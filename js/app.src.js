@@ -6849,17 +6849,29 @@
     return renderExamWiseSetPicker(main, exam);
   }
 
-  /* How many full-paper sets exist for one exam, probed from the published
-     files (data/exam-mock-sets/<exam>/set-N.json). */
+  /* How many full-paper sets exist for one exam. The published manifest
+     (data/exam-mock-sets/<exam>/index.json) answers this in one small request;
+     if it is missing we fall back to probing set-1..set-N in parallel. */
   async function detectExamMockSets(examId) {
     const cacheKey = `exw:${examId}`;
     if (state.examMockSetCache && state.examMockSetCache[cacheKey]) return state.examMockSetCache[cacheKey];
-    const found = [];
-    for (let n = 1; n <= MAX_MOCK_SETS; n++) {
-      const data = await API.getExamMockSet(examId, n);
-      if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
-      else break;
+
+    let found = null;
+    const manifest = await API.getExamMockIndex(examId);
+    if (manifest && manifest.length) {
+      found = manifest.slice().sort((a, b) => a - b);
+    } else {
+      const probes = await Promise.all(
+        Array.from({ length: MAX_MOCK_SETS }, (_, i) => API.getExamMockSet(examId, i + 1))
+      );
+      found = [];
+      for (let n = 1; n <= MAX_MOCK_SETS; n++) {
+        const data = probes[n - 1];
+        if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
+        else break;
+      }
     }
+
     state.examMockSetCache = state.examMockSetCache || {};
     state.examMockSetCache[cacheKey] = found;
     return found;

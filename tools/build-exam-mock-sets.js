@@ -193,6 +193,18 @@ function writeSet(dir, n, payload) {
   return true;
 }
 
+/* A tiny manifest so the runtime can learn how many sets exist with one small
+   request instead of probing set-1..set-N sequentially, each ~110 KB. */
+function writeManifest(dir, examId, sets) {
+  const payload = { exam: examId, count: sets, sets: Array.from({ length: sets }, (_, i) => i + 1) };
+  const bytes = JSON.stringify(payload, null, 2) + "\n";
+  const file = path.join(dir, "index.json");
+  const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+  if (prev === bytes) return false;
+  if (!CHECK) fs.writeFileSync(file, bytes);
+  return true;
+}
+
 /* ---------- blueprint mode ---------- */
 
 function readBlueprint(examId) {
@@ -283,6 +295,7 @@ function main() {
     const bp = readBlueprint(exam.id);
     const built = bp ? buildBlueprintSets(exam, bp, dir) : buildLegacySets(exam, dir);
     changed += built.changed;
+    if (writeManifest(dir, exam.id, built.sets)) changed++;
     report.push(`${exam.id}: ${built.note} | sets ${built.sets}`);
   }
 

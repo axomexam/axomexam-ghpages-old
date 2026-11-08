@@ -133,6 +133,28 @@ const API = (() => {
     }
   }
 
+  /* Tiny manifest: exam-mock-sets/<examId>/index.json lists the published set
+     numbers, so the runtime learns how many sets exist in one small request
+     instead of probing set-1..set-N (each ~110 KB) one after another. */
+  async function getExamMockIndex(examId) {
+    const dir = (CONFIG.EXAMS && CONFIG.EXAMS.MOCK_SETS_DIR) || "data/exam-mock-sets";
+    const rel = `${dir}/${examId}/index.json`;
+    const url = CONFIG.USE_REMOTE ? rawUrl(rel) : `/${rel}`;
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return null;
+      const data = await res.json();
+      const list = Array.isArray(data && data.sets)
+        ? data.sets
+        : Array.isArray(data)
+          ? data
+          : null;
+      return list ? list.filter((n) => Number.isInteger(n) && n > 0) : null;
+    } catch {
+      return null;
+    }
+  }
+
   /* ---- Mock test sets ----
      Each set is a single manually uploaded JSON file:
      mock-test/<categoryId>/<subcategoryId>/set-<n>.json
@@ -524,7 +546,7 @@ const API = (() => {
   return {
     getCategories, getTopic, getTopicMarkdown, listPdfDir, pdfUrl,
     listDownloads, getTrendingTopics, listPreviousYearYears, listPreviousYearPdfs,
-    getArticles, getMockSet, getExamMockSet, getBook, listBooks, listExams, getExamSection,
+    getArticles, getMockSet, getExamMockSet, getExamMockIndex, getBook, listBooks, listExams, getExamSection,
     listExamQuestions, getCounts, listCurrentAffairs, getCurrentAffairsCategory,
     listCurrentAffairsQuestions, getCurrentAffairsCounts,
   };
