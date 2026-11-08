@@ -49,7 +49,7 @@
      1-2 hours" notice. Set EXAM_WISE_FORCE_UPGRADE to true to take the whole
      portal down again without touching the list. */
   const EXAM_WISE_FORCE_UPGRADE = false;
-  const EXAM_WISE_LIVE = ["assam-police"];
+  const EXAM_WISE_LIVE = ["assam-police", "adre-grade-3"];
   const examWiseIsLive = (id) => !EXAM_WISE_FORCE_UPGRADE && EXAM_WISE_LIVE.indexOf(id) !== -1;
   /* Number of real downloadable PDF files shipped with the site. Kept in
      sync by tools/inject-static-questions.js so the homepage never claims
@@ -219,6 +219,25 @@
   function tLang(key, lang) {
     if (typeof I18N !== "undefined" && I18N[lang] && I18N[lang][key]) return I18N[lang][key];
     return t(key);
+  }
+
+  /* Translate a key and fill {placeholder} slots. Used by the exam-wise setup
+     panel, whose time / marks / marking text and instruction rules are derived
+     from the exam's blueprint rather than hardcoded, so Assam Police (100 Q,
+     50 marks, 2 h, no negative marking) and ADRE Grade III (150 Q, 150 marks,
+     3 h, 0.25 negative marking) each read correctly. */
+  function tf(key, vars) {
+    return String(t(key)).replace(/\{(\w+)\}/g, (m, name) =>
+      Object.prototype.hasOwnProperty.call(vars, name) ? String(vars[name]) : m
+    );
+  }
+
+  /* Same as tf() but for a fixed language, used for the bilingual instruction
+     rules whose Assamese twin must also follow the blueprint numbers. */
+  function tfLang(key, lang, vars) {
+    return String(tLang(key, lang)).replace(/\{(\w+)\}/g, (m, name) =>
+      Object.prototype.hasOwnProperty.call(vars, name) ? String(vars[name]) : m
+    );
   }
 
   /* Content strings (category/topic/exam names, descriptions, body prose)
@@ -6849,32 +6868,37 @@
     return renderExamWiseSetPicker(main, exam);
   }
 
-  /* How many full-paper sets exist for one exam. The published manifest
-     (data/exam-mock-sets/<exam>/index.json) answers this in one small request;
-     if it is missing we fall back to probing set-1..set-N in parallel. */
+  /* How many full-paper sets exist for one exam, and how many questions each
+     set carries. The published manifest (data/exam-mock-sets/<exam>/index.json)
+     answers both in one small request; if it is missing we fall back to probing
+     set-1..set-N in parallel and reading the first set's length. Returns
+     { sets, questions }. */
   async function detectExamMockSets(examId) {
     const cacheKey = `exw:${examId}`;
     if (state.examMockSetCache && state.examMockSetCache[cacheKey]) return state.examMockSetCache[cacheKey];
 
-    let found = null;
+    let result = null;
     const manifest = await API.getExamMockIndex(examId);
-    if (manifest && manifest.length) {
-      found = manifest.slice().sort((a, b) => a - b);
+    if (manifest && manifest.sets.length) {
+      result = { sets: manifest.sets.slice().sort((a, b) => a - b), questions: manifest.questions || 0 };
     } else {
       const probes = await Promise.all(
         Array.from({ length: MAX_MOCK_SETS }, (_, i) => API.getExamMockSet(examId, i + 1))
       );
-      found = [];
+      const sets = [];
       for (let n = 1; n <= MAX_MOCK_SETS; n++) {
         const data = probes[n - 1];
-        if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
+        if (data && Array.isArray(data.questions) && data.questions.length) sets.push(n);
         else break;
       }
+      const first = probes[0];
+      const questions = first && Array.isArray(first.questions) ? first.questions.length : 0;
+      result = { sets, questions };
     }
 
     state.examMockSetCache = state.examMockSetCache || {};
-    state.examMockSetCache[cacheKey] = found;
-    return found;
+    state.examMockSetCache[cacheKey] = result;
+    return result;
   }
 
   function renderExamWiseComingSoon(main, exam) {
@@ -6903,11 +6927,12 @@
     const exams = (state.exams || []);
     const counts = {};
     await Promise.all(exams.filter((e) => examIsAvailable(e)).map(async (e) => {
-      counts[e.id] = (await detectExamMockSets(e.id)).length;
+      counts[e.id] = await detectExamMockSets(e.id);
     }));
     const cards = exams.map((e, i) => {
       const available = examIsAvailable(e);
-      const nSets = counts[e.id] || 0;
+      const nSets = (counts[e.id] && counts[e.id].sets.length) || 0;
+      const nQ = (counts[e.id] && counts[e.id].questions) || 100;
       const titleEn = ebkLang(e.title, "en");
       const titleAs = ebkLang(e.title, "as");
       const subEn = ebkLang(e.subtitle, "en");
@@ -6922,7 +6947,7 @@
         ? `<span class="exw-badge exw-badge-live">${escapeHtml(t("mock.examwise.setsCount").replace("{n}", String(nSets)))}</span>`
         : `<span class="exw-badge exw-badge-soon">${escapeHtml(t("exams.comingSoon"))}</span>`;
       const meta = available
-        ? escapeHtml(t("mock.examwise.fullPaperMeta"))
+        ? escapeHtml(tf("mock.examwise.fullPaperMetaN", { n: nQ }))
         : escapeHtml(subEn || t("exams.comingSoon"));
       return `
         <a class="exw-card reveal ${available ? "" : "is-soon"}" style="--c:${examColor(e)}" data-delay="${i * 50}" href="${href}">
@@ -6951,14 +6976,15 @@
         <div class="exw-grid">${cards}</div>
       </section>`;
     observeReveals();
-    appendSeoFaq(main, examWiseHubSeo());
+    appendSeoFaq(main, examWiseHubSeo(counts));
   }
 
   /* Detailing panel for the exam-wise hub. The static copy lives inside
      <main> (crawler / no-JS view) and is therefore destroyed by renderRoute,
      so the same content is appended here for real visitors — the pattern the
      subject-wise mock-test, e-books and category hubs already follow. */
-  function examWiseHubSeo() {
+  function examWiseHubSeo(counts) {
+    counts = counts || {};
     const names = examWiseAvailableExams().map((e) => ebkLang(e.title, "en")).join(", ")
       || "Assam Police, ADRE Grade III and ADRE Grade IV";
     return {
@@ -6966,7 +6992,11 @@
       noDefaults: true,
       h2: "Exam-wise mock tests for Assam recruitment exams",
       info: "A subject-wise mock test drills one topic. An exam-wise mock test does the opposite: it hands you a complete question paper — every subject of the exam mixed together, in the order the real paper uses, with a live timer running while you attempt it. That is the part most candidates never practise, and it is where the real paper surprises them.",
-      items: examWiseAvailableExams().map((e) => ({ name: ebkLang(e.title, "en"), count: 100, unit: "questions per set" })),
+      items: examWiseAvailableExams().map((e) => ({
+        name: ebkLang(e.title, "en"),
+        count: (counts[e.id] && counts[e.id].questions) || 100,
+        unit: "questions per set"
+      })),
       tips: [
         "Open the exam that matches your recruitment.",
         "Pick a full paper set — start with Set 1 and move up.",
@@ -6975,7 +7005,7 @@
       ],
       faqs: [
         { q: "What is an exam-wise mock test?", a: "An exam-wise mock test is a single full-length paper that mixes every subject of one recruitment exam — for example Assam Police or ADRE Grade III — and runs under a live timer, so it works exactly like the real examination hall instead of a single-subject practice drill." },
-        { q: "How many questions are in each set?", a: "Every full paper set carries 100 bilingual questions with four options each, an answer key and a short explanation in both Assamese and English." },
+        { q: "How many questions are in each set?", a: "Each full paper set carries the same number of bilingual questions as the real exam paper — 100 for Assam Police, 150 for ADRE Grade III — with four options each, an answer key and a short explanation in both Assamese and English." },
         { q: "Are the mock tests different for each exam?", a: `Yes. Each exam has its own separate sets built from its own syllabus and question bank — ${names} are kept apart.` },
         { q: "Are these mock tests free?", a: "Yes. Every exam-wise mock test on axomexam is 100% free and can be reattempted as many times as you like." },
         { q: "Can I practise in Assamese?", a: "Yes. Every question, option and explanation is available in both Assamese and English, and you can choose the question language before the test begins." }
@@ -6988,7 +7018,9 @@
     const examAs = ebkLang(exam.title, "as");
     const subEn = ebkLang(exam.subtitle, "en");
     const subAs = ebkLang(exam.subtitle, "as");
-    const sets = await detectExamMockSets(exam.id);
+    const detected = await detectExamMockSets(exam.id);
+    const sets = detected.sets;
+    const nQuestions = detected.questions || 100;
     const visible = Math.max(DEFAULT_VISIBLE_SETS, ...(sets.length ? sets : [0]));
     const existing = new Set(sets);
     const color = examColor(exam);
@@ -6997,7 +7029,7 @@
 
     const stats = [
       { ico: `<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/>`, label: t("mock.examwise.statSets"), value: String(sets.length) },
-      { ico: `<circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M12 16h.01"/>`, label: t("mock.examwise.statQuestions"), value: "100" },
+      { ico: `<circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M12 16h.01"/>`, label: t("mock.examwise.statQuestions"), value: String(nQuestions) },
       { ico: `<path d="M4 5h16v14H4z"/><path d="M8 9h8"/><path d="M8 13h5"/>`, label: t("mock.examwise.statLangs"), value: "অসমীয়া / EN" },
       { ico: `<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>`, label: t("mock.examwise.statMode"), value: t("mock.examwise.modeTimed") }
     ];
@@ -7012,7 +7044,7 @@
             <span class="set-status">${t("mock.examwise.available")}</span>
           </span>
           <span class="set-name">${t("mock.examwise.fullPaperSet")} ${n}</span>
-          <span class="set-meta">${t("mock.examwise.setMeta")}</span>
+          <span class="set-meta">${escapeHtml(tf("mock.examwise.setMetaN", { n: nQuestions }))}</span>
           <span class="set-go">
             <span>${t("mock.examwise.start")}</span>
             <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -7079,12 +7111,13 @@
         </div>
       </section>`;
     observeReveals();
-    appendSeoFaq(main, examWiseExamSeo(exam, examEn, sets.length));
+    appendSeoFaq(main, examWiseExamSeo(exam, examEn, sets.length, nQuestions));
   }
 
   /* Detailing panel for one exam's set picker. Mirrors the static copy the
      builder writes inside <main>, which renderRoute replaces for visitors. */
-  function examWiseExamSeo(exam, examEn, nSets) {
+  function examWiseExamSeo(exam, examEn, nSets, nQuestions) {
+    const q = nQuestions || 100;
     const secs = (exam.sections || [])
       .filter((s) => s.id !== "syllabus")
       .map((s) => ebkLang(s.title, "en") || s.id);
@@ -7093,7 +7126,7 @@
       name: examEn,
       noDefaults: true,
       h2: `${examEn} full-paper mock test`,
-      info: `The ${examEn} mock test on this page is a full paper, not a single-subject practice set. Each of the ${nSets} sets mixes every subject of the ${examEn}${subEn ? ` (${subEn})` : ""} paper and runs to a fixed length of 100 questions under a live timer, so you practise the paper end to end the way it is actually set.`,
+      info: `The ${examEn} mock test on this page is a full paper, not a single-subject practice set. Each of the ${nSets} sets mixes every subject of the ${examEn}${subEn ? ` (${subEn})` : ""} paper and runs to a fixed length of ${q} questions under a live timer, so you practise the paper end to end the way it is actually set.`,
       items: secs.map((s) => ({ name: s })),
       tips: [
         "Attempt one set fully under the timer before checking any answer.",
@@ -7102,8 +7135,8 @@
         "Compare your set-to-set scores to track whether accuracy is improving."
       ],
       faqs: [
-        { q: `What is the ${examEn} mock test?`, a: `It is a full-length, timed mock test for the ${examEn} recruitment exam. Each set mixes every subject of the paper and carries 100 bilingual questions with answers and explanations.` },
-        { q: "How many full papers are there?", a: `There are ${nSets} full paper sets for ${examEn}. Every set is a complete 100-question paper.` },
+        { q: `What is the ${examEn} mock test?`, a: `It is a full-length, timed mock test for the ${examEn} recruitment exam. Each set mixes every subject of the paper and carries ${q} bilingual questions with answers and explanations.` },
+        { q: "How many full papers are there?", a: `There are ${nSets} full paper sets for ${examEn}. Every set is a complete ${q}-question paper.` },
         { q: `Which subjects are covered in the ${examEn} paper?`, a: secs.join(", ") + "." },
         { q: "Is the test timed?", a: "Yes. Every set runs on a live timer so you learn to manage your time the way you must in the real examination hall." },
         { q: "Are answers and explanations given?", a: "Yes. After you submit, you see your score and a bilingual review of every question with the correct answer and a short explanation." }
@@ -7117,7 +7150,7 @@
      the page still looks complete, replaces the count picker with a preparing
      notice, and opens a bilingual popup. The Start button re-opens the popup
      instead of starting the quiz. */
-  function renderExamWiseUpgrade(main, exam, setNumber) {
+  async function renderExamWiseUpgrade(main, exam, setNumber) {
     const examEn = ebkLang(exam.title, "en");
     const color = examColor(exam);
     const setTitle = `${t("mock.examwise.fullPaperSet")} ${setNumber}`;
@@ -7148,7 +7181,7 @@
             <span class="mt-hero-cat">${escapeHtml(examEn)}</span>
             <span class="mt-hero-title">${escapeHtml(setTitle)}</span>
             <span class="mt-hero-chips">
-              <span class="mt-chip">100 ${t("mock.questions")}</span>
+              <span class="mt-chip">${(await detectExamMockSets(exam.id)).questions || 100} ${t("mock.questions")}</span>
               <span class="mt-chip">অসমীয়া / English</span>
             </span>
           </span>
@@ -7211,12 +7244,13 @@
       });
     });
     showExamWiseUpgradePopup();
-    appendSeoFaq(main, examWiseSetSeo(exam, examEn, setNumber));
+    appendSeoFaq(main, examWiseSetSeo(exam, examEn, setNumber, (await detectExamMockSets(exam.id)).questions));
   }
 
   /* Detailing panel for one full-paper set. Mirrors the static copy the
      builder writes inside <main> (crawler / no-JS view). */
-  function examWiseSetSeo(exam, examEn, setNumber) {
+  function examWiseSetSeo(exam, examEn, setNumber, nQuestions) {
+    const q = nQuestions || 100;
     const secList = (exam.sections || [])
       .filter((s) => s.id !== "syllabus")
       .map((s) => ebkLang(s.title, "en") || s.id)
@@ -7225,7 +7259,7 @@
       name: `${examEn} Full Paper Set ${setNumber}`,
       noDefaults: true,
       h2: `${examEn} Full Paper Set ${setNumber}`,
-      info: `Full Paper Set ${setNumber} of the ${examEn} exam-wise mock test is a complete 100-question paper that mixes every subject of the exam — ${secList} — and runs under a live timer, exactly like the real test. When you start this set you choose your question language (Assamese or English) and the timer begins. On submit you get an instant score along with the correct answer and a short explanation for every question, in both languages.`,
+      info: `Full Paper Set ${setNumber} of the ${examEn} exam-wise mock test is a complete ${q}-question paper that mixes every subject of the exam — ${secList} — and runs under a live timer, exactly like the real test. When you start this set you choose your question language (Assamese or English) and the timer begins. On submit you get an instant score along with the correct answer and a short explanation for every question, in both languages.`,
       tips: [
         "Pick your question language.",
         "Start the timer and attempt the whole paper without pausing.",
@@ -7233,7 +7267,7 @@
         "Reattempt the set later and compare your score."
       ],
       faqs: [
-        { q: `How many questions are in ${examEn} Full Paper Set ${setNumber}?`, a: "100 bilingual questions with four options each, covering every subject of the paper." },
+        { q: `How many questions are in ${examEn} Full Paper Set ${setNumber}?`, a: `${q} bilingual questions with four options each, covering every subject of the paper.` },
         { q: `Is ${examEn} Set ${setNumber} timed?`, a: "Yes. The set runs on a live timer from the moment you start, so it works like the real examination." },
         { q: "Can I see the answers?", a: "Yes. After you submit, every question shows the correct option and a short explanation in both Assamese and English." },
         { q: "Can I reattempt this set?", a: "Yes. All sets are free and unlimited — you can reattempt any set as many times as you like." }
@@ -7979,9 +8013,43 @@
      sets and the exam-wise (Assam Police / ADRE Grade III & IV) mock tests.
      Renders the hero, the language switch, the question-count picker and the
      instructions, then wires the Start button to `opts.onStart`. */
+  /* Exam-wise display strings derived from an exam's paper blueprint, so the
+     setup panel and instruction rules read the real paper's numbers instead of
+     the old hardcoded 100 Q / 50 marks / 2 h / no-negative set. Falls back to
+     the Assam Police shape when no blueprint is supplied. */
+  const AS_DIGITS = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+  function asDigits(str) {
+    return String(str).replace(/[0-9]/g, (d) => AS_DIGITS[+d]);
+  }
+
+  function bpDisplay(bp) {
+    const q = bp ? bp.sections.reduce((n, s) => n + s.questions, 0) : 100;
+    const mins = (bp && bp.durationMinutes) || 120;
+    const total = (bp && bp.totalMarks) || 50;
+    const per = (bp && bp.marksPerQuestion) || 0.5;
+    const neg = (bp && bp.negativeMarking) || 0;
+    const hours = Math.round((mins / 60) * 10) / 10;
+    const marking = neg > 0
+      ? tf("mock.examwise.bpMarkingVal", { m: per, neg })
+      : tf("mock.examwise.bpMarkingNoNeg", { m: per });
+    return {
+      questions: q,
+      time: tf("mock.examwise.bpTimeVal", { mins, hours }),
+      marks: tf("mock.examwise.bpMarksVal", { n: total }),
+      marking,
+      rule1: tf("mock.examwise.bpRule1", { mins, hours }),
+      rule2: tf("mock.examwise.bpRule2", { n: q, m: per, total }),
+      rule3: neg > 0 ? tf("mock.examwise.bpRule3Neg", { neg }) : t("mock.examwise.bpRule3"),
+      asRule1: tfLang("mock.examwise.bpRule1", "as", { mins: asDigits(mins), hours: asDigits(hours) }),
+      asRule2: tfLang("mock.examwise.bpRule2", "as", { n: asDigits(q), m: asDigits(per), total: asDigits(total) }),
+      asRule3: neg > 0 ? tfLang("mock.examwise.bpRule3Neg", "as", { neg: asDigits(neg) }) : tLang("mock.examwise.bpRule3", "as"),
+    };
+  }
+
   function renderMockStartPanel(main, opts) {
     const pool = opts.pool || [];
     const bp = opts.blueprint || null;
+    const bpd = bpDisplay(bp);
     const countOptions = (opts.countOptions || [10, 15, 20, 25]).filter((n) => n <= pool.length);
     if (!countOptions.length) countOptions.push(pool.length);
     const defaultCount = countOptions.includes(25) ? 25 : countOptions[countOptions.length - 1];
@@ -8025,9 +8093,9 @@
             ${bp ? "" : `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>`}
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailLang")}</span><b id="mt-lang-val">${testLang === "as" ? "অসমীয়া" : "English"}</b></span>
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMode")}</span><b>${t("mock.examwise.modeTimed")}</b></span>
-            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailTime")}</span><b>${t("mock.examwise.timeVal")}</b></span>` : ""}
-            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarks")}</span><b>${t("mock.examwise.marksVal")}</b></span>` : ""}
-            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarking")}</span><b>${t("mock.examwise.markingVal")}</b></span>
+            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailTime")}</span><b>${escapeHtml(bpd.time)}</b></span>` : ""}
+            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarks")}</span><b>${escapeHtml(bpd.marks)}</b></span>` : ""}
+            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarking")}</span><b>${bp ? escapeHtml(bpd.marking) : t("mock.examwise.markingVal")}</b></span>
           </div>
         </div>
 
@@ -8054,9 +8122,9 @@
           <div class="mt-label">${t("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>
           <p class="mt-sub">${t("mock.examwise.instructionsSub")}</p>
           <ul class="mt-rules">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${t("mock.examwise.rule1")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs1", "as")}</span></span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${t("mock.examwise.rule2")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs2", "as")}</span></span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><span>${t("mock.examwise.rule3")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs3", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${bp ? escapeHtml(bpd.rule1) : t("mock.examwise.rule1")}<span class="mt-rule-as" lang="as">${bp ? escapeHtml(bpd.asRule1) : tLang("mock.examwise.ruleAs1", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${bp ? escapeHtml(bpd.rule2) : t("mock.examwise.rule2")}<span class="mt-rule-as" lang="as">${bp ? escapeHtml(bpd.asRule2) : tLang("mock.examwise.ruleAs2", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><span>${bp ? escapeHtml(bpd.rule3) : t("mock.examwise.rule3")}<span class="mt-rule-as" lang="as">${bp ? escapeHtml(bpd.asRule3) : tLang("mock.examwise.ruleAs3", "as")}</span></span></li>
             ${bp ? `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>${t("mock.examwise.rule4")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs4", "as")}</span></span></li>` : ""}
           </ul>
         </div>

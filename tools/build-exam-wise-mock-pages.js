@@ -8,7 +8,7 @@
  *
  *   exam-wise-mock-test/                                  exam picker
  *   exam-wise-mock-test/<exam>/                            full-paper set picker
- *   exam-wise-mock-test/<exam>/set-N/                      one 100-question paper
+ *   exam-wise-mock-test/<exam>/set-N/                      one full-paper set (100 or 150 Q)
  *
  * An exam-wise mock test is a full paper, not a single-subject practice set:
  * one set mixes every subject of that exam and runs to a fixed length. The
@@ -338,8 +338,9 @@ function hubContent() {
   const asLine = EXAMS.map((e) => locAs(e.title)).filter(Boolean).join(" · ");
   const rows = EXAMS.map((e) => {
     const n = examMockSets(e.id).length;
+    const q = examQuestionCount(e.id);
     const secs = examSections(e).map((s) => s.en).join(", ");
-    return `<li><strong>${escapeHtml(loc(e.title))}</strong> — ${n} full papers, 100 questions each. Sections: ${escapeHtml(secs)}.</li>`;
+    return `<li><strong>${escapeHtml(loc(e.title))}</strong> — ${n} full papers, ${q} questions each. Sections: ${escapeHtml(secs)}.</li>`;
   }).join("\n          ");
   return contentPanel(
     `        <h2 style="margin-top:0;">Exam-wise mock tests for Assam recruitment exams</h2>\n` +
@@ -349,7 +350,7 @@ function hubContent() {
     `        <h3>What each full paper contains</h3>\n` +
     `        <ul style="margin:8px 0 0 20px; line-height:1.9;">\n          ${rows}\n        </ul>\n` +
     `        <h3>How a set is built</h3>\n` +
-    `        <p>Each set carries <strong>100 bilingual questions</strong> with four options, the correct answer and a short explanation in both Assamese and English. The questions are pulled from the same verified question bank that powers the subject-wise practice and the exam books, then shuffled with a fixed seed so a set stays identical each time you reattempt it.</p>\n` +
+    `        <p>Each set carries <strong>bilingual questions</strong> with four options, the correct answer and a short explanation in both Assamese and English. The questions are pulled from the same verified question bank that powers the subject-wise practice and the exam books, then assembled per the exam's own paper blueprint — every set follows the same subject-wise question distribution as the real paper.</p>\n` +
     `        <h3>How to attempt an exam-wise mock test</h3>\n` +
     `        <ol style="margin:8px 0 0 20px; line-height:1.9;">\n` +
     `          <li>Open the exam that matches your recruitment.</li>\n` +
@@ -359,7 +360,7 @@ function hubContent() {
     `        </ol>\n` +
     faqBlock([
       ["What is an exam-wise mock test?", "An exam-wise mock test is a single full-length paper that mixes every subject of one recruitment exam — for example Assam Police or ADRE Grade III — and runs under a live timer, so it works exactly like the real examination hall instead of a single-subject practice drill."],
-      ["How many questions are in each set?", "Every full paper set carries 100 bilingual questions with four options each, an answer key and a short explanation in both Assamese and English."],
+      ["How many questions are in each set?", "Each full paper set carries the same number of bilingual questions as the real exam paper — 100 for Assam Police, 150 for ADRE Grade III — with four options each, an answer key and a short explanation in both Assamese and English."],
       ["Are the mock tests different for each exam?", `Yes. Each exam has its own separate sets built from its own syllabus and question bank — ${escapeHtml(list)} are kept apart.`],
       ["Are these mock tests free?", "Yes. Every exam-wise mock test on axomexam is 100% free and can be reattempted as many times as you like."],
       ["Can I practise in Assamese?", "Yes. Every question, option and explanation is available in both Assamese and English, and you can choose the question language before the test begins."]
@@ -372,17 +373,18 @@ function examContent(exam) {
   const examAs = locAs(exam.title);
   const subEn = loc(exam.subtitle);
   const n = examMockSets(exam.id).length;
+  const q = examQuestionCount(exam.id);
   const secs = examSections(exam);
   const secRows = secs.map((s) => `<li><strong>${escapeHtml(s.en)}</strong>${s.as && s.as !== s.en ? ` <span lang="as" style="font-family:var(--font-as); color:var(--ink-faint);">${escapeHtml(s.as)}</span>` : ""}</li>`).join("\n          ");
   return contentPanel(
     `        <h2 style="margin-top:0;">${escapeHtml(examEn)} full-paper mock test</h2>\n` +
-    `        <p>The ${escapeHtml(examEn)} mock test on this page is a full paper, not a single-subject practice set. Each of the ${n} sets mixes every subject of the ${escapeHtml(examEn)}${subEn ? ` (${escapeHtml(subEn)})` : ""} paper and runs to a fixed length of 100 questions under a live timer, so you practise the paper end to end the way it is actually set.</p>\n` +
-    (examAs && examAs !== examEn ? `        <p lang="as" style="font-family:var(--font-as);">${escapeHtml(examAs)} পৰীক্ষাৰ বাবে সম্পূৰ্ণ পত্ৰৰ মক টেষ্ট — প্ৰতিটো ছেটত প্ৰতিটো বিষয়ৰ ১০০টা প্ৰশ্ন একত্ৰিত কৰা হৈছে।</p>\n` : "") +
+    `        <p>The ${escapeHtml(examEn)} mock test on this page is a full paper, not a single-subject practice set. Each of the ${n} sets mixes every subject of the ${escapeHtml(examEn)}${subEn ? ` (${escapeHtml(subEn)})` : ""} paper and runs to a fixed length of ${q} questions under a live timer, so you practise the paper end to end the way it is actually set.</p>\n` +
+    (examAs && examAs !== examEn ? `        <p lang="as" style="font-family:var(--font-as);">${escapeHtml(examAs)} পৰীক্ষাৰ বাবে সম্পূৰ্ণ পত্ৰৰ মক টেষ্ট — প্ৰতিটো ছেটত প্ৰতিটো বিষয়ৰ ${q}টা প্ৰশ্ন একত্ৰিত কৰা হৈছে।</p>\n` : "") +
     `        <h3>Subjects covered in every set</h3>\n` +
     `        <ul style="margin:8px 0 0 20px; line-height:1.9;">\n          ${secRows}\n        </ul>\n` +
     `        <h3>What you get in each set</h3>\n` +
     `        <ul style="margin:8px 0 0 20px; line-height:1.9;">\n` +
-    `          <li>100 bilingual questions with four options each.</li>\n` +
+    `          <li>${q} bilingual questions with four options each.</li>\n` +
     `          <li>A live timer that mirrors the real exam's time pressure.</li>\n` +
     `          <li>Instant scoring the moment you submit.</li>\n` +
     `          <li>A full answer review with the correct option and a short explanation for every question.</li>\n` +
@@ -395,8 +397,8 @@ function examContent(exam) {
     `          <li>Compare your set-to-set scores to track whether accuracy is improving.</li>\n` +
     `        </ol>\n` +
     faqBlock([
-      [`What is the ${examEn} mock test?`, `It is a full-length, timed mock test for the ${examEn} recruitment exam. Each set mixes every subject of the paper and carries 100 bilingual questions with answers and explanations.`],
-      ["How many full papers are there?", `There are ${n} full paper sets for ${examEn}. Every set is a complete 100-question paper.`],
+      [`What is the ${examEn} mock test?`, `It is a full-length, timed mock test for the ${examEn} recruitment exam. Each set mixes every subject of the paper and carries ${q} bilingual questions with answers and explanations.`],
+      ["How many full papers are there?", `There are ${n} full paper sets for ${examEn}. Every set is a complete ${q}-question paper.`],
       [`Which subjects are covered in the ${examEn} paper?`, secs.map((s) => s.en).join(", ") + "."],
       ["Is the test timed?", "Yes. Every set runs on a live timer so you learn to manage your time the way you must in the real examination hall."],
       ["Are answers and explanations given?", "Yes. After you submit, you see your score and a bilingual review of every question with the correct answer and a short explanation."]
@@ -406,15 +408,16 @@ function examContent(exam) {
 
 function setContent(exam, setNumber) {
   const examEn = loc(exam.title);
+  const q = examQuestionCount(exam.id);
   const secs = examSections(exam);
   const secList = secs.map((s) => s.en).join(", ");
   return contentPanel(
     `        <h2 style="margin-top:0;">${escapeHtml(examEn)} Full Paper Set ${setNumber}</h2>\n` +
-    `        <p>Full Paper Set ${setNumber} of the ${escapeHtml(examEn)} exam-wise mock test is a complete 100-question paper that mixes every subject of the exam — ${escapeHtml(secList)} — and runs under a live timer, exactly like the real test.</p>\n` +
+    `        <p>Full Paper Set ${setNumber} of the ${escapeHtml(examEn)} exam-wise mock test is a complete ${q}-question paper that mixes every subject of the exam — ${escapeHtml(secList)} — and runs under a live timer, exactly like the real test.</p>\n` +
     `        <p>When you start this set you choose your question language (Assamese or English) and the timer begins. You can move between questions, skip a hard one and come back, and submit at any time. On submit you get an instant score along with the correct answer and a short explanation for every question, in both languages.</p>\n` +
     `        <h3>What this set tests</h3>\n` +
     `        <ul style="margin:8px 0 0 20px; line-height:1.9;">\n` +
-    `          <li>100 questions drawn from every subject of the ${escapeHtml(examEn)} paper.</li>\n` +
+    `          <li>${q} questions drawn from every subject of the ${escapeHtml(examEn)} paper.</li>\n` +
     `          <li>Four options per question, with a single correct answer.</li>\n` +
     `          <li>Bilingual questions, options and explanations.</li>\n` +
     `          <li>Instant scoring and a full answer review on submit.</li>\n` +
@@ -427,7 +430,7 @@ function setContent(exam, setNumber) {
     `          <li>Reattempt the set later and compare your score.</li>\n` +
     `        </ol>\n` +
     faqBlock([
-      [`How many questions are in ${examEn} Full Paper Set ${setNumber}?`, "100 bilingual questions with four options each, covering every subject of the paper."],
+      [`How many questions are in ${examEn} Full Paper Set ${setNumber}?`, `${q} bilingual questions with four options each, covering every subject of the paper.`],
       [`Is ${examEn} Set ${setNumber} timed?`, "Yes. The set runs on a live timer from the moment you start, so it works like the real examination."],
       ["Can I see the answers?", "Yes. After you submit, every question shows the correct option and a short explanation in both Assamese and English."],
       ["Can I reattempt this set?", "Yes. All sets are free and unlimited — you can reattempt any set as many times as you like."]
@@ -456,7 +459,7 @@ function buildHubPage() {
     const badge = available
       ? `<span class="exw-badge exw-badge-live">${nSets} full papers</span>`
       : `<span class="exw-badge exw-badge-soon">Coming Soon</span>`;
-    const meta = available ? "100-question full paper" : escapeHtml(loc(e.subtitle) || "Coming Soon");
+    const meta = available ? `${examQuestionCount(e.id)}-question full paper` : escapeHtml(loc(e.subtitle) || "Coming Soon");
     const href = `/exam-wise-mock-test/${encodeURIComponent(e.id)}`;
     return `<a class="exw-card${available ? "" : " is-soon"}" style="--c:${color}" href="${href}">
         <span class="exw-thumb">${thumb}${badge}</span>
@@ -514,7 +517,7 @@ function examHeroHTML(exam, nSets) {
     : `<span class="exw-hero-fallback">${escapeHtml(exam.icon || examEn.slice(0, 2).toUpperCase())}</span>`;
   const stats = [
     ["Full papers", String(nSets)],
-    ["Questions / set", "100"],
+    ["Questions / set", String(examQuestionCount(exam.id))],
     ["Languages", "অসমীয়া / EN"],
     ["Mode", "Timed"],
   ].map(([label, value]) => `<span class="exw-stat"><b>${escapeHtml(value)}</b>${escapeHtml(label)}</span>`).join("");
@@ -535,7 +538,7 @@ function buildExamPage(exam) {
   const examEn = loc(exam.title);
   const examAs = locAs(exam.title);
   const title = `${examEn} Mock Test — Full Paper Sets | ${SITE}`;
-  const desc = `Free ${examEn} full-paper mock tests — each set has 100 questions covering every subject, with instant scoring and bilingual answers.`;
+  const desc = `Free ${examEn} full-paper mock tests — each set has ${examQuestionCount(exam.id)} questions covering every subject, with instant scoring and bilingual answers.`;
   const shell = shellParts();
   const head = setHead(shell.preLD, { title, desc, url, ogDesc: desc });
 
@@ -551,7 +554,7 @@ function buildExamPage(exam) {
           <span class="set-status">Available</span>
         </span>
         <span class="set-name">Full Paper Set ${n}</span>
-        <span class="set-meta">100 questions • All subjects • Instant scoring</span>
+        <span class="set-meta">${examQuestionCount(exam.id)} questions • All subjects • Instant scoring</span>
         <span class="set-go"><span>Start test</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
       </a>`;
     }
@@ -573,7 +576,7 @@ function buildExamPage(exam) {
         { label: examEn },
       ])}
       <h1>${escapeHtml(examEn)}${examAs && examAs !== examEn ? ` <span class="exam-head-as">${escapeHtml(examAs)}</span>` : ""}</h1>
-      <p class="page-desc">Each set is a full 100-question paper that mixes every subject of this exam — exactly like the real test. Pick a set to begin.</p>
+      <p class="page-desc">Each set is a full ${examQuestionCount(exam.id)}-question paper that mixes every subject of this exam — exactly like the real test. Pick a set to begin.</p>
     </div>
     ${examHeroHTML(exam, sets.length)}
     <section class="section" style="padding-bottom:40px;">
@@ -608,8 +611,29 @@ function examMockSets(examId) {
     .sort((a, b) => a - b);
 }
 
+/* The published paper blueprint for an exam, or null when it has none (the
+   exam then keeps the "preparing" notice). */
+function examBlueprint(examId) {
+  return readJSON(path.join(ROOT, "data", "exam-mock-sets", "blueprints", `${examId}.json`));
+}
+
+/* How many questions one full-paper set carries for an exam: the blueprint's
+   section total when published, else the legacy fixed 100. */
+function examQuestionCount(examId) {
+  const bp = examBlueprint(examId);
+  if (bp && Array.isArray(bp.sections)) return bp.sections.reduce((n, s) => n + s.questions, 0);
+  return 100;
+}
+
 function examColorHex(exam) {
   return (exam.color && /^#[0-9a-fA-F]{3,8}$/.test(exam.color)) ? exam.color : "#4f46e5";
+}
+
+/* Render ASCII digits as Assamese digits for the Assamese twin lines, so the
+   instruction rules read naturally instead of mixing scripts. */
+const AS_DIGITS = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+function asDigits(v) {
+  return String(v).replace(/[0-9]/g, (d) => AS_DIGITS[+d]);
 }
 
 function buildSetPage(exam, setNumber) {
@@ -631,13 +655,17 @@ function buildLiveSetPage(exam, setNumber, setData, bp) {
   const examEn = loc(exam.title);
   const setTitle = `Full Paper Set ${setNumber}`;
   const title = `${examEn} Full Paper Mock Test — Set ${setNumber} | ${SITE}`;
-  const desc = `${examEn} Full Paper Set ${setNumber} — a free timed 100-question mock test with bilingual questions, answers and explanations.`;
+  const desc = `${examEn} Full Paper Set ${setNumber} — a free timed ${examQuestionCount(exam.id)}-question mock test with bilingual questions, answers and explanations.`;
   const shell = shellParts();
   const head = setHead(shell.preLD, { title, desc, url, ogDesc: `Full-paper ${examEn} mock test Set ${setNumber}: bilingual questions with answers and explanations.` });
 
   const color = examColorHex(exam);
   const nQ = bp.sections.reduce((n, s) => n + s.questions, 0);
   const totalMarks = bp.totalMarks || 50;
+  const mins = bp.durationMinutes || 120;
+  const per = bp.marksPerQuestion || 0.5;
+  const neg = bp.negativeMarking || 0;
+  const hours = Math.round((mins / 60) * 10) / 10;
 
   /* Mirror the runtime setup panel so a crawler / no-JS visitor sees the same
      test details and instructions the live page shows. The question count is
@@ -645,20 +673,23 @@ function buildLiveSetPage(exam, setNumber, setData, bp) {
   const details = [
     ["Language", "অসমীয়া / English"],
     ["Mode", "Timed"],
-    ["Time", `${bp.durationMinutes || 120} minutes`],
+    ["Time", `${mins} minutes (${hours} hours)`],
     ["Total Marks", `${totalMarks} marks`],
-    ["Marking", `${bp.marksPerQuestion || 0.5} mark per question • no negative marking`],
+    ["Marking", neg > 0 ? `${per} mark per question • ${neg} negative marking` : `${per} mark per question • no negative marking`],
   ].map(([k, v]) =>
     `<span class="mt-detail"><span class="mt-detail-k">${escapeHtml(k)}</span><b>${escapeHtml(v)}</b></span>`
   ).join("");
 
   const rules = [
-    ["This is a 2-hour (120-minute) timed test — a stopwatch tracks your total time.",
-      "এইটো এটা ২ ঘণ্টা (১২০ মিনিট)ৰ সময়বদ্ধ টেষ্ট — এটা ষ্টপৱাচে আপোনাৰ মুঠ সময় গণনা কৰে।"],
-    ["There are 100 questions, each carrying 4 options (A, B, C, D). Every correct answer scores 0.5 mark, for a total of 50 marks.",
-      "মুঠ ১০০ টা প্ৰশ্ন, প্ৰতিটোৰে ৪ টাকৈ বিকল্প (A, B, C, D)। প্ৰতিটো শুদ্ধ উত্তৰৰ বাবে ০.৫ নম্বৰ, মুঠ ৫০ নম্বৰ।"],
-    ["There is no negative marking — so attempt every question and leave none blank.",
-      "কোনো ঋণাত্মক নম্বৰ নাই — সেয়ে প্ৰতিটো প্ৰশ্নৰ উত্তৰ দিয়ক, কোনো এটা খালী নেৰিব।"],
+    [`This is a ${hours}-hour (${mins}-minute) timed test — a stopwatch tracks your total time.`,
+      `এইটো এটা ${asDigits(hours)} ঘণ্টা (${asDigits(mins)} মিনিট)ৰ সময়বদ্ধ টেষ্ট — এটা ষ্টপৱাচে আপোনাৰ মুঠ সময় গণনা কৰে।`],
+    [`There are ${nQ} questions, each carrying 4 options (A, B, C, D). Every correct answer scores ${per} mark, for a total of ${totalMarks} marks.`,
+      `মুঠ ${asDigits(nQ)} টা প্ৰশ্ন, প্ৰতিটোৰে ৪ টাকৈ বিকল্প (A, B, C, D)। প্ৰতিটো শুদ্ধ উত্তৰৰ বাবে ${asDigits(per)} নম্বৰ, মুঠ ${asDigits(totalMarks)} নম্বৰ।`],
+    neg > 0
+      ? [`There is a negative marking of ${neg} mark for every wrong answer — attempt with care and skip only when unsure.`,
+          `প্ৰতিটো ভুল উত্তৰৰ বাবে ${asDigits(neg)} নম্বৰ ঋণাত্মক মাৰ্কিং আছে — সাৱধানে উত্তৰ দিয়ক আৰু নিশ্চিত নহ'লে এৰি যাওক।`]
+      : ["There is no negative marking — so attempt every question and leave none blank.",
+          "কোনো ঋণাত্মক নম্বৰ নাই — সেয়ে প্ৰতিটো প্ৰশ্নৰ উত্তৰ দিয়ক, কোনো এটা খালী নেৰিব।"],
     ["Choose the best answer; results are graded instantly on submit, with a bilingual answer review.",
       "শ্ৰেষ্ঠ উত্তৰটো বাছনি কৰক; জমা দিয়াৰ লগে লগে ফলাফল আৰু দ্বিভাষিক উত্তৰ পৰ্যালোচনা পোৱা যাব।"],
   ].map(([en, as]) =>
@@ -731,7 +762,7 @@ function buildUpgradeSetPage(exam, setNumber) {
   const examEn = loc(exam.title);
   const setTitle = `Full Paper Set ${setNumber}`;
   const title = `${examEn} Full Paper Mock Test — Set ${setNumber} | ${SITE}`;
-  const desc = `${examEn} Full Paper Set ${setNumber} — a free timed 100-question mock test with bilingual questions, answers and explanations.`;
+  const desc = `${examEn} Full Paper Set ${setNumber} — a free timed ${examQuestionCount(exam.id)}-question mock test with bilingual questions, answers and explanations.`;
   const shell = shellParts();
   const head = setHead(shell.preLD, { title, desc, url, ogDesc: `Full-paper ${examEn} mock test Set ${setNumber}: bilingual questions with answers and explanations.` });
 

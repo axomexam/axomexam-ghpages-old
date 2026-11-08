@@ -1,6 +1,7 @@
 {
   "exam": "adre-grade-3",
   "count": 5,
+  "questions": 150,
   "sets": [
     1,
     2,
