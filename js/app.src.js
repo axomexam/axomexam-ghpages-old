@@ -43,11 +43,14 @@
   const MAX_MOCK_SETS = 20;
   /* Minimum number of set cards to show once at least one set exists */
   const DEFAULT_VISIBLE_SETS = 5;
-  /* Exam-wise mock test is temporarily closed while the question bank is
-     being prepared. The sets stay listed, but opening one shows a bilingual
-     "we'll be back in 1-2 hours" notice instead of the quiz. Flip to false
-     once the questions are uploaded to make the quiz live again. */
-  const EXAM_WISE_UPGRADE = true;
+  /* Exam-wise mock tests go live one exam at a time: an exam is playable once
+     its section-wise paper blueprint (data/exam-mock-sets/blueprints/<id>.json)
+     is published. Exams not listed here keep the bilingual "we'll be back in
+     1-2 hours" notice. Set EXAM_WISE_FORCE_UPGRADE to true to take the whole
+     portal down again without touching the list. */
+  const EXAM_WISE_FORCE_UPGRADE = false;
+  const EXAM_WISE_LIVE = ["assam-police"];
+  const examWiseIsLive = (id) => !EXAM_WISE_FORCE_UPGRADE && EXAM_WISE_LIVE.indexOf(id) !== -1;
   /* Number of real downloadable PDF files shipped with the site. Kept in
      sync by tools/inject-static-questions.js so the homepage never claims
      more PDFs than it actually serves. */
@@ -6839,24 +6842,36 @@
 
     const setMatch = setSeg && /^set-(\d+)$/.exec(setSeg);
     if (setMatch) {
-      if (EXAM_WISE_UPGRADE) return renderExamWiseUpgrade(main, exam, parseInt(setMatch[1], 10));
+      if (!examWiseIsLive(exam.id)) return renderExamWiseUpgrade(main, exam, parseInt(setMatch[1], 10));
       return renderExamWiseStart(main, exam, parseInt(setMatch[1], 10));
     }
     if (setSeg) return render404(main);
     return renderExamWiseSetPicker(main, exam);
   }
 
-  /* How many full-paper sets exist for one exam, probed from the published
-     files (data/exam-mock-sets/<exam>/set-N.json). */
+  /* How many full-paper sets exist for one exam. The published manifest
+     (data/exam-mock-sets/<exam>/index.json) answers this in one small request;
+     if it is missing we fall back to probing set-1..set-N in parallel. */
   async function detectExamMockSets(examId) {
     const cacheKey = `exw:${examId}`;
     if (state.examMockSetCache && state.examMockSetCache[cacheKey]) return state.examMockSetCache[cacheKey];
-    const found = [];
-    for (let n = 1; n <= MAX_MOCK_SETS; n++) {
-      const data = await API.getExamMockSet(examId, n);
-      if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
-      else break;
+
+    let found = null;
+    const manifest = await API.getExamMockIndex(examId);
+    if (manifest && manifest.length) {
+      found = manifest.slice().sort((a, b) => a - b);
+    } else {
+      const probes = await Promise.all(
+        Array.from({ length: MAX_MOCK_SETS }, (_, i) => API.getExamMockSet(examId, i + 1))
+      );
+      found = [];
+      for (let n = 1; n <= MAX_MOCK_SETS; n++) {
+        const data = probes[n - 1];
+        if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
+        else break;
+      }
     }
+
     state.examMockSetCache = state.examMockSetCache || {};
     state.examMockSetCache[cacheKey] = found;
     return found;
@@ -7038,7 +7053,7 @@
         </span>
       </div>
 
-      ${EXAM_WISE_UPGRADE ? `
+      ${!examWiseIsLive(exam.id) ? `
       <div class="upgrade-banner" role="status">
         <span class="upgrade-dot" aria-hidden="true"></span>
         <span>${t("mock.examwise.upgradeBanner")}</span>
@@ -7096,10 +7111,10 @@
     };
   }
 
-  /* Temporary "system upgrade" notice shown in place of a full-paper set
-     while the question bank is being prepared (EXAM_WISE_UPGRADE). Shows the
-     normal, professional setup panel (language, instructions, details) so the
-     page still looks complete, replaces the count picker with a preparing
+  /* Temporary "system upgrade" notice shown in place of a full-paper set for
+     an exam whose blueprint is not published yet (see examWiseIsLive). Shows
+     the normal, professional setup panel (language, instructions, details) so
+     the page still looks complete, replaces the count picker with a preparing
      notice, and opens a bilingual popup. The Start button re-opens the popup
      instead of starting the quiz. */
   function renderExamWiseUpgrade(main, exam, setNumber) {
@@ -7273,6 +7288,7 @@
     const data = await API.getExamMockSet(exam.id, setNumber);
     const list = data && Array.isArray(data.questions) ? data.questions : [];
     const pool = list.map(normalizeMockQuestion).filter((q) => q && q.options && q.options.length >= 2);
+    const bp = data && data.blueprint ? data.blueprint : null;
 
     const examEn = ebkLang(exam.title, "en");
     const examAs = ebkLang(exam.title, "as");
@@ -7312,6 +7328,7 @@
         { label: setTitle }
       ],
       setInfo: { title: setTitle, subject: examEn },
+      blueprint: bp,
       /* One full paper, fixed length — no count picker. */
       countOptions: [pool.length],
       onStart: startSetMock
@@ -7964,6 +7981,7 @@
      instructions, then wires the Start button to `opts.onStart`. */
   function renderMockStartPanel(main, opts) {
     const pool = opts.pool || [];
+    const bp = opts.blueprint || null;
     const countOptions = (opts.countOptions || [10, 15, 20, 25]).filter((n) => n <= pool.length);
     if (!countOptions.length) countOptions.push(pool.length);
     const defaultCount = countOptions.includes(25) ? 25 : countOptions[countOptions.length - 1];
@@ -7975,6 +7993,7 @@
       configured: false,
       count: defaultCount,
       testLang,
+      blueprint: bp,
       setInfo: opts.setInfo || null
     };
 
@@ -8003,9 +8022,11 @@
         <div class="mt-block mt-details">
           <div class="mt-label">${t("mock.examwise.details")} <span>পৰীক্ষাৰ বিৱৰণ</span></div>
           <div class="mt-detail-grid">
-            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>
+            ${bp ? "" : `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>`}
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailLang")}</span><b id="mt-lang-val">${testLang === "as" ? "অসমীয়া" : "English"}</b></span>
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMode")}</span><b>${t("mock.examwise.modeTimed")}</b></span>
+            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailTime")}</span><b>${t("mock.examwise.timeVal")}</b></span>` : ""}
+            ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarks")}</span><b>${t("mock.examwise.marksVal")}</b></span>` : ""}
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarking")}</span><b>${t("mock.examwise.markingVal")}</b></span>
           </div>
         </div>
@@ -8022,12 +8043,12 @@
           </div>
         </div>
 
-        <div class="mt-block">
+        ${bp ? "" : `<div class="mt-block">
           <div class="mt-label">${t("mock.examwise.count")} <span>প্ৰশ্নৰ সংখ্যা</span></div>
           <div class="count-picker" id="set-count-picker" style="margin:0;">
             ${countOptions.map((n) => `<button type="button" data-count="${n}" class="${n === defaultCount ? "active" : ""}">${n}</button>`).join("")}
           </div>
-        </div>
+        </div>`}
 
         <div class="mt-block">
           <div class="mt-label">${t("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>
@@ -8036,6 +8057,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${t("mock.examwise.rule1")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs1", "as")}</span></span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${t("mock.examwise.rule2")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs2", "as")}</span></span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><span>${t("mock.examwise.rule3")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs3", "as")}</span></span></li>
+            ${bp ? `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>${t("mock.examwise.rule4")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs4", "as")}</span></span></li>` : ""}
           </ul>
         </div>
 

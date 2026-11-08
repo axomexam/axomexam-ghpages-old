@@ -172,7 +172,73 @@ function breadcrumbHTML(crumbs) {
 
 /* ---------- question rendering ---------- */
 
-/* One bilingual question, in the same shape the topic Q&A pages use. */
+/* One bilingual question, in the same shape the topic Q&A pages use. Mirrors
+   tools/build-mock-set-pages.js so a crawler / no-JS visitor reads the full
+   paper: question, four options, the answer and a short explanation, each in
+   Assamese and English. */
+function qaItemHTML(q, n) {
+  const parts = [];
+  parts.push(
+    `<div lang="en" style="font-weight:800; font-size:1.02rem; line-height:1.5; margin-bottom:6px;">Q${n}. ${escapeHtml(loc(q.q))}</div>`
+  );
+  if (q.q && q.q.as) {
+    parts.push(`<div lang="as" style="color:#64748b; font-size:0.9rem; line-height:1.6; margin-bottom:8px;">${escapeHtml(q.q.as)}</div>`);
+  }
+  /* A shared figure (non-verbal series / pattern questions). */
+  if (typeof q.fig === "string" && q.fig) {
+    parts.push(`<div style="margin:6px 0; overflow-x:auto;">${q.fig}</div>`);
+  }
+  const opts = Array.isArray(q.options) ? q.options : [];
+  if (opts.length) {
+    const rows = opts
+      .map((o, i) => {
+        const en = loc(o);
+        const as = o && o.as ? o.as : "";
+        const fig = o && typeof o.fig === "string" ? o.fig : "";
+        const text = `${escapeHtml(en)}${as && as !== en ? ` <span lang="as" style="color:#64748b;">${escapeHtml(as)}</span>` : ""}`;
+        const body = fig ? `${fig}${en ? `<span style="display:block; margin-top:2px;">${text}</span>` : ""}` : text;
+        return `<div lang="en" style="margin:2px 0;">(${String.fromCharCode(65 + i)}) ${body}</div>`;
+      })
+      .join("");
+    parts.push(`<div style="margin-top:8px; color:#334155;">${rows}</div>`);
+  }
+  const correct = Number.isInteger(q.correct) ? q.correct : -1;
+  const ansOpt = opts[correct];
+  const ansEn = ansOpt ? loc(ansOpt) : "";
+  const ansAs = ansOpt && ansOpt.as ? ansOpt.as : "";
+  const ansFig = ansOpt && typeof ansOpt.fig === "string" ? ansOpt.fig : "";
+  parts.push(`<div lang="en" style="margin-top:8px;"><strong>Answer:</strong> ${ansFig}${ansEn ? `<span>${escapeHtml(ansEn)}</span>` : ""}</div>`);
+  if (ansAs && ansAs !== ansEn) {
+    parts.push(`<div lang="as" style="color:#64748b; font-size:0.9rem;">${escapeHtml(ansAs)}</div>`);
+  }
+  const ex = q.explanation || {};
+  if (ex.en) {
+    parts.push(`<div lang="en" style="margin-top:6px; font-size:0.9rem; color:#64748b;"><strong>Explanation:</strong> ${escapeHtml(ex.en)}</div>`);
+  }
+  if (ex.as) {
+    parts.push(`<div lang="as" style="font-size:0.9rem; color:#64748b;">${escapeHtml(ex.as)}</div>`);
+  }
+  return `<div class="qa-item" style="margin-bottom:22px;">${parts.join("")}</div>`;
+}
+
+/* Read one published full-paper set from data/exam-mock-sets/<exam>/set-N.json. */
+function readExamMockSet(examId, setNumber) {
+  return readJSON(path.join(ROOT, "data", "exam-mock-sets", examId, `set-${setNumber}.json`));
+}
+
+/* The crawler-facing question list for one set. The questions are the real
+   paper the runtime plays, so this doubles as the no-JS copy. */
+function questionsBlock(setData) {
+  const qs = setData && Array.isArray(setData.questions) ? setData.questions : [];
+  if (!qs.length) return "";
+  return `<section class="section axo-main-content" data-axo-main-content="1" style="padding-bottom:48px;">
+      <div class="info-panel exw-content" style="max-width:900px; margin:0 auto; text-align:left;">
+        <h2 style="margin-top:0;">Questions in this set</h2>
+        <p>Every question below is bilingual (Assamese and English), carries four options and is followed by the correct answer and a short explanation.</p>
+${qs.map((q, i) => "        " + qaItemHTML(q, i + 1)).join("\n")}
+      </div>
+    </section>`;
+}
 
 /* ---------- exam data ---------- */
 
@@ -547,6 +613,120 @@ function examColorHex(exam) {
 }
 
 function buildSetPage(exam, setNumber) {
+  const url = pageURL([exam.id, `set-${setNumber}`]);
+  const examEn = loc(exam.title);
+  const setTitle = `Full Paper Set ${setNumber}`;
+  const setData = readExamMockSet(exam.id, setNumber);
+  const bp = setData && setData.blueprint ? setData.blueprint : null;
+  /* An exam goes live once its paper blueprint is published (see the runtime
+     examWiseIsLive). Until then the set page shows the bilingual "preparing"
+     notice, exactly like the runtime. */
+  return bp ? buildLiveSetPage(exam, setNumber, setData, bp) : buildUpgradeSetPage(exam, setNumber);
+}
+
+/* Live set page: mirrors the runtime setup panel plus the real bilingual
+   question list, so a crawler / no-JS visitor reads the whole paper. */
+function buildLiveSetPage(exam, setNumber, setData, bp) {
+  const url = pageURL([exam.id, `set-${setNumber}`]);
+  const examEn = loc(exam.title);
+  const setTitle = `Full Paper Set ${setNumber}`;
+  const title = `${examEn} Full Paper Mock Test — Set ${setNumber} | ${SITE}`;
+  const desc = `${examEn} Full Paper Set ${setNumber} — a free timed 100-question mock test with bilingual questions, answers and explanations.`;
+  const shell = shellParts();
+  const head = setHead(shell.preLD, { title, desc, url, ogDesc: `Full-paper ${examEn} mock test Set ${setNumber}: bilingual questions with answers and explanations.` });
+
+  const color = examColorHex(exam);
+  const nQ = bp.sections.reduce((n, s) => n + s.questions, 0);
+  const totalMarks = bp.totalMarks || 50;
+
+  /* Mirror the runtime setup panel so a crawler / no-JS visitor sees the same
+     test details and instructions the live page shows. The question count is
+     already shown as the hero chip, so it is not repeated here. */
+  const details = [
+    ["Language", "অসমীয়া / English"],
+    ["Mode", "Timed"],
+    ["Time", `${bp.durationMinutes || 120} minutes`],
+    ["Total Marks", `${totalMarks} marks`],
+    ["Marking", `${bp.marksPerQuestion || 0.5} mark per question • no negative marking`],
+  ].map(([k, v]) =>
+    `<span class="mt-detail"><span class="mt-detail-k">${escapeHtml(k)}</span><b>${escapeHtml(v)}</b></span>`
+  ).join("");
+
+  const rules = [
+    ["This is a 2-hour (120-minute) timed test — a stopwatch tracks your total time.",
+      "এইটো এটা ২ ঘণ্টা (১২০ মিনিট)ৰ সময়বদ্ধ টেষ্ট — এটা ষ্টপৱাচে আপোনাৰ মুঠ সময় গণনা কৰে।"],
+    ["There are 100 questions, each carrying 4 options (A, B, C, D). Every correct answer scores 0.5 mark, for a total of 50 marks.",
+      "মুঠ ১০০ টা প্ৰশ্ন, প্ৰতিটোৰে ৪ টাকৈ বিকল্প (A, B, C, D)। প্ৰতিটো শুদ্ধ উত্তৰৰ বাবে ০.৫ নম্বৰ, মুঠ ৫০ নম্বৰ।"],
+    ["There is no negative marking — so attempt every question and leave none blank.",
+      "কোনো ঋণাত্মক নম্বৰ নাই — সেয়ে প্ৰতিটো প্ৰশ্নৰ উত্তৰ দিয়ক, কোনো এটা খালী নেৰিব।"],
+    ["Choose the best answer; results are graded instantly on submit, with a bilingual answer review.",
+      "শ্ৰেষ্ঠ উত্তৰটো বাছনি কৰক; জমা দিয়াৰ লগে লগে ফলাফল আৰু দ্বিভাষিক উত্তৰ পৰ্যালোচনা পোৱা যাব।"],
+  ].map(([en, as]) =>
+    `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${escapeHtml(en)}<span class="mt-rule-as" lang="as">${escapeHtml(as)}</span></span></li>`
+  ).join("");
+
+  const main = `<main id="app" class="container main">
+    <div class="page-head">
+      ${breadcrumbHTML([
+        { href: "/", label: "Home" },
+        { href: "/exam-wise-mock-test/", label: "Exam-wise Mock Test" },
+        { href: `/exam-wise-mock-test/${encodeURIComponent(exam.id)}/`, label: examEn },
+        { label: setTitle },
+      ])}
+      <h1>${escapeHtml(examEn)} — ${escapeHtml(setTitle)}</h1>
+      <p class="page-desc">Choose your language and start when ready.</p>
+    </div>
+    <div class="mt-setup">
+      <div class="mt-hero" style="--cat:${color}">
+        <span class="mt-hero-icon"><span class="cat-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span></span>
+        <span style="min-width:0;">
+          <span class="mt-hero-cat">${escapeHtml(examEn)}</span>
+          <span class="mt-hero-title">${escapeHtml(setTitle)}</span>
+          <span class="mt-hero-chips">
+            <span class="mt-chip">${nQ} questions</span>
+            <span class="mt-chip">অসমীয়া / English</span>
+          </span>
+        </span>
+      </div>
+
+      <div class="mt-block mt-details">
+        <div class="mt-label">Test Details <span>পৰীক্ষাৰ বিৱৰণ</span></div>
+        <div class="mt-detail-grid">${details}</div>
+      </div>
+
+      <div class="mt-block">
+        <div class="mt-label">Instructions <span>নিৰ্দেশনা</span></div>
+        <p class="mt-sub">Read the instructions carefully before you begin.</p>
+        <ul class="mt-rules">${rules}</ul>
+      </div>
+
+      <div class="mt-ready">
+        <span class="mt-ready-txt"><b>Ready to begin?</b><span>Your settings are saved. Start the timer when you are ready.</span></span>
+        <a class="btn mt-start" href="#set-questions">Start test →</a>
+      </div>
+    </div>
+    <div id="set-questions">${questionsBlock(setData)}</div>
+    ${setContent(exam, setNumber)}
+  </main>`;
+
+  const ld = `<script type="application/ld+json">${jsonldGraph(url, title, desc, [
+    { href: "/", label: "Home" },
+    { href: "/exam-wise-mock-test/", label: "Exam-wise Mock Test" },
+    { href: `/exam-wise-mock-test/${exam.id}/`, label: examEn },
+    { label: setTitle },
+  ], [])}</script>`;
+
+  const credit = creditBlock(
+    `${setTitle} of the ${examEn} exam-wise mock test is a full paper that mixes every subject of the exam, timed like the real test and followed by bilingual explanations. Attempt it under the timer, then review every answer before moving to the next set.`,
+    "gk"
+  );
+
+  return normaliseLinks(`${head}${MARKER}\n${ld}${shell.mid}${main}\n\n${credit}${shell.postFooter}`);
+}
+
+/* Pre-live set page: the bilingual "system upgrade" notice, shown for an exam
+   whose blueprint is not published yet. */
+function buildUpgradeSetPage(exam, setNumber) {
   const url = pageURL([exam.id, `set-${setNumber}`]);
   const examEn = loc(exam.title);
   const setTitle = `Full Paper Set ${setNumber}`;

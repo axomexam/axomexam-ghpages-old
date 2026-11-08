@@ -42,22 +42,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"40.00,20.00 56.50,38.00 45.10,38.00 45.10,80.00 40.00,80.00\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3.0\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"36.00,45.50 60.00,20.00 60.00,75.50 36.00,75.50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3.0\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"64.00,45.50 40.00,20.00 40.00,75.50 64.00,75.50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3.0\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"40.00,20.00 67.00,75.50 40.00,75.50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3.0\" stroke-linejoin=\"round\"/></svg>"
         }
       ],
       "correct": 2,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><polygon points=\"72.80,74.90 100.00,46.00 100.00,108.90 72.80,108.90\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"100.00\" y1=\"14.00\" x2=\"100.00\" y2=\"146.00\" stroke=\"#94a3b8\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-dasharray=\"6 5\"/><text x=\"150.00\" y=\"90.00\" font-size=\"34\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" fill=\"#64748b\" text-anchor=\"middle\">?</text></svg>",
       "explanation": {
         "en": "The right half must be the mirror image of the left half, which is the right half of the house.",
         "as": "সোঁ আধা অংশটো বাওঁ আধাৰ দাপোণ-প্ৰতিচ্ছবি হব লাগিব, অৰ্থাৎ ঘৰটোৰ সোঁ আধা।"
@@ -252,22 +257,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><text x=\"95.0\" y=\"65\" font-size=\"29\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">AMBULANCE</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(0,110) scale(1,-1)\"><text x=\"95.0\" y=\"65\" font-size=\"29\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">AMBULANCE</text></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(190,0) scale(-1,1)\"><text x=\"95.0\" y=\"65\" font-size=\"29\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">AMBULANCE</text></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(190,110) scale(-1,-1)\"><text x=\"95.0\" y=\"65\" font-size=\"29\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">AMBULANCE</text></g></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 250 130\" width=\"250\" height=\"130\"><rect x=\"1\" y=\"1\" width=\"248\" height=\"128\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><text x=\"125.0\" y=\"79\" font-size=\"39\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">AMBULANCE</text></svg>",
       "explanation": {
         "en": "A water image is a top-bottom reversal of the figure, so the correct option is the vertically flipped figure.",
         "as": "জল প্ৰতিবিম্বত চিত্ৰখন ওপৰ-তল ওলোটাই দিয়া হয়, সেয়ে শুদ্ধ উত্তৰটো উলম্বভাৱে ওলোটানো চিত্ৰ।"
@@ -612,22 +622,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">21</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">18</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">9</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">17</text></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><line x1=\"88.45\" y1=\"20.00\" x2=\"157.74\" y2=\"60.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"65.36\" y1=\"33.33\" x2=\"134.64\" y2=\"73.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"42.26\" y1=\"46.67\" x2=\"111.55\" y2=\"86.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"20.00\" x2=\"42.26\" y2=\"46.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"111.55\" y1=\"33.33\" x2=\"65.36\" y2=\"60.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"134.64\" y1=\"46.67\" x2=\"88.45\" y2=\"73.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"157.74\" y1=\"60.00\" x2=\"111.55\" y2=\"86.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"100.00\" x2=\"88.45\" y2=\"20.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"65.36\" y1=\"113.33\" x2=\"65.36\" y2=\"33.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"42.26\" y1=\"126.67\" x2=\"42.26\" y2=\"46.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"100.00\" x2=\"42.26\" y2=\"126.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"73.33\" x2=\"42.26\" y2=\"100.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"46.67\" x2=\"42.26\" y2=\"73.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"20.00\" x2=\"42.26\" y2=\"46.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"100.00\" x2=\"88.45\" y2=\"20.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"111.55\" y1=\"113.33\" x2=\"111.55\" y2=\"33.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"134.64\" y1=\"126.67\" x2=\"134.64\" y2=\"46.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"157.74\" y1=\"140.00\" x2=\"157.74\" y2=\"60.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"100.00\" x2=\"157.74\" y2=\"140.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"73.33\" x2=\"157.74\" y2=\"113.33\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"46.67\" x2=\"157.74\" y2=\"86.67\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/><line x1=\"88.45\" y1=\"20.00\" x2=\"157.74\" y2=\"60.00\" stroke=\"#334155\" stroke-width=\"2.0\" stroke-linecap=\"round\"/></svg>",
       "explanation": {
         "en": "The figure is made of 18 unit cubes.",
         "as": "চিত্ৰটোত 18 টা একক ঘনক আছে।"
@@ -822,22 +837,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">6</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">7</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">3</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">5</text></svg>"
         }
       ],
       "correct": 3,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><circle cx=\"100\" cy=\"40\" r=\"22\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"60\" cy=\"80\" r=\"22\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"140\" cy=\"80\" r=\"22\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"80\" cy=\"118\" r=\"22\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"120\" cy=\"118\" r=\"22\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/></svg>",
       "explanation": {
         "en": "There are 5 circles in the figure.",
         "as": "চিত্ৰটোত 5 টা বৃত্ত আছে।"
@@ -1332,22 +1352,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">1</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">3</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">4</text></svg>"
         }
       ],
       "correct": 2,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><polygon points=\"52.00,26.00 71.02,39.82 63.76,62.18 40.24,62.18 32.98,39.82\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><polygon points=\"148.00,26.00 167.02,39.82 159.76,62.18 136.24,62.18 128.98,39.82\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><rect x=\"35.00\" y=\"97.00\" width=\"34.00\" height=\"34.00\" rx=\"2\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><polygon points=\"148.00,94.00 167.02,107.82 159.76,130.18 136.24,130.18 128.98,107.82\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><text x=\"27\" y=\"51\" font-size=\"15\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" fill=\"#64748b\" text-anchor=\"middle\">1</text><text x=\"121\" y=\"51\" font-size=\"15\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" fill=\"#64748b\" text-anchor=\"middle\">2</text><text x=\"27\" y=\"119\" font-size=\"15\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" fill=\"#64748b\" text-anchor=\"middle\">3</text><text x=\"121\" y=\"119\" font-size=\"15\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" fill=\"#64748b\" text-anchor=\"middle\">4</text></svg>",
       "explanation": {
         "en": "All the figures are pentagons except the square.",
         "as": "বৰ্গটোৰ বাহিৰে বাকী সকলো পঞ্চভুজ।"
@@ -1422,22 +1447,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><circle cx=\"40\" cy=\"80\" r=\"26\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"80\" r=\"26\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"80\" r=\"26\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><circle cx=\"100\" cy=\"80\" r=\"60\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"72\" cy=\"80\" r=\"24\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"128\" cy=\"80\" r=\"24\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><circle cx=\"100\" cy=\"80\" r=\"62\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"80\" r=\"44\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"80\" r=\"26\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><circle cx=\"82\" cy=\"58\" r=\"42\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"118\" cy=\"58\" r=\"42\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"94\" r=\"42\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"300\" height=\"240\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><rect x=\"28\" y=\"25\" width=\"144\" height=\"34\" rx=\"8\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"100\" y=\"48\" font-size=\"14\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#1e293b\">Table</text><rect x=\"28\" y=\"63\" width=\"144\" height=\"34\" rx=\"8\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"100\" y=\"86\" font-size=\"14\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#1e293b\">Chair</text><rect x=\"28\" y=\"101\" width=\"144\" height=\"34\" rx=\"8\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"100\" y=\"124\" font-size=\"14\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#1e293b\">Furniture</text></svg>",
       "explanation": {
         "en": "Tables and chairs are different things but both are furniture.",
         "as": "মেজ আৰু চকী বেলেগ বস্তু কিন্তু দুয়োটা আচবাব।"
@@ -2472,22 +2502,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(190,110) scale(-1,-1)\"><text x=\"95.0\" y=\"75\" font-size=\"58\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(190,0) scale(-1,1)\"><text x=\"95.0\" y=\"75\" font-size=\"58\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><text x=\"95.0\" y=\"75\" font-size=\"58\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 110\" width=\"190\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"188\" height=\"108\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g transform=\"translate(0,110) scale(1,-1)\"><text x=\"95.0\" y=\"75\" font-size=\"58\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></g></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 250 130\" width=\"250\" height=\"130\"><rect x=\"1\" y=\"1\" width=\"248\" height=\"128\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><text x=\"125.0\" y=\"85\" font-size=\"58\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">2</text></svg>",
       "explanation": {
         "en": "A mirror image is a left-right reversal of the figure, so the correct option is the horizontally flipped figure.",
         "as": "দাপোণ প্ৰতিবিম্বত চিত্ৰখন বাওঁ-সোঁ ওলোটাই দিয়া হয়, সেয়ে শুদ্ধ উত্তৰটো অনুভূমিকভাৱে ওলোটানো চিত্ৰ।"

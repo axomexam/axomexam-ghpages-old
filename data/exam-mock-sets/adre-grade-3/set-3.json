@@ -582,22 +582,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g transform=\"scale(1.1)\"><circle cx=\"50\" cy=\"50\" r=\"24.44\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.6\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g transform=\"scale(1.1)\"><rect x=\"33.029\" y=\"33.029\" width=\"33.941\" height=\"33.941\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.6\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g transform=\"scale(1.1)\"><polygon points=\"50,24 72.517,63 27.483,63\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g transform=\"scale(1.1)\"><polygon points=\"50,24.8 56.221,41.437 73.967,42.213 60.066,53.271 64.812,70.387 50,60.584 35.188,70.387 39.934,53.271 26.033,42.213 43.779,41.437\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/></g></svg>"
         }
       ],
       "correct": 0,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 175 145\" width=\"175\" height=\"145\"><rect x=\"2\" y=\"2\" width=\"171\" height=\"141\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g transform=\"translate(87.5,72.5) scale(0.68) translate(-87.5,-72.5)\"><rect x=\"2\" y=\"2\" width=\"171\" height=\"141\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><rect x=\"20\" y=\"15\" width=\"130\" height=\"110\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"85\" cy=\"72\" r=\"45\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/></g></svg>",
       "explanation": {
         "en": "A circle is present inside the figure, so a circle is embedded in it.",
         "as": "চিত্ৰখনৰ ভিতৰত এটা বৃত্ত আছে, গতিকে এটা বৃত্ত লুকাই আছে।"
@@ -2338,6 +2343,7 @@
         }
       ],
       "correct": 3,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 170 140\" width=\"170\" height=\"140\"><rect x=\"2\" y=\"2\" width=\"166\" height=\"136\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><line x1=\"25\" y1=\"20\" x2=\"85\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"25\" y1=\"45\" x2=\"85\" y2=\"45\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"25\" y1=\"70\" x2=\"85\" y2=\"70\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"25\" y1=\"20\" x2=\"25\" y2=\"70\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"55\" y1=\"20\" x2=\"55\" y2=\"70\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"85\" y1=\"20\" x2=\"85\" y2=\"70\" stroke=\"#334155\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
       "explanation": {
         "en": "The number of rectangles in an m x n grid is C(m+1,2) x C(n+1,2); here it is 9.",
         "as": "m x n জালিকাত আয়তৰ সংখ্যা C(m+1,2) x C(n+1,2); ইয়াত 9।"

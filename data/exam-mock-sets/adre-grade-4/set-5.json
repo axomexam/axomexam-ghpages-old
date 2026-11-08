@@ -642,22 +642,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"30\" cy=\"80\" r=\"6\" fill=\"#334155\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"30\" cy=\"30\" r=\"6\" fill=\"#334155\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"80\" cy=\"30\" r=\"6\" fill=\"#334155\"/></g></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\"><rect x=\"1\" y=\"1\" width=\"108\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\"/><g><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"80\" cy=\"80\" r=\"6\" fill=\"#334155\"/></g></svg>"
         }
       ],
       "correct": 0,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 498 126\" width=\"498\" height=\"126\"><rect x=\"1\" y=\"1\" width=\"496\" height=\"124\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><rect x=\"8\" y=\"8\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><g transform=\"translate(8,8)\"><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"30\" cy=\"30\" r=\"6\" fill=\"#334155\"/></g><rect x=\"132\" y=\"8\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><g transform=\"translate(132,8)\"><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"80\" cy=\"30\" r=\"6\" fill=\"#334155\"/></g><rect x=\"256\" y=\"8\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><g transform=\"translate(256,8)\"><rect x=\"30\" y=\"30\" width=\"50\" height=\"50\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"80\" cy=\"80\" r=\"6\" fill=\"#334155\"/></g><rect x=\"380\" y=\"8\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"435.0\" y=\"79.0\" font-size=\"44\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#94a3b8\">?</text></svg>",
       "explanation": {
         "en": "The dot moves one corner clockwise at each step, so it next reaches the bottom-left corner.",
         "as": "বিন্দুটো প্ৰতিটো পদক্ষেপত বৰ্গৰ এটা চুক ঘড়ীৰ দিশত আগবাঢ়িছে, সেয়ে পৰৱৰ্তী অৱস্থাত তলৰ বাওঁ চুকত থাকিব।"
@@ -912,22 +917,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"21.5\" y1=\"50.0\" x2=\"80.0\" y2=\"50.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"80.0\" y1=\"50.0\" x2=\"63.5\" y2=\"63.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"80.0\" y1=\"50.0\" x2=\"63.5\" y2=\"36.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"50.0\" y1=\"21.5\" x2=\"50.0\" y2=\"80.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.0\" y1=\"80.0\" x2=\"36.5\" y2=\"63.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.0\" y1=\"80.0\" x2=\"63.5\" y2=\"63.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"78.5\" y1=\"50.0\" x2=\"20.0\" y2=\"50.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"20.0\" y1=\"50.0\" x2=\"36.5\" y2=\"36.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"20.0\" y1=\"50.0\" x2=\"36.5\" y2=\"63.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"50.0\" y1=\"78.5\" x2=\"50.0\" y2=\"20.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.0\" y1=\"20.0\" x2=\"63.5\" y2=\"36.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.0\" y1=\"20.0\" x2=\"36.5\" y2=\"36.5\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         }
       ],
       "correct": 3,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 250\" width=\"320\" height=\"250\"><rect x=\"2\" y=\"2\" width=\"316\" height=\"246\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><line x1=\"37.3\" y1=\"66.0\" x2=\"88.0\" y2=\"66.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"88.0\" y1=\"66.0\" x2=\"73.7\" y2=\"77.7\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"88.0\" y1=\"66.0\" x2=\"73.7\" y2=\"54.3\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><text x=\"160.0\" y=\"78.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">:</text><line x1=\"258.0\" y1=\"41.3\" x2=\"258.0\" y2=\"92.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"258.0\" y1=\"92.0\" x2=\"246.3\" y2=\"77.7\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"258.0\" y1=\"92.0\" x2=\"269.7\" y2=\"77.7\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"86.7\" y1=\"186.0\" x2=\"36.0\" y2=\"186.0\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"36.0\" y1=\"186.0\" x2=\"50.3\" y2=\"174.3\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"36.0\" y1=\"186.0\" x2=\"50.3\" y2=\"197.7\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><text x=\"160.0\" y=\"198.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">:</text><text x=\"258.0\" y=\"198.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">?</text></svg>",
       "explanation": {
         "en": "The figure rotates 90° clockwise at each step.",
         "as": "প্ৰতিটো ধাপত চিত্ৰটো ৯০° ঘড়ীৰ দিশত ঘূৰে।"
@@ -1242,22 +1252,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">11</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">17</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">12</text></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><text x=\"50\" y=\"70\" font-size=\"56\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">13</text></svg>"
         }
       ],
       "correct": 3,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 192 192\" width=\"192\" height=\"192\"><rect x=\"2\" y=\"2\" width=\"188\" height=\"188\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><polygon points=\"70.0,83.0 96.0,96.0 96.0,122.0 70.0,109.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,96.0 122.0,83.0 122.0,109.0 96.0,122.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,57.0 96.0,70.0 96.0,96.0 70.0,83.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,70.0 122.0,57.0 122.0,83.0 96.0,96.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,31.0 96.0,44.0 96.0,70.0 70.0,57.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,44.0 122.0,31.0 122.0,57.0 96.0,70.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,31.0 96.0,18.0 122.0,31.0 96.0,44.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,96.0 70.0,109.0 70.0,135.0 44.0,122.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,109.0 96.0,96.0 96.0,122.0 70.0,135.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,70.0 70.0,83.0 70.0,109.0 44.0,96.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,83.0 96.0,70.0 96.0,96.0 70.0,109.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,70.0 70.0,57.0 96.0,70.0 70.0,83.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,96.0 122.0,109.0 122.0,135.0 96.0,122.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"122.0,109.0 148.0,96.0 148.0,122.0 122.0,135.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,70.0 122.0,83.0 122.0,109.0 96.0,96.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"122.0,83.0 148.0,70.0 148.0,96.0 122.0,109.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,70.0 122.0,57.0 148.0,70.0 122.0,83.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"18.0,109.0 44.0,122.0 44.0,148.0 18.0,135.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,122.0 70.0,109.0 70.0,135.0 44.0,148.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"18.0,109.0 44.0,96.0 70.0,109.0 44.0,122.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,109.0 96.0,122.0 96.0,148.0 70.0,135.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,122.0 122.0,109.0 122.0,135.0 96.0,148.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,109.0 96.0,96.0 122.0,109.0 96.0,122.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"122.0,109.0 148.0,122.0 148.0,148.0 122.0,135.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"148.0,122.0 174.0,109.0 174.0,135.0 148.0,148.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"122.0,109.0 148.0,96.0 174.0,109.0 148.0,122.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,122.0 70.0,135.0 70.0,161.0 44.0,148.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,135.0 96.0,122.0 96.0,148.0 70.0,161.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"44.0,122.0 70.0,109.0 96.0,122.0 70.0,135.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,122.0 122.0,135.0 122.0,161.0 96.0,148.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"122.0,135.0 148.0,122.0 148.0,148.0 122.0,161.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,122.0 122.0,109.0 148.0,122.0 122.0,135.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,135.0 96.0,148.0 96.0,174.0 70.0,161.0\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"96.0,148.0 122.0,135.0 122.0,161.0 96.0,174.0\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><polygon points=\"70.0,135.0 96.0,122.0 122.0,135.0 96.0,148.0\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/></svg>",
       "explanation": {
         "en": "The figure has fully supported columns of heights 3+2+1+2+1+1+1+1+1, so the total number of cubes is 3+2+1+2+1+1+1+1+1 = 13.",
         "as": "চিত্ৰটোত থকা স্তম্ভবোৰৰ উচ্চতা 3+2+1+2+1+1+1+1+1, গতিকে মুঠ ঘনকৰ সংখ্যা = 3+2+1+2+1+1+1+1+1 = 13।"
@@ -1542,22 +1557,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"24.40\" y1=\"43.60\" x2=\"50.00\" y2=\"43.60\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.00\" y1=\"43.60\" x2=\"75.60\" y2=\"56.40\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"75.60\" y1=\"56.40\" x2=\"50.00\" y2=\"56.40\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"50.00\" y1=\"56.40\" x2=\"24.40\" y2=\"43.60\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"18.00\" y1=\"37.20\" x2=\"69.20\" y2=\"37.20\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"69.20\" y1=\"37.20\" x2=\"82.00\" y2=\"62.80\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"82.00\" y1=\"62.80\" x2=\"30.80\" y2=\"62.80\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"30.80\" y1=\"62.80\" x2=\"18.00\" y2=\"37.20\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"30.80\" y1=\"37.20\" x2=\"56.40\" y2=\"37.20\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"56.40\" y1=\"37.20\" x2=\"69.20\" y2=\"62.80\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"69.20\" y1=\"62.80\" x2=\"43.60\" y2=\"62.80\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"43.60\" y1=\"62.80\" x2=\"30.80\" y2=\"37.20\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"30.80\" y1=\"43.60\" x2=\"56.40\" y2=\"43.60\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"56.40\" y1=\"43.60\" x2=\"69.20\" y2=\"56.40\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"69.20\" y1=\"56.40\" x2=\"43.60\" y2=\"56.40\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"43.60\" y1=\"56.40\" x2=\"30.80\" y2=\"43.60\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         }
       ],
       "correct": 2,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"200\" height=\"160\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><line x1=\"14.00\" y1=\"22.67\" x2=\"128.67\" y2=\"22.67\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"128.67\" y1=\"22.67\" x2=\"186.00\" y2=\"137.33\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"186.00\" y1=\"137.33\" x2=\"71.33\" y2=\"137.33\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"71.33\" y1=\"137.33\" x2=\"14.00\" y2=\"22.67\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"14.00\" y1=\"22.67\" x2=\"186.00\" y2=\"137.33\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>",
       "explanation": {
         "en": "The parallelogram is embedded in the given figure.",
         "as": "দিয়া চিত্ৰটোত সামান্তৰিক সন্নিবিষ্ট হৈ আছে।"
@@ -2022,22 +2042,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"50.0,20.0 76.0,35.0 76.0,65.0 50.0,80.0 24.0,65.0 24.0,35.0\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"50.0,20.0 78.5,40.7 67.6,74.3 32.4,74.3 21.5,40.7\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"50.0,20.0 76.0,65.0 24.0,65.0\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><polygon points=\"71.2,28.8 71.2,71.2 28.8,71.2 28.8,28.8\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 250\" width=\"320\" height=\"250\"><rect x=\"2\" y=\"2\" width=\"316\" height=\"246\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><polygon points=\"62.0,40.0 86.7,58.0 77.3,87.0 46.7,87.0 37.3,58.0\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><text x=\"160.0\" y=\"78.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">:</text><polygon points=\"258.0,40.0 280.5,53.0 280.5,79.0 258.0,92.0 235.5,79.0 235.5,53.0\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><polygon points=\"80.4,167.6 80.4,204.4 43.6,204.4 43.6,167.6\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><text x=\"160.0\" y=\"198.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">:</text><text x=\"258.0\" y=\"198.0\" font-size=\"36\" font-family=\"Arial, Helvetica, sans-serif\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#334155\">?</text></svg>",
       "explanation": {
         "en": "The number of sides increases by one.",
         "as": "বাহুৰ সংখ্যা এটা বৃদ্ধি পায়।"
@@ -2112,22 +2137,27 @@
       "options": [
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"34.00\" y1=\"34.00\" x2=\"66.00\" y2=\"34.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"66.00\" y1=\"34.00\" x2=\"34.00\" y2=\"66.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"34.00\" y1=\"66.00\" x2=\"34.00\" y2=\"34.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"42.00\" y1=\"42.00\" x2=\"58.00\" y2=\"42.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"58.00\" y1=\"42.00\" x2=\"42.00\" y2=\"58.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"42.00\" y1=\"58.00\" x2=\"42.00\" y2=\"42.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"26.00\" y1=\"42.00\" x2=\"74.00\" y2=\"42.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"74.00\" y1=\"42.00\" x2=\"26.00\" y2=\"58.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"26.00\" y1=\"58.00\" x2=\"26.00\" y2=\"42.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         },
         {
           "en": "",
-          "as": ""
+          "as": "",
+          "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><line x1=\"18.00\" y1=\"18.00\" x2=\"82.00\" y2=\"18.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"82.00\" y1=\"18.00\" x2=\"18.00\" y2=\"82.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"18.00\" y1=\"82.00\" x2=\"18.00\" y2=\"18.00\" stroke=\"#334155\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>"
         }
       ],
       "correct": 1,
+      "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 160\" width=\"200\" height=\"160\"><rect x=\"2\" y=\"2\" width=\"196\" height=\"156\" rx=\"10\" fill=\"none\" stroke=\"#e2e8f0\"/><line x1=\"34.00\" y1=\"14.00\" x2=\"166.00\" y2=\"14.00\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"166.00\" y1=\"14.00\" x2=\"34.00\" y2=\"146.00\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"34.00\" y1=\"146.00\" x2=\"34.00\" y2=\"14.00\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"34.00\" y1=\"146.00\" x2=\"100.00\" y2=\"14.00\" stroke=\"#334155\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>",
       "explanation": {
         "en": "The right-angled triangle is embedded in the given figure.",
         "as": "দিয়া চিত্ৰটোত সমকোণী ত্ৰিভুজ সন্নিবিষ্ট হৈ আছে।"

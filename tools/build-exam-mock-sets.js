@@ -16,8 +16,19 @@
  * with the same canonical question shape the bank uses, so the runtime mock
  * engine can normalise and play it without a special case.
  *
- * The shuffle is seeded per exam+set, so re-running rewrites identical bytes
- * and a set stays stable for a candidate who re-attempts it.
+ * Two build modes
+ * ---------------
+ * 1. Blueprint mode. If data/exam-mock-sets/blueprints/<exam>.json exists, the
+ *    paper follows that section-wise blueprint exactly: each section
+ *    contributes its fixed number of questions (for Assam Police, 25 / 25 /
+ *    20 / 15 / 15 across Sections A-E). Questions are drawn round-robin across
+ *    the section's sub-categories so one set spans the whole section, and each
+ *    set draws a *different* slice of every section, so the five sets never
+ *    repeat a question. This is how the real paper is set, so a candidate
+ *    practises the true section mix instead of a random draw.
+ * 2. Legacy mode. With no blueprint the whole bank is shuffled and sliced, as
+ *    before. The shuffle is seeded per exam, so re-running rewrites identical
+ *    bytes and a set stays stable for a candidate who re-attempts it.
  *
  * Usage:
  *   node tools/build-exam-mock-sets.js            # apply
@@ -54,6 +65,28 @@ function leafPaths(subs, prefix) {
   return out;
 }
 
+function normalizeQ(item) {
+  if (!item || typeof item !== "object") return null;
+  if (!item.q || !Array.isArray(item.options) || item.options.length < 2) return null;
+  if (!Number.isInteger(item.correct) || item.correct < 0 || item.correct >= item.options.length) return null;
+  const out = {
+    id: String(item.id || ""),
+    q: { en: item.q.en || "", as: item.q.as || "" },
+    options: item.options.map((o) => {
+      const opt = { en: o.en || "", as: o.as || "" };
+      /* Non-verbal questions carry the shape as an inline SVG on the option
+         (and sometimes on the question itself). Keep it so the runtime and the
+         static page can draw the figure. */
+      if (typeof o.fig === "string" && o.fig) opt.fig = o.fig;
+      return opt;
+    }),
+    correct: item.correct,
+  };
+  if (typeof item.fig === "string" && item.fig) out.fig = item.fig;
+  if (item.explanation) out.explanation = { en: item.explanation.en || "", as: item.explanation.as || "" };
+  return out;
+}
+
 /* Every question of one section, in file order. */
 function readSectionQuestions(examId, sec) {
   const subs = Array.isArray(sec.subcategories) ? sec.subcategories : [];
@@ -69,6 +102,42 @@ function readSectionQuestions(examId, sec) {
     }
   }
   return all;
+}
+
+/* Same as readSectionQuestions, but grouped per leaf sub-category so the
+   blueprint builder can round-robin across them. */
+function readSectionGroups(examId, sec) {
+  const subs = Array.isArray(sec.subcategories) ? sec.subcategories : [];
+  const paths = subs.length ? leafPaths(subs, []) : [[]];
+  const groups = [];
+  for (const trail of paths) {
+    const dir = path.join(ROOT, "data", "exams", examId, sec.id, ...trail);
+    if (!fs.existsSync(dir)) continue;
+    const files = fs.readdirSync(dir).filter((f) => /^question-.*\.json$/i.test(f)).sort();
+    const qs = [];
+    for (const f of files) {
+      const data = readJSON(path.join(dir, f));
+      if (Array.isArray(data)) {
+        for (const raw of data) {
+          const q = normalizeQ(raw);
+          if (q) qs.push(q);
+        }
+      }
+    }
+    if (qs.length) groups.push(qs);
+  }
+  return groups;
+}
+
+/* Interleave the groups one item at a time, so the merged list alternates
+   across sub-categories rather than exhausting one before the next. */
+function roundRobin(groups) {
+  const out = [];
+  const max = groups.reduce((m, g) => Math.max(m, g.length), 0);
+  for (let i = 0; i < max; i++) {
+    for (const g of groups) if (i < g.length) out.push(g[i]);
+  }
+  return out;
 }
 
 /* Deterministic PRNG (mulberry32) so a set is reproducible from its seed. */
@@ -102,82 +171,137 @@ function shuffleInPlace(arr, rnd) {
   return arr;
 }
 
-function normalizeQ(item) {
-  if (!item || typeof item !== "object") return null;
-  if (!item.q || !Array.isArray(item.options) || item.options.length < 2) return null;
-  if (!Number.isInteger(item.correct) || item.correct < 0 || item.correct >= item.options.length) return null;
-  const out = {
-    id: String(item.id || ""),
-    q: { en: item.q.en || "", as: item.q.as || "" },
-    options: item.options.map((o) => ({ en: o.en || "", as: o.as || "" })),
-    correct: item.correct,
-  };
-  if (item.explanation) out.explanation = { en: item.explanation.en || "", as: item.explanation.as || "" };
+function deDupe(list) {
+  const seen = new Set();
+  const out = [];
+  for (const q of list) {
+    const key = q.id || `t:${q.q.en}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(q);
+  }
   return out;
 }
 
-/* Build a de-duplicated, deterministically ordered pool for one exam. */
-function buildPool(exam) {
+/* Write one set; returns true when the file bytes changed. */
+function writeSet(dir, n, payload) {
+  const bytes = JSON.stringify(payload, null, 2) + "\n";
+  const file = path.join(dir, `set-${n}.json`);
+  const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+  if (prev === bytes) return false;
+  if (!CHECK) fs.writeFileSync(file, bytes);
+  return true;
+}
+
+/* A tiny manifest so the runtime can learn how many sets exist with one small
+   request instead of probing set-1..set-N sequentially, each ~110 KB. */
+function writeManifest(dir, examId, sets) {
+  const payload = { exam: examId, count: sets, sets: Array.from({ length: sets }, (_, i) => i + 1) };
+  const bytes = JSON.stringify(payload, null, 2) + "\n";
+  const file = path.join(dir, "index.json");
+  const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+  if (prev === bytes) return false;
+  if (!CHECK) fs.writeFileSync(file, bytes);
+  return true;
+}
+
+/* ---------- blueprint mode ---------- */
+
+function readBlueprint(examId) {
+  const p = path.join(ROOT, "data", "exam-mock-sets", "blueprints", `${examId}.json`);
+  if (!fs.existsSync(p)) return null;
+  const bp = readJSON(p);
+  if (!bp || !Array.isArray(bp.sections) || !bp.sections.length) return null;
+  return bp;
+}
+
+function blueprintMeta(bp) {
+  return {
+    durationMinutes: bp.durationMinutes,
+    totalMarks: bp.totalMarks,
+    marksPerQuestion: bp.marksPerQuestion,
+    negativeMarking: !!bp.negativeMarking,
+    sections: bp.sections.map((s) => ({ id: s.id, questions: s.questions, label: s.label })),
+  };
+}
+
+/* Build the five sets so each follows the blueprint exactly, and every set
+   draws a different slice of every section (no question repeats across sets). */
+function buildBlueprintSets(exam, bp, dir) {
+  const perSection = bp.sections.map((s) => {
+    const sec = (exam.sections || []).find((x) => x.id === s.id);
+    const pool = sec ? deDupe(roundRobin(readSectionGroups(exam.id, sec))) : [];
+    const order = shuffleInPlace(pool, mulberry32(seedFor(`${exam.id}:${s.id}`)));
+    return { id: s.id, need: s.questions, order };
+  });
+
+  const total = perSection.reduce((n, ps) => n + ps.need, 0);
+  if (total !== QUESTIONS_PER_SET) {
+    throw new Error(`${exam.id}: blueprint sections total ${total}, expected ${QUESTIONS_PER_SET}`);
+  }
+  const sets = Math.min(SETS_PER_EXAM, Math.min(...perSection.map((ps) => Math.floor(ps.order.length / ps.need))));
+  const meta = blueprintMeta(bp);
+
+  let changed = 0;
+  for (let n = 1; n <= sets; n++) {
+    const questions = [];
+    for (const ps of perSection) questions.push(...ps.order.slice((n - 1) * ps.need, n * ps.need));
+    shuffleInPlace(questions, mulberry32(seedFor(`${exam.id}:set:${n}`)));
+    if (writeSet(dir, n, { setNumber: n, title: `Full Paper Set ${n}`, exam: exam.id, blueprint: meta, questions })) changed++;
+  }
+
+  const detail = perSection.map((ps) => `${ps.id}=${ps.need}`).join(", ");
+  return { sets, changed, note: `blueprint [${detail}]` };
+}
+
+/* ---------- legacy mode (no blueprint) ---------- */
+
+function buildLegacySets(exam, dir) {
   const seen = new Set();
   const pool = [];
-  const sections = (exam.sections || []).filter((s) => s.type !== "syllabus");
-  for (const sec of sections) {
-    const qs = readSectionQuestions(exam.id, sec);
-    for (const raw of qs) {
+  for (const sec of (exam.sections || []).filter((s) => s.type !== "syllabus")) {
+    for (const raw of readSectionQuestions(exam.id, sec)) {
       const q = normalizeQ(raw);
       if (!q) continue;
-      /* A question can repeat across sections in the bank; keep one copy,
-         keyed by its stable id, falling back to its English text. */
       const key = q.id || `t:${q.q.en}`;
       if (seen.has(key)) continue;
       seen.add(key);
       pool.push(q);
     }
   }
-  return pool;
+
+  const order = shuffleInPlace(pool.slice(), mulberry32(seedFor(exam.id)));
+  const sets = Math.min(SETS_PER_EXAM, Math.floor(order.length / QUESTIONS_PER_SET));
+
+  let changed = 0;
+  for (let n = 1; n <= sets; n++) {
+    const questions = order.slice((n - 1) * QUESTIONS_PER_SET, n * QUESTIONS_PER_SET);
+    if (writeSet(dir, n, { setNumber: n, title: `Full Paper Set ${n}`, exam: exam.id, questions })) changed++;
+  }
+  return { sets, changed, note: `pool ${pool.length}` };
 }
 
 function main() {
   const index = readJSON(path.join(ROOT, "data", "exams", "index.json")) || { exams: [] };
   const exams = (index.exams || []).filter((e) => e.status === "available");
 
-  let written = 0;
   let changed = 0;
   const report = [];
 
   for (const exam of exams) {
-    const pool = buildPool(exam);
-    const rnd = mulberry32(seedFor(exam.id));
-    const order = shuffleInPlace(pool.slice(), rnd);
-    const needed = SETS_PER_EXAM * QUESTIONS_PER_SET;
-
     const dir = path.join(ROOT, "data", "exam-mock-sets", exam.id);
     if (!CHECK) fs.mkdirSync(dir, { recursive: true });
 
-    const sets = Math.min(SETS_PER_EXAM, Math.floor(order.length / QUESTIONS_PER_SET));
-    for (let n = 1; n <= sets; n++) {
-      const questions = order.slice((n - 1) * QUESTIONS_PER_SET, n * QUESTIONS_PER_SET);
-      const payload = {
-        setNumber: n,
-        title: `Full Paper Set ${n}`,
-        exam: exam.id,
-        questions,
-      };
-      const bytes = JSON.stringify(payload, null, 2) + "\n";
-      const file = path.join(dir, `set-${n}.json`);
-      const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
-      if (prev !== bytes) {
-        changed++;
-        if (!CHECK) fs.writeFileSync(file, bytes);
-      }
-      written++;
-    }
-    report.push(`${exam.id}: pool ${pool.length} | sets ${sets} (need ${needed})`);
+    const bp = readBlueprint(exam.id);
+    const built = bp ? buildBlueprintSets(exam, bp, dir) : buildLegacySets(exam, dir);
+    changed += built.changed;
+    if (writeManifest(dir, exam.id, built.sets)) changed++;
+    report.push(`${exam.id}: ${built.note} | sets ${built.sets}`);
   }
 
   console.log(`${CHECK ? "[check] " : ""}Exam mock sets`);
   report.forEach((r) => console.log("  " + r));
-  console.log(`  Files ${CHECK ? "with drift" : "written"}: ${CHECK ? changed : written}`);
+  console.log(`  Files ${CHECK ? "with drift" : "changed"}: ${changed}`);
 }
 
 main();
