@@ -49,7 +49,7 @@
      1-2 hours" notice. Set EXAM_WISE_FORCE_UPGRADE to true to take the whole
      portal down again without touching the list. */
   const EXAM_WISE_FORCE_UPGRADE = false;
-  const EXAM_WISE_LIVE = ["assam-police", "adre-grade-3"];
+  const EXAM_WISE_LIVE = ["assam-police", "adre-grade-3", "adre-grade-4"];
   const examWiseIsLive = (id) => !EXAM_WISE_FORCE_UPGRADE && EXAM_WISE_LIVE.indexOf(id) !== -1;
   /* Number of real downloadable PDF files shipped with the site. Kept in
      sync by tools/inject-static-questions.js so the homepage never claims
