@@ -336,6 +336,7 @@ function hubContent() {
   const live = EXAMS.map((e) => loc(e.title));
   const list = live.length ? live.join(", ") : "Assam Police, ADRE Grade III and ADRE Grade IV";
   const asLine = EXAMS.map((e) => locAs(e.title)).filter(Boolean).join(" · ");
+  const countLine = EXAMS.map((e) => `${examQuestionCount(e.id)} for ${loc(e.title)}`).join(", ");
   const rows = EXAMS.map((e) => {
     const n = examMockSets(e.id).length;
     const q = examQuestionCount(e.id);
@@ -360,7 +361,7 @@ function hubContent() {
     `        </ol>\n` +
     faqBlock([
       ["What is an exam-wise mock test?", "An exam-wise mock test is a single full-length paper that mixes every subject of one recruitment exam — for example Assam Police or ADRE Grade III — and runs under a live timer, so it works exactly like the real examination hall instead of a single-subject practice drill."],
-      ["How many questions are in each set?", "Each full paper set carries the same number of bilingual questions as the real exam paper — 100 for Assam Police, 150 for ADRE Grade III — with four options each, an answer key and a short explanation in both Assamese and English."],
+      ["How many questions are in each set?", `Each full paper set carries the same number of bilingual questions as the real exam paper — ${escapeHtml(countLine)} — with four options each, an answer key and a short explanation in both Assamese and English.`],
       ["Are the mock tests different for each exam?", `Yes. Each exam has its own separate sets built from its own syllabus and question bank — ${escapeHtml(list)} are kept apart.`],
       ["Are these mock tests free?", "Yes. Every exam-wise mock test on axomexam is 100% free and can be reattempted as many times as you like."],
       ["Can I practise in Assamese?", "Yes. Every question, option and explanation is available in both Assamese and English, and you can choose the question language before the test begins."]
