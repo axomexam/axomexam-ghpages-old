@@ -8010,7 +8010,7 @@
         <div class="mt-block mt-details">
           <div class="mt-label">${t("mock.examwise.details")} <span>পৰীক্ষাৰ বিৱৰণ</span></div>
           <div class="mt-detail-grid">
-            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>
+            ${bp ? "" : `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>`}
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailLang")}</span><b id="mt-lang-val">${testLang === "as" ? "অসমীয়া" : "English"}</b></span>
             <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMode")}</span><b>${t("mock.examwise.modeTimed")}</b></span>
             ${bp ? `<span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailTime")}</span><b>${t("mock.examwise.timeVal")}</b></span>` : ""}
@@ -8031,12 +8031,12 @@
           </div>
         </div>
 
-        <div class="mt-block">
+        ${bp ? "" : `<div class="mt-block">
           <div class="mt-label">${t("mock.examwise.count")} <span>প্ৰশ্নৰ সংখ্যা</span></div>
           <div class="count-picker" id="set-count-picker" style="margin:0;">
             ${countOptions.map((n) => `<button type="button" data-count="${n}" class="${n === defaultCount ? "active" : ""}">${n}</button>`).join("")}
           </div>
-        </div>
+        </div>`}
 
         <div class="mt-block">
           <div class="mt-label">${t("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>

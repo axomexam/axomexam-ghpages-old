@@ -640,9 +640,9 @@ function buildLiveSetPage(exam, setNumber, setData, bp) {
   const totalMarks = bp.totalMarks || 50;
 
   /* Mirror the runtime setup panel so a crawler / no-JS visitor sees the same
-     test details and instructions the live page shows. */
+     test details and instructions the live page shows. The question count is
+     already shown as the hero chip, so it is not repeated here. */
   const details = [
-    ["Questions", String(nQ)],
     ["Language", "অসমীয়া / English"],
     ["Mode", "Timed"],
     ["Time", `${bp.durationMinutes || 120} minutes`],

@@ -2998,7 +2998,7 @@ Sent to: support@axomexam.in`};try{const C=await(await fetch("https://api.static
         <div class="mt-block mt-details">
           <div class="mt-label">${i("mock.examwise.details")} <span>পৰীক্ষাৰ বিৱৰণ</span></div>
           <div class="mt-detail-grid">
-            <span class="mt-detail"><span class="mt-detail-k">${i("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${r}</b></span>
+            ${s?"":`<span class="mt-detail"><span class="mt-detail-k">${i("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${r}</b></span>`}
             <span class="mt-detail"><span class="mt-detail-k">${i("mock.examwise.detailLang")}</span><b id="mt-lang-val">${o==="as"?"অসমীয়া":"English"}</b></span>
             <span class="mt-detail"><span class="mt-detail-k">${i("mock.examwise.detailMode")}</span><b>${i("mock.examwise.modeTimed")}</b></span>
             ${s?`<span class="mt-detail"><span class="mt-detail-k">${i("mock.examwise.detailTime")}</span><b>${i("mock.examwise.timeVal")}</b></span>`:""}
@@ -3019,12 +3019,12 @@ Sent to: support@axomexam.in`};try{const C=await(await fetch("https://api.static
           </div>
         </div>
 
-        <div class="mt-block">
+        ${s?"":`<div class="mt-block">
           <div class="mt-label">${i("mock.examwise.count")} <span>প্ৰশ্নৰ সংখ্যা</span></div>
           <div class="count-picker" id="set-count-picker" style="margin:0;">
             ${n.map(m=>`<button type="button" data-count="${m}" class="${m===r?"active":""}">${m}</button>`).join("")}
           </div>
-        </div>
+        </div>`}
 
         <div class="mt-block">
           <div class="mt-label">${i("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>
