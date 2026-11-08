@@ -117,6 +117,22 @@ const API = (() => {
     return fetchJSON(url);
   }
 
+  /* ---- Exam-wise full-paper sets ----
+     One JSON per set: exam-mock-sets/<examId>/set-<n>.json, holding a
+     mixed-subject paper for that exam. */
+  async function getExamMockSet(examId, setNumber) {
+    const dir = (CONFIG.EXAMS && CONFIG.EXAMS.MOCK_SETS_DIR) || "data/exam-mock-sets";
+    const rel = `${dir}/${examId}/set-${setNumber}.json`;
+    const url = CONFIG.USE_REMOTE ? rawUrl(rel) : `/${rel}`;
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  }
+
   /* ---- Mock test sets ----
      Each set is a single manually uploaded JSON file:
      mock-test/<categoryId>/<subcategoryId>/set-<n>.json
@@ -508,7 +524,7 @@ const API = (() => {
   return {
     getCategories, getTopic, getTopicMarkdown, listPdfDir, pdfUrl,
     listDownloads, getTrendingTopics, listPreviousYearYears, listPreviousYearPdfs,
-    getArticles, getMockSet, getBook, listBooks, listExams, getExamSection,
+    getArticles, getMockSet, getExamMockSet, getBook, listBooks, listExams, getExamSection,
     listExamQuestions, getCounts, listCurrentAffairs, getCurrentAffairsCategory,
     listCurrentAffairsQuestions, getCurrentAffairsCounts,
   };

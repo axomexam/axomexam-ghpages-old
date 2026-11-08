@@ -1,0 +1,3007 @@
+{
+  "setNumber": 3,
+  "title": "Full Paper Set 3",
+  "exam": "adre-grade-3",
+  "questions": [
+    {
+      "id": "important-days-dates-238",
+      "q": {
+        "en": "When is Indian Air Force Day celebrated in India?",
+        "as": "ভাৰতত ভাৰতীয় বায়ুসেনা দিৱস কেতিয়া পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "25 December",
+          "as": "২৫ ডিচেম্বৰ"
+        },
+        {
+          "en": "8 October",
+          "as": "৮ অক্টোবৰ"
+        },
+        {
+          "en": "4 March",
+          "as": "৪ মাৰ্চ"
+        },
+        {
+          "en": "19 August",
+          "as": "১৯ আগষ্ট"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Indian Air Force Day is celebrated on 8 October.",
+        "as": "ভাৰতীয় বায়ুসেনা দিৱস ৮ অক্টোবৰ তাৰিখে পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "narration-042",
+      "q": {
+        "en": "Change into indirect speech: She said, \"I don't know him.\"",
+        "as": "পৰোক্ষ উক্তি কৰা: She said, \"I don't know him.\""
+      },
+      "options": [
+        {
+          "en": "She said that she don't know him.",
+          "as": "তাই ক'লে যে তাই তেওঁক নাজানে।"
+        },
+        {
+          "en": "She said that she doesn't know him.",
+          "as": "তাই ক'লে যে তাই তেওঁক নাজানে (doesn't)।"
+        },
+        {
+          "en": "She said that she did not know him.",
+          "as": "তাই ক'লে যে তাই তেওঁক জনা নাছিল।"
+        },
+        {
+          "en": "She said that I did not know him.",
+          "as": "তাই ক'লে যে মই তেওঁক জনা নাছিলোঁ।"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Don't know becomes did not know in indirect speech.",
+        "as": "Don't know ৰ ৰূপ পৰোক্ষ উক্তিত did not know হয়।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-259",
+      "q": {
+        "en": "Who wrote the 'Panchatantra'?",
+        "as": "'পঞ্চতন্ত্ৰ' কোনে লিখিছিল?"
+      },
+      "options": [
+        {
+          "en": "Vishnu Sharma",
+          "as": "বিষ্ণু শৰ্মা"
+        },
+        {
+          "en": "Kalidasa",
+          "as": "কালিদাস"
+        },
+        {
+          "en": "Vatsyayana",
+          "as": "ৱাত্স্যায়ন"
+        },
+        {
+          "en": "Bharata",
+          "as": "ভৰত"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Vishnu Sharma wrote the Panchatantra, a collection of fables.",
+        "as": "বিষ্ণু শৰ্মাই পঞ্চতন্ত্ৰ লিখিছিল, উপকথাৰ এটা সংকলন।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-064",
+      "q": {
+        "en": "Which Ahom king is credited with the construction of the 'Rudrasagar' tank?",
+        "as": "'ৰুদ্ৰসাগৰ' পুখুৰী নিৰ্মাণৰ কৃতিত্ব কোন আহোম ৰজাৰ?"
+      },
+      "options": [
+        {
+          "en": "Siva Singha",
+          "as": "শিৱ সিংহ"
+        },
+        {
+          "en": "Pramatta Singha",
+          "as": "প্ৰমত্ত সিংহ"
+        },
+        {
+          "en": "Rudra Singha",
+          "as": "ৰুদ্ৰ সিংহ"
+        },
+        {
+          "en": "Gadadhar Singha",
+          "as": "গদাধৰ সিংহ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Rudrasagar tank was built during the reign of Rudra Singha.",
+        "as": "ৰুদ্ৰসাগৰ পুখুৰী ৰুদ্ৰ সিংহৰ ৰাজত্বকালত নিৰ্মিত।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-249",
+      "q": {
+        "en": "The 'Hajo' region of Assam is known for which of the following?",
+        "as": "অসমৰ 'হাজো' অঞ্চল তলৰ কোনটোৰ বাবে জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "A Mughal fort",
+          "as": "এখন মোগল দুৰ্গ"
+        },
+        {
+          "en": "An Ahom capital",
+          "as": "এখন আহোম ৰাজধানী"
+        },
+        {
+          "en": "A centre of pilgrimage for multiple faiths",
+          "as": "বহু ধৰ্মৰ বাবে এটা তীৰ্থ কেন্দ্ৰ"
+        },
+        {
+          "en": "A British cantonment",
+          "as": "এখন ব্ৰিটিছ ছাউনি"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Hajo is known as a centre of pilgrimage for Hindus, Muslims and Buddhists.",
+        "as": "হাজো হিন্দু, মুছলমান আৰু বৌদ্ধসকলৰ এটা তীৰ্থ কেন্দ্ৰ হিচাপে জনা যায়।"
+      }
+    },
+    {
+      "id": "synonyms-176",
+      "q": {
+        "en": "Choose the synonym of 'gloomy'.",
+        "as": "'gloomy' ৰ সমাৰ্থক শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "abundance",
+          "as": "প্ৰাচুৰ্য"
+        },
+        {
+          "en": "dark",
+          "as": "অন্ধকাৰ"
+        },
+        {
+          "en": "abundant",
+          "as": "প্ৰচুৰ"
+        },
+        {
+          "en": "abrupt",
+          "as": "আকস্মিক"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'dark' is a synonym of 'gloomy'; both words have nearly the same meaning.",
+        "as": "'dark' (অন্ধকাৰ) হৈছে 'gloomy' (বিষণ্ণ) ৰ সমাৰ্থক শব্দ।"
+      }
+    },
+    {
+      "id": "pipes-and-cisterns-055",
+      "q": {
+        "en": "Pipe A can fill a tank in 6 hours and pipe B in 3 hours. Working together they fill it in —",
+        "as": "A নলে চৌবাচ্চা 6 ঘণ্টাত আৰু B নলে 3 ঘণ্টাত ভৰ্তি কৰে। একেলগে কাম কৰিলে —"
+      },
+      "options": [
+        {
+          "en": "2 hours",
+          "as": "২ ঘণ্টা"
+        },
+        {
+          "en": "9 hours",
+          "as": "৯ ঘণ্টা"
+        },
+        {
+          "en": "3 hours",
+          "as": "৩ ঘণ্টা"
+        },
+        {
+          "en": "4 hours",
+          "as": "৪ ঘণ্টা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "One hour's work = 1/6 + 1/3 = 3/6, so the time = 6/3 = 2 hours.",
+        "as": "এঘণ্টাৰ কাম = 1/6 + 1/3 = 3/6, গতিকে সময় = 6/3 = 2 ঘণ্টা।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-067",
+      "q": {
+        "en": "Which Indian economist won the Nobel Prize in Economics?",
+        "as": "কোন ভাৰতীয় অৰ্থনীতিবিদে অৰ্থনীতিৰ নোবেল বঁটা লাভ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Amartya Sen",
+          "as": "অমৰ্ত্য সেন"
+        },
+        {
+          "en": "Dadabhai Naoroji",
+          "as": "দাদাভাই নৌৰজী"
+        },
+        {
+          "en": "P. C. Mahalanobis",
+          "as": "পি চি মহালানবিছ"
+        },
+        {
+          "en": "Jagdish Bhagwati",
+          "as": "জগদীশ ভগৱতী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Amartya Sen won the Nobel Prize in Economics in 1998.",
+        "as": "অমৰ্ত্য সেনে ১৯৯৮ চনত অৰ্থনীতিৰ নোবেল বঁটা লাভ কৰিছিল।"
+      }
+    },
+    {
+      "id": "awards-honours-086",
+      "q": {
+        "en": "Which statement about the Major Dhyan Chand Khel Ratna is correct?",
+        "as": "মেজৰ ধ্যানচান্দ খেল ৰত্ন ৰ বিষয়ে কোনটো বক্তব্য শুদ্ধ?"
+      },
+      "options": [
+        {
+          "en": "it is the third degree of the Padma awards",
+          "as": "ই পদ্ম বঁটাৰ তৃতীয় শ্ৰেণী"
+        },
+        {
+          "en": "it is the highest sporting honour of India",
+          "as": "ই ভাৰতৰ সৰ্বোচ্চ ক্ৰীড়া সন্মান"
+        },
+        {
+          "en": "it is given to young scientists",
+          "as": "ই যুৱ বিজ্ঞানীসকলক দিয়া হয়"
+        },
+        {
+          "en": "it is the third highest wartime gallantry award",
+          "as": "ই তৃতীয় সৰ্বোচ্চ যুদ্ধকালীন বীৰত্ব বঁটা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Major Dhyan Chand Khel Ratna: it is the highest sporting honour of India.",
+        "as": "মেজৰ ধ্যানচান্দ খেল ৰত্ন: ই ভাৰতৰ সৰ্বোচ্চ ক্ৰীড়া সন্মান।"
+      }
+    },
+    {
+      "id": "indian-history-medieval-068",
+      "q": {
+        "en": "Which Sultan is associated with the construction of the 'Alai Minar'?",
+        "as": "'আলাই মিনাৰ' নিৰ্মাণৰ লগত কোন সুলতান জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Balban",
+          "as": "বলবন"
+        },
+        {
+          "en": "Iltutmish",
+          "as": "ইলতুতমিছ"
+        },
+        {
+          "en": "Alauddin Khilji",
+          "as": "আলাউদ্দিন খিলজী"
+        },
+        {
+          "en": "Qutb-ud-din Aibak",
+          "as": "কুতুবুদ্দিন আইবক"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Alauddin Khilji began the construction of the Alai Minar.",
+        "as": "আলাউদ্দিন খিলজীয়ে আলাই মিনাৰ নিৰ্মাণ আৰম্ভ কৰিছিল।"
+      }
+    },
+    {
+      "id": "indian-geography-270",
+      "q": {
+        "en": "Which is the largest cotton producing state of India?",
+        "as": "ভাৰতত কপাহৰ আটাইতকৈ ডাঙৰ উৎপাদক ৰাজ্য কোন?"
+      },
+      "options": [
+        {
+          "en": "Maharashtra",
+          "as": "মহাৰাষ্ট্ৰ"
+        },
+        {
+          "en": "Gujarat",
+          "as": "গুজৰাট"
+        },
+        {
+          "en": "Telangana",
+          "as": "তেলেংগানা"
+        },
+        {
+          "en": "Punjab",
+          "as": "পঞ্জাব"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Gujarat is the largest cotton producing state of India.",
+        "as": "গুজৰাট ভাৰতত কপাহৰ আটাইতকৈ ডাঙৰ উৎপাদক ৰাজ্য।"
+      }
+    },
+    {
+      "id": "input-output-machine-007",
+      "q": {
+        "en": "Input: 44, 29, 81, 17, 63. Step I arranges the numbers in ascending order. What is the sum of the first two numbers in Step I?",
+        "as": "ইনপুট: 44, 29, 81, 17, 63। স্তৰ I এ সংখ্যাবোৰ ঊৰ্ধ্বক্ৰমত সজায়। স্তৰ I ত প্ৰথম দুটা সংখ্যাৰ যোগফল কিমান?"
+      },
+      "options": [
+        {
+          "en": "47",
+          "as": "47"
+        },
+        {
+          "en": "61",
+          "as": "61"
+        },
+        {
+          "en": "46",
+          "as": "46"
+        },
+        {
+          "en": "73",
+          "as": "73"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Ascending order is 17, 29, 44, 63, 81, so the first two are 17 and 29, summing to 46.",
+        "as": "ঊৰ্ধ্বক্ৰম 17, 29, 44, 63, 81, গতিকে প্ৰথম দুটা 17 আৰু 29, যোগফল 46।"
+      }
+    },
+    {
+      "id": "prepositions-015",
+      "q": {
+        "en": "Choose the correct preposition: She is responsible ___ the work.",
+        "as": "শুদ্ধ অনুসৰ্গ বাছনি কৰা: She is responsible ___ the work."
+      },
+      "options": [
+        {
+          "en": "of",
+          "as": "ৰ"
+        },
+        {
+          "en": "for",
+          "as": "বাবে"
+        },
+        {
+          "en": "to",
+          "as": "লৈ"
+        },
+        {
+          "en": "at",
+          "as": "ত"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Responsible takes the preposition for.",
+        "as": "Responsible য়ে for অনুসৰ্গ লয়।"
+      }
+    },
+    {
+      "id": "sentence-rearrangement-165",
+      "q": {
+        "en": "Arrange the parts to form a meaningful sentence: (1) in the yard (2) He (3) planted (4) a sapling.",
+        "as": "অৰ্থপূৰ্ণ বাক্য গঠন কৰিবলৈ অংশবোৰ সজাওক: (1) চোতালত (2) তেওঁ (3) ৰোপণ কৰিলে (4) এটা পুলি।"
+      },
+      "options": [
+        {
+          "en": "1-2-3-4",
+          "as": "১-২-৩-৪"
+        },
+        {
+          "en": "4-1-2-3",
+          "as": "৪-১-২-৩"
+        },
+        {
+          "en": "3-4-1-2",
+          "as": "৩-৪-১-২"
+        },
+        {
+          "en": "2-3-4-1",
+          "as": "২-৩-৪-১"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The correct sentence is 'He planted a sapling in the yard.', i.e. 2-3-4-1.",
+        "as": "শুদ্ধ বাক্য হ'ল 'He planted a sapling in the yard.', অৰ্থাৎ ২-৩-৪-১।"
+      }
+    },
+    {
+      "id": "parts-of-speech-134",
+      "q": {
+        "en": "The comparative degree of 'many' is —",
+        "as": "'many' ৰ তুলনাত্মক ৰূপ কি?"
+      },
+      "options": [
+        {
+          "en": "manyer",
+          "as": "মেনিয়াৰ"
+        },
+        {
+          "en": "most",
+          "as": "ম'ষ্ট"
+        },
+        {
+          "en": "more",
+          "as": "ম'ৰ"
+        },
+        {
+          "en": "manier",
+          "as": "মেনিয়াৰ (ভুল)"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Many has the irregular comparative more.",
+        "as": "Many ৰ অনিয়মীয়া তুলনাত্মক ৰূপ more।"
+      }
+    },
+    {
+      "id": "important-days-dates-307",
+      "q": {
+        "en": "When is National Milk Day celebrated in India?",
+        "as": "ভাৰতত ৰাষ্ট্ৰীয় গাখীৰ দিৱস কেতিয়া পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "8 June",
+          "as": "৮ জুন"
+        },
+        {
+          "en": "29 June",
+          "as": "২৯ জুন"
+        },
+        {
+          "en": "26 November",
+          "as": "২৬ নৱেম্বৰ"
+        },
+        {
+          "en": "8 March",
+          "as": "৮ মাৰ্চ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "National Milk Day is celebrated on 26 November.",
+        "as": "ৰাষ্ট্ৰীয় গাখীৰ দিৱস ২৬ নৱেম্বৰ তাৰিখে পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-149",
+      "q": {
+        "en": "Which ancient Kamarupa king is associated with the legend of the 'Kamakhya' shrine being built by divine command?",
+        "as": "কোন প্ৰাচীন কামৰূপ ৰজাক দেৱীৰ আদেশত 'কামাখ্যা' মন্দিৰ নিৰ্মাণৰ কিংবদন্তিৰ লগত জড়িত কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Narakasura",
+          "as": "নৰকাসুৰ"
+        },
+        {
+          "en": "Brahmapala",
+          "as": "ব্ৰহ্মপাল"
+        },
+        {
+          "en": "Viswa Singha",
+          "as": "বিশ্ব সিংহ"
+        },
+        {
+          "en": "Bhaskaravarman",
+          "as": "ভাস্কৰবৰ্মন"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Tradition associates the founding of the Kamakhya shrine with the Bhaskaravarman period and divine legends.",
+        "as": "পৰম্পৰাই কামাখ্যা মন্দিৰৰ প্ৰতিষ্ঠাক ভাস্কৰবৰ্মন কাল আৰু দৈৱিক কিংবদন্তিৰ লগত জড়িত কৰে।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-115",
+      "q": {
+        "en": "The Musi river rises from which place?",
+        "as": "মুচি নদী কোন ঠাইৰ পৰা উৎপত্তি হয়?"
+      },
+      "options": [
+        {
+          "en": "Chhattisgarh",
+          "as": "ছত্তীশগড়"
+        },
+        {
+          "en": "Amarkantak",
+          "as": "অমৰকণ্টক"
+        },
+        {
+          "en": "Telangana",
+          "as": "তেলেংগানা"
+        },
+        {
+          "en": "Himachal Pradesh",
+          "as": "হিমাচল প্ৰদেশ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Musi rises from Telangana.",
+        "as": "মুচি তেলেংগানাৰ পৰা উৎপত্তি হয়।"
+      }
+    },
+    {
+      "id": "surds-and-indices-010",
+      "q": {
+        "en": "5^3 x 5^2 = ?",
+        "as": "5^3 x 5^2 = ?"
+      },
+      "options": [
+        {
+          "en": "15625",
+          "as": "১৫৬২৫"
+        },
+        {
+          "en": "3125",
+          "as": "৩১২৫"
+        },
+        {
+          "en": "250",
+          "as": "২৫০"
+        },
+        {
+          "en": "75",
+          "as": "৭৫"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "a^m x a^n = a^(m+n), so 5^(3+2) = 5^5 = 3125.",
+        "as": "a^m x a^n = a^(m+n), গতিকে 5^(3+2) = 5^5 = 3125।"
+      }
+    },
+    {
+      "id": "embedded-figures-077",
+      "q": {
+        "en": "Which of the following figures is embedded (hidden) in the given figure?",
+        "as": "তলৰ কোনটো চিত্ৰ দিয়া চিত্ৰখনৰ ভিতৰত লুকাই আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "A circle is present inside the figure, so a circle is embedded in it.",
+        "as": "চিত্ৰখনৰ ভিতৰত এটা বৃত্ত আছে, গতিকে এটা বৃত্ত লুকাই আছে।"
+      }
+    },
+    {
+      "id": "direction-distance-032",
+      "q": {
+        "en": "A man walks 5 km towards the north and then 12 km towards the east. How far is he from the starting point?",
+        "as": "এজনে উত্তৰলৈ 5 km আৰু তাৰ পিছত পূৱলৈ 12 km খোজ কাঢ়ে। তেওঁ আৰম্ভণিৰ পৰা কিমান দূৰত?"
+      },
+      "options": [
+        {
+          "en": "13 km",
+          "as": "১৩ km"
+        },
+        {
+          "en": "12 km",
+          "as": "১২ km"
+        },
+        {
+          "en": "17 km",
+          "as": "১৭ km"
+        },
+        {
+          "en": "14 km",
+          "as": "১৪ km"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The displacement is the hypotenuse of 5 and 12, which is 13 km.",
+        "as": "সৰণ 5 আৰু 12 ৰ কৰ্ণ, অৰ্থাৎ 13 km।"
+      }
+    },
+    {
+      "id": "government-schemes-105",
+      "q": {
+        "en": "In which year was PM Vishwakarma launched?",
+        "as": "পিএম বিশ্বকৰ্মা কিমান চনত আৰম্ভ কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "2023",
+          "as": "২০২৩"
+        },
+        {
+          "en": "2015",
+          "as": "২০১৫"
+        },
+        {
+          "en": "2017",
+          "as": "২০১৭"
+        },
+        {
+          "en": "2020",
+          "as": "২০২০"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "PM Vishwakarma was launched in 2023.",
+        "as": "পিএম বিশ্বকৰ্মা 2023 চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "venn-diagrams-015",
+      "q": {
+        "en": "Which Venn diagram best shows the relation between 'Trees' and 'Banyan'?",
+        "as": "'Trees' আৰু 'Banyan' ৰ মাজৰ সম্পৰ্ক কোনটো ভেন ডায়াগ্ৰামে ভালদৰে দেখুৱায়?"
+      },
+      "options": [
+        {
+          "en": "The first circle lies inside the seconK",
+          "as": "The first circle lies inside the seconK"
+        },
+        {
+          "en": "The two circles are separate",
+          "as": "দুটা বৃত্ত সুকীয়া"
+        },
+        {
+          "en": "The two circles intersect",
+          "as": "দুটা বৃত্তে কটাকটি কৰে"
+        },
+        {
+          "en": "The first circle lies inside the second",
+          "as": "প্ৰথম বৃত্তটো দ্বিতীয়টোৰ ভিতৰত থাকে"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A banyan is a tree, so it lies inside trees.",
+        "as": "বৰগছ এজোপা গছ, গতিকে গছৰ ভিতৰত।"
+      }
+    },
+    {
+      "id": "error-detection-041",
+      "q": {
+        "en": "Find the error in the sentence: He apologised of his mistake.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: He apologised of his mistake."
+      },
+      "options": [
+        {
+          "en": "of",
+          "as": "of"
+        },
+        {
+          "en": "He",
+          "as": "He"
+        },
+        {
+          "en": "apologised",
+          "as": "apologised"
+        },
+        {
+          "en": "his",
+          "as": "his"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'of' is wrong here; it should be 'for'. 'Apologise' takes 'for'.",
+        "as": "ইয়াত 'of' ভুল; 'for' হোৱা উচিত। 'Apologise' ৱে 'for' লয়।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-194",
+      "q": {
+        "en": "The word 'Democratic' in the Preamble refers to —",
+        "as": "প্ৰস্তাৱনাত 'গণতান্ত্ৰিক' শব্দই কাৰ প্ৰতি ইংগিত কৰে?"
+      },
+      "options": [
+        {
+          "en": "hereditary rule",
+          "as": "বংশানুক্ৰমিক শাসন"
+        },
+        {
+          "en": "military rule",
+          "as": "সামৰিক শাসন"
+        },
+        {
+          "en": "popular sovereignty",
+          "as": "জনসাধাৰণৰ সাৰ্বভৌমত্ব"
+        },
+        {
+          "en": "one-party rule",
+          "as": "একদলীয় শাসন"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Democratic refers to popular sovereignty.",
+        "as": "গণতান্ত্ৰিকই জনসাধাৰণৰ সাৰ্বভৌমত্বক ইংগিত কৰে।"
+      }
+    },
+    {
+      "id": "world-history-125",
+      "q": {
+        "en": "Who was the Inca emperor defeated by the Spanish?",
+        "as": "স্পেনীয়সকলে পৰাস্ত কৰা ইনকা সম্ৰাট কোন আছিল?"
+      },
+      "options": [
+        {
+          "en": "Montezuma II",
+          "as": "মণ্টেজুমা দ্বিতীয়"
+        },
+        {
+          "en": "Huayna Capac",
+          "as": "হুৱাইনা কাপাক"
+        },
+        {
+          "en": "Atahualpa",
+          "as": "আতাহুৱালপা"
+        },
+        {
+          "en": "Cuauhtemoc",
+          "as": "কুৱাউটেমক"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Atahualpa was the Inca emperor defeated by the Spanish.",
+        "as": "আতাহুৱালপা স্পেনীয়সকলে পৰাস্ত কৰা ইনকা সম্ৰাট আছিল।"
+      }
+    },
+    {
+      "id": "coding-decoding-006",
+      "q": {
+        "en": "If PAGE is coded as MXDB, then MXDB is coded as —",
+        "as": "যদি PAGE ক MXDB হিচাপে সংকেত কৰা হয়, তেন্তে MXDB ক সংকেত কৰা হয় —"
+      },
+      "options": [
+        {
+          "en": "JUAY",
+          "as": "JUAY"
+        },
+        {
+          "en": "ITZX",
+          "as": "ITZX"
+        },
+        {
+          "en": "NYEC",
+          "as": "NYEC"
+        },
+        {
+          "en": "KVBZ",
+          "as": "KVBZ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Each letter moves -3 step(s) in the alphabet, so MXDB becomes JUAY.",
+        "as": "প্ৰতিটো আখৰ বৰ্ণমালাত -3 খোজ যায়, গতিকে MXDB এ JUAY হয়।"
+      }
+    },
+    {
+      "id": "ranking-order-006",
+      "q": {
+        "en": "In a row, a person is 15th from the left and 10th from the right. How many persons are in the row?",
+        "as": "এটা শাৰীত এজন ব্যক্তি বাওঁৰ পৰা 15 তম আৰু সোঁৰ পৰা 10 তম। শাৰীত কিমানজন আছে?"
+      },
+      "options": [
+        {
+          "en": "26",
+          "as": "২৬"
+        },
+        {
+          "en": "25",
+          "as": "২৫"
+        },
+        {
+          "en": "23",
+          "as": "২৩"
+        },
+        {
+          "en": "24",
+          "as": "২৪"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Total = 15 + 10 − 1 = 24.",
+        "as": "মুঠ = 15 + 10 − 1 = 24।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-274",
+      "q": {
+        "en": "Which scheme provides accident insurance to bank account holders in India?",
+        "as": "ভাৰতত বেংক একাউণ্টধাৰীক কোন আঁচনিয়ে দুৰ্ঘটনা বীমা প্ৰদান কৰে?"
+      },
+      "options": [
+        {
+          "en": "Pradhan Mantri Suraksha Bima Yojana",
+          "as": "প্ৰধানমন্ত্ৰী সূৰক্ষা বীমা যোজনা"
+        },
+        {
+          "en": "PMJDY",
+          "as": "পিএমজেডিৱাই"
+        },
+        {
+          "en": "MGNREGA",
+          "as": "এমজিএনআৰইজিএ"
+        },
+        {
+          "en": "GST",
+          "as": "জিএছটি"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "PMSBY provides accident insurance.",
+        "as": "পিএমএছবিৱাইয়ে দুৰ্ঘটনা বীমা প্ৰদান কৰে।"
+      }
+    },
+    {
+      "id": "government-schemes-003",
+      "q": {
+        "en": "Who are the main beneficiaries of Orunodoi?",
+        "as": "অৰুণোদইৰ প্ৰধান উপকাৰী কোন?"
+      },
+      "options": [
+        {
+          "en": "poor and needy families",
+          "as": "দৰিদ্ৰ আৰু অভাৱী পৰিয়াল"
+        },
+        {
+          "en": "SC, ST and women entrepreneurs",
+          "as": "এছচি, এছটি আৰু মহিলা উদ্যোগী"
+        },
+        {
+          "en": "tea garden workers",
+          "as": "চাহ বাগানৰ কৰ্মী"
+        },
+        {
+          "en": "students who excel in examinations",
+          "as": "পৰীক্ষাত কৃতিত্ব দেখুওৱা শিক্ষাৰ্থী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The main beneficiaries of Orunodoi are poor and needy families.",
+        "as": "অৰুণোদইৰ প্ৰধান উপকাৰী দৰিদ্ৰ আৰু অভাৱী পৰিয়াল।"
+      }
+    },
+    {
+      "id": "assam-natural-resources-244",
+      "q": {
+        "en": "Which mineral found in Assam is used in the cement industry?",
+        "as": "অসমত পোৱা কোন খনিজ চিমেণ্ট উদ্যোগত ব্যৱহাৰ কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Coal",
+          "as": "কয়লা"
+        },
+        {
+          "en": "Natural gas",
+          "as": "প্ৰাকৃতিক গেছ"
+        },
+        {
+          "en": "Petroleum",
+          "as": "পেট্ৰ'লিয়াম"
+        },
+        {
+          "en": "Limestone",
+          "as": "চূণশিল"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Limestone is used in the cement industry.",
+        "as": "চূণশিল চিমেণ্ট উদ্যোগত ব্যৱহাৰ কৰা হয়।"
+      }
+    },
+    {
+      "id": "government-schemes-016",
+      "q": {
+        "en": "In which year was Nijut Moina launched?",
+        "as": "নিজুত মইনা কিমান চনত আৰম্ভ কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "2004",
+          "as": "২০০৪"
+        },
+        {
+          "en": "2021",
+          "as": "২০২১"
+        },
+        {
+          "en": "settlement of pending ESI disputes",
+          "as": "বিচাৰাধীন ইএছআই বিবাদৰ নিষ্পত্তি"
+        },
+        {
+          "en": "2024",
+          "as": "২০২৪"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Nijut Moina was launched in 2024.",
+        "as": "নিজুত মইনা 2024 চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "government-schemes-025",
+      "q": {
+        "en": "Which scheme is related to land records and revenue services?",
+        "as": "কোন আঁচনি ভূমি পঞ্জী আৰু ৰাজহ সেৱাৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Senior Citizens' Savings Scheme",
+          "as": "জ্যেষ্ঠ নাগৰিক সঞ্চয় আঁচনি"
+        },
+        {
+          "en": "Pradhan Mantri Suraksha Bima Yojana",
+          "as": "প্ৰধানমন্ত্ৰী সুৰক্ষা বীমা যোজনা"
+        },
+        {
+          "en": "Swachh Bharat Mission",
+          "as": "স্বচ্ছ ভাৰত মিছন"
+        },
+        {
+          "en": "Mission Basundhara",
+          "as": "মিচন বসুন্ধৰা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Mission Basundhara is related to land records and revenue services.",
+        "as": "মিচন বসুন্ধৰা ভূমি পঞ্জী আৰু ৰাজহ সেৱাৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "synonyms-161",
+      "q": {
+        "en": "Choose the synonym of 'fraud'.",
+        "as": "'fraud' ৰ সমাৰ্থক শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "deceit",
+          "as": "প্ৰতাৰণা"
+        },
+        {
+          "en": "honesty",
+          "as": "সততা"
+        },
+        {
+          "en": "intentional",
+          "as": "ইচ্ছাকৃত"
+        },
+        {
+          "en": "interest",
+          "as": "আগ্ৰহ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'deceit' is a synonym of 'fraud'; both words have nearly the same meaning.",
+        "as": "'deceit' (প্ৰতাৰণা) হৈছে 'fraud' (প্ৰতাৰণা) ৰ সমাৰ্থক শব্দ।"
+      }
+    },
+    {
+      "id": "statistics-004",
+      "q": {
+        "en": "The mean of the numbers 3, 6, 9, 12, 15 is —",
+        "as": "3, 6, 9, 12, 15 সংখ্যাবোৰৰ মাধ্য —"
+      },
+      "options": [
+        {
+          "en": "45",
+          "as": "৪৫"
+        },
+        {
+          "en": "15",
+          "as": "১৫"
+        },
+        {
+          "en": "3",
+          "as": "৩"
+        },
+        {
+          "en": "9",
+          "as": "৯"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Mean = sum / count = 45 / 5 = 9.",
+        "as": "মাধ্য = যোগফল / সংখ্যা = 45 / 5 = 9।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-254",
+      "q": {
+        "en": "Which invaders threatened the Gupta Empire in its later phase?",
+        "as": "পিছৰ পৰ্যায়ত কোন আক্ৰমণকাৰীয়ে গুপ্ত সাম্ৰাজ্যক ভাবুকি দিছিল?"
+      },
+      "options": [
+        {
+          "en": "The Greeks",
+          "as": "গ্ৰীক"
+        },
+        {
+          "en": "The Arabs",
+          "as": "আৰব"
+        },
+        {
+          "en": "The Turks",
+          "as": "তুৰ্ক"
+        },
+        {
+          "en": "The Hunas",
+          "as": "হূণ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Hunas invaded India and threatened the Gupta Empire in its later phase.",
+        "as": "হূণসকলে ভাৰত আক্ৰমণ কৰি পিছৰ পৰ্যায়ত গুপ্ত সাম্ৰাজ্যক ভাবুকি দিছিল।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-001",
+      "q": {
+        "en": "Which was the earliest known civilisation of the Indian subcontinent?",
+        "as": "ভাৰতীয় উপমহাদেশৰ আটাইতকৈ প্ৰাচীন জনা সভ্যতা কোনটো?"
+      },
+      "options": [
+        {
+          "en": "The Indus Valley Civilisation",
+          "as": "সিন্ধু উপত্যকা সভ্যতা"
+        },
+        {
+          "en": "The Vedic Civilisation",
+          "as": "বৈদিক সভ্যতা"
+        },
+        {
+          "en": "The Mauryan Empire",
+          "as": "মৌৰ্য সাম্ৰাজ্য"
+        },
+        {
+          "en": "The Gupta Empire",
+          "as": "গুপ্ত সাম্ৰাজ্য"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Indus Valley Civilisation was the earliest known civilisation of the Indian subcontinent.",
+        "as": "সিন্ধু উপত্যকা সভ্যতা ভাৰতীয় উপমহাদেশৰ আটাইতকৈ প্ৰাচীন জনা সভ্যতা আছিল।"
+      }
+    },
+    {
+      "id": "environment-pollution-024",
+      "q": {
+        "en": "Which is a critically endangered species of India?",
+        "as": "ভাৰতৰ এটা চৰম সংকটাপন্ন প্ৰজাতি কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Cow",
+          "as": "গৰু"
+        },
+        {
+          "en": "Dog",
+          "as": "কুকুৰ"
+        },
+        {
+          "en": "Great Indian Bustard",
+          "as": "ভাৰতীয় গৰৈ"
+        },
+        {
+          "en": "Crow",
+          "as": "কাউৰী"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Great Indian Bustard is critically endangered.",
+        "as": "ভাৰতীয় গৰৈ চৰম সংকটাপন্ন।"
+      }
+    },
+    {
+      "id": "government-schemes-216",
+      "q": {
+        "en": "Who are the main beneficiaries of PM Gati Shakti?",
+        "as": "পিএম গতি শক্তিৰ প্ৰধান উপকাৰী কোন?"
+      },
+      "options": [
+        {
+          "en": "unbanked people",
+          "as": "বেংক একাউণ্ট নথকা লোক"
+        },
+        {
+          "en": "poor and homeless families",
+          "as": "দৰিদ্ৰ আৰু গৃহহীন পৰিয়াল"
+        },
+        {
+          "en": "infrastructure sectors",
+          "as": "আন্তঃগাঁথনি খণ্ড"
+        },
+        {
+          "en": "priority households",
+          "as": "অগ্ৰাধিকাৰপ্ৰাপ্ত পৰিয়াল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The main beneficiaries of PM Gati Shakti are infrastructure sectors.",
+        "as": "পিএম গতি শক্তিৰ প্ৰধান উপকাৰী আন্তঃগাঁথনি খণ্ড।"
+      }
+    },
+    {
+      "id": "statement-assumptions-048",
+      "q": {
+        "en": "Statement: The company has asked staff to wear identity cards.\nAssumptions: I. Identity cards help identify staff. II. All visitors carry identity cards.",
+        "as": "বিবৃতি: The company has asked staff to wear identity cards.\nঅনুমান: I. Identity cards help identify staff. II. All visitors carry identity cards."
+      },
+      "options": [
+        {
+          "en": "Both I and II are implicit",
+          "as": "I আৰু II দুয়োটা অন্তৰ্নিহিত"
+        },
+        {
+          "en": "Assumption II is implicit",
+          "as": "অনুমান II অন্তৰ্নিহিত"
+        },
+        {
+          "en": "Assumption I is implicit",
+          "as": "অনুমান I অন্তৰ্নিহিত"
+        },
+        {
+          "en": "Neither I nor II is implicit",
+          "as": "I বা II কোনোটোৱেই অন্তৰ্নিহিত নহয়"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The rule assumes cards help identify staff; visitors are not covered.",
+        "as": "নিয়মে কাৰ্ডে কৰ্মীক চিনাক্ত কৰে বুলি ধৰি লয়; দৰ্শনাৰ্থী সামৰি লোৱা নহয়।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-147",
+      "q": {
+        "en": "Article 352 deals with —",
+        "as": "অনুচ্ছেদ ৩৫২ এ কাৰ বিষয়ে কয়?"
+      },
+      "options": [
+        {
+          "en": "President's rule",
+          "as": "ৰাষ্ট্ৰপতি শাসন"
+        },
+        {
+          "en": "National Emergency",
+          "as": "ৰাষ্ট্ৰীয় জৰুৰীকালীন অৱস্থা"
+        },
+        {
+          "en": "Financial Emergency",
+          "as": "বিত্তীয় জৰুৰীকালীন অৱস্থা"
+        },
+        {
+          "en": "Money Bill",
+          "as": "ধন বিধেয়ক"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Article 352 provides for a National Emergency.",
+        "as": "অনুচ্ছেদ ৩৫২ ৰাষ্ট্ৰীয় জৰুৰীকালীন অৱস্থাৰ ব্যৱস্থা কৰে।"
+      }
+    },
+    {
+      "id": "sentence-rearrangement-127",
+      "q": {
+        "en": "Arrange the parts to form a meaningful sentence: (1) harvested (2) the ripe paddy (3) in autumn (4) The farmer.",
+        "as": "অৰ্থপূৰ্ণ বাক্য গঠন কৰিবলৈ অংশবোৰ সজাওক: (1) দায় মাৰিলে (2) পকা ধান (3) শৰৎকালত (4) কৃষকে।"
+      },
+      "options": [
+        {
+          "en": "3-4-1-2",
+          "as": "৩-৪-১-২"
+        },
+        {
+          "en": "2-3-4-1",
+          "as": "২-৩-৪-১"
+        },
+        {
+          "en": "1-2-3-4",
+          "as": "১-২-৩-৪"
+        },
+        {
+          "en": "4-1-2-3",
+          "as": "৪-১-২-৩"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The correct sentence is 'The farmer harvested the ripe paddy in autumn.', i.e. 4-1-2-3.",
+        "as": "শুদ্ধ বাক্য হ'ল 'The farmer harvested the ripe paddy in autumn.', অৰ্থাৎ ৪-১-২-৩।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-107",
+      "q": {
+        "en": "Which Article directs the State to secure a uniform civil code?",
+        "as": "কোন অনুচ্ছেদে ৰাজ্যক এক সমান নাগৰিক সংহিতা সুৰক্ষিত কৰাৰ নিৰ্দেশ দিয়ে?"
+      },
+      "options": [
+        {
+          "en": "Article 40",
+          "as": "অনুচ্ছেদ ৪০"
+        },
+        {
+          "en": "Article 45",
+          "as": "অনুচ্ছেদ ৪৫"
+        },
+        {
+          "en": "Article 44",
+          "as": "অনুচ্ছেদ ৪৪"
+        },
+        {
+          "en": "Article 48",
+          "as": "অনুচ্ছেদ ৪৮"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Article 44 directs the State to secure a uniform civil code.",
+        "as": "অনুচ্ছেদ ৪৪ ৰাজ্যক এক সমান নাগৰিক সংহিতা সুৰক্ষিত কৰাৰ নিৰ্দেশ দিয়ে।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-094",
+      "q": {
+        "en": "Which Koch king is credited with the construction of the 'Kamakhya' temple's beehive-shaped dome?",
+        "as": "কামাখ্যা মন্দিৰৰ মৌচাক-আকৃতিৰ গম্বুজ নিৰ্মাণৰ কৃতিত্ব কোন কোচ ৰজাৰ?"
+      },
+      "options": [
+        {
+          "en": "Viswa Singha",
+          "as": "বিশ্ব সিংহ"
+        },
+        {
+          "en": "Chilarai",
+          "as": "চিলাৰায়"
+        },
+        {
+          "en": "Naranarayan",
+          "as": "নৰনাৰায়ণ"
+        },
+        {
+          "en": "Raghu Dev",
+          "as": "ৰঘু দেৱ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Naranarayan rebuilt the Kamakhya temple with its distinctive beehive-shaped dome.",
+        "as": "নৰনাৰায়ণে কামাখ্যা মন্দিৰ ইয়াৰ সুকীয়া মৌচাক-আকৃতিৰ গম্বুজৰ সৈতে পুনৰ্নিৰ্মাণ কৰিছিল।"
+      }
+    },
+    {
+      "id": "algebra-060",
+      "q": {
+        "en": "The value of 11^3 is —",
+        "as": "11^3 ৰ মান —"
+      },
+      "options": [
+        {
+          "en": "121",
+          "as": "১২১"
+        },
+        {
+          "en": "33",
+          "as": "৩৩"
+        },
+        {
+          "en": "1342",
+          "as": "১৩৪২"
+        },
+        {
+          "en": "1331",
+          "as": "১৩৩১"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "11^3 = 11 x 11 x 11 = 1331.",
+        "as": "11^3 = 11 x 11 x 11 = 1331।"
+      }
+    },
+    {
+      "id": "assam-national-parks-229",
+      "q": {
+        "en": "Borail Wildlife Sanctuary is also noted for which of the following?",
+        "as": "বৰাইল অভয়াৰণ্য আন কিসেৰ বাবেও পৰিচিত?"
+      },
+      "options": [
+        {
+          "en": "its hilly terrain",
+          "as": "ইয়াৰ পাহাৰীয়া ভূ-প্ৰকৃতি"
+        },
+        {
+          "en": "its elephant population",
+          "as": "ইয়াৰ হাতী"
+        },
+        {
+          "en": "its golden langur population",
+          "as": "ইয়াৰ সোণালী বান্দৰ"
+        },
+        {
+          "en": "its wetland habitat",
+          "as": "ইয়াৰ জলাশয়"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Borail Wildlife Sanctuary is also noted for its hilly terrain.",
+        "as": "বৰাইল অভয়াৰণ্য ইয়াৰ পাহাৰীয়া ভূ-প্ৰকৃতিৰ বাবেও পৰিচিত।"
+      }
+    },
+    {
+      "id": "indian-history-modern-070",
+      "q": {
+        "en": "Who gave the slogan 'Swaraj is my birthright'?",
+        "as": "'স্বৰাজ মোৰ জন্মগত অধিকাৰ' শ্ল'গান কেৱে দিছিল?"
+      },
+      "options": [
+        {
+          "en": "Gopal Krishna Gokhale",
+          "as": "গোপাল কৃষ্ণ গোখলে"
+        },
+        {
+          "en": "Bal Gangadhar Tilak",
+          "as": "বাল গঙ্গাধৰ তিলক"
+        },
+        {
+          "en": "Lala Lajpat Rai",
+          "as": "লালা লাজপত ৰায়"
+        },
+        {
+          "en": "Bipin Chandra Pal",
+          "as": "বিপিন চন্দ্ৰ পাল"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Bal Gangadhar Tilak gave the slogan 'Swaraj is my birthright and I shall have it'.",
+        "as": "বাল গঙ্গাধৰ তিলকে 'স্বৰাজ মোৰ জন্মগত অধিকাৰ আৰু মই ইয়াক লম' শ্ল'গান দিছিল।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-204",
+      "q": {
+        "en": "Which Article prohibits discrimination in access to shops, hotels and public places?",
+        "as": "কোন অনুচ্ছেদে দোকান, হোটেল আৰু ৰাজহুৱা স্থানত প্ৰৱেশত ভেদাভেদ নিষিদ্ধ কৰে?"
+      },
+      "options": [
+        {
+          "en": "Article 14",
+          "as": "অনুচ্ছেদ ১৪"
+        },
+        {
+          "en": "Article 15(2)",
+          "as": "অনুচ্ছেদ 15(2)"
+        },
+        {
+          "en": "Article 16",
+          "as": "অনুচ্ছেদ ১৬"
+        },
+        {
+          "en": "Article 17",
+          "as": "অনুচ্ছেদ ১৭"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Article 15(2) prohibits discrimination in access to public places.",
+        "as": "অনুচ্ছেদ 15(2) ৰাজহুৱা স্থানত প্ৰৱেশত ভেদাভেদ নিষিদ্ধ কৰে।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-070",
+      "q": {
+        "en": "The 'garibi hatao' slogan was given by —",
+        "as": "'গৰীবী হটাও' শ্ল'গান কোনে দিছিল?"
+      },
+      "options": [
+        {
+          "en": "Indira Gandhi",
+          "as": "ইন্দিৰা গান্ধী"
+        },
+        {
+          "en": "Jawaharlal Nehru",
+          "as": "জৱাহৰলাল নেহৰু"
+        },
+        {
+          "en": "Rajiv Gandhi",
+          "as": "ৰাজীৱ গান্ধী"
+        },
+        {
+          "en": "Morarji Desai",
+          "as": "মোৰাৰজী দেশাই"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Indira Gandhi gave the 'garibi hatao' slogan in 1971.",
+        "as": "ইন্দিৰা গান্ধীয়ে ১৯৭১ চনত 'গৰীবী হটাও' শ্ল'গান দিছিল।"
+      }
+    },
+    {
+      "id": "mensuration-3d-044",
+      "q": {
+        "en": "A cuboid is 12 cm long, 8 cm broad and 5 cm high. Its total surface area is —",
+        "as": "এটা ঘনবস্তু 12 ছেমি দীঘ, 8 ছেমি প্ৰস্থ আৰু 5 ছেমি উচ্চ। মুঠ পৃষ্ঠকালি —"
+      },
+      "options": [
+        {
+          "en": "480 sq cm",
+          "as": "৪৮০ বৰ্গ ছেমি"
+        },
+        {
+          "en": "50 sq cm",
+          "as": "৫০ বৰ্গ ছেমি"
+        },
+        {
+          "en": "402 sq cm",
+          "as": "৪০২ বৰ্গ ছেমি"
+        },
+        {
+          "en": "392 sq cm",
+          "as": "৩৯২ বৰ্গ ছেমি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Total surface area = 2(lb + bh + hl) = 2(96 + 40 + 60) = 392 sq cm.",
+        "as": "মুঠ পৃষ্ঠকালি = 2(lb + bh + hl) = 2(96 + 40 + 60) = 392 বৰ্গ ছেমি।"
+      }
+    },
+    {
+      "id": "mensuration-3d-065",
+      "q": {
+        "en": "A cuboid is 30 cm long, 15 cm broad and 10 cm high. Its volume is —",
+        "as": "এটা ঘনবস্তু 30 ছেমি দীঘ, 15 ছেমি প্ৰস্থ আৰু 10 ছেমি উচ্চ। আয়তন —"
+      },
+      "options": [
+        {
+          "en": "4500 cubic cm",
+          "as": "৪৫০০ cubic cm"
+        },
+        {
+          "en": "1800 cubic cm",
+          "as": "১৮০০ cubic cm"
+        },
+        {
+          "en": "55 cubic cm",
+          "as": "৫৫ cubic cm"
+        },
+        {
+          "en": "4530 cubic cm",
+          "as": "৪৫৩০ cubic cm"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Volume of a cuboid = length x breadth x height = 30 x 15 x 10 = 4500 cubic cm.",
+        "as": "ঘনবস্তুৰ আয়তন = দীঘ x প্ৰস্থ x উচ্চতা = 30 x 15 x 10 = 4500 ঘন ছেমি।"
+      }
+    },
+    {
+      "id": "one-word-substitution-306",
+      "q": {
+        "en": "The signature of a famous person is called —",
+        "as": "এজন বিখ্যাত ব্যক্তিৰ স্বাক্ষৰ বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "telegram",
+          "as": "তাৰ-বাৰ্তা"
+        },
+        {
+          "en": "autograph",
+          "as": "স্বাক্ষৰ"
+        },
+        {
+          "en": "vaccine",
+          "as": "টিকা"
+        },
+        {
+          "en": "acronym",
+          "as": "চমু-শব্দ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The correct one-word substitution is 'autograph'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'autograph' (স্বাক্ষৰ)।"
+      }
+    },
+    {
+      "id": "idioms-phrases-282",
+      "q": {
+        "en": "The idiom 'down to earth' means —",
+        "as": "'down to earth' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "a person dearly loved",
+          "as": "অতি প্ৰিয় ব্যক্তি"
+        },
+        {
+          "en": "practical and realistic",
+          "as": "ব্যৱহাৰিক আৰু বাস্তৱবাদী"
+        },
+        {
+          "en": "a critic who does nothing himself",
+          "as": "কাম নকৰি সমালোচনা কৰা ব্যক্তি"
+        },
+        {
+          "en": "very calm and composed",
+          "as": "অতি শান্ত আৰু ধীৰ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'down to earth' means practical and realistic.",
+        "as": "'down to earth' ৰ অৰ্থ হৈছে ব্যৱহাৰিক আৰু বাস্তৱবাদী।"
+      }
+    },
+    {
+      "id": "world-history-217",
+      "q": {
+        "en": "In which year did man first land on the moon?",
+        "as": "মানুহে প্ৰথমে কিমান চনত চন্দ্ৰত অৱতৰণ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "1961 CE",
+          "as": "১৯৬১ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1972 CE",
+          "as": "১৯৭২ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1957 CE",
+          "as": "১৯৫৭ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1969 CE",
+          "as": "১৯৬৯ খ্ৰীষ্টাব্দ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Man first landed on the moon in 1969 CE.",
+        "as": "মানুহে প্ৰথমে ১৯৬৯ খ্ৰীষ্টাব্দত চন্দ্ৰত অৱতৰণ কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-history-modern-327",
+      "q": {
+        "en": "Which Assamese community is known for the 'Cane' craft?",
+        "as": "কোন অসমীয়া সমাজ 'বেত' শিল্পৰ বাবে জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "All Assamese communities",
+          "as": "অসমৰ সকলো সমাজ"
+        },
+        {
+          "en": "The Bodo community only",
+          "as": "কেৱল বড়ো সমাজ"
+        },
+        {
+          "en": "The Karbi community only",
+          "as": "কেৱল কাৰ্বি সমাজ"
+        },
+        {
+          "en": "The Rabha community only",
+          "as": "কেৱল ৰাভা সমাজ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Cane craft is practised by all Assamese communities.",
+        "as": "বেত শিল্প অসমৰ সকলো সমাজে অনুশীলন কৰে।"
+      }
+    },
+    {
+      "id": "geometry-078",
+      "q": {
+        "en": "The base of a triangle is 16 cm and its height is 11 cm. Its area is —",
+        "as": "এটা ত্ৰিভুজৰ ভূমি 16 ছেমি আৰু উচ্চতা 11 ছেমি। কালি —"
+      },
+      "options": [
+        {
+          "en": "176 sq cm",
+          "as": "১৭৬ বৰ্গ ছেমি"
+        },
+        {
+          "en": "88 sq cm",
+          "as": "৮৮ বৰ্গ ছেমি"
+        },
+        {
+          "en": "93 sq cm",
+          "as": "৯৩ বৰ্গ ছেমি"
+        },
+        {
+          "en": "83 sq cm",
+          "as": "৮৩ বৰ্গ ছেমি"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Area of a triangle = (1/2) x base x height = (1/2) x 16 x 11 = 88 sq cm.",
+        "as": "ত্ৰিভুজৰ কালি = (1/2) x ভূমি x উচ্চতা = (1/2) x 16 x 11 = 88 বৰ্গ ছেমি।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-254",
+      "q": {
+        "en": "Which state is called the Land of Five Rivers?",
+        "as": "কোন ৰাজ্যক পাঁচ নদীৰ দেশ বুলি কোৱা হয়?"
+      },
+      "options": [
+        {
+          "en": "Bihar",
+          "as": "বিহাৰ"
+        },
+        {
+          "en": "Punjab",
+          "as": "পঞ্জাব"
+        },
+        {
+          "en": "Uttar Pradesh",
+          "as": "উত্তৰ প্ৰদেশ"
+        },
+        {
+          "en": "Haryana",
+          "as": "হাৰিয়ানা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Punjab is called the Land of Five Rivers.",
+        "as": "পঞ্জাবক পাঁচ নদীৰ দেশ বুলি কোৱা হয়।"
+      }
+    },
+    {
+      "id": "government-schemes-233",
+      "q": {
+        "en": "In which year was Namami Gange launched?",
+        "as": "নমামি গংগে কিমান চনত আৰম্ভ কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "2005",
+          "as": "২০০৫"
+        },
+        {
+          "en": "2021",
+          "as": "২০২১"
+        },
+        {
+          "en": "2014",
+          "as": "২০১৪"
+        },
+        {
+          "en": "2015",
+          "as": "২০১৫"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Namami Gange was launched in 2014.",
+        "as": "নমামি গংগে 2014 চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-301",
+      "q": {
+        "en": "Which of the following was a feature of Sangam-era dance?",
+        "as": "তলৰ কোনটো সংগম-কালৰ নৃত্যৰ এটা বৈশিষ্ট্য আছিল?"
+      },
+      "options": [
+        {
+          "en": "Ballet",
+          "as": "বেলে"
+        },
+        {
+          "en": "Folk and temple dances",
+          "as": "লোক আৰু মন্দিৰ নৃত্য"
+        },
+        {
+          "en": "Flamenco",
+          "as": "ফ্লেমেংকো"
+        },
+        {
+          "en": "Waltz",
+          "as": "ৱালচ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Sangam-era dance included folk and temple dances.",
+        "as": "সংগম-কালৰ নৃত্যত লোক আৰু মন্দিৰ নৃত্য আছিল।"
+      }
+    },
+    {
+      "id": "indian-history-medieval-110",
+      "q": {
+        "en": "Which Bahmani minister introduced reforms in land revenue and the army?",
+        "as": "কোন বাহমনী মন্ত্ৰীয়ে ভূমি ৰাজহ আৰু সেনাত সংস্কাৰ প্ৰৱৰ্তন কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Mahmud Gawan",
+          "as": "মহমুদ গৱান"
+        },
+        {
+          "en": "Alauddin Bahman Shah",
+          "as": "আলাউদ্দিন বাহমন শাহ"
+        },
+        {
+          "en": "Krishnadevaraya",
+          "as": "কৃষ্ণদেৱৰায়"
+        },
+        {
+          "en": "Rama Raya",
+          "as": "ৰাম ৰায়"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Mahmud Gawan introduced reforms in land revenue and the army.",
+        "as": "মহমুদ গৱানে ভূমি ৰাজহ আৰু সেনাত সংস্কাৰ প্ৰৱৰ্তন কৰিছিল।"
+      }
+    },
+    {
+      "id": "environment-pollution-221",
+      "q": {
+        "en": "Which is one of the eight missions of India's climate action plan?",
+        "as": "ভাৰতৰ জলবায়ু কাৰ্য পৰিকল্পনাৰ আঠটা মিছনৰ এটা কোনটো?"
+      },
+      "options": [
+        {
+          "en": "National Mining Mission",
+          "as": "ৰাষ্ট্ৰীয় খনন মিছন"
+        },
+        {
+          "en": "National Highway Mission",
+          "as": "ৰাষ্ট্ৰীয় মহাসড়ক মিছন"
+        },
+        {
+          "en": "National Defence Mission",
+          "as": "ৰাষ্ট্ৰীয় প্ৰতিৰক্ষা মিছন"
+        },
+        {
+          "en": "National Solar Mission",
+          "as": "ৰাষ্ট্ৰীয় সৌৰ মিছন"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The National Solar Mission is one of the eight.",
+        "as": "ৰাষ্ট্ৰীয় সৌৰ মিছন আঠটাৰ এটা।"
+      }
+    },
+    {
+      "id": "brahmaputra-barak-106",
+      "q": {
+        "en": "Which region is the source of the Burhi Dihing river?",
+        "as": "বুঢ়ী দিহিং নদীৰ উৎস কোন অঞ্চল?"
+      },
+      "options": [
+        {
+          "en": "Barail hills",
+          "as": "বৰাইল পাহাৰ"
+        },
+        {
+          "en": "Patkai hills",
+          "as": "পাটকাই পাহাৰ"
+        },
+        {
+          "en": "Manipur",
+          "as": "মণিপুৰ"
+        },
+        {
+          "en": "Meghalaya",
+          "as": "মেঘালয়"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Burhi Dihing river has its source in Patkai hills.",
+        "as": "বুঢ়ী দিহিং নদীৰ উৎস পাটকাই পাহাৰ অঞ্চলত।"
+      }
+    },
+    {
+      "id": "world-history-104",
+      "q": {
+        "en": "Who painted the ceiling of the Sistine Chapel?",
+        "as": "ছিষ্টাইন চেপেলৰ চিলিং কোনে অঁকা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "Michelangelo",
+          "as": "মাইকেলএঞ্জেল'"
+        },
+        {
+          "en": "Leonardo da Vinci",
+          "as": "লিঅ'নাৰ্ড' দা ভিঞ্চি"
+        },
+        {
+          "en": "Raphael",
+          "as": "ৰাফেল"
+        },
+        {
+          "en": "Donatello",
+          "as": "ড'নাটেল'"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Michelangelo painted the ceiling of the Sistine Chapel.",
+        "as": "মাইকেলএঞ্জেল'ই ছিষ্টাইন চেপেলৰ চিলিং অঁকা হৈছিল।"
+      }
+    },
+    {
+      "id": "input-output-machine-024",
+      "q": {
+        "en": "Input: 66, 19, 82, 47, 35. Step I replaces each number by its square. Which number becomes the largest?",
+        "as": "ইনপুট: 66, 19, 82, 47, 35। স্তৰ I এ প্ৰতিটো সংখ্যাক তাৰ বৰ্গৰে সলনি কৰে। কোনটো সংখ্যা আটাইতকৈ ডাঙৰ হয়?"
+      },
+      "options": [
+        {
+          "en": "35",
+          "as": "35"
+        },
+        {
+          "en": "19",
+          "as": "19"
+        },
+        {
+          "en": "66",
+          "as": "66"
+        },
+        {
+          "en": "82",
+          "as": "82"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Squaring preserves order for positive numbers, so the largest number 82 stays the largest.",
+        "as": "ধনাত্মক সংখ্যাৰ বাবে বৰ্গই ক্ৰম ৰাখে, গতিকে আটাইতকৈ ডাঙৰ 82 ডাঙৰেই থাকে।"
+      }
+    },
+    {
+      "id": "mixture-and-alligation-013",
+      "q": {
+        "en": "In what ratio must rice at Rs 60/kg be mixed with rice at Rs 90/kg to get a mixture worth Rs 70/kg?",
+        "as": "60 টকা/kg দামৰ চাউল 90 টকা/kg দামৰ চাউলৰ সৈতে কিমান অনুপাতত মিহলালে 70 টকা/kg দামৰ মিশ্ৰণ পোৱা যাব?"
+      },
+      "options": [
+        {
+          "en": "2 : 1",
+          "as": "২ : ১"
+        },
+        {
+          "en": "1 : 2",
+          "as": "১ : ২"
+        },
+        {
+          "en": "60 : 90",
+          "as": "৬০ : ৯০"
+        },
+        {
+          "en": "20 : 10",
+          "as": "২০ : ১০"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "By alligation, the ratio of the cheaper to the dearer = (dear - mean) : (mean - cheap) = (90 - 70) : (70 - 60) = 2 : 1.",
+        "as": "সংযোগ নিয়মেৰে, সস্তাৰ সৈতে দামীৰ অনুপাত = (দামী - গড়) : (গড় - সস্তা) = (90 - 70) : (70 - 60) = 2 : 1।"
+      }
+    },
+    {
+      "id": "indian-geography-170",
+      "q": {
+        "en": "Which river is the longest in peninsular India?",
+        "as": "উপদ্বীপীয় ভাৰতৰ আটাইতকৈ দীঘল নদী কোন?"
+      },
+      "options": [
+        {
+          "en": "Narmada",
+          "as": "নৰ্মদা"
+        },
+        {
+          "en": "Godavari",
+          "as": "গোদাবৰী"
+        },
+        {
+          "en": "Mahanadi",
+          "as": "মহানদী"
+        },
+        {
+          "en": "Krishna",
+          "as": "কৃষ্ণা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Godavari is the longest river in peninsular India.",
+        "as": "গোদাবৰী উপদ্বীপীয় ভাৰতৰ আটাইতকৈ দীঘল নদী।"
+      }
+    },
+    {
+      "id": "complex-puzzles-010",
+      "q": {
+        "en": "4 people live on different floors, from bottom to top in the order B, C, D, A. Who lives immediately above D?",
+        "as": "4 জন মানুহে বেলেগ বেলেগ মহলাত থাকে, তলৰ পৰা ওপৰলৈ ক্ৰম B, C, D, A। D ৰ ঠিক ওপৰত কোন থাকে?"
+      },
+      "options": [
+        {
+          "en": "C",
+          "as": "C"
+        },
+        {
+          "en": "B",
+          "as": "B"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "D",
+          "as": "D"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The floor just above D is occupied by A.",
+        "as": "D ৰ ঠিক ওপৰৰ মহলাত A থাকে।"
+      }
+    },
+    {
+      "id": "environment-pollution-027",
+      "q": {
+        "en": "Kaziranga National Park is a UNESCO —",
+        "as": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যান ইউনেস্ক'ৰ —"
+      },
+      "options": [
+        {
+          "en": "World Heritage Site",
+          "as": "বিশ্ব ঐতিহ্য স্থল"
+        },
+        {
+          "en": "Biosphere Reserve only",
+          "as": "কেৱল জীৱমণ্ডল সংচিতি"
+        },
+        {
+          "en": "Ramsar site only",
+          "as": "কেৱল ৰামচাৰ স্থল"
+        },
+        {
+          "en": "Global Geopark",
+          "as": "বিশ্ব ভূউদ্যান"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Kaziranga is a UNESCO World Heritage Site.",
+        "as": "কাজিৰঙা ইউনেস্ক'ৰ বিশ্ব ঐতিহ্য স্থল।"
+      }
+    },
+    {
+      "id": "assam-natural-resources-005",
+      "q": {
+        "en": "Guwahati Tea Auction Centre in Assam is located at which place?",
+        "as": "অসমত গুৱাহাটী চাহ নিলাম কেন্দ্ৰ কোন ঠাইত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        },
+        {
+          "en": "Assam",
+          "as": "অসম"
+        },
+        {
+          "en": "Shillong",
+          "as": "শিলং"
+        },
+        {
+          "en": "Kamrup",
+          "as": "কামৰূপ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Guwahati Tea Auction Centre is located at Guwahati.",
+        "as": "গুৱাহাটী চাহ নিলাম কেন্দ্ৰ গুৱাহাটী ত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "word-formation-dictionary-049",
+      "q": {
+        "en": "Arrange in alphabetical order: Cold, Cord, Card, Crowd. Which word is second?",
+        "as": "বৰ্ণমালাৰ ক্ৰমত সজাওক: Cold, Cord, Card, Crowd। দ্বিতীয় শব্দ কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Cold",
+          "as": "Cold"
+        },
+        {
+          "en": "Cord",
+          "as": "Cord"
+        },
+        {
+          "en": "Crowd",
+          "as": "Crowd"
+        },
+        {
+          "en": "Card",
+          "as": "Card"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "In alphabetical order the words are Card, Cold, Cord, Crowd, so the second is Cold.",
+        "as": "বৰ্ণমালাৰ ক্ৰমত শব্দবোৰ Card, Cold, Cord, Crowd, গতিকে দ্বিতীয় Cold।"
+      }
+    },
+    {
+      "id": "world-history-288",
+      "q": {
+        "en": "Which canal connects the Atlantic and Pacific Oceans?",
+        "as": "কোন খালে আটলাণ্টিক আৰু প্ৰশান্ত মহাসাগৰ সংযোগ কৰে?"
+      },
+      "options": [
+        {
+          "en": "The Suez Canal",
+          "as": "চুৱেজ খাল"
+        },
+        {
+          "en": "The Kiel Canal",
+          "as": "কিল খাল"
+        },
+        {
+          "en": "The Panama Canal",
+          "as": "পানামা খাল"
+        },
+        {
+          "en": "The Grand Canal",
+          "as": "মহাখাল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Panama Canal connects the Atlantic and Pacific Oceans.",
+        "as": "পানামা খালে আটলাণ্টিক আৰু প্ৰশান্ত মহাসাগৰ সংযোগ কৰে।"
+      }
+    },
+    {
+      "id": "assam-national-parks-111",
+      "q": {
+        "en": "Gibbon Wildlife Sanctuary is also noted for which of the following?",
+        "as": "গিবন অভয়াৰণ্য আন কিসেৰ বাবেও পৰিচিত?"
+      },
+      "options": [
+        {
+          "en": "its hot water springs",
+          "as": "ইয়াৰ উষ্ণ পানীৰ প্ৰস্ৰৱন"
+        },
+        {
+          "en": "its wetland habitat",
+          "as": "ইয়াৰ জলাশয়"
+        },
+        {
+          "en": "its primate diversity",
+          "as": "ইয়াৰ প্ৰাইমেট বৈচিত্ৰ্য"
+        },
+        {
+          "en": "its birdlife",
+          "as": "ইয়াৰ চৰাই"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Gibbon Wildlife Sanctuary is also noted for its primate diversity.",
+        "as": "গিবন অভয়াৰণ্য ইয়াৰ প্ৰাইমেট বৈচিত্ৰ্যৰ বাবেও পৰিচিত।"
+      }
+    },
+    {
+      "id": "awards-honours-152",
+      "q": {
+        "en": "Who confers the Bhatnagar Award?",
+        "as": "ভট্টনাগৰ বঁটা কোনে প্ৰদান কৰে?"
+      },
+      "options": [
+        {
+          "en": "Bharatiya Jnanpith",
+          "as": "ভাৰতীয় জ্ঞানপীঠ"
+        },
+        {
+          "en": "Indian Council for Child Welfare",
+          "as": "ভাৰতীয় শিশু কল্যাণ পৰিষদ"
+        },
+        {
+          "en": "Government of India",
+          "as": "ভাৰত চৰকাৰ"
+        },
+        {
+          "en": "CSIR",
+          "as": "চি এছ আই আৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Bhatnagar Award is conferred by the CSIR.",
+        "as": "ভট্টনাগৰ বঁটা চি এছ আই আৰে প্ৰদান কৰে।"
+      }
+    },
+    {
+      "id": "assamese-literature-211",
+      "q": {
+        "en": "Which Assamese writer is known for the humorous sketches 'Kokadeuta'?",
+        "as": "কোন অসমীয়া লেখক হাস্যৰসাত্মক ৰচনা 'ককাদেউতা'ৰ বাবে জনাজাত?"
+      },
+      "options": [
+        {
+          "en": "Homen Borgohain",
+          "as": "হোমেন বৰগোহাঞি"
+        },
+        {
+          "en": "Rajanikanta Bordoloi",
+          "as": "ৰজনীকান্ত বৰদলৈ"
+        },
+        {
+          "en": "Lakshminath Bezbaroa",
+          "as": "লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Saurabh Kumar Chaliha",
+          "as": "সৌৰভ কুমাৰ চলিহা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Lakshminath Bezbaroa wrote the Kokadeuta sketches.",
+        "as": "লক্ষ্মীনাথ বেজবৰুৱাই ককাদেউতা ৰচনা লিখিছিল।"
+      }
+    },
+    {
+      "id": "assam-national-parks-151",
+      "q": {
+        "en": "On which bank of the Brahmaputra is Burachapori Wildlife Sanctuary located?",
+        "as": "বুঢ়াচাপৰি অভয়াৰণ্য ব্ৰহ্মপুত্ৰৰ কোন পাৰে অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "west",
+          "as": "পশ্চিম"
+        },
+        {
+          "en": "central",
+          "as": "মধ্য"
+        },
+        {
+          "en": "north",
+          "as": "উত্তৰ"
+        },
+        {
+          "en": "east",
+          "as": "পূব"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Burachapori Wildlife Sanctuary is on the north bank of the Brahmaputra.",
+        "as": "বুঢ়াচাপৰি অভয়াৰণ্য ব্ৰহ্মপুত্ৰৰ উত্তৰ পাৰে অৱস্থিত।"
+      }
+    },
+    {
+      "id": "assamese-literature-223",
+      "q": {
+        "en": "Which Assamese writer is known for the song 'Bisarjan'?",
+        "as": "কোন অসমীয়া লেখক 'বিসৰ্জন' গীতৰ বাবে জনাজাত?"
+      },
+      "options": [
+        {
+          "en": "Lakshminath Bezbaroa",
+          "as": "লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Jyotiprasad Agarwala",
+          "as": "জ্যোতি প্ৰসাদ আগৰৱালা"
+        },
+        {
+          "en": "Bishnu Prasad Rabha",
+          "as": "বিষ্ণু প্ৰসাদ ৰাভা"
+        },
+        {
+          "en": "Hemango Biswas",
+          "as": "হেমাঙ্গ বিশ্বাস"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Bishnu Prasad Rabha composed the song Bisarjan.",
+        "as": "বিষ্ণু প্ৰসাদ ৰাভাই বিসৰ্জন গীত ৰচনা কৰিছিল।"
+      }
+    },
+    {
+      "id": "important-days-dates-176",
+      "q": {
+        "en": "Which important day is observed on 15 August?",
+        "as": "১৫ আগষ্ট তাৰিখে কোন গুৰুত্বপূৰ্ণ দিৱস পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "World Tsunami Awareness Day",
+          "as": "বিশ্ব ছুনামি সজাগতা দিৱস"
+        },
+        {
+          "en": "World Ozone Day",
+          "as": "বিশ্ব অ'জন দিৱস"
+        },
+        {
+          "en": "Human Rights Day",
+          "as": "মানৱ অধিকাৰ দিৱস"
+        },
+        {
+          "en": "Independence Day",
+          "as": "স্বাধীনতা দিৱস"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Independence Day is observed on 15 August.",
+        "as": "স্বাধীনতা দিৱস ১৫ আগষ্ট তাৰিখে পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "counting-figures-043",
+      "q": {
+        "en": "How many rectangles are there in the given figure?",
+        "as": "দিয়া চিত্ৰখনত কিমানটা আয়ত আছে?"
+      },
+      "options": [
+        {
+          "en": "7",
+          "as": "৭"
+        },
+        {
+          "en": "10",
+          "as": "১০"
+        },
+        {
+          "en": "8",
+          "as": "৮"
+        },
+        {
+          "en": "9",
+          "as": "৯"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The number of rectangles in an m x n grid is C(m+1,2) x C(n+1,2); here it is 9.",
+        "as": "m x n জালিকাত আয়তৰ সংখ্যা C(m+1,2) x C(n+1,2); ইয়াত 9।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-060",
+      "q": {
+        "en": "Which of the following best describes the religion of the ancient Kamarupa rulers?",
+        "as": "তলৰ কোনটোৱে প্ৰাচীন কামৰূপৰ শাসকসকলৰ ধৰ্মক আটাইতকৈ ভালদৰে বৰ্ণনা কৰে?"
+      },
+      "options": [
+        {
+          "en": "Purely Buddhist",
+          "as": "কেৱল বৌদ্ধ"
+        },
+        {
+          "en": "Purely Jain",
+          "as": "কেৱল জৈন"
+        },
+        {
+          "en": "Mainly Shaiva with Shakti worship, tolerant of others",
+          "as": "মূলত শৈৱ, শাক্ত উপাসনাৰ সৈতে, আন ধৰ্মৰ প্ৰতি সহনশীল"
+        },
+        {
+          "en": "Christian",
+          "as": "খ্ৰীষ্টান"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Kamarupa rulers were mainly Shaiva and patrons of the Shakti cult, while tolerating Buddhism and other faiths.",
+        "as": "কামৰূপৰ শাসকসকল মূলত শৈৱ আছিল আৰু শাক্ত উপাসনাৰ পৃষ্ঠপোষক আছিল, লগতে বৌদ্ধ আৰু আন ধৰ্মৰ প্ৰতি সহনশীল আছিল।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-048",
+      "q": {
+        "en": "The Sutlej river finally drains into which water body?",
+        "as": "সতলুজ নদী শেষত কোন জলাশয়ত পৰে?"
+      },
+      "options": [
+        {
+          "en": "Bay of Bengal",
+          "as": "বংগোপসাগৰ"
+        },
+        {
+          "en": "Ganga",
+          "as": "গংগা"
+        },
+        {
+          "en": "Gangotri Glacier",
+          "as": "গংগোত্ৰী হিমবাহ"
+        },
+        {
+          "en": "Indus",
+          "as": "সিন্ধু"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Sutlej drains into the Indus.",
+        "as": "সতলুজ সিন্ধুত পৰে।"
+      }
+    },
+    {
+      "id": "government-schemes-017",
+      "q": {
+        "en": "Which scheme is related to monthly stipend to girl students?",
+        "as": "কোন আঁচনি ছাত্ৰীসকলক মাহেকীয়া বৃত্তিৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+          "as": "প্ৰধানমন্ত্ৰী জীৱন জ্যোতি বীমা যোজনা"
+        },
+        {
+          "en": "Assam Tea Industry Special Incentive Scheme",
+          "as": "অসম চাহ উদ্যোগ বিশেষ প্ৰণোদনা আঁচনি"
+        },
+        {
+          "en": "Nijut Moina",
+          "as": "নিজুত মইনা"
+        },
+        {
+          "en": "Ujjwala Yojana",
+          "as": "উজ্জ্বলা যোজনা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Nijut Moina is related to monthly stipend to girl students.",
+        "as": "নিজুত মইনা ছাত্ৰীসকলক মাহেকীয়া বৃত্তিৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "profit-loss-023",
+      "q": {
+        "en": "If a man sells an article at 5% loss and the cost price is 800, the selling price is —",
+        "as": "এজনে 5% লোকচানত সামগ্ৰী বিক্ৰী কৰে আৰু ক্ৰয় মূল্য 800 হ'লে বিক্ৰয় মূল্য —"
+      },
+      "options": [
+        {
+          "en": "740",
+          "as": "৭৪০"
+        },
+        {
+          "en": "750",
+          "as": "৭৫০"
+        },
+        {
+          "en": "770",
+          "as": "৭৭০"
+        },
+        {
+          "en": "760",
+          "as": "৭৬০"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "SP = 800 x 0.95 = 760.",
+        "as": "বিক্ৰয় মূল্য = 800 x 0.95 = 760।"
+      }
+    },
+    {
+      "id": "coding-decoding-040",
+      "q": {
+        "en": "In a code, 'sun' means 'moon', 'moon' means 'star' and 'star' means 'sky'. What shines at night in this code?",
+        "as": "এটা সংকেতত 'সূৰ্য্য' মানে 'চন্দ্ৰ', 'চন্দ্ৰ' মানে 'তৰা' আৰু 'তৰা' মানে 'আকাশ'। এই সংকেতত ৰাতি কি জিলিকে?"
+      },
+      "options": [
+        {
+          "en": "moon",
+          "as": "moon"
+        },
+        {
+          "en": "sky",
+          "as": "sky"
+        },
+        {
+          "en": "star",
+          "as": "star"
+        },
+        {
+          "en": "sun",
+          "as": "sun"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The moon shines at night, and the moon is called star in this code.",
+        "as": "ৰাতি চন্দ্ৰই জিলিকে, আৰু এই সংকেতত চন্দ্ৰক তৰা বোলা হয়।"
+      }
+    },
+    {
+      "id": "alphabet-test-word-formation-013",
+      "q": {
+        "en": "Which letter is the 12th letter from the left in the English alphabet?",
+        "as": "ইংৰাজী বৰ্ণমালাত বাওঁৰ পৰা 12 তম আখৰ কোনটো?"
+      },
+      "options": [
+        {
+          "en": "N",
+          "as": "N"
+        },
+        {
+          "en": "L",
+          "as": "L"
+        },
+        {
+          "en": "K",
+          "as": "K"
+        },
+        {
+          "en": "M",
+          "as": "M"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The 12th letter from the left is L.",
+        "as": "বাওঁৰ পৰা 12 তম আখৰ L।"
+      }
+    },
+    {
+      "id": "simplification-fractions-061",
+      "q": {
+        "en": "Simplify: 1/2 x 1/2 x 1/2",
+        "as": "সৰল কৰক: 1/2 x 1/2 x 1/2"
+      },
+      "options": [
+        {
+          "en": "1/4",
+          "as": "১/৪"
+        },
+        {
+          "en": "1/6",
+          "as": "১/৬"
+        },
+        {
+          "en": "1/8",
+          "as": "১/৮"
+        },
+        {
+          "en": "3/2",
+          "as": "৩/২"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "1/2 x 1/2 x 1/2 = 1/8.",
+        "as": "1/2 x 1/2 x 1/2 = 1/8।"
+      }
+    },
+    {
+      "id": "one-word-substitution-032",
+      "q": {
+        "en": "One who washes clothes for others is called —",
+        "as": "আনৰ কাপোৰ ধোৱা ব্যক্তি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "sceptic",
+          "as": "সংশয়বাদী"
+        },
+        {
+          "en": "sculptor",
+          "as": "ভাস্কৰ্যকাৰ"
+        },
+        {
+          "en": "washerman",
+          "as": "ধোপা"
+        },
+        {
+          "en": "shepherd",
+          "as": "গৰখীয়া"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The correct one-word substitution is 'washerman'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'washerman' (ধোপা)।"
+      }
+    },
+    {
+      "id": "complex-puzzles-050",
+      "q": {
+        "en": "6 friends visit a library on 6 different days. The order of visits is F on Thursday, D on Friday, E on Monday, C on Wednesday, A on Tuesday, B on Saturday. Who visits on Saturday?",
+        "as": "6 জন বন্ধুৱে 6 টা বেলেগ দিনত পুথিভঁৰাললৈ যায়। ভ্ৰমণৰ ক্ৰম F ক Thursday, D ক Friday, E ক Monday, C ক Wednesday, A ক Tuesday, B ক Saturday। Saturday তাৰিখে কোন যায়?"
+      },
+      "options": [
+        {
+          "en": "C",
+          "as": "C"
+        },
+        {
+          "en": "B",
+          "as": "B"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "D",
+          "as": "D"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The list says B visits on Saturday.",
+        "as": "তালিকাত B ক Saturday তাৰিখে যায় বুলি আছে।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-011",
+      "q": {
+        "en": "The Indus Valley people were the first to produce which of the following?",
+        "as": "সিন্ধু উপত্যকাৰ লোকসকলে তলৰ কোনটো প্ৰথমে উৎপাদন কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Cotton",
+          "as": "কপাহ"
+        },
+        {
+          "en": "Silk",
+          "as": "ৰেচম"
+        },
+        {
+          "en": "Wool",
+          "as": "ঊণ"
+        },
+        {
+          "en": "Jute",
+          "as": "পাট"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Indus Valley people were the first in the world to produce cotton.",
+        "as": "সিন্ধু উপত্যকাৰ লোকসকলে বিশ্বত প্ৰথমে কপাহ উৎপাদন কৰিছিল।"
+      }
+    },
+    {
+      "id": "president-pm-governor-cm-190",
+      "q": {
+        "en": "The President's rule in Assam is imposed by the —",
+        "as": "অসমত ৰাষ্ট্ৰপতি শাসন কোনে জাপি দিয়ে?"
+      },
+      "options": [
+        {
+          "en": "Governor alone",
+          "as": "কেৱল ৰাজ্যপাল"
+        },
+        {
+          "en": "Chief Minister",
+          "as": "মুখ্যমন্ত্ৰী"
+        },
+        {
+          "en": "Supreme Court",
+          "as": "সৰ্বোচ্চ ন্যায়ালয়"
+        },
+        {
+          "en": "President on the advice of the Union Council of Ministers",
+          "as": "সংঘ মন্ত্ৰীপৰিষদৰ পৰামৰ্শত ৰাষ্ট্ৰপতি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "President's rule is imposed by the President on the advice of the Union Council of Ministers.",
+        "as": "সংঘ মন্ত্ৰীপৰিষদৰ পৰামৰ্শত ৰাষ্ট্ৰপতিয়ে ৰাষ্ট্ৰপতি শাসন জাপি দিয়ে।"
+      }
+    },
+    {
+      "id": "assam-india-current-affairs-033",
+      "q": {
+        "en": "Which Assamese swimmer is famous for long-distance swimming?",
+        "as": "দীৰ্ঘদূৰত্ব সাঁতোৰৰ বাবে কোন অসমীয়া সাঁতোৰবিদ বিখ্যাত?"
+      },
+      "options": [
+        {
+          "en": "Lovlina Borgohain",
+          "as": "লাভলীনা বৰগোহাঁই"
+        },
+        {
+          "en": "Hima Das",
+          "as": "হিমা দাস"
+        },
+        {
+          "en": "Ankushita Boro",
+          "as": "অংকুশিতা বৰো"
+        },
+        {
+          "en": "Elvis Ali Hazarika",
+          "as": "এলভিছ আলী হাজৰিকা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Elvis Ali Hazarika is a well known long-distance swimmer from Assam.",
+        "as": "এলভিছ আলী হাজৰিকা অসমৰ এজন সুপৰিচিত দীৰ্ঘদূৰত্ব সাঁতোৰবিদ।"
+      }
+    },
+    {
+      "id": "important-days-dates-141",
+      "q": {
+        "en": "When is International Yoga Day celebrated in India?",
+        "as": "ভাৰতত আন্তৰ্জাতিক যোগ দিৱস কেতিয়া পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "21 June",
+          "as": "২১ জুন"
+        },
+        {
+          "en": "21 February",
+          "as": "২১ ফেব্ৰুৱাৰী"
+        },
+        {
+          "en": "2 October",
+          "as": "২ অক্টোবৰ"
+        },
+        {
+          "en": "29 September",
+          "as": "২৯ ছেপ্তেম্বৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "International Yoga Day is celebrated on 21 June.",
+        "as": "আন্তৰ্জাতিক যোগ দিৱস ২১ জুন তাৰিখে পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "indian-geography-056",
+      "q": {
+        "en": "Gulf of Mannar is which type of geographical feature?",
+        "as": "মান্নাৰ উপসাগৰ কোন ধৰণৰ ভৌগোলিক গঠন?"
+      },
+      "options": [
+        {
+          "en": "a fertile plain",
+          "as": "উৰ্বৰ সমভূমি"
+        },
+        {
+          "en": "a salt marsh",
+          "as": "লোণৰ জলাশয়"
+        },
+        {
+          "en": "a plateau",
+          "as": "মালভূমি"
+        },
+        {
+          "en": "a gulf",
+          "as": "উপসাগৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Gulf of Mannar is a gulf.",
+        "as": "মান্নাৰ উপসাগৰ এটা উপসাগৰ।"
+      }
+    },
+    {
+      "id": "time-work-008",
+      "q": {
+        "en": "A can do a work in 4 days, B in 6 days and C in 12 days. Working together, they finish it in —",
+        "as": "A এটা কাম 4 দিনত, B 6 দিনত আৰু C 12 দিনত কৰিব পাৰে। একেলগে কাম কৰিলে শেষ কৰিব —"
+      },
+      "options": [
+        {
+          "en": "1 day",
+          "as": "১ দিন"
+        },
+        {
+          "en": "4 days",
+          "as": "৪ দিন"
+        },
+        {
+          "en": "3 days",
+          "as": "৩ দিন"
+        },
+        {
+          "en": "2 days",
+          "as": "২ দিন"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "1/4 + 1/6 + 1/12 = 6/12 = 1/2, so 2 days.",
+        "as": "1/4 + 1/6 + 1/12 = 6/12 = 1/2, গতিকে 2 দিন।"
+      }
+    },
+    {
+      "id": "indian-history-medieval-261",
+      "q": {
+        "en": "Which ornamentation technique was popular in Mughal architecture?",
+        "as": "মোগল স্থাপত্যত কোন অলংকৰণ কৌশল জনপ্ৰিয় আছিল?"
+      },
+      "options": [
+        {
+          "en": "Wall painting",
+          "as": "বেৰৰ চিত্ৰ"
+        },
+        {
+          "en": "Mosaic tiles only",
+          "as": "কেৱল মোজাইক টাইলছ"
+        },
+        {
+          "en": "Pietra dura (inlay work)",
+          "as": "পিয়েট্ৰা দ্যুৰা (জড়াই কৰা কাম)"
+        },
+        {
+          "en": "Wood carving only",
+          "as": "কেৱল কাঠ খোদাই"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Pietra dura, or inlay work with semi-precious stones, was popular in Mughal architecture.",
+        "as": "পিয়েট্ৰা দ্যুৰা, অৰ্ধ-মূল্যৱান শিলেৰে জড়াই কৰা কাম, মোগল স্থাপত্যত জনপ্ৰিয় আছিল।"
+      }
+    },
+    {
+      "id": "important-days-dates-038",
+      "q": {
+        "en": "Which important day is observed on 21 February?",
+        "as": "২১ ফেব্ৰুৱাৰী তাৰিখে কোন গুৰুত্বপূৰ্ণ দিৱস পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "National Science Day",
+          "as": "ৰাষ্ট্ৰীয় বিজ্ঞান দিৱস"
+        },
+        {
+          "en": "International Mother Language Day",
+          "as": "আন্তৰ্জাতিক মাতৃভাষা দিৱস"
+        },
+        {
+          "en": "World Tourism Day",
+          "as": "বিশ্ব পৰ্যটন দিৱস"
+        },
+        {
+          "en": "National Youth Day",
+          "as": "ৰাষ্ট্ৰীয় যুৱ দিৱস"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "International Mother Language Day is observed on 21 February.",
+        "as": "আন্তৰ্জাতিক মাতৃভাষা দিৱস ২১ ফেব্ৰুৱাৰী তাৰিখে পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "statistics-113",
+      "q": {
+        "en": "The mode of a set of numbers is ?",
+        "as": "সংখ্যা এটা সমষ্টিৰ বহুলক ?"
+      },
+      "options": [
+        {
+          "en": "the value that occurs most often",
+          "as": "the value that occurs most often"
+        },
+        {
+          "en": "the middle value",
+          "as": "the middle value"
+        },
+        {
+          "en": "the average value",
+          "as": "the average value"
+        },
+        {
+          "en": "the range of the values",
+          "as": "the range of the values"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The mode is the observation with the highest frequency.",
+        "as": "বহুলক হৈছে সৰ্বাধিক বাৰ ঘটা পৰ্যবেক্ষণ।"
+      }
+    },
+    {
+      "id": "word-formation-dictionary-051",
+      "q": {
+        "en": "Arrange in alphabetical order: Seat, Sate, Site, Suit. Which word is second?",
+        "as": "বৰ্ণমালাৰ ক্ৰমত সজাওক: Seat, Sate, Site, Suit। দ্বিতীয় শব্দ কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Sate",
+          "as": "Sate"
+        },
+        {
+          "en": "Site",
+          "as": "Site"
+        },
+        {
+          "en": "Suit",
+          "as": "Suit"
+        },
+        {
+          "en": "Seat",
+          "as": "Seat"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "In alphabetical order the words are Sate, Seat, Site, Suit, so the second is Seat.",
+        "as": "বৰ্ণমালাৰ ক্ৰমত শব্দবোৰ Sate, Seat, Site, Suit, গতিকে দ্বিতীয় Seat।"
+      }
+    },
+    {
+      "id": "voice-change-057",
+      "q": {
+        "en": "Change to active: He was given a prize by the headmaster.",
+        "as": "সকৰ্মবাচ্যলৈ সলনি কৰা: He was given a prize by the headmaster."
+      },
+      "options": [
+        {
+          "en": "The headmaster gave him a prize.",
+          "as": "প্ৰধান শিক্ষকে তেওঁক এটা পুৰস্কাৰ দিছিল।"
+        },
+        {
+          "en": "The headmaster gives him a prize.",
+          "as": "প্ৰধান শিক্ষকে তেওঁক এটা পুৰস্কাৰ দিয়ে।"
+        },
+        {
+          "en": "The headmaster is giving him a prize.",
+          "as": "প্ৰধান শিক্ষকে তেওঁক এটা পুৰস্কাৰ দি আছে।"
+        },
+        {
+          "en": "The headmaster has given him a prize.",
+          "as": "প্ৰধান শিক্ষকে তেওঁক এটা পুৰস্কাৰ দিছে।"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Was given shows past simple, so the active is gave.",
+        "as": "Was given য়ে অতীত সাধাৰণ দেখুৱায়, গতিকে সকৰ্মবাচ্য gave।"
+      }
+    },
+    {
+      "id": "parts-of-speech-255",
+      "q": {
+        "en": "The word 'for' in 'he was punished, for he was guilty' is a —",
+        "as": "'he was punished, for he was guilty' ত 'for' শব্দটো এটা —"
+      },
+      "options": [
+        {
+          "en": "preposition of time",
+          "as": "সময়বাচক অনুসৰ্গ"
+        },
+        {
+          "en": "conjunction of reason",
+          "as": "কাৰণবাচক সংযোগ"
+        },
+        {
+          "en": "adverb",
+          "as": "ক্ৰিয়া-বিশেষণ"
+        },
+        {
+          "en": "adjective",
+          "as": "বিশেষণ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "For here gives a reason and acts as a conjunction.",
+        "as": "ইয়াত for এ এটা কাৰণ দি সংযোগ হিচাপে কাম কৰে।"
+      }
+    },
+    {
+      "id": "brahmaputra-barak-246",
+      "q": {
+        "en": "The Brahmaputra enters the Assam plain near which town?",
+        "as": "ব্ৰহ্মপুত্ৰ অসমৰ সমভূমিত কোন নগৰৰ ওচৰত প্ৰৱেশ কৰে?"
+      },
+      "options": [
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        },
+        {
+          "en": "Sadiya",
+          "as": "শদিয়া"
+        },
+        {
+          "en": "Dhubri",
+          "as": "ধুবুৰী"
+        },
+        {
+          "en": "Tezpur",
+          "as": "তেজপুৰ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Brahmaputra enters the Assam plain near Sadiya.",
+        "as": "ব্ৰহ্মপুত্ৰ শদিয়াৰ ওচৰত অসমৰ সমভূমিত প্ৰৱেশ কৰে।"
+      }
+    }
+  ]
+}

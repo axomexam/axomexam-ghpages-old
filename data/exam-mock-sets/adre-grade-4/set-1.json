@@ -1,0 +1,3007 @@
+{
+  "setNumber": 1,
+  "title": "Full Paper Set 1",
+  "exam": "adre-grade-4",
+  "questions": [
+    {
+      "id": "assamese-literature-100",
+      "q": {
+        "en": "In a Bhaona, the chief narrator is called:",
+        "as": "ভাওনাত প্ৰধান বৰ্ণনাকাৰীক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Bailung",
+          "as": "বাইলুং"
+        },
+        {
+          "en": "Satradhikar",
+          "as": "সত্ৰাধিকাৰ"
+        },
+        {
+          "en": "Deodhai",
+          "as": "দেউধাই"
+        },
+        {
+          "en": "Sutradhar",
+          "as": "সূত্ৰধাৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The chief narrator in a Bhaona is the Sutradhar.",
+        "as": "ভাওনাৰ প্ৰধান বৰ্ণনাকাৰী সূত্ৰধাৰ।"
+      }
+    },
+    {
+      "id": "government-schemes-125",
+      "q": {
+        "en": "The PM SHRI scheme is related to —",
+        "as": "পিএম শ্ৰী আঁচনি কি সৈতে সম্পৰ্কিত?"
+      },
+      "options": [
+        {
+          "en": "Model prisons",
+          "as": "আদৰ্শ কাৰাগাৰ"
+        },
+        {
+          "en": "Model hospitals",
+          "as": "আদৰ্শ চিকিৎসালয়"
+        },
+        {
+          "en": "Model schools",
+          "as": "আদৰ্শ বিদ্যালয়"
+        },
+        {
+          "en": "Model farms",
+          "as": "আদৰ্শ পাম"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "PM SHRI Schools are developed as model schools.",
+        "as": "পিএম শ্ৰী বিদ্যালয়সমূহ আদৰ্শ বিদ্যালয় হিচাপে বিকশিত কৰা হয়।"
+      }
+    },
+    {
+      "id": "assamese-literature-350",
+      "q": {
+        "en": "The first Assamese newspaper 'Orunodoi' was primarily a:",
+        "as": "প্ৰথম অসমীয়া বাতৰি কাকত 'অৰুণোদয়' মূলতঃ কি আছিল?"
+      },
+      "options": [
+        {
+          "en": "Weekly pamphlet",
+          "as": "সাপ্তাহিক পুস্তিকা"
+        },
+        {
+          "en": "Monthly magazine",
+          "as": "মাহেকীয়া আলোচনী"
+        },
+        {
+          "en": "Annual journal",
+          "as": "বাৰ্ষিক পত্ৰিকা"
+        },
+        {
+          "en": "Daily newspaper",
+          "as": "দৈনিক বাতৰি কাকত"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Orunodoi was primarily a monthly magazine.",
+        "as": "অৰুণোদয় মূলতঃ এখন মাহেকীয়া আলোচনী আছিল।"
+      }
+    },
+    {
+      "id": "panchayati-raj-113",
+      "q": {
+        "en": "Which of the following is a subject of the Eleventh Schedule?",
+        "as": "তলৰ কোনটো একাদশ অনুসূচীৰ এটা বিষয়?"
+      },
+      "options": [
+        {
+          "en": "Roads and rural communication",
+          "as": "পথ আৰু গ্ৰাম্য যোগাযোগ"
+        },
+        {
+          "en": "Defence",
+          "as": "প্ৰতিৰক্ষা"
+        },
+        {
+          "en": "Railways",
+          "as": "ৰে'লপথ"
+        },
+        {
+          "en": "Currency",
+          "as": "মুদ্ৰা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Rural roads and communication is a subject of the Eleventh Schedule.",
+        "as": "গ্ৰাম্য পথ আৰু যোগাযোগ একাদশ অনুসূচীৰ এটা বিষয়।"
+      }
+    },
+    {
+      "id": "one-word-substitution-105",
+      "q": {
+        "en": "One who sells flowers is called —",
+        "as": "ফুল বিক্ৰী কৰা মানুহক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Florist",
+          "as": "Florist"
+        },
+        {
+          "en": "Botanist",
+          "as": "Botanist"
+        },
+        {
+          "en": "Gardener",
+          "as": "Gardener"
+        },
+        {
+          "en": "Greengrocer",
+          "as": "Greengrocer"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "One who sells flowers is called 'Florist'.",
+        "as": "ইংৰাজীত ইয়াক Florist বুলি কোৱা হয়।"
+      }
+    },
+    {
+      "id": "assam-india-current-affairs-187",
+      "q": {
+        "en": "Which Assamese city is famous for the Kamakhya Temple?",
+        "as": "কামাখ্যা মন্দিৰৰ বাবে কোন অসমীয়া চহৰ বিখ্যাত?"
+      },
+      "options": [
+        {
+          "en": "Nagaon",
+          "as": "নগাঁও"
+        },
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Tezpur",
+          "as": "তেজপুৰ"
+        },
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Guwahati is famous for the Kamakhya Temple.",
+        "as": "গুৱাহাটী কামাখ্যা মন্দিৰৰ বাবে বিখ্যাত।"
+      }
+    },
+    {
+      "id": "paper-folding-cutting-005",
+      "q": {
+        "en": "A paper is folded as shown and a hole is punched through it. Which pattern will appear when the paper is completely unfolded?",
+        "as": "দেখুওৱাৰ দৰে কাগজ ভাঁজ কৰি এটা ফুটা কৰা হ'ল। কাগজখন সম্পূৰ্ণকৈ মেলিলে কোনটো আৰ্হি দেখা যাব?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "On unfolding, every fold line reflects the punched hole. The hole lies on the fold line, so both halves overlap and only 1 hole is formed.",
+        "as": "কাগজ মেলিলে প্ৰতিটো ভাঁজ ৰেখাই ফুটাৰ প্ৰতিবিম্ব সৃষ্টি কৰে। ফুটাটো ভাঁজ ৰেখাৰ ওপৰত আছে, সেয়ে দুয়ো অংশ একেলগ হৈ মাত্ৰ 1 টা ফুটা হয়।"
+      }
+    },
+    {
+      "id": "simple-compound-interest-033",
+      "q": {
+        "en": "In how many years will ₹5,000 double at 10% simple interest?",
+        "as": "বছৰি 10% সৰল সুতত 5,000 টকা কিমান বছৰত দুগুণ হ'ব?"
+      },
+      "options": [
+        {
+          "en": "8 years",
+          "as": "৮ বছৰ"
+        },
+        {
+          "en": "10 years",
+          "as": "১০ বছৰ"
+        },
+        {
+          "en": "12 years",
+          "as": "১২ বছৰ"
+        },
+        {
+          "en": "15 years",
+          "as": "১৫ বছৰ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Time to double = 100 / R = 100 / 10 = 10 years.",
+        "as": "দুগুণ হ'বলৈ সময় = 100 / 10 = 10 বছৰ।"
+      }
+    },
+    {
+      "id": "government-schemes-113",
+      "q": {
+        "en": "The PM Surya Ghar: Muft Bijli Yojana is related to —",
+        "as": "পিএম সূৰ্য ঘৰ: মুক্ত বিদ্যুৎ যোজনা কি সৈতে সম্পৰ্কিত?"
+      },
+      "options": [
+        {
+          "en": "Free education",
+          "as": "বিনামূলীয়া শিক্ষা"
+        },
+        {
+          "en": "Free ration",
+          "as": "বিনামূলীয়া ৰেচন"
+        },
+        {
+          "en": "Free LPG connection",
+          "as": "বিনামূলীয়া এলপিজি সংযোগ"
+        },
+        {
+          "en": "Rooftop solar power for households",
+          "as": "ঘৰুৱা ছাদত সৌৰ বিদ্যুৎ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "PM Surya Ghar: Muft Bijli Yojana promotes rooftop solar power for households.",
+        "as": "পিএম সূৰ্য ঘৰ: মুক্ত বিদ্যুৎ যোজনা ঘৰুৱা ছাদত সৌৰ বিদ্যুৎ প্ৰচাৰ কৰে।"
+      }
+    },
+    {
+      "id": "problems-on-ages-043",
+      "q": {
+        "en": "The present age of A is 25 years. What was his age 10 years ago?",
+        "as": "A ৰ বৰ্তমান বয়স 25 বছৰ। 10 বছৰ আগতে তেওঁৰ বয়স কিমান আছিল?"
+      },
+      "options": [
+        {
+          "en": "10 years",
+          "as": "১০ বছৰ"
+        },
+        {
+          "en": "20 years",
+          "as": "২০ বছৰ"
+        },
+        {
+          "en": "15 years",
+          "as": "১৫ বছৰ"
+        },
+        {
+          "en": "35 years",
+          "as": "৩৫ বছৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Age 10 years ago = 25 − 10 = 15 years.",
+        "as": "10 বছৰ আগৰ বয়স = 25 − 10 = 15 বছৰ।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-137",
+      "q": {
+        "en": "Which of the following is a reason for low industrial development in Assam?",
+        "as": "অসমত কম ঔদ্যোগিক উন্নয়নৰ এটা কাৰণ কি?"
+      },
+      "options": [
+        {
+          "en": "Difficult terrain and limited connectivity",
+          "as": "কঠিন ভূখণ্ড আৰু সীমিত সংযোগ"
+        },
+        {
+          "en": "Excess deserts",
+          "as": "অতিৰিক্ত মৰুভূমি"
+        },
+        {
+          "en": "Lack of water",
+          "as": "পানীৰ অভাৱ"
+        },
+        {
+          "en": "No population",
+          "as": "জনসংখ্যা নাই"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Difficult terrain and poor connectivity have slowed Assam's industrial growth.",
+        "as": "কঠিন ভূখণ্ড আৰু দুৰ্বল সংযোগে অসমৰ ঔদ্যোগিক বৃদ্ধি লেহেমীয়া কৰিছে।"
+      }
+    },
+    {
+      "id": "average-007",
+      "q": {
+        "en": "What is the average of 5 consecutive numbers starting from 11?",
+        "as": "11 ৰ পৰা আৰম্ভ হোৱা 5 টা ক্ৰমিক সংখ্যাৰ গড় কিমান?"
+      },
+      "options": [
+        {
+          "en": "12",
+          "as": "১২"
+        },
+        {
+          "en": "14",
+          "as": "১৪"
+        },
+        {
+          "en": "15",
+          "as": "১৫"
+        },
+        {
+          "en": "13",
+          "as": "১৩"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Numbers are 11, 12, 13, 14, 15; average = 13.",
+        "as": "সংখ্যাকেইটা 11, 12, 13, 14, 15; গড় = 13।"
+      }
+    },
+    {
+      "id": "number-alphabet-series-002",
+      "q": {
+        "en": "Find the next number in the series: 5, 10, 20, 40, ?",
+        "as": "শৃংখলাটোত পৰৱৰ্তী সংখ্যাটো নিৰ্ণয় কৰা: ৫, ১০, ২০, ৪০, ?"
+      },
+      "options": [
+        {
+          "en": "81",
+          "as": "৮১"
+        },
+        {
+          "en": "80",
+          "as": "৮০"
+        },
+        {
+          "en": "79",
+          "as": "৭৯"
+        },
+        {
+          "en": "82",
+          "as": "৮২"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Each term is doubled, so 40 x 2 = 80.",
+        "as": "প্ৰতিটো পদ দুগুণ হয়, সেয়ে 40 x 2 = 80।"
+      }
+    },
+    {
+      "id": "panchayati-raj-121",
+      "q": {
+        "en": "The PESA Act applies to areas covered under which Schedule?",
+        "as": "PESA আইনে কোন অনুসূচীৰ অধীনৰ এলেকাত প্ৰযোজ্য?"
+      },
+      "options": [
+        {
+          "en": "Fifth Schedule",
+          "as": "পঞ্চম অনুসূচী"
+        },
+        {
+          "en": "Ninth Schedule",
+          "as": "নৱম অনুসূচী"
+        },
+        {
+          "en": "Seventh Schedule",
+          "as": "সপ্তম অনুসূচী"
+        },
+        {
+          "en": "Sixth Schedule",
+          "as": "ষষ্ঠ অনুসূচী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "PESA applies to Fifth Schedule (Scheduled) areas.",
+        "as": "PESA পঞ্চম অনুসূচী (অনুসূচিত) এলেকাত প্ৰযোজ্য।"
+      }
+    },
+    {
+      "id": "idioms-phrases-030",
+      "q": {
+        "en": "The idiom 'to break the ice' means —",
+        "as": "'to break the ice' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "to start a conversation",
+          "as": "কথা-বতৰা আৰম্ভ কৰা"
+        },
+        {
+          "en": "to betray someone",
+          "as": "কাকোবা বিশ্বাসঘাতকতা কৰা"
+        },
+        {
+          "en": "to accept punishment",
+          "as": "শাস্তি স্বীকাৰ কৰা"
+        },
+        {
+          "en": "to cause trouble",
+          "as": "অসুবিধা সৃষ্টি কৰা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'To break the ice' means to start a conversation.",
+        "as": "'to break the ice' ৰ অৰ্থ হৈছে কথা-বতৰা আৰম্ভ কৰা।"
+      }
+    },
+    {
+      "id": "articles-determiners-015",
+      "q": {
+        "en": "Fill in the blank: He is ___ MP from our district.",
+        "as": "ৰিক্ত স্থান পূৰণ কৰক: He is ___ MP from our district."
+      },
+      "options": [
+        {
+          "en": "the",
+          "as": "the"
+        },
+        {
+          "en": "a",
+          "as": "a"
+        },
+        {
+          "en": "no article",
+          "as": "কোনো article নহয়"
+        },
+        {
+          "en": "an",
+          "as": "an"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'MP' begins with a vowel sound 'em', so 'an' is used.",
+        "as": "'MP' স্বৰধ্বনি 'এম' ৰে আৰম্ভ হয়, গতিকে 'an' ব্যৱহাৰ কৰা হয়।"
+      }
+    },
+    {
+      "id": "assamese-literature-036",
+      "q": {
+        "en": "Madhava Kandali's Assamese Ramayana is also known as:",
+        "as": "মাধৱ কন্দলীৰ অসমীয়া ৰামায়ণক কি বুলিও জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Mula Ramayana",
+          "as": "মূল ৰামায়ণ"
+        },
+        {
+          "en": "Katha Ramayana",
+          "as": "কথা ৰামায়ণ"
+        },
+        {
+          "en": "Adbhut Ramayana",
+          "as": "অদ্ভুত ৰামায়ণ"
+        },
+        {
+          "en": "Saptakanda Ramayana",
+          "as": "সপ্তকাণ্ড ৰামায়ণ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "It is known as the Saptakanda Ramayana.",
+        "as": "ইয়াক সপ্তকাণ্ড ৰামায়ণ বুলি জনা যায়।"
+      }
+    },
+    {
+      "id": "panchayati-raj-065",
+      "q": {
+        "en": "Panchayat Samiti generally functions at which level?",
+        "as": "পঞ্চায়ত সমিতি সাধাৰণতে কোনটো স্তৰত কাৰ্যনিৰ্বাহ কৰে?"
+      },
+      "options": [
+        {
+          "en": "Block level",
+          "as": "ব্লক স্তৰ"
+        },
+        {
+          "en": "State level",
+          "as": "ৰাজ্য স্তৰ"
+        },
+        {
+          "en": "District level",
+          "as": "জিলা স্তৰ"
+        },
+        {
+          "en": "Village level",
+          "as": "গাঁও স্তৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Panchayat Samiti functions at the block (intermediate) level.",
+        "as": "পঞ্চায়ত সমিতি ব্লক (মধ্যৱৰ্তী) স্তৰত কাৰ্যনিৰ্বাহ কৰে।"
+      }
+    },
+    {
+      "id": "assamese-literature-032",
+      "q": {
+        "en": "The language of the Charyapada belongs to which language family?",
+        "as": "চৰ্যাপদৰ ভাষা কোন ভাষা পৰিয়ালৰ?"
+      },
+      "options": [
+        {
+          "en": "Dravidian",
+          "as": "দ্ৰাবিড়"
+        },
+        {
+          "en": "Austric",
+          "as": "অষ্ট্ৰিক"
+        },
+        {
+          "en": "Indo-Aryan",
+          "as": "ইন্দো-আৰ্য"
+        },
+        {
+          "en": "Tibeto-Burman",
+          "as": "তিব্বত-বাৰ্মা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Charyapada language belongs to the Indo-Aryan family.",
+        "as": "চৰ্যাপদৰ ভাষা ইন্দো-আৰ্য পৰিয়ালৰ।"
+      }
+    },
+    {
+      "id": "lcm-hcf-006",
+      "q": {
+        "en": "What is the LCM of 6 and 8?",
+        "as": "6 আৰু 8 ৰ ল.সা.গু. কিমান?"
+      },
+      "options": [
+        {
+          "en": "48",
+          "as": "৪৮"
+        },
+        {
+          "en": "12",
+          "as": "১২"
+        },
+        {
+          "en": "24",
+          "as": "২৪"
+        },
+        {
+          "en": "2",
+          "as": "২"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "6 = 2×3 and 8 = 2³, so LCM = 2³×3 = 24.",
+        "as": "6 = 2×3 আৰু 8 = 2³, গতিকে ল.সা.গু. = 2³×3 = 24।"
+      }
+    },
+    {
+      "id": "assam-national-parks-086",
+      "q": {
+        "en": "Which national park of Assam is located in the Dibrugarh and Tinsukia districts on the Brahmaputra floodplain?",
+        "as": "অসমৰ কোনখন ৰাষ্ট্ৰীয় উদ্যান ব্ৰহ্মপুত্ৰ বানপানী সমভূমিত ডিব্ৰুগড় আৰু তিনিচুকীয়া জিলাত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Manas",
+          "as": "মানস"
+        },
+        {
+          "en": "Nameri",
+          "as": "নামেৰী"
+        },
+        {
+          "en": "Dibru-Saikhowa",
+          "as": "ডিব্ৰু-চৈখোৱা"
+        },
+        {
+          "en": "Orang",
+          "as": "ওৰাং"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Dibru-Saikhowa lies on the Brahmaputra floodplain in Dibrugarh and Tinsukia.",
+        "as": "ডিব্ৰু-চৈখোৱা ডিব্ৰুগড় আৰু তিনিচুকীয়াৰ ব্ৰহ্মপুত্ৰ বানপানী সমভূমিত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "ahom-koch-kingdoms-018",
+      "q": {
+        "en": "Which Mughal general invaded Assam in 1662 and occupied Garhgaon?",
+        "as": "কোন মোগল সেনাপতিয়ে ১৬৬২ চনত অসম আক্ৰমণ কৰি গড়গাঁও দখল কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Shaista Khan",
+          "as": "শায়েস্তা খান"
+        },
+        {
+          "en": "Ram Singh",
+          "as": "ৰাম সিংহ"
+        },
+        {
+          "en": "Islam Khan",
+          "as": "ইছলাম খান"
+        },
+        {
+          "en": "Mir Jumla",
+          "as": "মীৰজুমলা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Mir Jumla invaded Assam in 1662 and occupied Garhgaon.",
+        "as": "মীৰজুমলাই ১৬৬২ চনত অসম আক্ৰমণ কৰি গড়গাঁও দখল কৰিছিল।"
+      }
+    },
+    {
+      "id": "panchayati-raj-123",
+      "q": {
+        "en": "In how many states is the PESA Act applicable?",
+        "as": "PESA আইন কিমানখন ৰাজ্যত প্ৰযোজ্য?"
+      },
+      "options": [
+        {
+          "en": "Eight",
+          "as": "আঠখন"
+        },
+        {
+          "en": "Six",
+          "as": "ছখন"
+        },
+        {
+          "en": "Ten",
+          "as": "দহখন"
+        },
+        {
+          "en": "Twelve",
+          "as": "বাৰখন"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "PESA is applicable in ten states having Fifth Schedule areas.",
+        "as": "পঞ্চম অনুসূচী এলেকা থকা দহখন ৰাজ্যত PESA প্ৰযোজ্য।"
+      }
+    },
+    {
+      "id": "assamese-literature-181",
+      "q": {
+        "en": "'Jonaki' was published from which city?",
+        "as": "'জোনাকী' কোন নগৰৰ পৰা প্ৰকাশিত হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "Calcutta",
+          "as": "কলিকতা"
+        },
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        },
+        {
+          "en": "Sibsagar",
+          "as": "শিৱসাগৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Jonaki was published from Calcutta.",
+        "as": "জোনাকী কলিকতাৰ পৰা প্ৰকাশিত হৈছিল।"
+      }
+    },
+    {
+      "id": "indian-history-609",
+      "q": {
+        "en": "The 'Golden Silk' of Assam is:",
+        "as": "অসমৰ 'সোণালী ৰেচম' কি?"
+      },
+      "options": [
+        {
+          "en": "Eri",
+          "as": "এৰী"
+        },
+        {
+          "en": "Pat",
+          "as": "পাট"
+        },
+        {
+          "en": "Muga",
+          "as": "মুগা"
+        },
+        {
+          "en": "Tassar",
+          "as": "তছৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Muga is known as the Golden Silk of Assam.",
+        "as": "মুগাক অসমৰ সোণালী ৰেচম বোলা হয়।"
+      }
+    },
+    {
+      "id": "articles-determiners-051",
+      "q": {
+        "en": "Fill in the blank: He goes to ___ work by train.",
+        "as": "ৰিক্ত স্থান পূৰণ কৰক: He goes to ___ work by train."
+      },
+      "options": [
+        {
+          "en": "the",
+          "as": "the"
+        },
+        {
+          "en": "an",
+          "as": "an"
+        },
+        {
+          "en": "a",
+          "as": "a"
+        },
+        {
+          "en": "no article",
+          "as": "কোনো article নহয়"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'Go to work' is a fixed phrase and takes no article.",
+        "as": "'Go to work' এটা স্থিৰ বাক্যাংশ, ইয়াত article নালাগে।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-236",
+      "q": {
+        "en": "Which river is known as the 'Ganga of Kerala'?",
+        "as": "কোনখন নদীক 'কেৰালাৰ গংগা' বুলি জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Kaveri",
+          "as": "কাবেৰী"
+        },
+        {
+          "en": "Periyar",
+          "as": "পেৰিয়াৰ"
+        },
+        {
+          "en": "Bharathappuzha",
+          "as": "ভৰতপ্পুঝা"
+        },
+        {
+          "en": "Pamba",
+          "as": "পাম্বা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Periyar river is known as the Ganga of Kerala.",
+        "as": "পেৰিয়াৰ নদীক কেৰালাৰ গংগা বুলি জনা যায়।"
+      }
+    },
+    {
+      "id": "ratio-proportion-028",
+      "q": {
+        "en": "₹770 is divided in the ratio 4 : 7. Find the larger share.",
+        "as": "770 টকা 4 : 7 অনুপাতত ভগোৱা হ'ল। ডাঙৰ অংশ উলিয়াওক।"
+      },
+      "options": [
+        {
+          "en": "₹440",
+          "as": "৪৪০ টকা"
+        },
+        {
+          "en": "₹420",
+          "as": "৪২০ টকা"
+        },
+        {
+          "en": "₹450",
+          "as": "৪৫০ টকা"
+        },
+        {
+          "en": "₹490",
+          "as": "৪৯০ টকা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Larger share = (7/11) × 770 = ₹490.",
+        "as": "ডাঙৰ অংশ = (7/11) × 770 = 490 টকা।"
+      }
+    },
+    {
+      "id": "simple-compound-interest-045",
+      "q": {
+        "en": "The population of a village increases by 5% every year. If the present population is 8,000, what will it be after 2 years?",
+        "as": "এখন গাঁৱৰ জনসংখ্যা বছৰি 5% হাৰত বাঢ়ে। বৰ্তমান জনসংখ্যা 8,000 হ'লে 2 বছৰৰ পিছত কিমান হ'ব?"
+      },
+      "options": [
+        {
+          "en": "8,800",
+          "as": "৮,৮০০"
+        },
+        {
+          "en": "8,820",
+          "as": "৮,৮২০"
+        },
+        {
+          "en": "8,840",
+          "as": "৮,৮৪০"
+        },
+        {
+          "en": "8,900",
+          "as": "৮,৯০০"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Population = 8000 × (1.05)² = 8,820.",
+        "as": "জনসংখ্যা = 8000 × (1.05)² = 8,820।"
+      }
+    },
+    {
+      "id": "time-work-040",
+      "q": {
+        "en": "A and B together can finish a work in 6 days. A alone can do it in 12 days. In how many days can B alone finish it?",
+        "as": "A আৰু B একেলগে এটা কাম 6 দিনত শেষ কৰিব পাৰে। A এ অকলে 12 দিনত কৰিব পাৰে। B এ অকলে কিমান দিনত শেষ কৰিব?"
+      },
+      "options": [
+        {
+          "en": "6 days",
+          "as": "৬ দিন"
+        },
+        {
+          "en": "8 days",
+          "as": "৮ দিন"
+        },
+        {
+          "en": "10 days",
+          "as": "১০ দিন"
+        },
+        {
+          "en": "12 days",
+          "as": "১২ দিন"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "1/B = 1/6 - 1/12 = 1/12, so B alone takes 12 days.",
+        "as": "1/B = 1/6 - 1/12 = 1/12, গতিকে B এ 12 দিন লয়।"
+      }
+    },
+    {
+      "id": "voice-change-006",
+      "q": {
+        "en": "Change into passive voice: He has finished the work.",
+        "as": "Passive voice লৈ সলনি কৰক: He has finished the work."
+      },
+      "options": [
+        {
+          "en": "The work has been finished by him.",
+          "as": "The work has been finished by him."
+        },
+        {
+          "en": "The work has finished by him.",
+          "as": "The work has finished by him."
+        },
+        {
+          "en": "The work was finished by him.",
+          "as": "The work was finished by him."
+        },
+        {
+          "en": "The work is finished by him.",
+          "as": "The work is finished by him."
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Present perfect passive uses 'has/have been + past participle'.",
+        "as": "Present perfect ৰ passive হৈছে 'has/have been + past participle'।"
+      }
+    },
+    {
+      "id": "embedded-figure-039",
+      "q": {
+        "en": "Which one of the following figures is embedded in the given figure?",
+        "as": "তলৰ কোনটো চিত্ৰ দিয়া চিত্ৰটোত সন্নিবিষ্ট (লুকাই) আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The hexagon is embedded in the given figure.",
+        "as": "দিয়া চিত্ৰটোত ষড়ভুজ সন্নিবিষ্ট হৈ আছে।"
+      }
+    },
+    {
+      "id": "panchayati-raj-119",
+      "q": {
+        "en": "What does PESA stand for?",
+        "as": "PESA ৰ সম্পূৰ্ণ ৰূপ কি?"
+      },
+      "options": [
+        {
+          "en": "Public Employment Scheme Act",
+          "as": "ৰাজহুৱা নিয়োগ আঁচনি আইন"
+        },
+        {
+          "en": "Panchayat Financial Assistance Act",
+          "as": "পঞ্চায়ত আৰ্থিক সহায় আইন"
+        },
+        {
+          "en": "Panchayats (Extension to Scheduled Areas) Act",
+          "as": "পঞ্চায়ত (অনুসূচিত এলেকালৈ সম্প্ৰসাৰণ) আইন"
+        },
+        {
+          "en": "Panchayat Election and Security Act",
+          "as": "পঞ্চায়ত নিৰ্বাচন আৰু সুৰক্ষা আইন"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "PESA stands for Panchayats (Extension to Scheduled Areas) Act.",
+        "as": "PESA ৰ অৰ্থ হৈছে পঞ্চায়ত (অনুসূচিত এলেকালৈ সম্প্ৰসাৰণ) আইন।"
+      }
+    },
+    {
+      "id": "odd-one-out-037",
+      "q": {
+        "en": "Choose the odd one out: He, She, It, Book",
+        "as": "অমিলটো বাছি উলিওৱা: He, She, It, Book"
+      },
+      "options": [
+        {
+          "en": "Book",
+          "as": "কিতাপ"
+        },
+        {
+          "en": "He",
+          "as": "সি"
+        },
+        {
+          "en": "She",
+          "as": "তাই"
+        },
+        {
+          "en": "It",
+          "as": "ই"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "He, she and it are pronouns; book is a noun.",
+        "as": "সি, তাই আৰু ই সৰ্বনাম; কিতাপ এটা বিশেষ্য।"
+      }
+    },
+    {
+      "id": "pos-016",
+      "q": {
+        "en": "Identify the part of speech of the word 'She' in the sentence: She is my sister.",
+        "as": "বাক্যটোত 'She' শব্দটোৰ Parts of Speech চিনাক্ত কৰক: She is my sister."
+      },
+      "options": [
+        {
+          "en": "Noun",
+          "as": "Noun"
+        },
+        {
+          "en": "Pronoun",
+          "as": "Pronoun"
+        },
+        {
+          "en": "Adjective",
+          "as": "Adjective"
+        },
+        {
+          "en": "Adverb",
+          "as": "Adverb"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'She' is used in place of a noun, so it is a pronoun.",
+        "as": "'She' এ এটা নামৰ সলনি ব্যৱহাৰ হয়, গতিকে ই এটা Pronoun।"
+      }
+    },
+    {
+      "id": "awards-honours-010",
+      "q": {
+        "en": "On the occasion of which day are the Padma Awards announced?",
+        "as": "পদ্ম বঁটা কোন উপলক্ষত ঘোষণা কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Independence Day",
+          "as": "স্বাধীনতা দিৱস"
+        },
+        {
+          "en": "Gandhi Jayanti",
+          "as": "গান্ধী জয়ন্তী"
+        },
+        {
+          "en": "Republic Day",
+          "as": "গণৰাজ্য দিৱস"
+        },
+        {
+          "en": "New Year",
+          "as": "নতুন বছৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Padma Awards are announced every year on the occasion of Republic Day.",
+        "as": "পদ্ম বঁটা প্ৰতি বছৰে গণৰাজ্য দিৱস উপলক্ষত ঘোষণা কৰা হয়।"
+      }
+    },
+    {
+      "id": "assamese-literature-149",
+      "q": {
+        "en": "Which of the following was a major contribution of the Satra institution to Assamese culture?",
+        "as": "অসমীয়া সংস্কৃতিলৈ সত্ৰ প্ৰতিষ্ঠানৰ এটা প্ৰধান অৱদান তলৰ কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Preservation of dance, music and literature",
+          "as": "নৃত্য, সংগীত আৰু সাহিত্যৰ সংৰক্ষণ"
+        },
+        {
+          "en": "Mining coal",
+          "as": "কয়লা খনি"
+        },
+        {
+          "en": "Building railways",
+          "as": "ৰে'লপথ নিৰ্মাণ"
+        },
+        {
+          "en": "Printing newspapers",
+          "as": "বাতৰি কাকত ছপা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Satra institutions preserved dance, music and literature.",
+        "as": "সত্ৰ প্ৰতিষ্ঠানসমূহে নৃত্য, সংগীত আৰু সাহিত্য সংৰক্ষণ কৰিছিল।"
+      }
+    },
+    {
+      "id": "simple-compound-interest-022",
+      "q": {
+        "en": "Find the compound interest on ₹2,000 at 10% per annum for 3 years.",
+        "as": "2,000 টকাৰ ওপৰত বছৰি 10% হাৰত 3 বছৰৰ চক্ৰবৃদ্ধি সুত নিৰ্ণয় কৰক।"
+      },
+      "options": [
+        {
+          "en": "₹662",
+          "as": "৬৬২ টকা"
+        },
+        {
+          "en": "₹600",
+          "as": "৬০০ টকা"
+        },
+        {
+          "en": "₹620",
+          "as": "৬২০ টকা"
+        },
+        {
+          "en": "₹640",
+          "as": "৬৪০ টকা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Amount = 2000 × (1.1)³ = ₹2,662; CI = ₹662.",
+        "as": "মুঠ ধন = 2000 × (1.1)³ = 2,662 টকা; চক্ৰবৃদ্ধি সুত = 662 টকা।"
+      }
+    },
+    {
+      "id": "number-alphabet-series-001",
+      "q": {
+        "en": "Find the next number in the series: 3, 6, 9, 12, 15, ?",
+        "as": "শৃংখলাটোত পৰৱৰ্তী সংখ্যাটো নিৰ্ণয় কৰা: ৩, ৬, ৯, ১২, ১৫, ?"
+      },
+      "options": [
+        {
+          "en": "18",
+          "as": "১৮"
+        },
+        {
+          "en": "19",
+          "as": "১৯"
+        },
+        {
+          "en": "17",
+          "as": "১৭"
+        },
+        {
+          "en": "20",
+          "as": "২০"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The series increases by 3 each time, so 15 + 3 = 18.",
+        "as": "শৃংখলাটো প্ৰতিবাৰ 3 কৈ বৃদ্ধি পায়, সেয়ে 15 + 3 = 18।"
+      }
+    },
+    {
+      "id": "indian-history-546",
+      "q": {
+        "en": "Mahatma Gandhi's autobiography is titled:",
+        "as": "মহাত্মা গান্ধীৰ আত্মজীৱনীৰ নাম কি?"
+      },
+      "options": [
+        {
+          "en": "Gitanjali",
+          "as": "গীতাঞ্জলি"
+        },
+        {
+          "en": "Wings of Fire",
+          "as": "ৱিংছ অফ ফায়াৰ"
+        },
+        {
+          "en": "Discovery of India",
+          "as": "ভাৰতৰ আৱিষ্কাৰ"
+        },
+        {
+          "en": "The Story of My Experiments with Truth",
+          "as": "সত্যৰ সৈতে মোৰ পৰীক্ষা-নিৰীক্ষাৰ কাহিনী"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Gandhi's autobiography is 'The Story of My Experiments with Truth'.",
+        "as": "গান্ধীৰ আত্মজীৱনী 'সত্যৰ সৈতে মোৰ পৰীক্ষা-নিৰীক্ষাৰ কাহিনী'।"
+      }
+    },
+    {
+      "id": "paper-folding-cutting-006",
+      "q": {
+        "en": "A paper is folded as shown and a hole is punched through it. Which pattern will appear when the paper is completely unfolded?",
+        "as": "দেখুওৱাৰ দৰে কাগজ ভাঁজ কৰি এটা ফুটা কৰা হ'ল। কাগজখন সম্পূৰ্ণকৈ মেলিলে কোনটো আৰ্হি দেখা যাব?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "On unfolding, every fold line reflects the punched hole. The hole lies on the fold line, so both halves overlap and only 1 hole is formed.",
+        "as": "কাগজ মেলিলে প্ৰতিটো ভাঁজ ৰেখাই ফুটাৰ প্ৰতিবিম্ব সৃষ্টি কৰে। ফুটাটো ভাঁজ ৰেখাৰ ওপৰত আছে, সেয়ে দুয়ো অংশ একেলগ হৈ মাত্ৰ 1 টা ফুটা হয়।"
+      }
+    },
+    {
+      "id": "assam-natural-resources-091",
+      "q": {
+        "en": "Which institution manages reserved forests in Assam?",
+        "as": "অসমত সংৰক্ষিত বনাঞ্চল কোনটো প্ৰতিষ্ঠানে পৰিচালনা কৰে?"
+      },
+      "options": [
+        {
+          "en": "RBI",
+          "as": "আৰ বি আই"
+        },
+        {
+          "en": "Oil India Limited",
+          "as": "অইল ইণ্ডিয়া লিমিটেড"
+        },
+        {
+          "en": "Assam Forest Department",
+          "as": "অসম বন বিভাগ"
+        },
+        {
+          "en": "SEBI",
+          "as": "ছেবি"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Assam Forest Department manages and protects the state's forests.",
+        "as": "অসম বন বিভাগে ৰাজ্যৰ বনাঞ্চল পৰিচালনা আৰু সুৰক্ষা কৰে।"
+      }
+    },
+    {
+      "id": "panchayati-raj-016",
+      "q": {
+        "en": "Which committee recommended a two-tier Panchayati Raj system?",
+        "as": "কোন সমিতিয়ে দুই-স্তৰীয় পঞ্চায়তী ৰাজ ব্যৱস্থাৰ সুপাৰিশ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Balwant Rai Mehta Committee",
+          "as": "বলৱন্ত ৰায় মেহতা সমিতি"
+        },
+        {
+          "en": "L.M. Singhvi Committee",
+          "as": "এল. এম. সিংভি সমিতি"
+        },
+        {
+          "en": "G.V.K. Rao Committee",
+          "as": "জি. ভি. কে. ৰাও সমিতি"
+        },
+        {
+          "en": "Ashok Mehta Committee",
+          "as": "অশোক মেহতা সমিতি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Ashok Mehta Committee (1977) recommended a two-tier system.",
+        "as": "অশোক মেহতা সমিতিয়ে (১৯৭৭) দুই-স্তৰীয় ব্যৱস্থাৰ সুপাৰিশ কৰিছিল।"
+      }
+    },
+    {
+      "id": "ranking-order-039",
+      "q": {
+        "en": "P is older than Q and R is younger than Q. Who is the youngest?",
+        "as": "P, Q তকৈ ডাঙৰ আৰু R, Q তকৈ সৰু। আটাইতকৈ সৰু কোন?"
+      },
+      "options": [
+        {
+          "en": "P",
+          "as": "P"
+        },
+        {
+          "en": "Q",
+          "as": "Q"
+        },
+        {
+          "en": "R",
+          "as": "R"
+        },
+        {
+          "en": "Cannot be determined",
+          "as": "নিৰ্ণয় কৰিব নোৱাৰি"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "P > Q > R, so R is the youngest.",
+        "as": "P > Q > R, সেয়ে R আটাইতকৈ সৰু।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-029",
+      "q": {
+        "en": "Which of the following is an indirect tax?",
+        "as": "তলৰ কোনটো এটা পৰোক্ষ কৰ?"
+      },
+      "options": [
+        {
+          "en": "Income tax",
+          "as": "আয় কৰ"
+        },
+        {
+          "en": "Corporate tax",
+          "as": "নিগম কৰ"
+        },
+        {
+          "en": "Wealth tax",
+          "as": "সম্পত্তি কৰ"
+        },
+        {
+          "en": "GST",
+          "as": "জিএছটি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "GST is an indirect tax collected on the sale of goods and services.",
+        "as": "জিএছটি এটা পৰোক্ষ কৰ যি সামগ্ৰী আৰু সেৱাৰ বিক্ৰয়ত সংগ্ৰহ কৰা হয়।"
+      }
+    },
+    {
+      "id": "pos-133",
+      "q": {
+        "en": "Which word in the sentence 'She writes neatly' is an adverb?",
+        "as": "'She writes neatly' বাক্যটোত কোনটো শব্দ Adverb?"
+      },
+      "options": [
+        {
+          "en": "neatly",
+          "as": "neatly"
+        },
+        {
+          "en": "She",
+          "as": "She"
+        },
+        {
+          "en": "writes",
+          "as": "writes"
+        },
+        {
+          "en": "None",
+          "as": "None"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Neatly' modifies the verb 'writes', so it is an adverb.",
+        "as": "'Neatly' এ 'writes' ক্ৰিয়াটো বৰ্ণনা কৰে, গতিকে ই এটা Adverb।"
+      }
+    },
+    {
+      "id": "indian-history-165",
+      "q": {
+        "en": "The Mongol menace during Alauddin Khalji's reign was checked by:",
+        "as": "আলাউদ্দিন খিলজীৰ শাসনকালত মঙ্গোল ভাবুকি কোনে নিয়ন্ত্ৰণ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Zafar Khan",
+          "as": "জফৰ খান"
+        },
+        {
+          "en": "Ulugh Khan",
+          "as": "উলুঘ খান"
+        },
+        {
+          "en": "Malik Kafur",
+          "as": "মালিক কাফুৰ"
+        },
+        {
+          "en": "Almas Beg",
+          "as": "আলমাছ বেগ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Zafar Khan checked the Mongol menace.",
+        "as": "জফৰ খানে মঙ্গোল ভাবুকি নিয়ন্ত্ৰণ কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-national-parks-011",
+      "q": {
+        "en": "Manas National Park is famous as the last stronghold of which endangered species?",
+        "as": "মানস ৰাষ্ট্ৰীয় উদ্যান কোনটো বিপন্ন প্ৰজাতিৰ শেষ আশ্ৰয়স্থল হিচাপে বিখ্যাত?"
+      },
+      "options": [
+        {
+          "en": "Polar bear",
+          "as": "ধ্ৰুৱীয় ভালুক"
+        },
+        {
+          "en": "Penguin",
+          "as": "পেংগুইন"
+        },
+        {
+          "en": "Pygmy hog",
+          "as": "পিগমী গাহৰি"
+        },
+        {
+          "en": "Camel",
+          "as": "উট"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Manas is a key habitat of the critically endangered pygmy hog.",
+        "as": "মানস অতি সংকটপন্ন পিগমী গাহৰিৰ এটা প্ৰধান বাসস্থান।"
+      }
+    },
+    {
+      "id": "yandabo-british-rule-049",
+      "q": {
+        "en": "Under which British official was the first regular administration of Assam organised?",
+        "as": "কোন ব্ৰিটিছ বিষয়াৰ অধীনত অসমৰ প্ৰথম নিয়মীয়া প্ৰশাসন সংগঠিত হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "Lord Amherst",
+          "as": "লৰ্ড আমহাৰ্ষ্ট"
+        },
+        {
+          "en": "David Scott",
+          "as": "ডেভিদ স্কট"
+        },
+        {
+          "en": "Lord Canning",
+          "as": "লৰ্ড কেনিং"
+        },
+        {
+          "en": "Warren Hastings",
+          "as": "ৱাৰেন হেষ্টিংছ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "David Scott organised the first regular British administration in Assam.",
+        "as": "ডেভিদ স্কটে অসমত প্ৰথম নিয়মীয়া ব্ৰিটিছ প্ৰশাসন সংগঠিত কৰিছিল।"
+      }
+    },
+    {
+      "id": "government-schemes-120",
+      "q": {
+        "en": "The National Clean Air Programme is related to —",
+        "as": "ৰাষ্ট্ৰীয় পৰিষ্কাৰ বায়ু কাৰ্যসূচী কি সৈতে সম্পৰ্কিত?"
+      },
+      "options": [
+        {
+          "en": "Reducing noise",
+          "as": "শব্দ হ্ৰাস"
+        },
+        {
+          "en": "Reducing air pollution",
+          "as": "বায়ু প্ৰদূষণ হ্ৰাস"
+        },
+        {
+          "en": "Reducing water pollution",
+          "as": "জল প্ৰদূষণ হ্ৰাস"
+        },
+        {
+          "en": "Reducing soil erosion",
+          "as": "মাটি ক্ষয় হ্ৰাস"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The National Clean Air Programme aims at reducing air pollution.",
+        "as": "ৰাষ্ট্ৰীয় পৰিষ্কাৰ বায়ু কাৰ্যসূচীয়ে বায়ু প্ৰদূষণ হ্ৰাস কৰাৰ লক্ষ্য লৈছে।"
+      }
+    },
+    {
+      "id": "one-word-substitution-087",
+      "q": {
+        "en": "One who studies population is called —",
+        "as": "জনসংখ্যা অধ্যয়ন কৰা মানুহক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Geographer",
+          "as": "Geographer"
+        },
+        {
+          "en": "Sociologist",
+          "as": "Sociologist"
+        },
+        {
+          "en": "Demographer",
+          "as": "Demographer"
+        },
+        {
+          "en": "Psephologist",
+          "as": "Psephologist"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "One who studies population is called 'Demographer'.",
+        "as": "ইংৰাজীত ইয়াক Demographer বুলি কোৱা হয়।"
+      }
+    },
+    {
+      "id": "synonyms-antonyms-077",
+      "q": {
+        "en": "Choose the word that is most similar in meaning to 'Dry'.",
+        "as": "'Dry' ৰ অৰ্থৰ সৈতে আটাইতকৈ মিল থকা শব্দটো বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "Arid",
+          "as": "শুকান"
+        },
+        {
+          "en": "Wet",
+          "as": "তিতা"
+        },
+        {
+          "en": "Curtain",
+          "as": "পৰ্দা"
+        },
+        {
+          "en": "Desert",
+          "as": "মৰুভূমি"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Arid' is a synonym of 'Dry'; both have a similar meaning.",
+        "as": "'Arid' হৈছে 'Dry' ৰ সমাৰ্থক শব্দ; দুয়োটাৰ অৰ্থ প্ৰায় একে।"
+      }
+    },
+    {
+      "id": "assamese-literature-209",
+      "q": {
+        "en": "Nalini Bala Devi's first poetry collection is:",
+        "as": "নলিনীবালা দেৱীৰ প্ৰথম কবিতা সংকলন কি?"
+      },
+      "options": [
+        {
+          "en": "Smritir Tirtha",
+          "as": "স্মৃতিৰ তীৰ্থ"
+        },
+        {
+          "en": "Phool",
+          "as": "ফুল"
+        },
+        {
+          "en": "Surabhi",
+          "as": "সুৰভি"
+        },
+        {
+          "en": "Sandhiyar Sur",
+          "as": "সন্ধিয়াৰ সুৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Her first poetry collection is 'Sandhiyar Sur'.",
+        "as": "তেওঁৰ প্ৰথম কবিতা সংকলন 'সন্ধিয়াৰ সুৰ'।"
+      }
+    },
+    {
+      "id": "assamese-literature-329",
+      "q": {
+        "en": "Which of the following is correctly matched?",
+        "as": "তলৰ কোনটো শুদ্ধভাৱে মিলে?"
+      },
+      "options": [
+        {
+          "en": "Bihogi Kabi - Ambikagiri Raichoudhury",
+          "as": "বিহগী কবি - অম্বিকাগিৰি ৰায়চৌধুৰী"
+        },
+        {
+          "en": "Bihogi Kabi - Raghunath Choudhury",
+          "as": "বিহগী কবি - ৰঘুনাথ চৌধুৰী"
+        },
+        {
+          "en": "Bihogi Kabi - Nalini Bala Devi",
+          "as": "বিহগী কবি - নলিনীবালা দেৱী"
+        },
+        {
+          "en": "Bihogi Kabi - Kamalakanta Bhattacharya",
+          "as": "বিহগী কবি - কমলাকান্ত ভট্টাচাৰ্য"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Bihogi Kabi is the title of Raghunath Choudhury.",
+        "as": "বিহগী কবি ৰঘুনাথ চৌধুৰীৰ উপাধি।"
+      }
+    },
+    {
+      "id": "counting-figure-035",
+      "q": {
+        "en": "How many circles are there in the figure?",
+        "as": "চিত্ৰটোত কিমান বৃত্ত আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "There are 2 circles in the figure.",
+        "as": "চিত্ৰটোত 2 টা বৃত্ত আছে।"
+      }
+    },
+    {
+      "id": "assamese-literature-251",
+      "q": {
+        "en": "The protagonist 'Joymoti' is associated with which period of Assam's history?",
+        "as": "'জয়মতী' চৰিত্ৰ অসমৰ ইতিহাসৰ কোন সময়ৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Mughal period",
+          "as": "মোগল কাল"
+        },
+        {
+          "en": "Post-independence",
+          "as": "স্বাধীনতাৰ পিছৰ কাল"
+        },
+        {
+          "en": "Ahom period",
+          "as": "আহোম কাল"
+        },
+        {
+          "en": "British period",
+          "as": "ব্ৰিটিছ কাল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Joymoti belongs to the Ahom period.",
+        "as": "জয়মতী আহোম কালৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-116",
+      "q": {
+        "en": "Which Schedule of the Constitution deals with anti-defection?",
+        "as": "সংবিধানৰ কোন অনুসূচীয়ে দলত্যাগ-বিৰোধী বিধানৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Eighth Schedule",
+          "as": "অষ্টম অনুসূচী"
+        },
+        {
+          "en": "Eleventh Schedule",
+          "as": "একাদশ অনুসূচী"
+        },
+        {
+          "en": "Ninth Schedule",
+          "as": "নৱম অনুসূচী"
+        },
+        {
+          "en": "Tenth Schedule",
+          "as": "দশম অনুসূচী"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Tenth Schedule contains the anti-defection provisions.",
+        "as": "দশম অনুসূচীত দলত্যাগ-বিৰোধী বিধান আছে।"
+      }
+    },
+    {
+      "id": "synonyms-antonyms-132",
+      "q": {
+        "en": "Choose the word that is most opposite in meaning to 'High'.",
+        "as": "'High' ৰ অৰ্থৰ বিপৰীত অৰ্থৰ শব্দটো বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "Tall",
+          "as": "ওখ"
+        },
+        {
+          "en": "Camera",
+          "as": "কেমেৰা"
+        },
+        {
+          "en": "Mountain",
+          "as": "পৰ্বত"
+        },
+        {
+          "en": "Low",
+          "as": "নীচ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'Low' is an antonym of 'High'; it has the opposite meaning.",
+        "as": "'Low' হৈছে 'High' ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "analogy-033",
+      "q": {
+        "en": "Peacock : Peahen :: Drake : ?",
+        "as": "ময়ূৰ : মাইকী ময়ূৰ :: মতা হাঁহ : ?"
+      },
+      "options": [
+        {
+          "en": "Duck",
+          "as": "মাইকী হাঁহ"
+        },
+        {
+          "en": "Swan",
+          "as": "ৰাজহাঁহ"
+        },
+        {
+          "en": "Goose",
+          "as": "হংস"
+        },
+        {
+          "en": "Water",
+          "as": "পানী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Peahen is the female of Peacock; in the same way Duck is the female of Drake.",
+        "as": "ময়ূৰৰ মাইকী মাইকী ময়ূৰ; সেইদৰে মতা হাঁহৰ মাইকী মাইকী হাঁহ।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-027",
+      "q": {
+        "en": "The Tapti river flows into which body of water?",
+        "as": "তাপ্তী নদী কোন জলভাগত পৰে?"
+      },
+      "options": [
+        {
+          "en": "Gulf of Khambhat",
+          "as": "খাম্বাট উপসাগৰ"
+        },
+        {
+          "en": "Bay of Bengal",
+          "as": "বংগোপসাগৰ"
+        },
+        {
+          "en": "Gulf of Mannar",
+          "as": "মান্নাৰ উপসাগৰ"
+        },
+        {
+          "en": "Palk Strait",
+          "as": "পাল্ক জলডম্বৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Tapti flows into the Gulf of Khambhat (Arabian Sea).",
+        "as": "তাপ্তী নদী খাম্বাট উপসাগৰত (আৰব সাগৰ) পৰে।"
+      }
+    },
+    {
+      "id": "yandabo-british-rule-004",
+      "q": {
+        "en": "Who signed the Treaty of Yandabo on behalf of the British?",
+        "as": "ব্ৰিটিছৰ তৰফৰ পৰা য়াণ্ডাবু সন্ধিত কোনে স্বাক্ষৰ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Sir Archibald Campbell",
+          "as": "ছাৰ আৰ্কিবল্ড কেম্পবেল"
+        },
+        {
+          "en": "Lord Amherst",
+          "as": "লৰ্ড আমহাৰ্ষ্ট"
+        },
+        {
+          "en": "David Scott",
+          "as": "ডেভিদ স্কট"
+        },
+        {
+          "en": "Francis Jenkins",
+          "as": "ফ্ৰান্সিছ জেনকিন্স"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Sir Archibald Campbell signed the Treaty of Yandabo for the British.",
+        "as": "ছাৰ আৰ্কিবল্ড কেম্পবেলে ব্ৰিটিছৰ তৰফৰ পৰা য়াণ্ডাবু সন্ধিত স্বাক্ষৰ কৰিছিল।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-082",
+      "q": {
+        "en": "Which is a major tourist attraction that contributes to Assam's economy?",
+        "as": "অসমৰ অৰ্থনীতিত অৱদান যোগোৱা এটা প্ৰধান পৰ্যটন আকৰ্ষণ কি?"
+      },
+      "options": [
+        {
+          "en": "Taj Mahal",
+          "as": "তাজমহল"
+        },
+        {
+          "en": "Gateway of India",
+          "as": "গেটৱে অৱ ইণ্ডিয়া"
+        },
+        {
+          "en": "Kaziranga National Park",
+          "as": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যান"
+        },
+        {
+          "en": "Sun Temple",
+          "as": "সূৰ্য মন্দিৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Kaziranga attracts tourists and supports Assam's tourism and wildlife economy.",
+        "as": "কাজিৰঙাই পৰ্যটক আকৰ্ষণ কৰি অসমৰ পৰ্যটন আৰু বন্যপ্ৰাণী অৰ্থনীতিত সহায় কৰে।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-066",
+      "q": {
+        "en": "Which Article protects the interests of minorities?",
+        "as": "কোন অনুচ্ছেদে সংখ্যালঘুৰ স্বাৰ্থ সুৰক্ষিত কৰে?"
+      },
+      "options": [
+        {
+          "en": "Article 30",
+          "as": "অনুচ্ছেদ ৩০"
+        },
+        {
+          "en": "Article 29",
+          "as": "অনুচ্ছেদ ২৯"
+        },
+        {
+          "en": "Article 25",
+          "as": "অনুচ্ছেদ ২৫"
+        },
+        {
+          "en": "Article 28",
+          "as": "অনুচ্ছেদ ২৮"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Article 29 protects the interests of minorities in educational and cultural matters.",
+        "as": "অনুচ্ছেদ ২৯-য়ে শৈক্ষিক আৰু সাংস্কৃতিক ক্ষেত্ৰত সংখ্যালঘুৰ স্বাৰ্থ সুৰক্ষিত কৰে।"
+      }
+    },
+    {
+      "id": "indian-history-266",
+      "q": {
+        "en": "The Charter Act of 1813 abolished the monopoly of the East India Company in:",
+        "as": "১৮১৩ চনৰ সনদ আইনে ইষ্ট ইণ্ডিয়া কোম্পানীৰ একচেটিয়া বাণিজ্য কিমানত বিলুপ্ত কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Salt",
+          "as": "নিমখ"
+        },
+        {
+          "en": "Trade",
+          "as": "বাণিজ্য"
+        },
+        {
+          "en": "Opium",
+          "as": "আফিং"
+        },
+        {
+          "en": "Tea",
+          "as": "চাহ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Charter Act of 1813 ended the Company's trade monopoly.",
+        "as": "১৮১৩ চনৰ সনদ আইনে কোম্পানীৰ বাণিজ্য একচেটিয়া বিলুপ্ত কৰিছিল।"
+      }
+    },
+    {
+      "id": "ancient-assam-030",
+      "q": {
+        "en": "The Allahabad Pillar Inscription was composed by which court poet?",
+        "as": "এলাহাবাদ স্তম্ভ লিপি কোন ৰাজসভাৰ কবিয়ে ৰচনা কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Kalidasa",
+          "as": "কালিদাস"
+        },
+        {
+          "en": "Harishena",
+          "as": "হৰিষেণ"
+        },
+        {
+          "en": "Banabhatta",
+          "as": "বাণভট্ট"
+        },
+        {
+          "en": "Vishakhadatta",
+          "as": "বিশাখদত্ত"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Allahabad Pillar Inscription was composed by Harishena, the court poet of Samudragupta.",
+        "as": "এলাহাবাদ স্তম্ভ লিপি সমুদ্ৰগুপ্তৰ ৰাজসভাৰ কবি হৰিষেণে ৰচনা কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-freedom-struggle-022",
+      "q": {
+        "en": "The Treaty of Yandabo ended which war?",
+        "as": "য়াণ্ডাবু সন্ধিয়ে কোন যুদ্ধৰ সমাপ্তি ঘটাইছিল?"
+      },
+      "options": [
+        {
+          "en": "Anglo-Afghan War",
+          "as": "ইংৰাজ-আফগান যুদ্ধ"
+        },
+        {
+          "en": "Second Anglo-Burmese War",
+          "as": "দ্বিতীয় ইংৰাজ-বৰ্মা যুদ্ধ"
+        },
+        {
+          "en": "First Anglo-Burmese War",
+          "as": "প্ৰথম ইংৰাজ-বৰ্মা যুদ্ধ"
+        },
+        {
+          "en": "Battle of Plassey",
+          "as": "পলাশীৰ যুদ্ধ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Treaty of Yandabo ended the First Anglo-Burmese War.",
+        "as": "য়াণ্ডাবু সন্ধিয়ে প্ৰথম ইংৰাজ-বৰ্মা যুদ্ধৰ সমাপ্তি ঘটাইছিল।"
+      }
+    },
+    {
+      "id": "assam-natural-resources-053",
+      "q": {
+        "en": "Numaligarh Refinery is located in which district of Assam?",
+        "as": "নুমলীগড় শোধনাগাৰ অসমৰ কোনটো জিলাত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Golaghat",
+          "as": "গোলাঘাট"
+        },
+        {
+          "en": "Kokrajhar",
+          "as": "কোকৰাঝাৰ"
+        },
+        {
+          "en": "Nagaon",
+          "as": "নগাঁও"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Numaligarh Refinery is located in Golaghat district.",
+        "as": "নুমলীগড় শোধনাগাৰ গোলাঘাট জিলাত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "assamese-literature-275",
+      "q": {
+        "en": "Which writer is associated with the 'Jonaki' age of Assamese literature?",
+        "as": "কোনজন লেখক অসমীয়া সাহিত্যৰ 'জোনাকী' যুগৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Mamoni Raisom Goswami",
+          "as": "মামণি ৰয়ছম গোস্বামী"
+        },
+        {
+          "en": "Homen Borgohain",
+          "as": "হোমেন বৰগোহাঞি"
+        },
+        {
+          "en": "Lakshminath Bezbaroa",
+          "as": "লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Saurabh Kumar Chaliha",
+          "as": "সৌৰভ কুমাৰ চলিহা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Lakshminath Bezbaroa is associated with the Jonaki age.",
+        "as": "লক্ষ্মীনাথ বেজবৰুৱা জোনাকী যুগৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "number-system-018",
+      "q": {
+        "en": "The product of two even numbers is always —",
+        "as": "দুটা যুগ্ম সংখ্যাৰ গুণফল সদায় —"
+      },
+      "options": [
+        {
+          "en": "odd",
+          "as": "অযুগ্ম"
+        },
+        {
+          "en": "prime",
+          "as": "মৌলিক"
+        },
+        {
+          "en": "even",
+          "as": "যুগ্ম"
+        },
+        {
+          "en": "1",
+          "as": "১"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Example: 2 × 4 = 8, which is even. So the product of two even numbers is always even.",
+        "as": "উদাহৰণ: 2 × 4 = 8, যি যুগ্ম। গতিকে দুটা যুগ্ম সংখ্যাৰ গুণফল সদায় যুগ্ম।"
+      }
+    },
+    {
+      "id": "mathematical-operations-011",
+      "q": {
+        "en": "If '÷' means '+' and '+' means '−', then 11 ÷ 7 + 6 = ?",
+        "as": "যদি '÷' ৰ অৰ্থ '+' আৰু '+' ৰ অৰ্থ '−' হয়, তেন্তে 11 ÷ 7 + 6 = ?"
+      },
+      "options": [
+        {
+          "en": "11",
+          "as": "১১"
+        },
+        {
+          "en": "13",
+          "as": "১৩"
+        },
+        {
+          "en": "12",
+          "as": "১২"
+        },
+        {
+          "en": "14",
+          "as": "১৪"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "After replacing the signs: 11 + 7 − 6 = 12.",
+        "as": "চিহ্ন সলনি কৰাৰ পিছত: 11 + 7 − 6 = 12।"
+      }
+    },
+    {
+      "id": "indian-history-495",
+      "q": {
+        "en": "The Sanchi Stupa was originally built by:",
+        "as": "সাঞ্চি স্তূপ মূলতঃ কোনে নিৰ্মাণ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Harsha",
+          "as": "হৰ্ষ"
+        },
+        {
+          "en": "Kanishka",
+          "as": "কনিষ্ক"
+        },
+        {
+          "en": "Ashoka",
+          "as": "অশোক"
+        },
+        {
+          "en": "Chandragupta",
+          "as": "চন্দ্ৰগুপ্ত"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Sanchi Stupa was originally built by Ashoka.",
+        "as": "সাঞ্চি স্তূপ মূলতঃ অশোকে নিৰ্মাণ কৰিছিল।"
+      }
+    },
+    {
+      "id": "indian-history-230",
+      "q": {
+        "en": "The Sikh religion was founded by:",
+        "as": "শিখ ধৰ্ম কোনে প্ৰতিষ্ঠা কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Guru Gobind Singh",
+          "as": "গুৰু গোবিন্দ সিং"
+        },
+        {
+          "en": "Guru Nanak",
+          "as": "গুৰু নানক"
+        },
+        {
+          "en": "Guru Angad",
+          "as": "গুৰু অঙ্গদ"
+        },
+        {
+          "en": "Guru Arjan",
+          "as": "গুৰু অৰ্জন"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Guru Nanak founded Sikhism.",
+        "as": "গুৰু নানকে শিখ ধৰ্ম প্ৰতিষ্ঠা কৰিছিল।"
+      }
+    },
+    {
+      "id": "blood-relations-008",
+      "q": {
+        "en": "A is B's brother. B is C's father's wife. How is A related to C?",
+        "as": "A হৈছে B ৰ ভাই। B হৈছে C ৰ দেউতাকৰ পত্নী। A ৰ লগত C ৰ সম্পৰ্ক কি?"
+      },
+      "options": [
+        {
+          "en": "Father",
+          "as": "দেউতাক"
+        },
+        {
+          "en": "Brother",
+          "as": "ভাই"
+        },
+        {
+          "en": "Grandfather",
+          "as": "ককা/নানা"
+        },
+        {
+          "en": "Uncle",
+          "as": "খুৰা/মোমায়েক"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "B is C's mother; A is B's brother, so A is C's maternal uncle.",
+        "as": "B হৈছে C ৰ মাক; A হৈছে B ৰ ভাই, সেয়ে A হৈছে C ৰ মোমায়েক।"
+      }
+    },
+    {
+      "id": "assamese-literature-205",
+      "q": {
+        "en": "Who directed 'Joymoti', the first Assamese film?",
+        "as": "প্ৰথম অসমীয়া চলচ্চিত্ৰ 'জয়মতী' কে পৰিচালনা কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Bhupen Hazarika",
+          "as": "ভূপেন হাজৰিকা"
+        },
+        {
+          "en": "Jyotiprasad Agarwala",
+          "as": "জ্যোতিপ্ৰসাদ আগৰৱালা"
+        },
+        {
+          "en": "Lakshminath Bezbaroa",
+          "as": "লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Bishnu Prasad Rabha",
+          "as": "বিষ্ণুপ্ৰসাদ ৰাভা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Jyotiprasad Agarwala directed Joymoti.",
+        "as": "জ্যোতিপ্ৰসাদ আগৰৱালাই জয়মতী পৰিচালনা কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-freedom-struggle-032",
+      "q": {
+        "en": "The Civil Disobedience Movement began in which year?",
+        "as": "অসহযোগ আন্দোলন (আইন অমান্য) কোন বছৰত আৰম্ভ হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "1931",
+          "as": "1931"
+        },
+        {
+          "en": "1929",
+          "as": "1929"
+        },
+        {
+          "en": "1930",
+          "as": "1930"
+        },
+        {
+          "en": "1928",
+          "as": "1928"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Civil Disobedience Movement began in 1930.",
+        "as": "আইন অমান্য আন্দোলন 1930 চনত আৰম্ভ হৈছিল।"
+      }
+    },
+    {
+      "id": "articles-determiners-070",
+      "q": {
+        "en": "Choose the correct determiner: There aren't ___ oranges in the basket.",
+        "as": "শুদ্ধ determiner বাছনি কৰক: There aren't ___ oranges in the basket."
+      },
+      "options": [
+        {
+          "en": "many",
+          "as": "many"
+        },
+        {
+          "en": "few",
+          "as": "few"
+        },
+        {
+          "en": "some",
+          "as": "some"
+        },
+        {
+          "en": "any",
+          "as": "any"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'Any' is used in negative sentences.",
+        "as": "নঞৰ্থক বাক্যত 'any' ব্যৱহাৰ কৰা হয়।"
+      }
+    },
+    {
+      "id": "percentage-052",
+      "q": {
+        "en": "1/8 as a percentage is —",
+        "as": "1/8 শতাংশ হিচাপে —"
+      },
+      "options": [
+        {
+          "en": "8%",
+          "as": "৮%"
+        },
+        {
+          "en": "18%",
+          "as": "১৮%"
+        },
+        {
+          "en": "25%",
+          "as": "২৫%"
+        },
+        {
+          "en": "12.5%",
+          "as": "১২.৫%"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "1/8 × 100 = 12.5%.",
+        "as": "1/8 × 100 = 12.5%।"
+      }
+    },
+    {
+      "id": "tenses-rules-068",
+      "q": {
+        "en": "Choose the correct option: We ___ watching TV when father arrived.",
+        "as": "শুদ্ধ বিকল্পটো বাছনি কৰক: We ___ watching TV when father arrived."
+      },
+      "options": [
+        {
+          "en": "was",
+          "as": "was"
+        },
+        {
+          "en": "are",
+          "as": "are"
+        },
+        {
+          "en": "were",
+          "as": "were"
+        },
+        {
+          "en": "is",
+          "as": "is"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "With the plural subject 'We', the past continuous uses 'were'.",
+        "as": "বহুবচন কৰ্তা 'We' ৰ সৈতে past continuous ত 'were' ব্যৱহাৰ হয়।"
+      }
+    },
+    {
+      "id": "panchayati-raj-161",
+      "q": {
+        "en": "Which of the following is a mandatory provision of the 73rd Amendment?",
+        "as": "তলৰ কোনটো ৭৩ সংখ্যক সংশোধনীৰ বাধ্যতামূলক বিধান?"
+      },
+      "options": [
+        {
+          "en": "Reservation for SCs and STs",
+          "as": "অনুসূচিত জাতি আৰু জনজাতিৰ বাবে সংৰক্ষণ"
+        },
+        {
+          "en": "Nyaya Panchayats",
+          "as": "ন্যায় পঞ্চায়ত"
+        },
+        {
+          "en": "Reservation for backward classes",
+          "as": "অনগ্ৰসৰ শ্ৰেণীৰ বাবে সংৰক্ষণ"
+        },
+        {
+          "en": "Metropolitan planning committees",
+          "as": "মহানগৰ পৰিকল্পনা সমিতি"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Reservation for SCs and STs is a mandatory provision.",
+        "as": "অনুসূচিত জাতি আৰু জনজাতিৰ বাবে সংৰক্ষণ এটা বাধ্যতামূলক বিধান।"
+      }
+    },
+    {
+      "id": "average-008",
+      "q": {
+        "en": "What is the average of 6 consecutive even numbers starting from 4?",
+        "as": "4 ৰ পৰা আৰম্ভ হোৱা 6 টা ক্ৰমিক যুগ্ম সংখ্যাৰ গড় কিমান?"
+      },
+      "options": [
+        {
+          "en": "9",
+          "as": "৯"
+        },
+        {
+          "en": "8",
+          "as": "৮"
+        },
+        {
+          "en": "10",
+          "as": "১০"
+        },
+        {
+          "en": "11",
+          "as": "১১"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Numbers are 4, 6, 8, 10, 12, 14; sum = 54; average = 54 / 6 = 9.",
+        "as": "সংখ্যাকেইটা 4, 6, 8, 10, 12, 14; সমষ্টি = 54; গড় = 54 / 6 = 9।"
+      }
+    },
+    {
+      "id": "assamese-literature-285",
+      "q": {
+        "en": "Which of the following is the correct match of author and work?",
+        "as": "তলৰ কোনটো লেখক আৰু ৰচনাৰ শুদ্ধ মিল?"
+      },
+      "options": [
+        {
+          "en": "Miri Jiyori - Homen Borgohain",
+          "as": "মিৰি জীয়ৰী - হোমেন বৰগোহাঞি"
+        },
+        {
+          "en": "Miri Jiyori - Lakshminath Bezbaroa",
+          "as": "মিৰি জীয়ৰী - লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Miri Jiyori - Padmanath Gohain Baruah",
+          "as": "মিৰি জীয়ৰী - পদ্মনাথ গোহাঞি বৰুৱা"
+        },
+        {
+          "en": "Miri Jiyori - Rajanikanta Bordoloi",
+          "as": "মিৰি জীয়ৰী - ৰজনীকান্ত বৰদলৈ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Miri Jiyori was written by Rajanikanta Bordoloi.",
+        "as": "মিৰি জীয়ৰী ৰজনীকান্ত বৰদলৈয়ে লিখিছিল।"
+      }
+    },
+    {
+      "id": "ancient-assam-061",
+      "q": {
+        "en": "Hiuen Tsang described Kamarupa as a country about how many li in circuit?",
+        "as": "হিউয়েন ছাঙে কামৰূপক প্ৰায় কিমান লি পৰিধিৰ দেশ বুলি বৰ্ণনা কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "About 10,000 li",
+          "as": "প্ৰায় ১০,০০০ লি"
+        },
+        {
+          "en": "About 50,000 li",
+          "as": "প্ৰায় ৫০,০০০ লি"
+        },
+        {
+          "en": "About 500 li",
+          "as": "প্ৰায় ৫০০ লি"
+        },
+        {
+          "en": "About 1,000 li",
+          "as": "প্ৰায় ১,০০০ লি"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Hiuen Tsang described Kamarupa as a country about 10,000 li in circuit.",
+        "as": "হিউয়েন ছাঙে কামৰূপক প্ৰায় ১০,০০০ লি পৰিধিৰ দেশ বুলি বৰ্ণনা কৰিছিল।"
+      }
+    },
+    {
+      "id": "number-alphabet-series-031",
+      "q": {
+        "en": "Find the next letter in the series: A, B, D, G, K, ?",
+        "as": "শৃংখলাটোত পৰৱৰ্তী আখৰটো নিৰ্ণয় কৰা: A, B, D, G, K, ?"
+      },
+      "options": [
+        {
+          "en": "Q",
+          "as": "Q"
+        },
+        {
+          "en": "O",
+          "as": "O"
+        },
+        {
+          "en": "P",
+          "as": "P"
+        },
+        {
+          "en": "R",
+          "as": "R"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The gaps increase by one (+1, +2, +3, +4, +5), so K + 5 = P.",
+        "as": "ব্যৱধান এটা এটাকৈ বাঢ়ে (+1, +2, +3, +4, +5), সেয়ে K + 5 = P।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-064",
+      "q": {
+        "en": "Which Article provides freedom concerning attendance at religious instruction in educational institutions?",
+        "as": "শৈক্ষিক প্ৰতিষ্ঠানত ধৰ্মীয় শিক্ষাত উপস্থিতিৰ ক্ষেত্ৰত কোন অনুচ্ছেদে স্বাধীনতা প্ৰদান কৰে?"
+      },
+      "options": [
+        {
+          "en": "Article 25",
+          "as": "অনুচ্ছেদ ২৫"
+        },
+        {
+          "en": "Article 27",
+          "as": "অনুচ্ছেদ ২৭"
+        },
+        {
+          "en": "Article 26",
+          "as": "অনুচ্ছেদ ২৬"
+        },
+        {
+          "en": "Article 28",
+          "as": "অনুচ্ছেদ ২৮"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Article 28 deals with freedom as to attendance at religious instruction in certain institutions.",
+        "as": "অনুচ্ছেদ ২৮-য়ে কিছুমান প্ৰতিষ্ঠানত ধৰ্মীয় শিক্ষাত উপস্থিতিৰ স্বাধীনতা সম্পৰ্কে আলোচনা কৰে।"
+      }
+    },
+    {
+      "id": "ahom-koch-kingdoms-088",
+      "q": {
+        "en": "Which Ahom capital was known for its palaces and became a cultural centre under Rudra Singha?",
+        "as": "কোন আহোম ৰাজধানী নিজৰ ৰাজপ্ৰসাদৰ বাবে বিখ্যাত আছিল আৰু ৰুদ্ৰ সিংহৰ অধীনত সাংস্কৃতিক কেন্দ্ৰ হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "Jorhat",
+          "as": "যোৰহাট"
+        },
+        {
+          "en": "Diphu",
+          "as": "ডিফু"
+        },
+        {
+          "en": "Rangpur",
+          "as": "ৰংপুৰ"
+        },
+        {
+          "en": "Charaideo",
+          "as": "চৰাইদেও"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Rangpur became a major cultural centre under Rudra Singha.",
+        "as": "ৰুদ্ৰ সিংহৰ অধীনত ৰংপুৰ এটা প্ৰধান সাংস্কৃতিক কেন্দ্ৰ হৈছিল।"
+      }
+    },
+    {
+      "id": "analogy-027",
+      "q": {
+        "en": "Lion : Den :: Rabbit : ?",
+        "as": "সিংহ : গুহা :: শহাপহু : ?"
+      },
+      "options": [
+        {
+          "en": "Fast",
+          "as": "ক্ষিপ্ৰ"
+        },
+        {
+          "en": "Carrot",
+          "as": "গাজৰ"
+        },
+        {
+          "en": "Burrow",
+          "as": "গাঁত"
+        },
+        {
+          "en": "Ears",
+          "as": "কাণ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "A Lion lives in a Den; in the same way a Rabbit lives in a Burrow.",
+        "as": "সিংহ এ গুহাত বাস কৰে; সেইদৰে শহাপহু এ গাঁতত বাস কৰে।"
+      }
+    },
+    {
+      "id": "assam-india-current-affairs-182",
+      "q": {
+        "en": "Which city is known as the 'Gateway to the Northeast'?",
+        "as": "কোনখন চহৰক 'উত্তৰ-পূবৰ প্ৰৱেশদ্বাৰ' বুলি জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        },
+        {
+          "en": "Silchar",
+          "as": "শিলচৰ"
+        },
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Jorhat",
+          "as": "যোৰহাট"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Guwahati is known as the Gateway to the Northeast.",
+        "as": "গুৱাহাটীক উত্তৰ-পূবৰ প্ৰৱেশদ্বাৰ বুলি জনা যায়।"
+      }
+    },
+    {
+      "id": "assam-national-parks-080",
+      "q": {
+        "en": "Which national park of Assam is located in the Bodoland Territorial Region?",
+        "as": "অসমৰ কোনখন ৰাষ্ট্ৰীয় উদ্যান বড়োলেণ্ড প্ৰাদেশিক অঞ্চলত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Orang",
+          "as": "ওৰাং"
+        },
+        {
+          "en": "Nameri",
+          "as": "নামেৰী"
+        },
+        {
+          "en": "Dehing Patkai",
+          "as": "ডিহিং পাটকাই"
+        },
+        {
+          "en": "Manas",
+          "as": "মানস"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Manas and Raimona are located in the Bodoland Territorial Region.",
+        "as": "মানস আৰু ৰাইমনা বড়োলেণ্ড প্ৰাদেশিক অঞ্চলত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "one-word-substitution-014",
+      "q": {
+        "en": "One who believes in the existence of God is called —",
+        "as": "ঈশ্বৰৰ অস্তিত্বত বিশ্বাস কৰা মানুহক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Agnostic",
+          "as": "Agnostic"
+        },
+        {
+          "en": "Theist",
+          "as": "Theist"
+        },
+        {
+          "en": "Atheist",
+          "as": "Atheist"
+        },
+        {
+          "en": "Deist",
+          "as": "Deist"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "One who believes in the existence of God is called 'Theist'.",
+        "as": "ইংৰাজীত ইয়াক Theist বুলি কোৱা হয়।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-112",
+      "q": {
+        "en": "The procedure for amendment of the Constitution is laid down in which Article?",
+        "as": "সংবিধান সংশোধনৰ পদ্ধতি কোন অনুচ্ছেদত বৰ্ণনা কৰা হৈছে?"
+      },
+      "options": [
+        {
+          "en": "Article 352",
+          "as": "অনুচ্ছেদ ৩৫২"
+        },
+        {
+          "en": "Article 360",
+          "as": "অনুচ্ছেদ ৩৬০"
+        },
+        {
+          "en": "Article 356",
+          "as": "অনুচ্ছেদ ৩৫৬"
+        },
+        {
+          "en": "Article 368",
+          "as": "অনুচ্ছেদ ৩৬৮"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Article 368 deals with the power of Parliament to amend the Constitution.",
+        "as": "অনুচ্ছেদ ৩৬৮-য়ে সংবিধান সংশোধনৰ বাবে সংসদৰ ক্ষমতা আলোচনা কৰে।"
+      }
+    },
+    {
+      "id": "coding-decoding-027",
+      "q": {
+        "en": "If 'WORD' is coded as 'DROW', how is 'FLOW' coded in the same code?",
+        "as": "যদি 'WORD' ক 'DROW' বুলি ক'ড কৰা হয়, তেন্তে একে ক'ডত 'FLOW' ক কেনেকৈ ক'ড কৰা হ'ব?"
+      },
+      "options": [
+        {
+          "en": "WOLG",
+          "as": "WOLG"
+        },
+        {
+          "en": "FOLW",
+          "as": "FOLW"
+        },
+        {
+          "en": "WOLF",
+          "as": "WOLF"
+        },
+        {
+          "en": "WLOW",
+          "as": "WLOW"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The letters are written in reverse order, so FLOW becomes WOLF.",
+        "as": "আখৰবোৰ ওলোটা ক্ৰমত লিখা হয়, সেয়ে FLOW → WOLF।"
+      }
+    },
+    {
+      "id": "average-005",
+      "q": {
+        "en": "What is the average of the first 15 natural numbers?",
+        "as": "প্ৰথম 15 টা স্বাভাৱিক সংখ্যাৰ গড় কিমান?"
+      },
+      "options": [
+        {
+          "en": "7.5",
+          "as": "৭.৫"
+        },
+        {
+          "en": "8.5",
+          "as": "৮.৫"
+        },
+        {
+          "en": "8",
+          "as": "৮"
+        },
+        {
+          "en": "9",
+          "as": "৯"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Average = (1 + 15) / 2 = 8.",
+        "as": "গড় = (1 + 15) / 2 = 8।"
+      }
+    },
+    {
+      "id": "awards-honours-001",
+      "q": {
+        "en": "What is the highest civilian award of India?",
+        "as": "ভাৰতৰ সৰ্বোচ্চ অসামৰিক সন্মান কি?"
+      },
+      "options": [
+        {
+          "en": "Padma Vibhushan",
+          "as": "পদ্মবিভূষণ"
+        },
+        {
+          "en": "Bharat Ratna",
+          "as": "ভাৰত ৰত্ন"
+        },
+        {
+          "en": "Padma Bhushan",
+          "as": "পদ্মভূষণ"
+        },
+        {
+          "en": "Padma Shri",
+          "as": "পদ্মশ্ৰী"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Bharat Ratna is the highest civilian award of India.",
+        "as": "ভাৰত ৰত্ন ভাৰতৰ সৰ্বোচ্চ অসামৰিক সন্মান।"
+      }
+    },
+    {
+      "id": "synonyms-antonyms-291",
+      "q": {
+        "en": "Choose the word that is most opposite in meaning to 'Advance'.",
+        "as": "'Advance' ৰ অৰ্থৰ বিপৰীত অৰ্থৰ শব্দটো বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "Progress",
+          "as": "উন্নতি"
+        },
+        {
+          "en": "Bicycle",
+          "as": "চাইকেল"
+        },
+        {
+          "en": "Retreat",
+          "as": "পিছুৱাই যোৱা"
+        },
+        {
+          "en": "Blanket",
+          "as": "কম্বল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'Retreat' is an antonym of 'Advance'; it has the opposite meaning.",
+        "as": "'Retreat' হৈছে 'Advance' ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-118",
+      "q": {
+        "en": "Which is the highest peak of the Western Ghats in Maharashtra?",
+        "as": "মহাৰাষ্ট্ৰত পশ্চিম ঘাটৰ আটাইতকৈ ওখ শিখৰ কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Kalsubai",
+          "as": "কালছুবাই"
+        },
+        {
+          "en": "Doddabetta",
+          "as": "দোদ্দাবেট্টা"
+        },
+        {
+          "en": "Anamudi",
+          "as": "আনামুদি"
+        },
+        {
+          "en": "Guru Shikhar",
+          "as": "গুৰু শিখৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Kalsubai is the highest peak of the Western Ghats in Maharashtra.",
+        "as": "কালছুবাই মহাৰাষ্ট্ৰত পশ্চিম ঘাটৰ আটাইতকৈ ওখ শিখৰ।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-025",
+      "q": {
+        "en": "The Preamble of the Indian Constitution is based on which document?",
+        "as": "ভাৰতীয় সংবিধানৰ প্ৰস্তাৱনা কোনখন দস্তাবেজৰ ওপৰত আধাৰিত?"
+      },
+      "options": [
+        {
+          "en": "Objectives Resolution",
+          "as": "উদ্দেশ্য প্ৰস্তাৱ"
+        },
+        {
+          "en": "Government of India Act, 1935",
+          "as": "ভাৰত চৰকাৰ আইন, ১৯৩৫"
+        },
+        {
+          "en": "Nehru Report",
+          "as": "নেহৰু ৰিপৰ্ট"
+        },
+        {
+          "en": "Cabinet Mission Plan",
+          "as": "কেবিনেট মিছন পৰিকল্পনা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Preamble is based on the Objectives Resolution moved by Nehru.",
+        "as": "প্ৰস্তাৱনা নেহৰুৱে উত্থাপন কৰা উদ্দেশ্য প্ৰস্তাৱৰ ওপৰত আধাৰিত।"
+      }
+    },
+    {
+      "id": "indian-history-233",
+      "q": {
+        "en": "The Sufi saint buried at Ajmer is:",
+        "as": "আজমেৰত সমাহিত চুফি সন্ত কোন?"
+      },
+      "options": [
+        {
+          "en": "Baba Farid",
+          "as": "বাবা ফৰীদ"
+        },
+        {
+          "en": "Khwaja Moinuddin Chishti",
+          "as": "খ্বাজা মইনুদ্দিন চিশ্তী"
+        },
+        {
+          "en": "Nizamuddin Auliya",
+          "as": "নিজামুদ্দিন আউলিয়া"
+        },
+        {
+          "en": "Bahauddin Zakariya",
+          "as": "বাহাউদ্দিন জাকাৰিয়া"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Khwaja Moinuddin Chishti is buried at Ajmer.",
+        "as": "খ্বাজা মইনুদ্দিন চিশ্তী আজমেৰত সমাহিত।"
+      }
+    },
+    {
+      "id": "assam-national-parks-036",
+      "q": {
+        "en": "Which is the smallest national park of Assam by area?",
+        "as": "কালিৰ ফালৰ পৰা অসমৰ সৰ্ববৃহৎ ক্ষুদ্ৰ ৰাষ্ট্ৰীয় উদ্যান কোনখন?"
+      },
+      "options": [
+        {
+          "en": "Orang",
+          "as": "ওৰাং"
+        },
+        {
+          "en": "Manas",
+          "as": "মানস"
+        },
+        {
+          "en": "Kaziranga",
+          "as": "কাজিৰঙা"
+        },
+        {
+          "en": "Dehing Patkai",
+          "as": "ডিহিং পাটকাই"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Orang, at about 79 square kilometres, is the smallest national park of Assam.",
+        "as": "ওৰাং, প্ৰায় ৭৯ বৰ্গ কিলোমিটাৰ, অসমৰ সৰ্ববৃহৎ ক্ষুদ্ৰ ৰাষ্ট্ৰীয় উদ্যান।"
+      }
+    },
+    {
+      "id": "assamese-literature-012",
+      "q": {
+        "en": "Who wrote 'Prahlada Charitra', one of the earliest Assamese works?",
+        "as": "আটাইতকৈ পুৰণি অসমীয়া ৰচনাসমূহৰ এটা 'প্ৰহ্লাদ চৰিত' কে লিখিছিল?"
+      },
+      "options": [
+        {
+          "en": "Hema Saraswati",
+          "as": "হেম সৰস্বতী"
+        },
+        {
+          "en": "Madhava Kandali",
+          "as": "মাধৱ কন্দলী"
+        },
+        {
+          "en": "Harivara Vipra",
+          "as": "হৰিবৰ বিপ্ৰ"
+        },
+        {
+          "en": "Kaviratna Saraswati",
+          "as": "কবিৰত্ন সৰস্বতী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Prahlada Charitra' was written by Hema Saraswati.",
+        "as": "'প্ৰহ্লাদ চৰিত' হেম সৰস্বতীয়ে লিখিছিল।"
+      }
+    },
+    {
+      "id": "synonyms-antonyms-262",
+      "q": {
+        "en": "Choose the word that is most similar in meaning to 'Vacant'.",
+        "as": "'Vacant' ৰ অৰ্থৰ সৈতে আটাইতকৈ মিল থকা শব্দটো বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "Occupied",
+          "as": "ব্যস্ত"
+        },
+        {
+          "en": "Empty",
+          "as": "খালী"
+        },
+        {
+          "en": "Temple",
+          "as": "মন্দিৰ"
+        },
+        {
+          "en": "Ticket",
+          "as": "টিকট"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'Empty' is a synonym of 'Vacant'; both have a similar meaning.",
+        "as": "'Empty' হৈছে 'Vacant' ৰ সমাৰ্থক শব্দ; দুয়োটাৰ অৰ্থ প্ৰায় একে।"
+      }
+    }
+  ]
+}

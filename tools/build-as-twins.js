@@ -53,6 +53,8 @@ const argv = process.argv.slice(2);
 const CHECK = argv.includes("--check");
 const onlyIdx = argv.indexOf("--only");
 const ONLY = onlyIdx >= 0 ? argv[onlyIdx + 1].replace(/^\/+|\/+$/g, "") : null;
+const prefixIdx = argv.indexOf("--prefix");
+const PREFIX = prefixIdx >= 0 ? argv[prefixIdx + 1].replace(/^\/+|\/+$/g, "") : null;
 const limIdx = argv.indexOf("--limit");
 const LIMIT = limIdx >= 0 ? parseInt(argv[limIdx + 1], 10) : 0;
 
@@ -438,6 +440,34 @@ function headFor(rel) {
     };
   }
 
+  /* /exam-wise-mock-test/<exam?>/<set-N?> — exam-wise full-paper mock tests. */
+  if (segs[0] === "exam-wise-mock-test") {
+    const examId = segs[1] || "";
+    const setSeg = segs[2] || "";
+    const examAs = examId ? (examNames.get(examId) || {}).as || "" : "";
+    const setMatch = /^set-(\d+)$/.exec(setSeg);
+    if (setMatch && examAs) {
+      const n = setMatch[1];
+      return {
+        title: `${examAs} সম্পূৰ্ণ পত্ৰ মক টেষ্ট — ছেট ${n} | axomexam`,
+        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট ছেট ${n} — ১০০ টা দ্বিভাষিক প্ৰশ্ন, সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু উত্তৰৰ পৰ্যালোচনা।`,
+        h1: `${examAs} — সম্পূৰ্ণ পত্ৰ ছেট ${n}`,
+      };
+    }
+    if (examAs) {
+      return {
+        title: `${examAs} মক টেষ্ট — সম্পূৰ্ণ পত্ৰ ছেট | axomexam`,
+        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — ১০০ প্ৰশ্নৰ ছেটত সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
+        h1: `${examAs} মক টেষ্ট`,
+      };
+    }
+    return {
+      title: `পৰীক্ষা-ভিত্তিক মক টেষ্ট — অসম আৰক্ষী, ADRE গ্ৰেড III আৰু IV | axomexam`,
+      meta: `অসম আৰক্ষী, ADRE গ্ৰেড III আৰু ADRE গ্ৰেড IV ৰ বাবে সুকীয়া বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
+      h1: `পৰীক্ষা-ভিত্তিক মক টেষ্ট`,
+    };
+  }
+
   /* /mock-test/<cat>/<sub?>/set-N? */
   if (segs[0] === "mock-test" && segs.length >= 2) {
     const setIdx = segs.findIndex((s) => /^set-\d+$/.test(s));
@@ -784,6 +814,7 @@ for (const { rel, file } of enPages) {
   seen.add(rel);
   if (SKIP_ROUTES.has(rel)) continue;
   if (ONLY && rel !== ONLY) continue;
+  if (PREFIX && rel !== PREFIX && !rel.startsWith(PREFIX + "/")) continue;
   /* A page that is deliberately noindex (a duplicate stub or a redirect)
      gets no twin, and must not claim a head string in the uniqueness pass
      either, or an indexable sibling is pushed onto an uglier fallback. */

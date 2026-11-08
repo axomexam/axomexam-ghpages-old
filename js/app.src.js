@@ -24,6 +24,7 @@
     mock: null,            
     isGeneratingPdf: false,
     mockSetCache: {},
+    examMockSetCache: {},
     mockSetCount: {},
     mockLiveCounts: {},
     exams: null,
@@ -42,6 +43,11 @@
   const MAX_MOCK_SETS = 20;
   /* Minimum number of set cards to show once at least one set exists */
   const DEFAULT_VISIBLE_SETS = 5;
+  /* Exam-wise mock test is temporarily closed while the question bank is
+     being prepared. The sets stay listed, but opening one shows a bilingual
+     "we'll be back in 1-2 hours" notice instead of the quiz. Flip to false
+     once the questions are uploaded to make the quiz live again. */
+  const EXAM_WISE_UPGRADE = true;
   /* Number of real downloadable PDF files shipped with the site. Kept in
      sync by tools/inject-static-questions.js so the homepage never claims
      more PDFs than it actually serves. */
@@ -203,6 +209,13 @@
       if (I18N.en && I18N.en[key]) return I18N.en[key];
     }
     return key;
+  }
+
+  /* Fixed-language lookup for the few places that must show both languages
+     at once (bilingual notices), independent of the interface toggle. */
+  function tLang(key, lang) {
+    if (typeof I18N !== "undefined" && I18N[lang] && I18N[lang][key]) return I18N[lang][key];
+    return t(key);
   }
 
   /* Content strings (category/topic/exam names, descriptions, body prose)
@@ -1181,7 +1194,7 @@
 
   function moreDropdownHTML(rest, activePath) {
     const root = activePath.split("/")[0];
-    const isInside = rest.some((c) => c.id === root) || ["submit", "previous-year", "ebooks", "exams", "download-app", "contact", "about", "privacy", "privacy-policy", "terms", "disclaimer"].includes(root);
+    const isInside = rest.some((c) => c.id === root) || ["submit", "previous-year", "ebooks", "exams", "exam-wise-mock-test", "download-app", "contact", "about", "privacy", "privacy-policy", "terms", "disclaimer"].includes(root);
 
     const links = rest.map((c) => {
       const on = root === c.id;
@@ -1201,9 +1214,15 @@
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         <span>${escapeHtml(t("nav.exams"))}</span>
       </a>`;
+    const examMockOn = root === "exam-wise-mock-test";
+    const examMockLink = `
+      <a class="ebook-nav-link ${examMockOn ? "active" : ""}" href="/exam-wise-mock-test">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>${escapeHtml(t("nav.examMock"))}</span>
+      </a>`;
     const artPos = rest.findIndex((c) => c.id === "articles");
-    if (artPos !== -1) links.splice(artPos + 1, 0, ebookLink, examsLink);
-    else links.push(ebookLink, examsLink);
+    if (artPos !== -1) links.splice(artPos + 1, 0, ebookLink, examsLink, examMockLink);
+    else links.push(ebookLink, examsLink, examMockLink);
 
     const catLinks = links.join("");
 
@@ -1258,6 +1277,7 @@
     const isActive = (href) => {
       const h = href.replace(/^\//, "").replace(/\/$/, "");
       if (h === "mock-test") return segs[0] === "mock-test";
+      if (h === "exam-wise-mock-test") return segs[0] === "exam-wise-mock-test";
       return activePath === h || activePath.split("/")[0] === h;
     };
 
@@ -1298,8 +1318,9 @@
        colour-tinted cards instead of a plain text list. */
     const tiles = [
       { href: "/mock-test", key: "nav.mock", color: "#0ea5e9", svg: `<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/>` },
+      { href: "/exam-wise-mock-test", key: "nav.examMock", color: "#6366f1", svg: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>`, isNew: true },
       { href: "/ebooks", key: "nav.ebooks", color: "#f59e0b", svg: `<path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>` },
-      { href: "/exams", key: "nav.exams", color: "#8b5cf6", svg: `<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>`, isNew: true },
+      { href: "/exams", key: "nav.exams", color: "#8b5cf6", svg: `<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>` },
       { href: "/downloads", key: "nav.downloads", color: "#0d9488", svg: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>` },
     ];
     const tileParts = tiles.map((it) => `
@@ -1463,6 +1484,21 @@
         const cat = state.categories.find((c) => c.id === segs[1]);
         const n = cat ? localized(cat.name) : "";
         title = (n ? n + " " : "") + "Mock Test | axomexam";
+      } else if (segs[0] === "exam-wise-mock-test") {
+        const exam = (state.exams || []).find((e) => e.id === segs[1]);
+        const exName = exam ? localized(exam.title) : "";
+        const sec = exam && segs[2] ? (exam.sections || []).find((s) => s.id === segs[2]) : null;
+        const secName = sec ? localized(sec.title) : "";
+        if (secName) {
+          title = secName + " Mock Test — " + exName + " | axomexam";
+          desc = "Take a free timed " + secName + " mock test for " + exName + " with instant scoring and bilingual answer review.";
+        } else if (exName) {
+          title = exName + " Mock Test | axomexam";
+          desc = "Take free timed mock tests for " + exName + " subject-wise with instant scoring and bilingual answer review.";
+        } else {
+          title = "Exam-wise Mock Test | axomexam";
+          desc = "Take free exam-wise timed mock tests for Assam Police, ADRE Grade III and ADRE Grade IV — instant scoring and bilingual answer review.";
+        }
       } else if (segs[0] === "previous-year") {
         title = "Previous Year Question Papers | axomexam";
       } else if (segs[0] === "trending") {
@@ -1797,6 +1833,7 @@
       if (segs[1]) return renderExamPage(main, segs[1]);
       return renderExamsPage(main);
     }
+    if (segs[0] === "exam-wise-mock-test") return handleExamWiseMockRouting(main, segs);
     if (segs[0] === "current-affairs") {
       if (segs[1]) return renderCurrentAffairsCategoryPage(main, segs[1]);
       return renderCurrentAffairsPage(main);
@@ -1856,6 +1893,11 @@
           <a class="feat-card reveal" href="/ebooks" style="--fc:#f59e0b">
             <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></span>
             <span class="feat-body"><b>${state.uiLang === "as" ? "বিনামূলীয়া ই-বুক" : "Free eBooks"}</b><span>${state.uiLang === "as" ? "যিকোনো সময়ত অনলাইন পঢ়ক" : "Read online, anytime"}</span></span>
+          </a>
+          <a class="feat-card feat-new reveal" href="/exam-wise-mock-test" style="--fc:#6366f1">
+            <span class="feat-new-badge"><span class="fnb-dot"></span>${state.uiLang === "as" ? "নতুন" : "NEW"}</span>
+            <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <span class="feat-body"><b>${state.uiLang === "as" ? "পৰীক্ষা-ভিত্তিক মক টেষ্ট" : "Exam-wise Mock Test"}</b><span>${state.uiLang === "as" ? "অসম আৰক্ষী, ADRE, APSC আৰু TET" : "Assam Police, ADRE, APSC & TET"}</span></span>
           </a>
           <a class="feat-card feat-new reveal" href="/exams" style="--fc:#8b5cf6">
             <span class="feat-new-badge"><span class="fnb-dot"></span>${state.uiLang === "as" ? "নতুন" : "NEW"}</span>
@@ -6757,6 +6799,517 @@
     return renderMockSetup(main, cat, null, null, null);
   }
 
+  /* ================= Exam-wise Mock Test (standalone portal) =================
+     A dedicated portal, in the same spirit as Your Exams and E-Books, that
+     keeps each recruitment exam apart, so a candidate for Assam Police, ADRE
+     Grade III or ADRE Grade IV practises a full paper for that exam instead
+     of a mixed subject bank. Each set is a full-length paper that mixes every
+     subject of the exam; the questions are prebuilt from data/exams/<exam>/...
+     (the "Your Exams" library) into data/exam-mock-sets/<exam>/set-N.json and
+     run through the same timed quiz engine.
+
+     Routes:
+       /exam-wise-mock-test/                          exam picker
+       /exam-wise-mock-test/<exam>/                   full-paper set picker
+       /exam-wise-mock-test/<exam>/set-N/             setup + start        */
+
+  function examWiseAvailableExams() {
+    return (state.exams || []).filter((e) => examIsAvailable(e));
+  }
+
+  async function handleExamWiseMockRouting(main, segs) {
+    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    await getExamsList();
+
+    const examId = segs[1];
+    const setSeg = segs[2];
+
+    if (!examId) return renderExamWisePicker(main);
+
+    const exam = findExam(examId);
+    if (!exam) return render404(main);
+    if (!examIsAvailable(exam)) return renderExamWiseComingSoon(main, exam);
+
+    const setMatch = setSeg && /^set-(\d+)$/.exec(setSeg);
+    if (setMatch) {
+      if (EXAM_WISE_UPGRADE) return renderExamWiseUpgrade(main, exam, parseInt(setMatch[1], 10));
+      return renderExamWiseStart(main, exam, parseInt(setMatch[1], 10));
+    }
+    if (setSeg) return render404(main);
+    return renderExamWiseSetPicker(main, exam);
+  }
+
+  /* How many full-paper sets exist for one exam, probed from the published
+     files (data/exam-mock-sets/<exam>/set-N.json). */
+  async function detectExamMockSets(examId) {
+    const cacheKey = `exw:${examId}`;
+    if (state.examMockSetCache && state.examMockSetCache[cacheKey]) return state.examMockSetCache[cacheKey];
+    const found = [];
+    for (let n = 1; n <= MAX_MOCK_SETS; n++) {
+      const data = await API.getExamMockSet(examId, n);
+      if (data && Array.isArray(data.questions) && data.questions.length) found.push(n);
+      else break;
+    }
+    state.examMockSetCache = state.examMockSetCache || {};
+    state.examMockSetCache[cacheKey] = found;
+    return found;
+  }
+
+  function renderExamWiseComingSoon(main, exam) {
+    const titleEn = ebkLang(exam.title, "en");
+    const titleAs = ebkLang(exam.title, "as");
+    const subEn = ebkLang(exam.subtitle, "en");
+    main.innerHTML = `
+      <div class="page-head">
+        <nav class="breadcrumb">
+          <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+          <a href="/exam-wise-mock-test">${t("mock.examwise.title")}</a><span class="bc-sep">/</span>
+          <span>${escapeHtml(titleEn)}</span>
+        </nav>
+      </div>
+      <div class="exam-soon-panel" style="--ebk:${examColor(exam)}">
+        <span class="exam-soon-ico">${EXAM_SECTION_ICONS.default}</span>
+        <h1>${escapeHtml(titleEn)}${titleAs && titleAs !== titleEn ? ` <span class="exam-soon-as">${escapeHtml(titleAs)}</span>` : ""}</h1>
+        ${subEn ? `<p class="exam-soon-sub">${escapeHtml(subEn)}</p>` : ""}
+        <span class="exam-soon-chip">${t("exams.comingSoon")}</span>
+        <p class="exam-soon-msg">${escapeHtml(t("mock.examwise.comingSoonMsg"))}</p>
+        <a class="btn btn-accent" href="/exam-wise-mock-test">${t("mock.examwise.back")}</a>
+      </div>`;
+  }
+
+  async function renderExamWisePicker(main) {
+    const exams = (state.exams || []);
+    const counts = {};
+    await Promise.all(exams.filter((e) => examIsAvailable(e)).map(async (e) => {
+      counts[e.id] = (await detectExamMockSets(e.id)).length;
+    }));
+    const cards = exams.map((e, i) => {
+      const available = examIsAvailable(e);
+      const nSets = counts[e.id] || 0;
+      const titleEn = ebkLang(e.title, "en");
+      const titleAs = ebkLang(e.title, "as");
+      const subEn = ebkLang(e.subtitle, "en");
+      const subAs = ebkLang(e.subtitle, "as");
+      const logo = e.logo ? String(e.logo) : (e.cover ? String(e.cover) : "");
+      const href = `/exam-wise-mock-test/${encodeURIComponent(e.id)}`;
+      const fallback = `<span class="exw-thumb-fallback" aria-hidden="true">${escapeHtml(e.icon || titleEn.slice(0, 3).toUpperCase())}</span>`;
+      const thumb = logo
+        ? `${fallback}<img class="exw-thumb-img" src="${escapeHtml(logo)}" alt="${escapeHtml(examCoverAlt(e, state.lang))}" loading="lazy" decoding="async" onerror="this.remove()">`
+        : fallback;
+      const badge = available
+        ? `<span class="exw-badge exw-badge-live">${escapeHtml(t("mock.examwise.setsCount").replace("{n}", String(nSets)))}</span>`
+        : `<span class="exw-badge exw-badge-soon">${escapeHtml(t("exams.comingSoon"))}</span>`;
+      const meta = available
+        ? escapeHtml(t("mock.examwise.fullPaperMeta"))
+        : escapeHtml(subEn || t("exams.comingSoon"));
+      return `
+        <a class="exw-card reveal ${available ? "" : "is-soon"}" style="--c:${examColor(e)}" data-delay="${i * 50}" href="${href}">
+          <span class="exw-thumb">${thumb}${badge}</span>
+          <span class="exw-body">
+            <span class="exw-title">${escapeHtml(titleEn)}</span>
+            ${titleAs && titleAs !== titleEn ? `<span class="exw-as">${escapeHtml(titleAs)}</span>` : ""}
+            ${subAs && subAs !== subEn ? `<span class="exw-sub">${escapeHtml(subAs)}</span>` : ""}
+            <span class="exw-meta">${meta}</span>
+          </span>
+          <span class="exw-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>`;
+    }).join("");
+
+    main.innerHTML = `
+      <div class="page-head">
+        <nav class="breadcrumb">
+          <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+          <span>${t("mock.examwise.title")}</span>
+        </nav>
+        <h1>${t("mock.examwise.title")}</h1>
+        <p class="page-desc">${t("mock.examwise.desc")}</p>
+      </div>
+      <section class="section" style="padding-bottom:46px;">
+        <div class="mt-topics-head"><h2>${t("mock.examwise.chooseExam")}</h2><p>${t("mock.examwise.chooseExamSub")}</p></div>
+        <div class="exw-grid">${cards}</div>
+      </section>`;
+    observeReveals();
+    appendSeoFaq(main, examWiseHubSeo());
+  }
+
+  /* Detailing panel for the exam-wise hub. The static copy lives inside
+     <main> (crawler / no-JS view) and is therefore destroyed by renderRoute,
+     so the same content is appended here for real visitors — the pattern the
+     subject-wise mock-test, e-books and category hubs already follow. */
+  function examWiseHubSeo() {
+    const names = examWiseAvailableExams().map((e) => ebkLang(e.title, "en")).join(", ")
+      || "Assam Police, ADRE Grade III and ADRE Grade IV";
+    return {
+      name: t("mock.examwise.title"),
+      noDefaults: true,
+      h2: "Exam-wise mock tests for Assam recruitment exams",
+      info: "A subject-wise mock test drills one topic. An exam-wise mock test does the opposite: it hands you a complete question paper — every subject of the exam mixed together, in the order the real paper uses, with a live timer running while you attempt it. That is the part most candidates never practise, and it is where the real paper surprises them.",
+      items: examWiseAvailableExams().map((e) => ({ name: ebkLang(e.title, "en"), count: 100, unit: "questions per set" })),
+      tips: [
+        "Open the exam that matches your recruitment.",
+        "Pick a full paper set — start with Set 1 and move up.",
+        "Choose your question language and start the timed test.",
+        "Submit to get an instant score, then read the bilingual answer review for every question."
+      ],
+      faqs: [
+        { q: "What is an exam-wise mock test?", a: "An exam-wise mock test is a single full-length paper that mixes every subject of one recruitment exam — for example Assam Police or ADRE Grade III — and runs under a live timer, so it works exactly like the real examination hall instead of a single-subject practice drill." },
+        { q: "How many questions are in each set?", a: "Every full paper set carries 100 bilingual questions with four options each, an answer key and a short explanation in both Assamese and English." },
+        { q: "Are the mock tests different for each exam?", a: `Yes. Each exam has its own separate sets built from its own syllabus and question bank — ${names} are kept apart.` },
+        { q: "Are these mock tests free?", a: "Yes. Every exam-wise mock test on axomexam is 100% free and can be reattempted as many times as you like." },
+        { q: "Can I practise in Assamese?", a: "Yes. Every question, option and explanation is available in both Assamese and English, and you can choose the question language before the test begins." }
+      ]
+    };
+  }
+
+  async function renderExamWiseSetPicker(main, exam) {
+    const examEn = ebkLang(exam.title, "en");
+    const examAs = ebkLang(exam.title, "as");
+    const subEn = ebkLang(exam.subtitle, "en");
+    const subAs = ebkLang(exam.subtitle, "as");
+    const sets = await detectExamMockSets(exam.id);
+    const visible = Math.max(DEFAULT_VISIBLE_SETS, ...(sets.length ? sets : [0]));
+    const existing = new Set(sets);
+    const color = examColor(exam);
+    const cover = exam.cover ? String(exam.cover) : (exam.logo ? String(exam.logo) : "");
+
+    const stats = [
+      { ico: `<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/>`, label: t("mock.examwise.statSets"), value: String(sets.length) },
+      { ico: `<circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M12 16h.01"/>`, label: t("mock.examwise.statQuestions"), value: "100" },
+      { ico: `<path d="M4 5h16v14H4z"/><path d="M8 9h8"/><path d="M8 13h5"/>`, label: t("mock.examwise.statLangs"), value: "অসমীয়া / EN" },
+      { ico: `<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>`, label: t("mock.examwise.statMode"), value: t("mock.examwise.modeTimed") }
+    ];
+
+    const setCards = Array.from({ length: visible }, (_, i) => {
+      const n = i + 1;
+      if (existing.has(n)) {
+        return `
+        <a class="set-card reveal" href="/exam-wise-mock-test/${encodeURIComponent(exam.id)}/set-${n}" style="--cat:${color}" data-delay="${i * 40}">
+          <span class="set-card-head">
+            <span class="set-num">${String(n).padStart(2, "0")}</span>
+            <span class="set-status">${t("mock.examwise.available")}</span>
+          </span>
+          <span class="set-name">${t("mock.examwise.fullPaperSet")} ${n}</span>
+          <span class="set-meta">${t("mock.examwise.setMeta")}</span>
+          <span class="set-go">
+            <span>${t("mock.examwise.start")}</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>`;
+      }
+      return `
+        <div class="set-card set-card-locked reveal" style="--cat:${color}" data-delay="${i * 40}">
+          <span class="set-card-head">
+            <span class="set-num">${String(n).padStart(2, "0")}</span>
+            <span class="set-status set-status-locked">${t("exams.comingSoon")}</span>
+          </span>
+          <span class="set-name">${t("mock.examwise.fullPaperSet")} ${n}</span>
+          <span class="set-meta">${t("mock.examwise.notPublished")}</span>
+        </div>`;
+    }).join("");
+
+    main.innerHTML = `
+      <div class="page-head">
+        <nav class="breadcrumb">
+          <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+          <a href="/exam-wise-mock-test">${t("mock.examwise.title")}</a><span class="bc-sep">/</span>
+          <span>${escapeHtml(examEn)}</span>
+        </nav>
+      </div>
+
+      <div class="exw-hero" style="--c:${color}">
+        <span class="exw-hero-thumb">
+          ${cover ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(examCoverAlt(exam, state.lang))}" loading="eager" decoding="async" onerror="this.remove()">` : `<span class="exw-hero-fallback">${escapeHtml(exam.icon || examEn.slice(0, 2).toUpperCase())}</span>`}
+        </span>
+        <span class="exw-hero-body">
+          <span class="exw-hero-chip">${escapeHtml(t("mock.examwise.title"))}</span>
+          <h1 class="exw-hero-title">${escapeHtml(examEn)}${examAs && examAs !== examEn ? ` <span class="exw-hero-as" lang="as">${escapeHtml(examAs)}</span>` : ""}</h1>
+          ${subAs && subAs !== subEn ? `<span class="exw-hero-sub" lang="as">${escapeHtml(subAs)}</span>` : (subEn ? `<span class="exw-hero-sub">${escapeHtml(subEn)}</span>` : "")}
+          <span class="exw-hero-stats">
+            ${stats.map((s) => `<span class="exw-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${s.ico}</svg><b>${escapeHtml(s.value)}</b>${escapeHtml(s.label)}</span>`).join("")}
+          </span>
+        </span>
+      </div>
+
+      ${EXAM_WISE_UPGRADE ? `
+      <div class="upgrade-banner" role="status">
+        <span class="upgrade-dot" aria-hidden="true"></span>
+        <span>${t("mock.examwise.upgradeBanner")}</span>
+        <span class="upgrade-banner-as" lang="as">${t("mock.examwise.upgrade.msg")}</span>
+      </div>` : ""}
+
+      <section class="section" style="padding-bottom:46px;">
+        <div class="mt-topics-head">
+          <h2>${t("mock.examwise.setsHead")}</h2>
+          <p>${t("mock.examwise.setsHeadSub")}</p>
+        </div>
+        <div class="set-grid">${setCards}</div>
+      </section>
+
+      <section class="section" style="padding-bottom:52px;">
+        <div class="mt-block exw-howto">
+          <div class="mt-label">${t("mock.examwise.howItWorks")}</div>
+          <ol class="exw-howto-list">
+            <li><span class="exw-howto-num">1</span>${t("mock.examwise.how1")}</li>
+            <li><span class="exw-howto-num">2</span>${t("mock.examwise.how2")}</li>
+            <li><span class="exw-howto-num">3</span>${t("mock.examwise.how3")}</li>
+          </ol>
+        </div>
+      </section>`;
+    observeReveals();
+    appendSeoFaq(main, examWiseExamSeo(exam, examEn, sets.length));
+  }
+
+  /* Detailing panel for one exam's set picker. Mirrors the static copy the
+     builder writes inside <main>, which renderRoute replaces for visitors. */
+  function examWiseExamSeo(exam, examEn, nSets) {
+    const secs = (exam.sections || [])
+      .filter((s) => s.id !== "syllabus")
+      .map((s) => ebkLang(s.title, "en") || s.id);
+    const subEn = ebkLang(exam.subtitle, "en");
+    return {
+      name: examEn,
+      noDefaults: true,
+      h2: `${examEn} full-paper mock test`,
+      info: `The ${examEn} mock test on this page is a full paper, not a single-subject practice set. Each of the ${nSets} sets mixes every subject of the ${examEn}${subEn ? ` (${subEn})` : ""} paper and runs to a fixed length of 100 questions under a live timer, so you practise the paper end to end the way it is actually set.`,
+      items: secs.map((s) => ({ name: s })),
+      tips: [
+        "Attempt one set fully under the timer before checking any answer.",
+        "Note every wrong answer and the subject it belongs to.",
+        "Revise that subject in the exam book, then attempt the next set.",
+        "Compare your set-to-set scores to track whether accuracy is improving."
+      ],
+      faqs: [
+        { q: `What is the ${examEn} mock test?`, a: `It is a full-length, timed mock test for the ${examEn} recruitment exam. Each set mixes every subject of the paper and carries 100 bilingual questions with answers and explanations.` },
+        { q: "How many full papers are there?", a: `There are ${nSets} full paper sets for ${examEn}. Every set is a complete 100-question paper.` },
+        { q: `Which subjects are covered in the ${examEn} paper?`, a: secs.join(", ") + "." },
+        { q: "Is the test timed?", a: "Yes. Every set runs on a live timer so you learn to manage your time the way you must in the real examination hall." },
+        { q: "Are answers and explanations given?", a: "Yes. After you submit, you see your score and a bilingual review of every question with the correct answer and a short explanation." }
+      ]
+    };
+  }
+
+  /* Temporary "system upgrade" notice shown in place of a full-paper set
+     while the question bank is being prepared (EXAM_WISE_UPGRADE). Shows the
+     normal, professional setup panel (language, instructions, details) so the
+     page still looks complete, replaces the count picker with a preparing
+     notice, and opens a bilingual popup. The Start button re-opens the popup
+     instead of starting the quiz. */
+  function renderExamWiseUpgrade(main, exam, setNumber) {
+    const examEn = ebkLang(exam.title, "en");
+    const color = examColor(exam);
+    const setTitle = `${t("mock.examwise.fullPaperSet")} ${setNumber}`;
+    const steps = [
+      { key: "mock.examwise.upgrade.step1", state: "done" },
+      { key: "mock.examwise.upgrade.step2", state: "active" },
+      { key: "mock.examwise.upgrade.step3", state: "" }
+    ];
+
+    state.mock = null;
+
+    main.innerHTML = `
+      <div class="page-head">
+        <nav class="breadcrumb">
+          <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+          <a href="/exam-wise-mock-test">${t("mock.examwise.title")}</a><span class="bc-sep">/</span>
+          <a href="/exam-wise-mock-test/${encodeURIComponent(exam.id)}">${escapeHtml(examEn)}</a><span class="bc-sep">/</span>
+          <span>${escapeHtml(setTitle)}</span>
+        </nav>
+        <h1>${escapeHtml(examEn)} — ${escapeHtml(setTitle)}</h1>
+        <p class="page-desc">${t("mock.examwise.setup.desc")}</p>
+      </div>
+
+      <div class="mt-setup">
+        <div class="mt-hero" style="--cat:${color}">
+          <span class="mt-hero-icon"><span class="cat-svg">${examSectionIcon({ id: "gk" })}</span></span>
+          <span style="min-width:0;">
+            <span class="mt-hero-cat">${escapeHtml(examEn)}</span>
+            <span class="mt-hero-title">${escapeHtml(setTitle)}</span>
+            <span class="mt-hero-chips">
+              <span class="mt-chip">100 ${t("mock.questions")}</span>
+              <span class="mt-chip">অসমীয়া / English</span>
+            </span>
+          </span>
+        </div>
+
+        <div class="upgrade-panel upgrade-panel-inline" style="--c:${color}">
+          <span class="upgrade-badge"><span class="upgrade-dot" aria-hidden="true"></span>${escapeHtml(tLang("mock.examwise.upgrade.badge", "en"))}</span>
+          <h2 class="upgrade-title">${escapeHtml(tLang("mock.examwise.upgrade.title", "en"))}</h2>
+          <p class="upgrade-as" lang="as">${escapeHtml(tLang("mock.examwise.upgrade.title", "as"))}</p>
+          <p class="upgrade-msg">${escapeHtml(tLang("mock.examwise.upgrade.msg", "en"))}</p>
+          <p class="upgrade-msg upgrade-as" lang="as">${escapeHtml(tLang("mock.examwise.upgrade.msg", "as"))}</p>
+          <span class="upgrade-eta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            ${escapeHtml(tLang("mock.examwise.upgrade.eta", "en"))}
+          </span>
+          <ul class="upgrade-steps">
+            ${steps.map((s) => `
+              <li class="upgrade-step ${s.state}">
+                <span class="upgrade-step-ico">${s.state === "done"
+                  ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>`
+                  : `<span class="upgrade-spin"></span>`}</span>
+                <span>
+                  <span>${escapeHtml(tLang(s.key, "en"))}</span>
+                  <span class="upgrade-step-as" lang="as">${escapeHtml(tLang(s.key, "as"))}</span>
+                </span>
+              </li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="mt-block">
+          <div class="mt-label">${t("mock.examwise.lang")} <span>প্ৰশ্নৰ ভাষা</span></div>
+          <div class="mt-segmented">
+            <button type="button" class="mt-seg-btn active" data-mocklang="as"><span class="mt-seg-ico">অ</span> অসমীয়া (Assamese)</button>
+            <button type="button" class="mt-seg-btn" data-mocklang="en"><span class="mt-seg-ico">A</span> English</button>
+          </div>
+        </div>
+
+        <div class="mt-block">
+          <div class="mt-label">${t("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>
+          <p class="mt-sub">${t("mock.examwise.instructionsSub")}</p>
+          <ul class="mt-rules">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${t("mock.examwise.rule1")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs1", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${t("mock.examwise.rule2")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs2", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><span>${t("mock.examwise.rule3")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs3", "as")}</span></span></li>
+          </ul>
+        </div>
+
+        <div class="mt-ready">
+          <span class="mt-ready-txt"><b>${t("mock.examwise.readyTitle")}</b><span>${t("mock.examwise.readySub")}</span></span>
+          <button class="btn mt-start" id="mock-begin-btn">${t("mock.begin")} →</button>
+        </div>
+      </div>`;
+
+    const beginBtn = $("#mock-begin-btn", main);
+    if (beginBtn) beginBtn.addEventListener("click", () => showExamWiseUpgradePopup());
+    $$("[data-mocklang]", main).forEach((b) => {
+      b.addEventListener("click", () => {
+        $$("[data-mocklang]", main).forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+      });
+    });
+    showExamWiseUpgradePopup();
+    appendSeoFaq(main, examWiseSetSeo(exam, examEn, setNumber));
+  }
+
+  /* Detailing panel for one full-paper set. Mirrors the static copy the
+     builder writes inside <main> (crawler / no-JS view). */
+  function examWiseSetSeo(exam, examEn, setNumber) {
+    const secList = (exam.sections || [])
+      .filter((s) => s.id !== "syllabus")
+      .map((s) => ebkLang(s.title, "en") || s.id)
+      .join(", ");
+    return {
+      name: `${examEn} Full Paper Set ${setNumber}`,
+      noDefaults: true,
+      h2: `${examEn} Full Paper Set ${setNumber}`,
+      info: `Full Paper Set ${setNumber} of the ${examEn} exam-wise mock test is a complete 100-question paper that mixes every subject of the exam — ${secList} — and runs under a live timer, exactly like the real test. When you start this set you choose your question language (Assamese or English) and the timer begins. On submit you get an instant score along with the correct answer and a short explanation for every question, in both languages.`,
+      tips: [
+        "Pick your question language.",
+        "Start the timer and attempt the whole paper without pausing.",
+        "Submit and review the explanations for the questions you missed.",
+        "Reattempt the set later and compare your score."
+      ],
+      faqs: [
+        { q: `How many questions are in ${examEn} Full Paper Set ${setNumber}?`, a: "100 bilingual questions with four options each, covering every subject of the paper." },
+        { q: `Is ${examEn} Set ${setNumber} timed?`, a: "Yes. The set runs on a live timer from the moment you start, so it works like the real examination." },
+        { q: "Can I see the answers?", a: "Yes. After you submit, every question shows the correct option and a short explanation in both Assamese and English." },
+        { q: "Can I reattempt this set?", a: "Yes. All sets are free and unlimited — you can reattempt any set as many times as you like." }
+      ]
+    };
+  }
+
+  /* Bilingual upgrade popup. English is the primary line (title + body), the
+     Assamese twin sits underneath in a slightly muted style, so a visitor
+     reading either language understands the message at a glance. */
+  function showExamWiseUpgradePopup() {
+    const existing = $("#examwise-upgrade-modal");
+    if (existing) existing.remove();
+
+    const modal = document.createElement("div");
+    modal.id = "examwise-upgrade-modal";
+    modal.className = "read-modal upgrade-modal";
+    modal.innerHTML = `
+      <div class="read-modal-backdrop"></div>
+      <div class="read-modal-box upgrade-modal-box" role="dialog" aria-modal="true" aria-label="${escapeHtml(t("mock.examwise.upgrade.popupTitle"))}">
+        <span class="upgrade-modal-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/>
+            <path d="M5.6 5.6l2.1 2.1"/><path d="M16.3 16.3l2.1 2.1"/><path d="M18.4 5.6l-2.1 2.1"/><path d="M7.7 16.3l-2.1 2.1"/>
+            <circle cx="12" cy="12" r="3.4"/>
+          </svg>
+        </span>
+        <span class="upgrade-badge">
+          <span class="upgrade-dot" aria-hidden="true"></span>
+          ${escapeHtml(tLang("mock.examwise.upgrade.badge", "en"))}
+        </span>
+        <h3 class="upgrade-modal-title">${escapeHtml(tLang("mock.examwise.upgrade.popupTitle", "en"))}</h3>
+        <p class="upgrade-modal-as" lang="as">${escapeHtml(tLang("mock.examwise.upgrade.popupTitle", "as"))}</p>
+        <p class="upgrade-modal-msg">${escapeHtml(tLang("mock.examwise.upgrade.popupMsg", "en"))}</p>
+        <p class="upgrade-modal-msg upgrade-modal-as" lang="as">${escapeHtml(tLang("mock.examwise.upgrade.popupMsg", "as"))}</p>
+        <span class="upgrade-eta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          ${escapeHtml(tLang("mock.examwise.upgrade.eta", state.lang))}
+        </span>
+        <button type="button" class="btn btn-primary" id="upgrade-modal-ok">${escapeHtml(tLang("mock.examwise.upgrade.ok", state.lang))}</button>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const close = () => modal.remove();
+    $("#upgrade-modal-ok", modal).addEventListener("click", close);
+    $(".read-modal-backdrop", modal).addEventListener("click", close);
+  }
+
+  async function renderExamWiseStart(main, exam, setNumber) {
+    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+
+    const data = await API.getExamMockSet(exam.id, setNumber);
+    const list = data && Array.isArray(data.questions) ? data.questions : [];
+    const pool = list.map(normalizeMockQuestion).filter((q) => q && q.options && q.options.length >= 2);
+
+    const examEn = ebkLang(exam.title, "en");
+    const examAs = ebkLang(exam.title, "as");
+    const setTitle = `${t("mock.examwise.fullPaperSet")} ${setNumber}`;
+
+    if (!pool.length) {
+      main.innerHTML = `
+        <div class="page-head">
+          <nav class="breadcrumb">
+            <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+            <a href="/exam-wise-mock-test">${t("mock.examwise.title")}</a><span class="bc-sep">/</span>
+            <a href="/exam-wise-mock-test/${encodeURIComponent(exam.id)}">${escapeHtml(examEn)}</a><span class="bc-sep">/</span>
+            <span>${escapeHtml(setTitle)}</span>
+          </nav>
+        </div>
+        <div class="qa-empty" style="padding:60px 20px;">
+          <div class="big"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+          <p>${t("mock.noQuestions")}</p>
+          <div style="margin-top:18px;"><a class="btn btn-outline" href="/exam-wise-mock-test/${encodeURIComponent(exam.id)}">← ${t("mock.examwise.back")}</a></div>
+        </div>`;
+      return;
+    }
+
+    renderMockStartPanel(main, {
+      cat: null,
+      pool,
+      testLang: "as",
+      iconHtml: `<span class="cat-svg">${examSectionIcon({ id: "gk" })}</span>`,
+      color: examColor(exam),
+      heroCat: examEn,
+      heroTitle: setTitle,
+      title: `${examEn} — ${setTitle}`,
+      breadcrumb: [
+        { href: "/", label: "Home" },
+        { href: "/exam-wise-mock-test", label: t("mock.examwise.title") },
+        { href: `/exam-wise-mock-test/${encodeURIComponent(exam.id)}`, label: examEn },
+        { label: setTitle }
+      ],
+      setInfo: { title: setTitle, subject: examEn },
+      /* One full paper, fixed length — no count picker. */
+      countOptions: [pool.length],
+      onStart: startSetMock
+    });
+  }
+
   /* Subcategory landing: show manual JSON sets when available,
      otherwise fall back to the old section / topic flow. */
   async function renderMockSubLevel(main, cat, sub) {
@@ -6919,9 +7472,34 @@
       </a>`;
   }
 
-  function renderMockCategoryPicker(main) {
+  /* Promo banner pointing at the standalone Exam-wise Mock Test portal. */
+  function examWiseLandingCards() {
+    const exams = examWiseAvailableExams();
+    if (!exams.length) return "";
+    const names = exams.map((e) => ebkLang(e.title, "en")).join(" · ");
+    return `
+      <a class="mv-promo reveal" href="/exam-wise-mock-test">
+        <span class="mv-promo-new"><span class="fnb-dot"></span>${state.uiLang === "as" ? "নতুন" : "NEW"}</span>
+        <span class="mv-promo-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <span class="mv-promo-body">
+          <b>${escapeHtml(t("mock.examwise.landingTitle"))}</b>
+          <span>${escapeHtml(t("mock.examwise.landingSub"))}</span>
+          <span class="mv-promo-chips">${escapeHtml(names)}</span>
+        </span>
+        <span class="mv-promo-go">${escapeHtml(t("mock.examwise.landingCta"))}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>`;
+  }
+
+  async function renderMockCategoryPicker(main) {
+    /* Exam-wise cards are drawn from the live exam library, so the picker
+       waits for it before painting. */
+    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    await getExamsList();
     const mockCategories = state.categories.filter(c => c.id !== "study-guides" && c.id !== "articles");
     const baseline = mockLandingBaseline();
+    const examWiseCards = examWiseLandingCards();
 
     main.innerHTML = `
       <section class="mv-landing">
@@ -6936,11 +7514,16 @@
             <div class="mv-stat"><b>100%</b><span>Free Forever</span></div>
           </div>
           <div class="mv-cta">
-            <a class="mv-btn mv-btn-primary" href="#subjects">Start Mock Test
+            <a class="mv-btn mv-btn-primary" href="#subjects">${escapeHtml(t("mock.startMain"))}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
+            <a class="mv-btn mv-btn-ghost" href="#exam-wise">${escapeHtml(t("nav.examMock"))}</a>
           </div>
         </div>
+
+        ${examWiseCards ? `<div class="mv-section" id="exam-wise">
+          ${examWiseCards}
+        </div>` : ""}
 
         <div class="mv-exams reveal">
           <div class="mv-exams-head">
@@ -7344,70 +7927,113 @@
 
     const quizPool = loaded.questions.filter((q) => q.options && q.options.length >= 2);
     const fullPool = quizPool.length ? quizPool : loaded.questions;
-    const countOptions = [10, 15, 20, 25].filter((n) => n <= fullPool.length);
-    if (!countOptions.length) countOptions.push(fullPool.length);
+
+    renderMockStartPanel(main, {
+      cat,
+      pool: fullPool,
+      testLang: cat.id === "english" ? "en" : "as",
+      iconHtml: catIconHTML(cat.id),
+      color: catColor(cat.id),
+      heroCat: localized(cat.name),
+      heroTitle: `${loaded.title} • ${localized(sub.name)}`,
+      title: `${loaded.title} — ${localized(sub.name)}`,
+      breadcrumb: [
+        { href: "/", label: "Home" },
+        { href: "/mock-test", label: "Mock Test" },
+        { href: `/mock-test/${cat.id}`, label: localized(cat.name) },
+        { href: `/mock-test/${cat.id}/${sub.id}`, label: localized(sub.name) },
+        { label: loaded.title }
+      ],
+      setInfo: { setNumber, title: loaded.title, subject: localized(sub.name) },
+      countOptions: [10, 15, 20, 25],
+      onStart: startSetMock
+    });
+  }
+
+  /* Shared "configure and start" panel used by both the subject-wise mock
+     sets and the exam-wise (Assam Police / ADRE Grade III & IV) mock tests.
+     Renders the hero, the language switch, the question-count picker and the
+     instructions, then wires the Start button to `opts.onStart`. */
+  function renderMockStartPanel(main, opts) {
+    const pool = opts.pool || [];
+    const countOptions = (opts.countOptions || [10, 15, 20, 25]).filter((n) => n <= pool.length);
+    if (!countOptions.length) countOptions.push(pool.length);
     const defaultCount = countOptions.includes(25) ? 25 : countOptions[countOptions.length - 1];
+    const testLang = opts.testLang || "as";
 
     state.mock = {
-      cat, pool: fullPool, configured: false, count: defaultCount,
-      testLang: cat.id === "english" ? "en" : "as",
-      setInfo: { setNumber, title: loaded.title, subject: localized(sub.name) }
+      cat: opts.cat || null,
+      pool,
+      configured: false,
+      count: defaultCount,
+      testLang,
+      setInfo: opts.setInfo || null
     };
 
     main.innerHTML = `
       <div class="page-head">
         <nav class="breadcrumb">
-          <a href="/">Home</a><span class="bc-sep">/</span>
-          <a href="/mock-test">Mock Test</a><span class="bc-sep">/</span>
-          <a href="/mock-test/${cat.id}">${escapeHtml(localized(cat.name))}</a><span class="bc-sep">/</span>
-          <a href="/mock-test/${cat.id}/${sub.id}">${escapeHtml(localized(sub.name))}</a><span class="bc-sep">/</span>
-          <span>${escapeHtml(loaded.title)}</span>
+          ${(opts.breadcrumb || []).map((c) => `${c.href ? `<a href="${c.href}">${escapeHtml(c.label)}</a><span class="bc-sep">/</span>` : `<span>${escapeHtml(c.label)}</span>`}`).join("")}
         </nav>
-        <h1>${escapeHtml(loaded.title)} — ${escapeHtml(localized(sub.name))}</h1>
-        <p class="page-desc">Choose your language and start when ready.</p>
+        <h1>${escapeHtml(opts.title)}</h1>
+        <p class="page-desc">${t("mock.examwise.setup.desc")}</p>
       </div>
 
       <div class="mt-setup">
-        <div class="mt-hero" style="--cat:${catColor(cat.id)}">
-          <span class="mt-hero-icon">${catIconHTML(cat.id)}</span>
+        <div class="mt-hero" style="--cat:${opts.color}">
+          <span class="mt-hero-icon">${opts.iconHtml}</span>
           <span style="min-width:0;">
-            <span class="mt-hero-cat">${escapeHtml(localized(cat.name))}</span>
-            <span class="mt-hero-title">${escapeHtml(loaded.title)} • ${escapeHtml(localized(sub.name))}</span>
+            <span class="mt-hero-cat">${escapeHtml(opts.heroCat)}</span>
+            <span class="mt-hero-title">${escapeHtml(opts.heroTitle)}</span>
             <span class="mt-hero-chips">
-              <span class="mt-chip">${state.mock.pool.length} ${t("mock.questions")}</span>
+              <span class="mt-chip">${pool.length} ${t("mock.questions")}</span>
               <span class="mt-chip">অসমীয়া / English</span>
             </span>
           </span>
         </div>
 
+        <div class="mt-block mt-details">
+          <div class="mt-label">${t("mock.examwise.details")} <span>পৰীক্ষাৰ বিৱৰণ</span></div>
+          <div class="mt-detail-grid">
+            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailQuestions")}</span><b id="mt-count-val">${defaultCount}</b></span>
+            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailLang")}</span><b id="mt-lang-val">${testLang === "as" ? "অসমীয়া" : "English"}</b></span>
+            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMode")}</span><b>${t("mock.examwise.modeTimed")}</b></span>
+            <span class="mt-detail"><span class="mt-detail-k">${t("mock.examwise.detailMarking")}</span><b>${t("mock.examwise.markingVal")}</b></span>
+          </div>
+        </div>
+
         <div class="mt-block">
-          <div class="mt-label">Question Language <span>প্ৰশ্নৰ ভাষা</span></div>
+          <div class="mt-label">${t("mock.examwise.lang")} <span>প্ৰশ্নৰ ভাষা</span></div>
           <div class="mt-segmented">
-            <button type="button" class="mt-seg-btn ${state.mock.testLang === "as" ? "active" : ""}" data-mocklang="as">
+            <button type="button" class="mt-seg-btn ${testLang === "as" ? "active" : ""}" data-mocklang="as">
               <span class="mt-seg-ico">অ</span> অসমীয়া (Assamese)
             </button>
-            <button type="button" class="mt-seg-btn ${state.mock.testLang === "en" ? "active" : ""}" data-mocklang="en">
+            <button type="button" class="mt-seg-btn ${testLang === "en" ? "active" : ""}" data-mocklang="en">
               <span class="mt-seg-ico">A</span> English
             </button>
           </div>
         </div>
 
         <div class="mt-block">
-          <div class="mt-label">Number of Questions <span>প্ৰশ্নৰ সংখ্যা</span></div>
+          <div class="mt-label">${t("mock.examwise.count")} <span>প্ৰশ্নৰ সংখ্যা</span></div>
           <div class="count-picker" id="set-count-picker" style="margin:0;">
             ${countOptions.map((n) => `<button type="button" data-count="${n}" class="${n === defaultCount ? "active" : ""}">${n}</button>`).join("")}
           </div>
         </div>
 
-        <button class="btn mt-start" id="mock-begin-btn">${t("mock.begin")} →</button>
-
         <div class="mt-block">
-          <div class="mt-label">Instructions <span>নিৰ্দেশনা</span></div>
+          <div class="mt-label">${t("mock.examwise.instructions")} <span>নিৰ্দেশনা</span></div>
+          <p class="mt-sub">${t("mock.examwise.instructionsSub")}</p>
           <ul class="mt-rules">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>This is a timed test — a stopwatch tracks your total time.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>Choose the best answer. Results are graded instantly on submit.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>You can quit anytime — your current progress will be lost.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${t("mock.examwise.rule1")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs1", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>${t("mock.examwise.rule2")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs2", "as")}</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><span>${t("mock.examwise.rule3")}<span class="mt-rule-as" lang="as">${tLang("mock.examwise.ruleAs3", "as")}</span></span></li>
           </ul>
+        </div>
+
+        <div class="mt-ready">
+          <span class="mt-ready-txt"><b>${t("mock.examwise.readyTitle")}</b><span>${t("mock.examwise.readySub")}</span></span>
+          <button class="btn mt-start" id="mock-begin-btn">${t("mock.begin")} →</button>
         </div>
       </div>`;
 
@@ -7416,6 +8042,8 @@
         $$("[data-mocklang]").forEach((x) => x.classList.remove("active"));
         b.classList.add("active");
         state.mock.testLang = b.dataset.mocklang;
+        const lv = $("#mt-lang-val");
+        if (lv) lv.textContent = b.dataset.mocklang === "as" ? "অসমীয়া" : "English";
       });
     });
 
@@ -7428,19 +8056,26 @@
           b.classList.add("active");
           selectedCount = parseInt(b.dataset.count, 10);
           state.mock.count = selectedCount;
+          const cv = $("#mt-count-val");
+          if (cv) cv.textContent = String(selectedCount);
         });
       });
     }
 
-    $("#mock-begin-btn").addEventListener("click", () => {
-      showModalPopup({
-        title: `Start ${loaded.title}?`,
-        message: `You are about to start a ${selectedCount} question mock test in ${state.mock.testLang === "as" ? "অসমীয়া" : "English"}. Do you want to proceed?`,
-        confirmText: "Start Test",
-        cancelText: "Cancel",
-        onConfirm: () => startSetMock(selectedCount)
+    const beginBtn = $("#mock-begin-btn");
+    if (beginBtn) {
+      beginBtn.addEventListener("click", () => {
+        showModalPopup({
+          title: t("mock.examwise.confirm.title"),
+          message: t("mock.examwise.confirm.msg")
+            .replace("{n}", selectedCount)
+            .replace("{lang}", state.mock.testLang === "as" ? "অসমীয়া" : "English"),
+          confirmText: t("mock.begin"),
+          cancelText: t("mock.examwise.confirm.cancel"),
+          onConfirm: () => opts.onStart(selectedCount)
+        });
       });
-    });
+    }
   }
 
   function startSetMock(count) {
@@ -7559,9 +8194,10 @@
     const qText = localizeContent(q.q);
     const optList = q.options || [];
     const qMedia = mediaBlock(q);
+    const catName = m.cat ? localized(m.cat.name) : "";
     const setLabel = m.setInfo
-      ? `${escapeHtml(localized(m.cat.name))} • ${escapeHtml(m.setInfo.title)}`
-      : `${escapeHtml(localized(m.cat.name))}`;
+      ? `${escapeHtml(catName ? catName + " • " : "")}${escapeHtml(m.setInfo.title)}`
+      : escapeHtml(catName);
 
     main.innerHTML = `
       <div class="quiz-wrap">
@@ -8525,7 +9161,7 @@
   function updateTabbar(segs) {
     const tabs = $$("#tabbar .tab-item");
     let active = "home";
-    if (segs[0] === "mock-test") active = "mock";
+    if (segs[0] === "mock-test" || segs[0] === "exam-wise-mock-test") active = "mock";
     else if (segs[0] === "categories" || segs[0] === "category" || segs[0] === "topic") active = "categories";
     else if (segs[0] === "exams") active = "exams";
     else if (segs[0] === "search") active = "search";

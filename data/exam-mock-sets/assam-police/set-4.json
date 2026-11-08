@@ -1,0 +1,3007 @@
+{
+  "setNumber": 4,
+  "title": "Full Paper Set 4",
+  "exam": "assam-police",
+  "questions": [
+    {
+      "id": "indian-economy-118",
+      "q": {
+        "en": "The Competition Commission of India was established in —",
+        "as": "ভাৰতৰ প্ৰতিযোগিতা আয়োগ কেতিয়া স্থাপিত হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "2000",
+          "as": "২০০০"
+        },
+        {
+          "en": "2003",
+          "as": "২০০৩"
+        },
+        {
+          "en": "2007",
+          "as": "২০০৭"
+        },
+        {
+          "en": "2010",
+          "as": "২০১০"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Competition Commission of India was established in 2003.",
+        "as": "ভাৰতৰ প্ৰতিযোগিতা আয়োগ ২০০৩ চনত স্থাপিত হৈছিল।"
+      }
+    },
+    {
+      "id": "collective-nouns-027",
+      "q": {
+        "en": "What is a group of kangaroos called?",
+        "as": "কেংগেৰুৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Herd",
+          "as": "পশুৰ জাক"
+        },
+        {
+          "en": "Pack",
+          "as": "দল"
+        },
+        {
+          "en": "Mob",
+          "as": "কেংগেৰু দল"
+        },
+        {
+          "en": "Troop",
+          "as": "সেনাদল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "A group of kangaroos is called a mob.",
+        "as": "কেংগেৰুৰ দলক mob বোলা হয়।"
+      }
+    },
+    {
+      "id": "assam-geography-113",
+      "q": {
+        "en": "Sualkuchi, famous for silk weaving, is located in which district?",
+        "as": "ৰেচম বোৱনৰ বাবে বিখ্যাত শুৱালকুছি কোন জিলাত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Nagaon",
+          "as": "নগাঁও"
+        },
+        {
+          "en": "Kamrup",
+          "as": "কামৰূপ"
+        },
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Jorhat",
+          "as": "যোৰহাট"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Sualkuchi is in Kamrup district.",
+        "as": "শুৱালকুছি কামৰূপ জিলাত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "odd-one-out-045",
+      "q": {
+        "en": "Choose the odd one out: Lion, Cow, Buffalo, Sheep",
+        "as": "অসদৃশটো বাছনি কৰক: সিংহ, গৰু, ম'হ, ভেড়া"
+      },
+      "options": [
+        {
+          "en": "Buffalo",
+          "as": "ম'হ"
+        },
+        {
+          "en": "Cow",
+          "as": "গৰু"
+        },
+        {
+          "en": "Lion",
+          "as": "সিংহ"
+        },
+        {
+          "en": "Sheep",
+          "as": "ভেড়া"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Cow, Buffalo and Sheep are herbivores, but Lion is a carnivore.",
+        "as": "গৰু, ম'হ আৰু ভেড়া তৃণভোজী, কিন্তু সিংহ মাংসভোজী।"
+      }
+    },
+    {
+      "id": "indian-economy-119",
+      "q": {
+        "en": "The Startup India initiative was launched in —",
+        "as": "ষ্টাৰ্টআপ ইণ্ডিয়া পদক্ষেপ কেতিয়া আৰম্ভ কৰা হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "2016",
+          "as": "২০১৬"
+        },
+        {
+          "en": "2014",
+          "as": "২০১৪"
+        },
+        {
+          "en": "2018",
+          "as": "২০১৮"
+        },
+        {
+          "en": "2020",
+          "as": "২০২০"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Startup India was launched in 2016.",
+        "as": "ষ্টাৰ্টআপ ইণ্ডিয়া ২০১৬ চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "venn-diagrams-038",
+      "q": {
+        "en": "In a class of 100 students, 55 like A, 50 like B, 45 like C. 25 like A and B, 20 like B and C, 15 like A and C and 10 like all three. How many like exactly one subject?",
+        "as": "১০০ জন ছাত্ৰৰ এটা শ্ৰেণীত ৫৫ জনে A, ৫০ জনে B, ৪৫ জনে C ভাল পায়। ২৫ জনে A আৰু B, ২০ জনে B আৰু C, ১৫ জনে A আৰু C আৰু ১০ জনে তিনিওটা ভাল পায়। কিমানজনে কেৱল এটা বিষয় ভাল পায়?"
+      },
+      "options": [
+        {
+          "en": "65",
+          "as": "৬৫"
+        },
+        {
+          "en": "55",
+          "as": "৫৫"
+        },
+        {
+          "en": "60",
+          "as": "৬০"
+        },
+        {
+          "en": "50",
+          "as": "৫০"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Exactly one = 150 − 2×60 + 3×10 = 60.",
+        "as": "কেৱল এটা = ১৫০ − ২×৬০ + ৩×১০ = ৬০।"
+      }
+    },
+    {
+      "id": "parts-of-speech-017",
+      "q": {
+        "en": "Identify the part of speech of the word 'team' in the sentence: The team won the trophy.",
+        "as": "বাক্যটোত 'team' শব্দটোৰ Parts of Speech চিনাক্ত কৰক: The team won the trophy."
+      },
+      "options": [
+        {
+          "en": "Pronoun",
+          "as": "Pronoun"
+        },
+        {
+          "en": "Verb",
+          "as": "Verb"
+        },
+        {
+          "en": "Adjective",
+          "as": "Adjective"
+        },
+        {
+          "en": "Noun",
+          "as": "Noun"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'team' is a Noun. A noun names a person, place, thing, or idea.",
+        "as": "'team' এটা Noun। Noun এ ব্যক্তি, স্থান, বস্তু বা ভাৱৰ নাম বুজায়।"
+      }
+    },
+    {
+      "id": "homes-habitats-060",
+      "q": {
+        "en": "Where does a giraffe live?",
+        "as": "জিৰাফ ক'ত থাকে?"
+      },
+      "options": [
+        {
+          "en": "Nest",
+          "as": "বাহ"
+        },
+        {
+          "en": "Hive",
+          "as": "মৌচাক"
+        },
+        {
+          "en": "Web",
+          "as": "মকৰাজাল"
+        },
+        {
+          "en": "Savanna",
+          "as": "তৃণভূমি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Giraffes live in the savanna.",
+        "as": "জিৰাফবোৰে তৃণভূমিত (savanna) বাস কৰে।"
+      }
+    },
+    {
+      "id": "narration-037",
+      "q": {
+        "en": "Change into indirect speech: She said, \"I shall have finished the work by evening.\"",
+        "as": "Indirect speech লৈ সলনি কৰক: She said, \"I shall have finished the work by evening.\""
+      },
+      "options": [
+        {
+          "en": "She said that she will have finished the work by evening.",
+          "as": "She said that she will have finished the work by evening."
+        },
+        {
+          "en": "She said that I would have finished the work by evening.",
+          "as": "She said that I would have finished the work by evening."
+        },
+        {
+          "en": "She said that she would have finished the work by evening.",
+          "as": "She said that she would have finished the work by evening."
+        },
+        {
+          "en": "She says that she would have finished the work by evening.",
+          "as": "She says that she would have finished the work by evening."
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'Shall have finished' becomes 'would have finished'.",
+        "as": "'Shall have finished' এ 'would have finished' লৈ সলনি হয়।"
+      }
+    },
+    {
+      "id": "odd-one-out-023",
+      "q": {
+        "en": "Choose the odd one out: K, A, E, I",
+        "as": "অসদৃশটো বাছনি কৰক: K, A, E, I"
+      },
+      "options": [
+        {
+          "en": "K",
+          "as": "K"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "E",
+          "as": "E"
+        },
+        {
+          "en": "I",
+          "as": "I"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "A, E and I are vowels, but K is a consonant.",
+        "as": "A, E আৰু I স্বৰবৰ্ণ, কিন্তু K ব্যঞ্জনবৰ্ণ।"
+      }
+    },
+    {
+      "id": "ranking-order-058",
+      "q": {
+        "en": "In a row of 49 persons, A is 25th from the left. What is his position from the right?",
+        "as": "৪৯ জনৰ শাৰীত A বাওঁফালৰ পৰা ২৫তম। সোঁফালৰ পৰা স্থান কিমান?"
+      },
+      "options": [
+        {
+          "en": "24",
+          "as": "২৪"
+        },
+        {
+          "en": "23",
+          "as": "২৩"
+        },
+        {
+          "en": "26",
+          "as": "২৬"
+        },
+        {
+          "en": "25",
+          "as": "২৫"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Position from right = 49 − 25 + 1 = 25.",
+        "as": "সোঁফালৰ স্থান = ৪৯ − ২৫ + ১ = ২৫।"
+      }
+    },
+    {
+      "id": "general-science-130",
+      "q": {
+        "en": "The main organs of respiration in humans are the —",
+        "as": "মানুহৰ শ্বাস-প্ৰশ্বাসৰ মূল অংগ কি —"
+      },
+      "options": [
+        {
+          "en": "Lungs",
+          "as": "হাওঁফাওঁ"
+        },
+        {
+          "en": "Kidneys",
+          "as": "বৃক্ক"
+        },
+        {
+          "en": "Liver",
+          "as": "যকৃত"
+        },
+        {
+          "en": "Heart",
+          "as": "হৃদয়"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The lungs are the main organs of respiration.",
+        "as": "হাওঁফাওঁ শ্বাস-প্ৰশ্বাসৰ মূল অংগ।"
+      }
+    },
+    {
+      "id": "profit-loss-015",
+      "q": {
+        "en": "A shopkeeper marks his goods 40% above the cost price and allows a discount of 25%. Find his profit percent.",
+        "as": "এজন দোকানীয়ে নিজৰ সামগ্ৰী ক্ৰয় মূল্যতকৈ ৪০% বেছি চিহ্নিত কৰে আৰু ২৫% ৰেহাই দিয়ে। তেওঁৰ লাভৰ শতাংশ নিৰ্ণয় কৰা।"
+      },
+      "options": [
+        {
+          "en": "10%",
+          "as": "১০%"
+        },
+        {
+          "en": "15%",
+          "as": "১৫%"
+        },
+        {
+          "en": "5%",
+          "as": "৫%"
+        },
+        {
+          "en": "No profit no loss",
+          "as": "কোনো লাভ বা লোকচান নাই"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Let CP = 100, so MP = 140. SP = 140 × 75/100 = 105. Profit% = (105 - 100)/100 × 100 = 5%.",
+        "as": "ধৰা হওক ক্ৰয় মূল্য = ১০০, গতিকে চিহ্নিত মূল্য = ১৪০। বিক্ৰয় মূল্য = ১৪০ × ৭৫/১০০ = ১০৫। লাভ% = (১০৫ - ১০০)/১০০ × ১০০ = ৫%।"
+      }
+    },
+    {
+      "id": "important-days-089",
+      "q": {
+        "en": "World Teachers' Day is observed on —",
+        "as": "বিশ্ব শিক্ষক দিৱস কেতিয়া পালন কৰা হয় —"
+      },
+      "options": [
+        {
+          "en": "October 5",
+          "as": "৫ অক্টোবৰ"
+        },
+        {
+          "en": "September 5",
+          "as": "৫ ছেপ্টেম্বৰ"
+        },
+        {
+          "en": "October 4",
+          "as": "৪ অক্টোবৰ"
+        },
+        {
+          "en": "October 8",
+          "as": "৮ অক্টোবৰ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "World Teachers' Day is on October 5.",
+        "as": "বিশ্ব শিক্ষক দিৱস ৫ অক্টোবৰত।"
+      }
+    },
+    {
+      "id": "parts-of-speech-140",
+      "q": {
+        "en": "Identify the part of speech of the word 'and' in the sentence: She both sings and dances.",
+        "as": "বাক্যটোত 'and' শব্দটোৰ Parts of Speech চিনাক্ত কৰক: She both sings and dances."
+      },
+      "options": [
+        {
+          "en": "Pronoun",
+          "as": "Pronoun"
+        },
+        {
+          "en": "Conjunction",
+          "as": "Conjunction"
+        },
+        {
+          "en": "Preposition",
+          "as": "Preposition"
+        },
+        {
+          "en": "Adverb",
+          "as": "Adverb"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'and' is a Conjunction. A conjunction joins words, phrases, or clauses.",
+        "as": "'and' এটা Conjunction। Conjunction এ শব্দ, phrase বা clause সংযোগ কৰে।"
+      }
+    },
+    {
+      "id": "one-word-substitution-086",
+      "q": {
+        "en": "One who dies for his country is called —",
+        "as": "দেশৰ বাবে প্ৰাণ দিয়া মানুহক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Patriot",
+          "as": "Patriot"
+        },
+        {
+          "en": "Soldier",
+          "as": "Soldier"
+        },
+        {
+          "en": "Martyr",
+          "as": "Martyr"
+        },
+        {
+          "en": "Veteran",
+          "as": "Veteran"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "One who dies for his country is a martyr.",
+        "as": "দেশৰ বাবে প্ৰাণ দিয়া মানুহক martyr বোলা হয়।"
+      }
+    },
+    {
+      "id": "voice-change-004",
+      "q": {
+        "en": "Change into passive voice: She sang a song.",
+        "as": "Passive voice লৈ সলনি কৰক: She sang a song."
+      },
+      "options": [
+        {
+          "en": "A song is sung by her.",
+          "as": "A song is sung by her."
+        },
+        {
+          "en": "A song was sung by her.",
+          "as": "A song was sung by her."
+        },
+        {
+          "en": "A song has sung by her.",
+          "as": "A song has sung by her."
+        },
+        {
+          "en": "A song were sung by her.",
+          "as": "A song were sung by her."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Simple past active becomes 'was/were + past participle'; the participle of 'sing' is 'sung'.",
+        "as": "Simple past active ৰ passive হ'ল 'was/were + past participle'; 'sing' ৰ participle 'sung'।"
+      }
+    },
+    {
+      "id": "assam-culture-048",
+      "q": {
+        "en": "Sangken is the water festival of which community?",
+        "as": "চাংকেন কোন সম্প্ৰদায়ৰ জল উৎসৱ?"
+      },
+      "options": [
+        {
+          "en": "Tai-Khamti",
+          "as": "তাই-খামটি"
+        },
+        {
+          "en": "Mising",
+          "as": "মিচিং"
+        },
+        {
+          "en": "Bodo",
+          "as": "বড়ো"
+        },
+        {
+          "en": "Rabha",
+          "as": "ৰাভা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Sangken is the water festival of the Tai-Khamti community.",
+        "as": "চাংকেন তাই-খামটি সম্প্ৰদায়ৰ জল উৎসৱ।"
+      }
+    },
+    {
+      "id": "simplification-015",
+      "q": {
+        "en": "Simplify: 1 ÷ (1 + 1 ÷ (1 + 1/2))",
+        "as": "সৰল কৰক: ১ ÷ (১ + ১ ÷ (১ + ১/২))"
+      },
+      "options": [
+        {
+          "en": "5/3",
+          "as": "৫/৩"
+        },
+        {
+          "en": "2/3",
+          "as": "২/৩"
+        },
+        {
+          "en": "1/2",
+          "as": "১/২"
+        },
+        {
+          "en": "3/5",
+          "as": "৩/৫"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "1 + 1/2 = 3/2, so 1 ÷ (3/2) = 2/3. Then 1 + 2/3 = 5/3 and 1 ÷ (5/3) = 3/5.",
+        "as": "১ + ১/২ = ৩/২, গতিকে ১ ÷ (৩/২) = ২/৩। তাৰপিছত ১ + ২/৩ = ৫/৩ আৰু ১ ÷ (৫/৩) = ৩/৫।"
+      }
+    },
+    {
+      "id": "general-science-085",
+      "q": {
+        "en": "The gas commonly used in fire extinguishers is —",
+        "as": "অগ্নি নিৰ্বাপকত সাধাৰণতে ব্যৱহাৰ হোৱা গেছ কি —"
+      },
+      "options": [
+        {
+          "en": "Oxygen",
+          "as": "অক্সিজেন"
+        },
+        {
+          "en": "Carbon dioxide",
+          "as": "কাৰ্বন ডাই অক্সাইড"
+        },
+        {
+          "en": "Nitrogen",
+          "as": "নাইট্ৰ'জেন"
+        },
+        {
+          "en": "Hydrogen",
+          "as": "হাইড্ৰ'জেন"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Carbon dioxide is used to extinguish fires.",
+        "as": "অগ্নি নিৰ্বাপন কৰিবলৈ কাৰ্বন ডাই অক্সাইড ব্যৱহাৰ কৰা হয়।"
+      }
+    },
+    {
+      "id": "idioms-phrases-063",
+      "q": {
+        "en": "The idiom 'to look a gift horse in the mouth' means —",
+        "as": "'to look a gift horse in the mouth' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "to be kind",
+          "as": "দয়ালু হোৱা"
+        },
+        {
+          "en": "to be foolish",
+          "as": "মূৰ্খ হোৱা"
+        },
+        {
+          "en": "to find fault with a gift",
+          "as": "উপহাৰত দোষ বিচৰা"
+        },
+        {
+          "en": "to be wise",
+          "as": "জ্ঞানী হোৱা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'To look a gift horse in the mouth' means to find fault with a gift.",
+        "as": "'to look a gift horse in the mouth' ৰ অৰ্থ হৈছে উপহাৰত দোষ বিচৰা।"
+      }
+    },
+    {
+      "id": "assam-history-193",
+      "q": {
+        "en": "Which city was the capital of Assam before Dispur?",
+        "as": "দিছপুৰৰ আগতে অসমৰ ৰাজধানী কোন নগৰ আছিল?"
+      },
+      "options": [
+        {
+          "en": "Jorhat",
+          "as": "যোৰহাট"
+        },
+        {
+          "en": "Dibrugarh",
+          "as": "ডিব্ৰুগড়"
+        },
+        {
+          "en": "Guwahati",
+          "as": "গুৱাহাটী"
+        },
+        {
+          "en": "Shillong",
+          "as": "শ্বিলং"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Shillong was the capital of Assam until 1972.",
+        "as": "১৯৭২ চনলৈকে শ্বিলং অসমৰ ৰাজধানী আছিল।"
+      }
+    },
+    {
+      "id": "parts-of-speech-144",
+      "q": {
+        "en": "Identify the part of speech of the word 'Oh' in the sentence: Oh! I forgot my keys.",
+        "as": "বাক্যটোত 'Oh' শব্দটোৰ Parts of Speech চিনাক্ত কৰক: Oh! I forgot my keys."
+      },
+      "options": [
+        {
+          "en": "Interjection",
+          "as": "Interjection"
+        },
+        {
+          "en": "Noun",
+          "as": "Noun"
+        },
+        {
+          "en": "Adverb",
+          "as": "Adverb"
+        },
+        {
+          "en": "Conjunction",
+          "as": "Conjunction"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Oh' is a Interjection. An interjection expresses sudden feeling or emotion.",
+        "as": "'Oh' এটা Interjection। Interjection এ হঠাতে হোৱা অনুভৱ বা আৱেগ প্ৰকাশ কৰে।"
+      }
+    },
+    {
+      "id": "fill-in-the-blanks-024",
+      "q": {
+        "en": "Fill in the blank: Would you like tea ___ coffee?",
+        "as": "Fill in the blank: Would you like tea ___ coffee?"
+      },
+      "options": [
+        {
+          "en": "and",
+          "as": "and (আৰু)"
+        },
+        {
+          "en": "but",
+          "as": "but (কিন্তু)"
+        },
+        {
+          "en": "so",
+          "as": "so (সেয়ে)"
+        },
+        {
+          "en": "or",
+          "as": "or (বা)"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'Or' is used to show choice.",
+        "as": "বিকল্প দেখুৱাবলৈ 'or' ব্যৱহাৰ হয়।"
+      }
+    },
+    {
+      "id": "assam-geography-034",
+      "q": {
+        "en": "Which river is known as the 'Sorrow of Assam' for causing floods?",
+        "as": "বানপানীৰ বাবে কোন নদীক 'অসমৰ দুখ' বুলি জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Brahmaputra",
+          "as": "ব্ৰহ্মপুত্ৰ"
+        },
+        {
+          "en": "Barak",
+          "as": "বৰাক"
+        },
+        {
+          "en": "Manas",
+          "as": "মনাহ"
+        },
+        {
+          "en": "Kopili",
+          "as": "কপিলী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Brahmaputra is called the Sorrow of Assam due to floods.",
+        "as": "বানপানীৰ বাবে ব্ৰহ্মপুত্ৰক অসমৰ দুখ বোলা হয়।"
+      }
+    },
+    {
+      "id": "current-affairs-117",
+      "q": {
+        "en": "Who is known as the 'Rupkonwar' of Assam?",
+        "as": "অসমৰ 'ৰূপকোঁৱৰ' হিচাপে কোন জনাজাত?"
+      },
+      "options": [
+        {
+          "en": "Bishnu Prasad Rabha",
+          "as": "বিষ্ণু প্ৰসাদ ৰাভা"
+        },
+        {
+          "en": "Bhogeswar Baruah",
+          "as": "ভোগেশ্বৰ বৰুৱা"
+        },
+        {
+          "en": "Lakshminath Bezbaroa",
+          "as": "লক্ষ্মীনাথ বেজবৰুৱা"
+        },
+        {
+          "en": "Jyoti Prasad Agarwala",
+          "as": "জ্যোতি প্ৰসাদ আগৰৱালা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Jyoti Prasad Agarwala is known as the Rupkonwar (Prince of Beauty) of Assam.",
+        "as": "জ্যোতি প্ৰসাদ আগৰৱালা অসমৰ ৰূপকোঁৱৰ হিচাপে জনাজাত।"
+      }
+    },
+    {
+      "id": "word-formation-dictionary-029",
+      "q": {
+        "en": "Arrange the following words in the order in which they appear in an English dictionary: 1. Young  2. Youth  3. Yours  4. Yodel",
+        "as": "তলৰ শব্দবোৰ ইংৰাজী অভিধানত যি ক্ৰমত থাকে সেই ক্ৰমত সজাওক: ১. Young  ২. Youth  ৩. Yours  ৪. Yodel"
+      },
+      "options": [
+        {
+          "en": "3, 1, 4, 2",
+          "as": "৩, ১, ৪, ২"
+        },
+        {
+          "en": "1, 4, 2, 3",
+          "as": "১, ৪, ২, ৩"
+        },
+        {
+          "en": "4, 1, 3, 2",
+          "as": "৪, ১, ৩, ২"
+        },
+        {
+          "en": "3, 2, 1, 4",
+          "as": "৩, ২, ১, ৪"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Comparing letter by letter, the dictionary order is: Yodel, Young, Yours, Youth — so the correct order is 4, 1, 3, 2.",
+        "as": "আখৰে আখৰে তুলনা কৰিলে অভিধানৰ ক্ৰম: Yodel, Young, Yours, Youth — গতিকে শুদ্ধ ক্ৰম ৪, ১, ৩, ২।"
+      }
+    },
+    {
+      "id": "indian-polity-083",
+      "q": {
+        "en": "The first National Emergency in India was proclaimed in —",
+        "as": "ভাৰতত প্ৰথম ৰাষ্ট্ৰীয় আপদকালীন অৱস্থা কেতিয়া ঘোষণা কৰা হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "1975",
+          "as": "১৯৭৫"
+        },
+        {
+          "en": "1971",
+          "as": "১৯৭১"
+        },
+        {
+          "en": "1962",
+          "as": "১৯৬২"
+        },
+        {
+          "en": "1991",
+          "as": "১৯৯১"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The first National Emergency was proclaimed in 1962.",
+        "as": "প্ৰথম ৰাষ্ট্ৰীয় আপদকালীন অৱস্থা ১৯৬২ চনত ঘোষণা কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "current-affairs-052",
+      "q": {
+        "en": "Which country has the largest population in the world?",
+        "as": "বিশ্বৰ আটাইতকৈ বেছি জনসংখ্যা কোনখন দেশৰ?"
+      },
+      "options": [
+        {
+          "en": "USA",
+          "as": "আমেৰিকা"
+        },
+        {
+          "en": "China",
+          "as": "চীন"
+        },
+        {
+          "en": "India",
+          "as": "ভাৰত"
+        },
+        {
+          "en": "Indonesia",
+          "as": "ইণ্ডোনেছিয়া"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "India became the most populous country in the world in 2023.",
+        "as": "২০২৩ চনত ভাৰত বিশ্বৰ আটাইতকৈ বেছি জনসংখ্যাৰ দেশ হৈছিল।"
+      }
+    },
+    {
+      "id": "capitals-currencies-057",
+      "q": {
+        "en": "The capital of Mongolia is —",
+        "as": "মংগোলিয়াৰ ৰাজধানী কি —"
+      },
+      "options": [
+        {
+          "en": "Choibalsan",
+          "as": "চয়বালছান"
+        },
+        {
+          "en": "Erdenet",
+          "as": "এৰ্ডেনেট"
+        },
+        {
+          "en": "Darkhan",
+          "as": "ডাৰখান"
+        },
+        {
+          "en": "Ulaanbaatar",
+          "as": "উলানবাটৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The capital of Mongolia is Ulaanbaatar.",
+        "as": "মংগোলিয়াৰ ৰাজধানী উলানবাটৰ।"
+      }
+    },
+    {
+      "id": "cubes-dice-079",
+      "q": {
+        "en": "A cube is painted red on one pair of opposite faces, green on the second pair and blue on the third pair. It is cut into 4 × 4 × 4 small cubes. How many small cubes have only one colour on them?",
+        "as": "এটা ঘনকৰ এক যোৰ বিপৰীত পৃষ্ঠত ৰঙা, দ্বিতীয় যোৰত সেউজীয়া আৰু তৃতীয় যোৰত নীলা ৰং লগাই 4 × 4 × 4 টা সৰু ঘনকত কটা হ'ল। কিমানটা সৰু ঘনকত মাত্ৰ এটা ৰং থাকে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The face-centre cubes have only one painted face (one colour). There are 6 faces, each with (4 − 2)² such cubes, so 6 × (4 − 2)² = 24.",
+        "as": "পৃষ্ঠৰ মাজৰ ঘনকবোৰত মাত্ৰ এটা ৰঙীন পৃষ্ঠ থাকে (এটা ৰং)। ৬টা পৃষ্ঠ, প্ৰতিটোত (4 − 2)² টা, গতিকে 6 × (4 − 2)² = 24।"
+      }
+    },
+    {
+      "id": "assam-history-262",
+      "q": {
+        "en": "Sankardeva translated which major Sanskrit scripture into Assamese?",
+        "as": "শংকৰদেৱে কোন প্ৰধান সংস্কৃত শাস্ত্ৰ অসমীয়ালৈ অনুবাদ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Srimad Bhagavata",
+          "as": "শ্ৰীমদ ভাগৱত"
+        },
+        {
+          "en": "Ramayana",
+          "as": "ৰামায়ণ"
+        },
+        {
+          "en": "Mahabharata",
+          "as": "মহাভাৰত"
+        },
+        {
+          "en": "Rigveda",
+          "as": "ঋগবেদ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Sankardeva translated and adapted the Srimad Bhagavata.",
+        "as": "শংকৰদেৱে শ্ৰীমদ ভাগৱত অনুবাদ আৰু উপযোগী কৰিছিল।"
+      }
+    },
+    {
+      "id": "prepositions-015",
+      "q": {
+        "en": "Fill in the blank: She is not interested ___ politics.",
+        "as": "ৰিক্ত স্থান পূৰণ কৰক: She is not interested ___ politics."
+      },
+      "options": [
+        {
+          "en": "on",
+          "as": "on"
+        },
+        {
+          "en": "at",
+          "as": "at"
+        },
+        {
+          "en": "for",
+          "as": "for"
+        },
+        {
+          "en": "in",
+          "as": "in"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'Interested in' is the correct fixed preposition.",
+        "as": "সঠিক নিৰ্দিষ্ট পূৰ্বসৰ্গ হৈছে 'interested in'।"
+      }
+    },
+    {
+      "id": "assam-history-104",
+      "q": {
+        "en": "Which Koch king is regarded as the greatest ruler of the Koch dynasty?",
+        "as": "কোচ ৰাজবংশৰ শ্ৰেষ্ঠ ৰজা হিচাপে কাক গণ্য কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Biswa Singha",
+          "as": "বিশ্ব সিংহ"
+        },
+        {
+          "en": "Naranarayan",
+          "as": "নৰনাৰায়ণ"
+        },
+        {
+          "en": "Raghudev",
+          "as": "ৰঘুদেৱ"
+        },
+        {
+          "en": "Lakshmi Narayan",
+          "as": "লক্ষ্মী নাৰায়ণ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Naranarayan was the most powerful Koch king.",
+        "as": "নৰনাৰায়ণ আটাইতকৈ শক্তিশালী কোচ ৰজা আছিল।"
+      }
+    },
+    {
+      "id": "one-word-substitution-072",
+      "q": {
+        "en": "A place where wine is made is called —",
+        "as": "মদ তৈয়াৰ কৰা স্থানক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Brewery",
+          "as": "Brewery"
+        },
+        {
+          "en": "Bakery",
+          "as": "Bakery"
+        },
+        {
+          "en": "Winery",
+          "as": "Winery"
+        },
+        {
+          "en": "Distillery",
+          "as": "Distillery"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "A place where wine is made is a winery.",
+        "as": "মদ তৈয়াৰ কৰা স্থানক winery বোলা হয়।"
+      }
+    },
+    {
+      "id": "direction-distance-006",
+      "q": {
+        "en": "A man walks 10 m north, then 10 m east and then 10 m south. How far and in which direction is he from the starting point?",
+        "as": "এজন মানুহে ১০ মিটাৰ উত্তৰ, তাৰ পিছত ১০ মিটাৰ পূব আৰু তাৰ পিছত ১০ মিটাৰ দক্ষিণ দিশে খোজ কাঢ়ে। তেওঁ আৰম্ভণি স্থানৰ পৰা কিমান দূৰত আৰু কোন দিশত?"
+      },
+      "options": [
+        {
+          "en": "10 m south",
+          "as": "১০ মিটাৰ দক্ষিণ"
+        },
+        {
+          "en": "10 m west",
+          "as": "১০ মিটাৰ পশ্চিম"
+        },
+        {
+          "en": "10 m east",
+          "as": "১০ মিটাৰ পূব"
+        },
+        {
+          "en": "10 m north",
+          "as": "১০ মিটাৰ উত্তৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The north and south movements cancel each other, leaving a net displacement of 10 m east.",
+        "as": "উত্তৰ আৰু দক্ষিণৰ গতি পৰস্পৰ কটাকটি যায়, ফলত নিট স্থানচ্যুতি ১০ মিটাৰ পূব হয়।"
+      }
+    },
+    {
+      "id": "fill-in-the-blanks-059",
+      "q": {
+        "en": "Fill in the blank: The car crashed ___ a tree.",
+        "as": "Fill in the blank: The car crashed ___ a tree."
+      },
+      "options": [
+        {
+          "en": "on",
+          "as": "on (ওপৰত)"
+        },
+        {
+          "en": "at",
+          "as": "at (সময়ত)"
+        },
+        {
+          "en": "into",
+          "as": "into (ভিতৰলৈ / খুন্দা)"
+        },
+        {
+          "en": "with",
+          "as": "with (সৈতে)"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'Crash into' is the correct phrase.",
+        "as": "'Crash into' শুদ্ধ বাক্যাংশ।"
+      }
+    },
+    {
+      "id": "homes-habitats-050",
+      "q": {
+        "en": "Where does a peacock live?",
+        "as": "ময়ূৰ ক'ত থাকে?"
+      },
+      "options": [
+        {
+          "en": "Hive",
+          "as": "মৌচাক"
+        },
+        {
+          "en": "Nest",
+          "as": "বাহ"
+        },
+        {
+          "en": "Den",
+          "as": "গুহা"
+        },
+        {
+          "en": "Burrow",
+          "as": "গাঁত"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Peacocks live in a nest.",
+        "as": "ময়ূৰবোৰে বাহত (nest) বাস কৰে।"
+      }
+    },
+    {
+      "id": "assam-history-365",
+      "q": {
+        "en": "Which satra is associated with Srimanta Sankardeva's birthplace at Bordowa?",
+        "as": "শ্ৰীমন্ত শংকৰদেৱৰ জন্মস্থান বৰদোৱাৰ সৈতে কোন সত্ৰ জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Barpeta Satra",
+          "as": "বৰপেটা সত্ৰ"
+        },
+        {
+          "en": "Dakhinpat Satra",
+          "as": "দক্ষিণপাট সত্ৰ"
+        },
+        {
+          "en": "Kamalabari Satra",
+          "as": "কমলাবাৰী সত্ৰ"
+        },
+        {
+          "en": "Narowa Satra",
+          "as": "নাৰোৱা সত্ৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Sankardeva founded the Narowa Satra at Bordowa.",
+        "as": "শংকৰদেৱে বৰদোৱাত নাৰোৱা সত্ৰ প্ৰতিষ্ঠা কৰিছিল।"
+      }
+    },
+    {
+      "id": "indian-polity-116",
+      "q": {
+        "en": "The First Constitutional Amendment was passed in —",
+        "as": "প্ৰথম সাংবিধানিক সংশোধনী কেতিয়া গৃহীত হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "1950",
+          "as": "১৯৫০"
+        },
+        {
+          "en": "1952",
+          "as": "১৯৫২"
+        },
+        {
+          "en": "1951",
+          "as": "১৯৫১"
+        },
+        {
+          "en": "1955",
+          "as": "১৯৫৫"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The First Amendment was passed in 1951.",
+        "as": "প্ৰথম সংশোধনী ১৯৫১ চনত গৃহীত হৈছিল।"
+      }
+    },
+    {
+      "id": "general-science-017",
+      "q": {
+        "en": "The energy possessed by a moving body is called —",
+        "as": "গতিশীল বস্তুৰ শক্তিক কি বুলি কোৱা হয় —"
+      },
+      "options": [
+        {
+          "en": "Potential energy",
+          "as": "স্থিতিজ শক্তি"
+        },
+        {
+          "en": "Kinetic energy",
+          "as": "গতিজ শক্তি"
+        },
+        {
+          "en": "Nuclear energy",
+          "as": "পাৰমাণৱিক শক্তি"
+        },
+        {
+          "en": "Chemical energy",
+          "as": "ৰাসায়নিক শক্তি"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "A moving body possesses kinetic energy.",
+        "as": "গতিশীল বস্তুত গতিজ শক্তি থাকে।"
+      }
+    },
+    {
+      "id": "gender-020",
+      "q": {
+        "en": "What is the feminine form of 'Bachelor'?",
+        "as": "'Bachelor' ৰ স্ত্ৰীলিংগ ৰূপ কি?"
+      },
+      "options": [
+        {
+          "en": "Widow",
+          "as": "বিধৱা"
+        },
+        {
+          "en": "Maid",
+          "as": "দাসী"
+        },
+        {
+          "en": "Spinster",
+          "as": "অবিবাহিতা নাৰী"
+        },
+        {
+          "en": "Nun",
+          "as": "সন্ন্যাসিনী"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The feminine of 'bachelor' is 'spinster'.",
+        "as": "'bachelor' ৰ স্ত্ৰীলিংগ ৰূপ হৈছে 'spinster'।"
+      }
+    },
+    {
+      "id": "odd-one-out-037",
+      "q": {
+        "en": "Choose the odd one out: Neem, Lily, Jasmine, Sunflower",
+        "as": "অসদৃশটো বাছনি কৰক: নিম, লিলি, যুঁইফুল, সূৰ্যমুখী"
+      },
+      "options": [
+        {
+          "en": "Jasmine",
+          "as": "যুঁইফুল"
+        },
+        {
+          "en": "Lily",
+          "as": "লিলি"
+        },
+        {
+          "en": "Neem",
+          "as": "নিম"
+        },
+        {
+          "en": "Sunflower",
+          "as": "সূৰ্যমুখী"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Lily, Jasmine and Sunflower are flowers, but Neem is a tree.",
+        "as": "লিলি, যুঁইফুল আৰু সূৰ্যমুখী ফুল, কিন্তু নিম গছ।"
+      }
+    },
+    {
+      "id": "narration-056",
+      "q": {
+        "en": "Change into indirect speech: He said, \"I shall see you here tomorrow.\"",
+        "as": "Indirect speech লৈ সলনি কৰক: He said, \"I shall see you here tomorrow.\""
+      },
+      "options": [
+        {
+          "en": "He said that he would see you here tomorrow.",
+          "as": "He said that he would see you here tomorrow."
+        },
+        {
+          "en": "He said that he would see me there the next day.",
+          "as": "He said that he would see me there the next day."
+        },
+        {
+          "en": "He said that he shall see me there the next day.",
+          "as": "He said that he shall see me there the next day."
+        },
+        {
+          "en": "He says that he would see me there tomorrow.",
+          "as": "He says that he would see me there tomorrow."
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'Shall' becomes 'would', 'you' becomes 'me', 'here' becomes 'there', and 'tomorrow' becomes 'the next day'.",
+        "as": "'Shall' এ 'would' লৈ, 'you' এ 'me' লৈ, 'here' এ 'there' লৈ, আৰু 'tomorrow' এ 'the next day' লৈ সলনি হয়।"
+      }
+    },
+    {
+      "id": "collective-nouns-116",
+      "q": {
+        "en": "What is a group of bushes called?",
+        "as": "জোপোহাৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Grove",
+          "as": "গছনি"
+        },
+        {
+          "en": "Cluster",
+          "as": "গুচ্ছ"
+        },
+        {
+          "en": "Forest",
+          "as": "বন"
+        },
+        {
+          "en": "Thicket",
+          "as": "জোপোহা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A group of bushes is called a thicket.",
+        "as": "জোপোহাৰ দলক thicket বোলা হয়।"
+      }
+    },
+    {
+      "id": "indian-polity-002",
+      "q": {
+        "en": "Fundamental Duties were added to the Constitution by which amendment?",
+        "as": "কোন সংশোধনীৰ দ্বাৰা সংবিধানত মৌলিক কৰ্তব্য যোগ কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "24th Amendment",
+          "as": "২৪সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "42nd Amendment",
+          "as": "৪২সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "44th Amendment",
+          "as": "৪৪সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "52nd Amendment",
+          "as": "৫২সংখ্যক সংশোধনী"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The 42nd Amendment Act, 1976 added Fundamental Duties.",
+        "as": "১৯৭৬ চনৰ ৪২সংখ্যক সংশোধনী আইনে মৌলিক কৰ্তব্য যোগ কৰিছিল।"
+      }
+    },
+    {
+      "id": "idioms-phrases-164",
+      "q": {
+        "en": "The idiom 'to set up' means —",
+        "as": "'to set up' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "to cheat someone",
+          "as": "কাৰোবাক ঠগা"
+        },
+        {
+          "en": "to support someone",
+          "as": "কাৰোবাক সমৰ্থন কৰা"
+        },
+        {
+          "en": "to oppose someone",
+          "as": "কাৰোবাৰ বিৰোধিতা কৰা"
+        },
+        {
+          "en": "to establish",
+          "as": "প্ৰতিষ্ঠা কৰা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'To set up' means to establish.",
+        "as": "'to set up' ৰ অৰ্থ হৈছে প্ৰতিষ্ঠা কৰা।"
+      }
+    },
+    {
+      "id": "homes-habitats-059",
+      "q": {
+        "en": "Where does a hippopotamus live?",
+        "as": "জলহস্তী ক'ত থাকে?"
+      },
+      "options": [
+        {
+          "en": "Nest",
+          "as": "বাহ"
+        },
+        {
+          "en": "Hive",
+          "as": "মৌচাক"
+        },
+        {
+          "en": "River",
+          "as": "নদী"
+        },
+        {
+          "en": "Burrow",
+          "as": "গাঁত"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Hippopotamuses live in rivers.",
+        "as": "জলহস্তীবোৰে নদীত (river) বাস কৰে।"
+      }
+    },
+    {
+      "id": "one-word-substitution-070",
+      "q": {
+        "en": "A place where books are kept for reading is called —",
+        "as": "পঢ়াৰ বাবে কিতাপ ৰখা স্থানক কি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "Laboratory",
+          "as": "Laboratory"
+        },
+        {
+          "en": "Gallery",
+          "as": "Gallery"
+        },
+        {
+          "en": "Museum",
+          "as": "Museum"
+        },
+        {
+          "en": "Library",
+          "as": "Library"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A place where books are kept is a library.",
+        "as": "কিতাপ ৰখা স্থানক library বোলা হয়।"
+      }
+    },
+    {
+      "id": "indian-economy-097",
+      "q": {
+        "en": "The Antyodaya Anna Yojana was launched in —",
+        "as": "অন্ত্যোদয় অন্ন যোজনা কেতিয়া আৰম্ভ কৰা হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "2000",
+          "as": "২০০০"
+        },
+        {
+          "en": "1995",
+          "as": "১৯৯৫"
+        },
+        {
+          "en": "2005",
+          "as": "২০০৫"
+        },
+        {
+          "en": "2010",
+          "as": "২০১০"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Antyodaya Anna Yojana was launched in 2000.",
+        "as": "অন্ত্যোদয় অন্ন যোজনা ২০০০ চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "simplification-007",
+      "q": {
+        "en": "Find the value: 0.6 ÷ 0.02",
+        "as": "মান উলিয়াওক: ০.৬ ÷ ০.০২"
+      },
+      "options": [
+        {
+          "en": "3",
+          "as": "৩"
+        },
+        {
+          "en": "0.3",
+          "as": "০.৩"
+        },
+        {
+          "en": "300",
+          "as": "৩০০"
+        },
+        {
+          "en": "30",
+          "as": "৩০"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "0.6 ÷ 0.02 = 60/2 = 30.",
+        "as": "০.৬ ÷ ০.০২ = ৬০/২ = ৩০।"
+      }
+    },
+    {
+      "id": "awards-097",
+      "q": {
+        "en": "When are the Padma Awards announced every year?",
+        "as": "প্ৰতি বছৰে পদ্ম বঁটা কেতিয়া ঘোষণা কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "15 August",
+          "as": "১৫ আগষ্ট"
+        },
+        {
+          "en": "2 October",
+          "as": "২ অক্টোবৰ"
+        },
+        {
+          "en": "25 December",
+          "as": "২৫ ডিচেম্বৰ"
+        },
+        {
+          "en": "26 January",
+          "as": "২৬ জানুৱাৰী"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Padma Awards are announced on the eve of Republic Day, 26 January.",
+        "as": "পদ্ম বঁটা গণৰাজ্য দিৱসৰ পূৰ্বসন্ধ্যা ২৬ জানুৱাৰীত ঘোষণা কৰা হয়।"
+      }
+    },
+    {
+      "id": "sentence-rearrangement-049",
+      "q": {
+        "en": "Choose the correct arrangement: (1) my (2) these (3) books (4) are.",
+        "as": "শুদ্ধ সজ্জাটো বাছনি কৰক: (১) my (২) these (৩) books (৪) are।"
+      },
+      "options": [
+        {
+          "en": "2-4-1-3",
+          "as": "২-৪-১-৩"
+        },
+        {
+          "en": "2-1-3-4",
+          "as": "২-১-৩-৪"
+        },
+        {
+          "en": "2-1-4-3",
+          "as": "২-১-৪-৩"
+        },
+        {
+          "en": "2-3-1-4",
+          "as": "২-৩-১-৪"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The correct sentence is 'These are my books.', i.e. 2-4-1-3.",
+        "as": "শুদ্ধ বাক্য হ'ল 'These are my books.', অৰ্থাৎ ২-৪-১-৩।"
+      }
+    },
+    {
+      "id": "vocabulary-077",
+      "q": {
+        "en": "Choose the correct synonym of 'Quell'.",
+        "as": "'Quell' ৰ সঠিক সমাৰ্থক শব্দ বাছনি কৰা।"
+      },
+      "options": [
+        {
+          "en": "Subdue",
+          "as": "Subdue"
+        },
+        {
+          "en": "Incite",
+          "as": "Incite"
+        },
+        {
+          "en": "Provoke",
+          "as": "Provoke"
+        },
+        {
+          "en": "Agitate",
+          "as": "Agitate"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Quell' means to suppress; 'Subdue' is its synonym.",
+        "as": "'Quell' ৰ অৰ্থ দমন কৰা; 'Subdue' ইয়াৰ সমাৰ্থক।"
+      }
+    },
+    {
+      "id": "collective-nouns-055",
+      "q": {
+        "en": "What is a group of vultures called?",
+        "as": "শগুণৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Convocation",
+          "as": "ঈগল দল"
+        },
+        {
+          "en": "Flock",
+          "as": "চৰাইৰ জাক"
+        },
+        {
+          "en": "Venue",
+          "as": "শগুণ দল"
+        },
+        {
+          "en": "Murder",
+          "as": "হত্যা দল"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "A group of vultures is called a venue.",
+        "as": "শগুণৰ দলক venue বোলা হয়।"
+      }
+    },
+    {
+      "id": "direction-distance-034",
+      "q": {
+        "en": "A man walks 3 km north, then 4 km east and then 6 km south. How far is he from the starting point?",
+        "as": "এজন মানুহে ৩ কিমি উত্তৰ, তাৰ পিছত ৪ কিমি পূব আৰু তাৰ পিছত ৬ কিমি দক্ষিণ দিশে খোজ কাঢ়ে। তেওঁ আৰম্ভণি স্থানৰ পৰা কিমান দূৰত?"
+      },
+      "options": [
+        {
+          "en": "13 km",
+          "as": "১৩ কিমি"
+        },
+        {
+          "en": "5 km",
+          "as": "৫ কিমি"
+        },
+        {
+          "en": "1 km",
+          "as": "১ কিমি"
+        },
+        {
+          "en": "7 km",
+          "as": "৭ কিমি"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Net displacement = 4 km east and 3 km south; distance = √(4² + 3²) = 5 km.",
+        "as": "নিট স্থানচ্যুতি = ৪ কিমি পূব আৰু ৩ কিমি দক্ষিণ; দূৰত্ব = √(৪² + ৩²) = ৫ কিমি।"
+      }
+    },
+    {
+      "id": "fill-in-the-blanks-049",
+      "q": {
+        "en": "Fill in the blank: He failed ___ his carelessness.",
+        "as": "Fill in the blank: He failed ___ his carelessness."
+      },
+      "options": [
+        {
+          "en": "because of",
+          "as": "because of (ৰ কাৰণে)"
+        },
+        {
+          "en": "because",
+          "as": "because (কাৰণে)"
+        },
+        {
+          "en": "so",
+          "as": "so (সেয়ে)"
+        },
+        {
+          "en": "although",
+          "as": "although (যদিও)"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'Because of' is followed by a noun or noun phrase.",
+        "as": "'Because of' ৰ পিছত বিশেষ্য বা বিশেষ্য বাক্যাংশ আহে।"
+      }
+    },
+    {
+      "id": "parts-of-speech-041",
+      "q": {
+        "en": "Identify the part of speech of the word 'beautiful' in the sentence: She is a beautiful girl.",
+        "as": "বাক্যটোত 'beautiful' শব্দটোৰ Parts of Speech চিনাক্ত কৰক: She is a beautiful girl."
+      },
+      "options": [
+        {
+          "en": "Verb",
+          "as": "Verb"
+        },
+        {
+          "en": "Adverb",
+          "as": "Adverb"
+        },
+        {
+          "en": "Adjective",
+          "as": "Adjective"
+        },
+        {
+          "en": "Noun",
+          "as": "Noun"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'beautiful' is a Adjective. An adjective describes or modifies a noun or pronoun.",
+        "as": "'beautiful' এটা Adjective। Adjective এ noun বা pronoun ৰ বিষয়ে বৰ্ণনা কৰে।"
+      }
+    },
+    {
+      "id": "assam-geography-049",
+      "q": {
+        "en": "The Barak river is declared as which National Waterway?",
+        "as": "বৰাক নদীক কোন ৰাষ্ট্ৰীয় জলপথ হিচাপে ঘোষণা কৰা হৈছে?"
+      },
+      "options": [
+        {
+          "en": "National Waterway 1",
+          "as": "ৰাষ্ট্ৰীয় জলপথ ১"
+        },
+        {
+          "en": "National Waterway 16",
+          "as": "ৰাষ্ট্ৰীয় জলপথ ১৬"
+        },
+        {
+          "en": "National Waterway 2",
+          "as": "ৰাষ্ট্ৰীয় জলপথ ২"
+        },
+        {
+          "en": "National Waterway 5",
+          "as": "ৰাষ্ট্ৰীয় জলপথ ৫"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Barak river is National Waterway 16.",
+        "as": "বৰাক নদী ৰাষ্ট্ৰীয় জলপথ ১৬।"
+      }
+    },
+    {
+      "id": "vocabulary-010",
+      "q": {
+        "en": "Choose the correct antonym of 'Jovial'.",
+        "as": "'Jovial' ৰ সঠিক বিপৰীত শব্দ বাছনি কৰা।"
+      },
+      "options": [
+        {
+          "en": "Cheerful",
+          "as": "Cheerful"
+        },
+        {
+          "en": "Gloomy",
+          "as": "Gloomy"
+        },
+        {
+          "en": "Merry",
+          "as": "Merry"
+        },
+        {
+          "en": "Jolly",
+          "as": "Jolly"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'Jovial' means cheerful and friendly; 'Gloomy' is its antonym.",
+        "as": "'Jovial' ৰ অৰ্থ হাঁহি-মুখীয়া আৰু বন্ধুত্বপূৰ্ণ; 'Gloomy' ইয়াৰ বিপৰীত শব্দ।"
+      }
+    },
+    {
+      "id": "current-affairs-050",
+      "q": {
+        "en": "Who is the 'Father of the Indian Constitution'?",
+        "as": "'ভাৰতীয় সংবিধানৰ পিতা' কোন?"
+      },
+      "options": [
+        {
+          "en": "B.R. Ambedkar",
+          "as": "বি.আৰ. আম্বেদকাৰ"
+        },
+        {
+          "en": "Jawaharlal Nehru",
+          "as": "জৱাহৰলাল নেহৰু"
+        },
+        {
+          "en": "Rajendra Prasad",
+          "as": "ৰাজেন্দ্ৰ প্ৰসাদ"
+        },
+        {
+          "en": "Sardar Patel",
+          "as": "সৰ্দাৰ পেটেল"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Dr. B.R. Ambedkar is known as the Father of the Indian Constitution.",
+        "as": "ড০ বি.আৰ. আম্বেদকাৰ ভাৰতীয় সংবিধানৰ পিতা হিচাপে জনাজাত।"
+      }
+    },
+    {
+      "id": "percentage-021",
+      "q": {
+        "en": "A's income is 20% more than B's income. By what percent is B's income less than A's income?",
+        "as": "A ৰ আয় B ৰ আয়তকৈ ২০% বেছি। B ৰ আয় A ৰ আয়তকৈ কিমান শতাংশ কম?"
+      },
+      "options": [
+        {
+          "en": "20%",
+          "as": "২০%"
+        },
+        {
+          "en": "16.67%",
+          "as": "১৬.৬৭%"
+        },
+        {
+          "en": "25%",
+          "as": "২৫%"
+        },
+        {
+          "en": "15%",
+          "as": "১৫%"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Let B = 100, then A = 120. Required percent = (20/120) × 100 = 16.67%.",
+        "as": "B = ১০০ ধৰা হ'ল, তেন্তে A = ১২০। প্ৰয়োজনীয় শতাংশ = (২০/১২০) × ১০০ = ১৬.৬৭%।"
+      }
+    },
+    {
+      "id": "gender-049",
+      "q": {
+        "en": "What is the feminine form of 'Fiance'?",
+        "as": "'Fiance' ৰ স্ত্ৰীলিংগ ৰূপ কি?"
+      },
+      "options": [
+        {
+          "en": "Bride",
+          "as": "কইনা"
+        },
+        {
+          "en": "Fiancee",
+          "as": "বাগদত্তা"
+        },
+        {
+          "en": "Wife",
+          "as": "পত্নী"
+        },
+        {
+          "en": "Widow",
+          "as": "বিধৱা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The feminine of 'fiance' is 'fiancee'.",
+        "as": "'fiance' ৰ স্ত্ৰীলিংগ ৰূপ হৈছে 'fiancee'।"
+      }
+    },
+    {
+      "id": "important-days-008",
+      "q": {
+        "en": "Republic Day in India is celebrated on —",
+        "as": "ভাৰতত গণৰাজ্য দিৱস কেতিয়া পালন কৰা হয় —"
+      },
+      "options": [
+        {
+          "en": "January 1",
+          "as": "১ জানুৱাৰী"
+        },
+        {
+          "en": "August 15",
+          "as": "১৫ আগষ্ট"
+        },
+        {
+          "en": "January 26",
+          "as": "২৬ জানুৱাৰী"
+        },
+        {
+          "en": "November 26",
+          "as": "২৬ নৱেম্বৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Republic Day is celebrated on January 26.",
+        "as": "গণৰাজ্য দিৱস ২৬ জানুৱাৰীত পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "cubes-dice-080",
+      "q": {
+        "en": "A cube is painted red on one pair of opposite faces, green on the second pair and blue on the third pair. It is cut into 5 × 5 × 5 small cubes. How many small cubes have all three colours on them?",
+        "as": "এটা ঘনকৰ এক যোৰ বিপৰীত পৃষ্ঠত ৰঙা, দ্বিতীয় যোৰত সেউজীয়া আৰু তৃতীয় যোৰত নীলা ৰং লগাই 5 × 5 × 5 টা সৰু ঘনকত কটা হ'ল। কিমানটা সৰু ঘনকত তিনিওটা ৰং থাকে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A cube has three mutually adjacent painted faces only at its 8 corners, so exactly 8 small cubes show all three colours.",
+        "as": "ঘনকৰ কেৱল ৮টা চুকত তিনিটা পৰস্পৰ সংলগ্ন ৰঙীন পৃষ্ঠ থাকে, গতিকে ঠিক ৮টা সৰু ঘনকত তিনিওটা ৰং দেখা যায়।"
+      }
+    },
+    {
+      "id": "homes-habitats-004",
+      "q": {
+        "en": "Where does a spider live?",
+        "as": "মকৰা ক'ত থাকে?"
+      },
+      "options": [
+        {
+          "en": "Nest",
+          "as": "বাহ"
+        },
+        {
+          "en": "Hive",
+          "as": "মৌচাক"
+        },
+        {
+          "en": "Burrow",
+          "as": "গাঁত"
+        },
+        {
+          "en": "Web",
+          "as": "মকৰাজাল"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Spiders live in a web.",
+        "as": "মকৰাবোৰে মকৰাজালত (web) বাস কৰে।"
+      }
+    },
+    {
+      "id": "blood-relations-014",
+      "q": {
+        "en": "She is the mother of my son. How is she related to me?",
+        "as": "তেওঁ মোৰ পুত্ৰৰ মাক। তেওঁ মোৰ কি সম্পৰ্কীয়?"
+      },
+      "options": [
+        {
+          "en": "Mother",
+          "as": "মাক"
+        },
+        {
+          "en": "Wife",
+          "as": "পত্নী"
+        },
+        {
+          "en": "Sister",
+          "as": "ভগ্নী"
+        },
+        {
+          "en": "Aunt",
+          "as": "খুড়ী"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The mother of one's son is one's wife.",
+        "as": "পুত্ৰৰ মাক হৈছে পত্নী।"
+      }
+    },
+    {
+      "id": "indian-history-119",
+      "q": {
+        "en": "The Lucknow Pact was signed in —",
+        "as": "লখনৌ চুক্তি কেতিয়া স্বাক্ষৰিত হৈছিল —"
+      },
+      "options": [
+        {
+          "en": "1916",
+          "as": "১৯১৬"
+        },
+        {
+          "en": "1906",
+          "as": "১৯০৬"
+        },
+        {
+          "en": "1920",
+          "as": "১৯২০"
+        },
+        {
+          "en": "1928",
+          "as": "১৯২৮"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Lucknow Pact was signed in 1916.",
+        "as": "লখনৌ চুক্তি ১৯১৬ চনত স্বাক্ষৰিত হৈছিল।"
+      }
+    },
+    {
+      "id": "assam-history-018",
+      "q": {
+        "en": "Which Khen dynasty ruler of Kamata was defeated by Alauddin Hussain Shah?",
+        "as": "কামতাৰ কোন খেন ৰাজবংশীয় ৰজাক আলাউদ্দিন হুছেইন শ্বাহে পৰাজিত কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Sukapha",
+          "as": "চুকাফা"
+        },
+        {
+          "en": "Naranarayan",
+          "as": "নৰনাৰায়ণ"
+        },
+        {
+          "en": "Nilambar",
+          "as": "নীলাম্বৰ"
+        },
+        {
+          "en": "Biswa Singha",
+          "as": "বিশ্ব সিংহ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Khen ruler Nilambar was defeated by Alauddin Hussain Shah.",
+        "as": "খেন ৰজা নীলাম্বৰক আলাউদ্দিন হুছেইন শ্বাহে পৰাজিত কৰিছিল।"
+      }
+    },
+    {
+      "id": "cubes-dice-046",
+      "q": {
+        "en": "A cube is painted on all its faces and then cut into 4 × 4 × 4 small cubes. How many small cubes have exactly 2 faces painted?",
+        "as": "এটা ঘনকৰ আটাইবোৰ পৃষ্ঠত ৰং লগাই তাৰ পিছত 4 × 4 × 4 টা সৰু ঘনকত কটা হ'ল। কিমানটা সৰু ঘনকৰ ঠিক 2টা পৃষ্ঠত ৰং লগা আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The 8 corner cubes have 3 painted faces, the edge cubes have 2 [12 × (4 − 2) = 24], the face-centre cubes have 1 [6 × (4 − 2)² = 24] and the inner cubes have none [(4 − 2)³ = 8]. Here exactly 2 painted face(s) gives 24 cubes.",
+        "as": "৮টা চুকৰ ঘনকত ৩টা পৃষ্ঠত ৰং থাকে, ধাৰৰ ঘনকত ২টা, পৃষ্ঠৰ মাজৰ ঘনকত ১টা আৰু ভিতৰৰ ঘনকত এটাও নাথাকে। ইয়াত ঠিক 2টা পৃষ্ঠত ৰং থকা ঘনকৰ সংখ্যা 24।"
+      }
+    },
+    {
+      "id": "pattern-completion-042",
+      "q": {
+        "en": "Study the pattern and choose the figure that completes the missing cell.",
+        "as": "পেটাৰ্ণটো অধ্যয়ন কৰি অনুপস্থিত খালী ঠাই পূৰণ কৰা চিত্ৰটো বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The figures repeat along the diagonals; the missing cell follows the same diagonal pattern.",
+        "as": "চিত্ৰবোৰ কৰ্ণ বৰাবৰ একে ধৰণে পুনৰাবৃত্তি হয়; অনুপস্থিত খালী ঠাইও একে কৰ্ণ ধৰণ অনুসৰণ কৰে।"
+      }
+    },
+    {
+      "id": "articles-determiners-062",
+      "q": {
+        "en": "Fill in the blank: ___ of the milk was wasted.",
+        "as": "ৰিক্ত স্থান পূৰণ কৰক: ___ of the milk was wasted."
+      },
+      "options": [
+        {
+          "en": "Many",
+          "as": "Many"
+        },
+        {
+          "en": "Some",
+          "as": "Some"
+        },
+        {
+          "en": "Few",
+          "as": "Few"
+        },
+        {
+          "en": "A few",
+          "as": "A few"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'Milk' is uncountable, so 'some' is used instead of 'many' or 'few'.",
+        "as": "'Milk' অগণনীয়, গতিকে 'many' বা 'few' ৰ পৰিৱৰ্তে 'some' ব্যৱহাৰ কৰা হয়।"
+      }
+    },
+    {
+      "id": "cubes-dice-073",
+      "q": {
+        "en": "A cube is painted on all its faces and then cut into 4 × 4 × 4 small cubes. How many small cubes have at most 1 face painted?",
+        "as": "এটা ঘনকৰ আটাইবোৰ পৃষ্ঠত ৰং লগাই তাৰ পিছত 4 × 4 × 4 টা সৰু ঘনকত কটা হ'ল। কিমানটা সৰু ঘনকৰ বেছিৰ পৰা ১টা পৃষ্ঠত ৰং লগা আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Cubes with at most 1 painted face are the face-centre cubes plus the inner cubes: 6 × (4 − 2)² + (4 − 2)³ = 32.",
+        "as": "বেছিৰ পৰা ১টা পৃষ্ঠত ৰং থকা ঘনকবোৰ হ'ল পৃষ্ঠৰ ঘনক আৰু ভিতৰৰ ঘনক: 6 × (4 − 2)² + (4 − 2)³ = 32।"
+      }
+    },
+    {
+      "id": "alphabet-series-013",
+      "q": {
+        "en": "Find the next letter in the series: Y, V, S, P, ?",
+        "as": "শ্ৰেণীটোৰ পৰৱৰ্তী আখৰটো নিৰ্ণয় কৰক: Y, V, S, P, ?"
+      },
+      "options": [
+        {
+          "en": "L",
+          "as": "L"
+        },
+        {
+          "en": "N",
+          "as": "N"
+        },
+        {
+          "en": "M",
+          "as": "M"
+        },
+        {
+          "en": "O",
+          "as": "O"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Subtract 3 each time; P − 3 = M.",
+        "as": "প্ৰতিবাৰ ৩ বিয়োগ; P − ৩ = M।"
+      }
+    },
+    {
+      "id": "assam-history-406",
+      "q": {
+        "en": "The 'Lachit Divas' is observed on which date?",
+        "as": "'লাচিত দিৱস' কোন তাৰিখে পালন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "26 January",
+          "as": "২৬ জানুৱাৰী"
+        },
+        {
+          "en": "1 December",
+          "as": "১ ডিচেম্বৰ"
+        },
+        {
+          "en": "24 November",
+          "as": "২৪ নৱেম্বৰ"
+        },
+        {
+          "en": "15 August",
+          "as": "১৫ আগষ্ট"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Lachit Divas is observed on 24 November.",
+        "as": "লাচিত দিৱস ২৪ নৱেম্বৰত পালন কৰা হয়।"
+      }
+    },
+    {
+      "id": "assam-culture-065",
+      "q": {
+        "en": "Which Assamese singer is popularly known as the 'Bihu Samrat'?",
+        "as": "কোন অসমীয়া গায়কক 'বিহু সম্ৰাট' বুলি জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Zubeen Garg",
+          "as": "জুবিন গাৰ্গ"
+        },
+        {
+          "en": "Dwijen Baruah",
+          "as": "দ্বিজেন বৰুৱা"
+        },
+        {
+          "en": "Khagen Mahanta",
+          "as": "খগেন মহন্ত"
+        },
+        {
+          "en": "Bhupen Hazarika",
+          "as": "ভূপেন হাজৰিকা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Khagen Mahanta is popularly known as the Bihu Samrat.",
+        "as": "খগেন মহন্তক বিহু সম্ৰাট বুলি জনা যায়।"
+      }
+    },
+    {
+      "id": "subject-verb-agreement-018",
+      "q": {
+        "en": "Choose the correct option: The teacher, along with the students, ___ arrived.",
+        "as": "শুদ্ধ বিকল্পটো বাছনি কৰক: The teacher, along with the students, ___ arrived."
+      },
+      "options": [
+        {
+          "en": "has",
+          "as": "has"
+        },
+        {
+          "en": "have",
+          "as": "have"
+        },
+        {
+          "en": "are",
+          "as": "are"
+        },
+        {
+          "en": "were",
+          "as": "were"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "When subjects are joined by 'along with', the verb agrees with the first subject.",
+        "as": "'Along with' ৰে যুক্ত হ'লে ক্ৰিয়া প্ৰথম কৰ্তাৰ সৈতে মিলে।"
+      }
+    },
+    {
+      "id": "current-affairs-102",
+      "q": {
+        "en": "Which is the first Indian state to be formed on linguistic basis?",
+        "as": "ভাষিক ভিত্তিত গঠিত প্ৰথম ভাৰতীয় ৰাজ্য কোনখন?"
+      },
+      "options": [
+        {
+          "en": "Tamil Nadu",
+          "as": "তামিলনাডু"
+        },
+        {
+          "en": "Karnataka",
+          "as": "কৰ্ণাটক"
+        },
+        {
+          "en": "Maharashtra",
+          "as": "মহাৰাষ্ট্ৰ"
+        },
+        {
+          "en": "Andhra Pradesh",
+          "as": "অন্ধ্ৰ প্ৰদেশ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Andhra Pradesh was the first Indian state formed on a linguistic basis in 1953.",
+        "as": "১৯৫৩ চনত ভাষিক ভিত্তিত গঠিত প্ৰথম ভাৰতীয় ৰাজ্য আছিল অন্ধ্ৰ প্ৰদেশ।"
+      }
+    },
+    {
+      "id": "homes-habitats-013",
+      "q": {
+        "en": "Where does a rat live?",
+        "as": "এন্দুৰ ক'ত থাকে?"
+      },
+      "options": [
+        {
+          "en": "Burrow",
+          "as": "গাঁত"
+        },
+        {
+          "en": "Nest",
+          "as": "বাহ"
+        },
+        {
+          "en": "Hive",
+          "as": "মৌচাক"
+        },
+        {
+          "en": "Web",
+          "as": "মকৰাজাল"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Rats live in a burrow.",
+        "as": "এন্দুৰবোৰে গাঁতত (burrow) বাস কৰে।"
+      }
+    },
+    {
+      "id": "narration-041",
+      "q": {
+        "en": "Change into indirect speech: The stranger said to me, \"Who are you?\"",
+        "as": "Indirect speech লৈ সলনি কৰক: The stranger said to me, \"Who are you?\""
+      },
+      "options": [
+        {
+          "en": "The stranger asked me who I was.",
+          "as": "The stranger asked me who I was."
+        },
+        {
+          "en": "The stranger asked me who was I.",
+          "as": "The stranger asked me who was I."
+        },
+        {
+          "en": "The stranger asked me who are you.",
+          "as": "The stranger asked me who are you."
+        },
+        {
+          "en": "The stranger asked to me who I was.",
+          "as": "The stranger asked to me who I was."
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "In indirect questions the verb follows the subject, and 'are' becomes 'was'.",
+        "as": "Indirect question ত ক্ৰিয়া subject ৰ পিছত আহে, আৰু 'are' এ 'was' লৈ সলনি হয়।"
+      }
+    },
+    {
+      "id": "current-affairs-128",
+      "q": {
+        "en": "Which Indian state is known as the 'Spice Garden of India'?",
+        "as": "কোনখন ভাৰতীয় ৰাজ্যক 'ভাৰতৰ মচলা বাগান' বুলি কোৱা হয়?"
+      },
+      "options": [
+        {
+          "en": "Karnataka",
+          "as": "কৰ্ণাটক"
+        },
+        {
+          "en": "Tamil Nadu",
+          "as": "তামিলনাডু"
+        },
+        {
+          "en": "Goa",
+          "as": "গোৱা"
+        },
+        {
+          "en": "Kerala",
+          "as": "কেৰালা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Kerala is known as the Spice Garden of India.",
+        "as": "কেৰালাক ভাৰতৰ মচলা বাগান বুলি কোৱা হয়।"
+      }
+    },
+    {
+      "id": "subject-verb-agreement-013",
+      "q": {
+        "en": "Choose the correct option: Ten kilometres ___ a long distance.",
+        "as": "শুদ্ধ বিকল্পটো বাছনি কৰক: Ten kilometres ___ a long distance."
+      },
+      "options": [
+        {
+          "en": "are",
+          "as": "are"
+        },
+        {
+          "en": "is",
+          "as": "is"
+        },
+        {
+          "en": "were",
+          "as": "were"
+        },
+        {
+          "en": "have",
+          "as": "have"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "A distance is treated as a single unit and takes a singular verb.",
+        "as": "দূৰত্বক এটা একক হিচাপে গণ্য কৰি একবচন ক্ৰিয়া লোৱা হয়।"
+      }
+    },
+    {
+      "id": "collective-nouns-020",
+      "q": {
+        "en": "What is a group of tigers called?",
+        "as": "বাঘৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Pride",
+          "as": "গৰ্জন দল"
+        },
+        {
+          "en": "Pack",
+          "as": "দল"
+        },
+        {
+          "en": "Leap",
+          "as": "নাহৰ দল"
+        },
+        {
+          "en": "Streak",
+          "as": "বাঘ দল"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A group of tigers is called a streak.",
+        "as": "বাঘৰ দলক streak বোলা হয়।"
+      }
+    },
+    {
+      "id": "assam-culture-001",
+      "q": {
+        "en": "Who is regarded as the founder of the Assamese Vaishnavite movement?",
+        "as": "অসমীয়া বৈষ্ণৱ আন্দোলনৰ প্ৰৱৰ্তক কাক বুলি গণ্য কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Madhavdeva",
+          "as": "মাধৱদেৱ"
+        },
+        {
+          "en": "Harideva",
+          "as": "হৰিদেৱ"
+        },
+        {
+          "en": "Srimanta Sankardeva",
+          "as": "শ্ৰীমন্ত শংকৰদেৱ"
+        },
+        {
+          "en": "Damodardeva",
+          "as": "দামোদৰদেৱ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Srimanta Sankardeva founded the neo-Vaishnavite movement in Assam.",
+        "as": "শ্ৰীমন্ত শংকৰদেৱে অসমত নৱ-বৈষ্ণৱ আন্দোলন প্ৰৱৰ্তন কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-culture-080",
+      "q": {
+        "en": "Which silk variety is produced almost exclusively in Assam?",
+        "as": "কোন ৰেচম প্ৰকাৰ প্ৰায় কেৱল অসমত উৎপাদন কৰা হয়?"
+      },
+      "options": [
+        {
+          "en": "Mulberry",
+          "as": "মালবেৰী"
+        },
+        {
+          "en": "Muga",
+          "as": "মুগা"
+        },
+        {
+          "en": "Tussar",
+          "as": "তছৰ"
+        },
+        {
+          "en": "Kosa",
+          "as": "কোষা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Muga silk is produced almost exclusively in Assam.",
+        "as": "মুগা ৰেচম প্ৰায় কেৱল অসমত উৎপাদন কৰা হয়।"
+      }
+    },
+    {
+      "id": "assam-geography-121",
+      "q": {
+        "en": "Which refinery is located at Bongaigaon?",
+        "as": "বঙাইগাঁওত কোন শোধনাগাৰ অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Digboi Refinery",
+          "as": "ডিগবৈ শোধনাগাৰ"
+        },
+        {
+          "en": "Numaligarh Refinery",
+          "as": "নুমলীগড় শোধনাগাৰ"
+        },
+        {
+          "en": "Guwahati Refinery",
+          "as": "গুৱাহাটী শোধনাগাৰ"
+        },
+        {
+          "en": "Bongaigaon Refinery",
+          "as": "বঙাইগাঁও শোধনাগাৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Bongaigaon Refinery is located at Bongaigaon.",
+        "as": "বঙাইগাঁও শোধনাগাৰ বঙাইগাঁওত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "sounds-calls-046",
+      "q": {
+        "en": "What is the sound made by a seal called?",
+        "as": "ছীলে কৰা শব্দক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Moo",
+          "as": "হাম্বা"
+        },
+        {
+          "en": "Bark",
+          "as": "ভৌ-ভৌ"
+        },
+        {
+          "en": "Buzz",
+          "as": "ভোঁ-ভোঁ"
+        },
+        {
+          "en": "Bleat",
+          "as": "ব্যা-ব্যা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "A seal barks; its sound is called a bark.",
+        "as": "ছীলে ভৌ-ভৌ কৰে; ইয়াৰ শব্দক bark বোলা হয়।"
+      }
+    },
+    {
+      "id": "collective-nouns-093",
+      "q": {
+        "en": "What is a group of soldiers called?",
+        "as": "সৈনিকৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Army",
+          "as": "সেনাবাহিনী"
+        },
+        {
+          "en": "Fleet",
+          "as": "নৌবহৰ"
+        },
+        {
+          "en": "Crowd",
+          "as": "ভিৰ"
+        },
+        {
+          "en": "Band",
+          "as": "বাদ্য দল"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "A group of soldiers is called an army.",
+        "as": "সৈনিকৰ দলক army বোলা হয়।"
+      }
+    },
+    {
+      "id": "number-system-019",
+      "q": {
+        "en": "The LCM of 8, 12 and 15 is:",
+        "as": "8, 12 আৰু 15 ৰ LCM হ'ল:"
+      },
+      "options": [
+        {
+          "en": "60",
+          "as": "60"
+        },
+        {
+          "en": "90",
+          "as": "90"
+        },
+        {
+          "en": "120",
+          "as": "120"
+        },
+        {
+          "en": "180",
+          "as": "180"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "LCM of 8, 12, 15 = 120.",
+        "as": "8, 12, 15 ৰ LCM = 120।"
+      }
+    },
+    {
+      "id": "collective-nouns-032",
+      "q": {
+        "en": "What is a group of badgers called?",
+        "as": "বেজীৰ এটা দলক কি বোলা হয়?"
+      },
+      "options": [
+        {
+          "en": "Colony",
+          "as": "উপনিবেশ"
+        },
+        {
+          "en": "Pack",
+          "as": "দল"
+        },
+        {
+          "en": "Herd",
+          "as": "পশুৰ জাক"
+        },
+        {
+          "en": "Cete",
+          "as": "বেজী দল"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "A group of badgers is called a cete.",
+        "as": "বেজীৰ দলক cete বোলা হয়।"
+      }
+    },
+    {
+      "id": "clock-calendar-028",
+      "q": {
+        "en": "What is the angle between the hour hand and the minute hand of a clock at 10:30?",
+        "as": "১০:৩০ বজাত ঘড়ীৰ ঘণ্টাৰ কাঁটা আৰু মিনিটৰ কাঁটাৰ মাজৰ কোণ কিমান?"
+      },
+      "options": [
+        {
+          "en": "165°",
+          "as": "১৬৫°"
+        },
+        {
+          "en": "105°",
+          "as": "১০৫°"
+        },
+        {
+          "en": "135°",
+          "as": "১৩৫°"
+        },
+        {
+          "en": "150°",
+          "as": "১৫০°"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "At 10:30, the hour hand is at 315° and the minute hand at 180°; the angle is 135°.",
+        "as": "১০:৩০ বজাত ঘণ্টাৰ কাঁটা ৩১৫° আৰু মিনিটৰ কাঁটা ১৮০° ত থাকে; কোণ = ১৩৫°।"
+      }
+    },
+    {
+      "id": "indian-economy-130",
+      "q": {
+        "en": "The Foreign Exchange Regulation Act (FERA) was replaced by —",
+        "as": "বিদেশী বিনিময় নিয়ন্ত্ৰণ আইন (ফেৰা) কাক সলনি কৰিছিল —"
+      },
+      "options": [
+        {
+          "en": "FRBM",
+          "as": "এফআৰবিএম"
+        },
+        {
+          "en": "FEMA",
+          "as": "ফেমা"
+        },
+        {
+          "en": "FII",
+          "as": "এফআইআই"
+        },
+        {
+          "en": "FDI",
+          "as": "এফডিআই"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "FERA was replaced by FEMA.",
+        "as": "ফেৰাক ফেমাই সলনি কৰিছিল।"
+      }
+    },
+    {
+      "id": "gender-107",
+      "q": {
+        "en": "What is the masculine form of 'Bride'?",
+        "as": "'Bride' ৰ পুৰুষলিংগ ৰূপ কি?"
+      },
+      "options": [
+        {
+          "en": "Bridegroom",
+          "as": "দৰা"
+        },
+        {
+          "en": "Widower",
+          "as": "বিধুৰ"
+        },
+        {
+          "en": "Husband",
+          "as": "স্বামী"
+        },
+        {
+          "en": "Fiance",
+          "as": "বাগদত্ত"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The masculine of 'bride' is 'bridegroom'.",
+        "as": "'bride' ৰ পুৰুষলিংগ ৰূপ হৈছে 'bridegroom'।"
+      }
+    },
+    {
+      "id": "sentence-rearrangement-039",
+      "q": {
+        "en": "Choose the correct arrangement: (1) late (2) train (3) is (4) the.",
+        "as": "শুদ্ধ সজ্জাটো বাছনি কৰক: (১) late (২) train (৩) is (৪) the।"
+      },
+      "options": [
+        {
+          "en": "4-3-2-1",
+          "as": "৪-৩-২-১"
+        },
+        {
+          "en": "1-2-3-4",
+          "as": "১-২-৩-৪"
+        },
+        {
+          "en": "4-2-3-1",
+          "as": "৪-২-৩-১"
+        },
+        {
+          "en": "1-2-4-3",
+          "as": "১-২-৪-৩"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The correct sentence is 'The train is late.', i.e. 4-2-3-1.",
+        "as": "শুদ্ধ বাক্য হ'ল 'The train is late.', অৰ্থাৎ ৪-২-৩-১।"
+      }
+    },
+    {
+      "id": "direction-distance-020",
+      "q": {
+        "en": "A man walks 3 km east, then 4 km south and then 3 km west. Where is he now with respect to the starting point?",
+        "as": "এজন মানুহে ৩ কিমি পূব, তাৰ পিছত ৪ কিমি দক্ষিণ আৰু তাৰ পিছত ৩ কিমি পশ্চিম দিশে খোজ কাঢ়ে। এতিয়া তেওঁ আৰম্ভণি স্থানৰ সাপেক্ষে ক'ত আছে?"
+      },
+      "options": [
+        {
+          "en": "3 km east",
+          "as": "৩ কিমি পূব"
+        },
+        {
+          "en": "4 km north",
+          "as": "৪ কিমি উত্তৰ"
+        },
+        {
+          "en": "4 km south",
+          "as": "৪ কিমি দক্ষিণ"
+        },
+        {
+          "en": "At the starting point",
+          "as": "আৰম্ভণি স্থানত"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "East and west cancel, leaving him 4 km south of the start.",
+        "as": "পূব আৰু পশ্চিম কটাকটি যায়, ফলত তেওঁ আৰম্ভণিৰ পৰা ৪ কিমি দক্ষিণত থাকে।"
+      }
+    },
+    {
+      "id": "assam-geography-203",
+      "q": {
+        "en": "Which is the largest National Park of Assam by area?",
+        "as": "মাটিকালিৰে অসমৰ আটাইতকৈ বৃহৎ ৰাষ্ট্ৰীয় উদ্যান কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Manas",
+          "as": "মানাহ"
+        },
+        {
+          "en": "Kaziranga",
+          "as": "কাজিৰঙা"
+        },
+        {
+          "en": "Orang",
+          "as": "ওৰাং"
+        },
+        {
+          "en": "Nameri",
+          "as": "নামেৰী"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Kaziranga is the largest National Park of Assam by area.",
+        "as": "মাটিকালিৰে কাজিৰঙা অসমৰ আটাইতকৈ বৃহৎ ৰাষ্ট্ৰীয় উদ্যান।"
+      }
+    },
+    {
+      "id": "capitals-currencies-006",
+      "q": {
+        "en": "The capital of Russia is —",
+        "as": "ৰাছিয়াৰ ৰাজধানী কি —"
+      },
+      "options": [
+        {
+          "en": "Sochi",
+          "as": "ছ'চি"
+        },
+        {
+          "en": "St. Petersburg",
+          "as": "ছেইণ্ট পিটাৰ্ছবাৰ্গ"
+        },
+        {
+          "en": "Kazan",
+          "as": "কাজান"
+        },
+        {
+          "en": "Moscow",
+          "as": "মস্কো"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The capital of Russia is Moscow.",
+        "as": "ৰাছিয়াৰ ৰাজধানী মস্কো।"
+      }
+    },
+    {
+      "id": "coding-decoding-006",
+      "q": {
+        "en": "If MAN is coded as 13-1-14, then SUN is coded as —",
+        "as": "যদি MAN ক ১৩-১-১৪ হিচাপে ক'ড কৰা হয়, তেন্তে SUN ক ক'ড কৰা হ'ব —"
+      },
+      "options": [
+        {
+          "en": "21-21-14",
+          "as": "২১-২১-১৪"
+        },
+        {
+          "en": "18-21-14",
+          "as": "১৮-২১-১৪"
+        },
+        {
+          "en": "20-21-14",
+          "as": "২০-২১-১৪"
+        },
+        {
+          "en": "19-21-14",
+          "as": "১৯-২১-১৪"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Each letter is replaced by its alphabet position: S=19, U=21, N=14.",
+        "as": "প্ৰতিটো আখৰক ইয়াৰ বৰ্ণমালা স্থানৰে সলনি কৰা হয়: S=১৯, U=২১, N=১৪।"
+      }
+    },
+    {
+      "id": "tenses-rules-031",
+      "q": {
+        "en": "Choose the correct option: She ___ to music when I entered.",
+        "as": "শুদ্ধ বিকল্পটো বাছনি কৰক: She ___ to music when I entered."
+      },
+      "options": [
+        {
+          "en": "listened",
+          "as": "listened"
+        },
+        {
+          "en": "was listening",
+          "as": "was listening"
+        },
+        {
+          "en": "listens",
+          "as": "listens"
+        },
+        {
+          "en": "has listened",
+          "as": "has listened"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "A past action in progress is expressed by the past continuous.",
+        "as": "অতীতত চলি থকা কাৰ্য past continuous ৰে প্ৰকাশ কৰা হয়।"
+      }
+    },
+    {
+      "id": "idioms-phrases-088",
+      "q": {
+        "en": "The idiom 'to be in stitches' means —",
+        "as": "'to be in stitches' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "to make friends",
+          "as": "বন্ধুত্ব কৰা"
+        },
+        {
+          "en": "to betray a friend",
+          "as": "বন্ধুক বিশ্বাসঘাতকতা কৰা"
+        },
+        {
+          "en": "to give advice",
+          "as": "উপদেশ দিয়া"
+        },
+        {
+          "en": "to laugh uncontrollably",
+          "as": "অনিয়ন্ত্ৰিতভাৱে হাঁহা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'To be in stitches' means to laugh uncontrollably.",
+        "as": "'to be in stitches' ৰ অৰ্থ হৈছে অনিয়ন্ত্ৰিতভাৱে হাঁহা।"
+      }
+    }
+  ]
+}

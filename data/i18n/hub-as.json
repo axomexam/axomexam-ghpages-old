@@ -327,7 +327,13 @@
     "Download the printable PDF notes, e-books and previous year solved papers so you can revise offline. Everything on axomexam.in is free, bilingual and needs no account or login.": "প্ৰিণ্ট কৰিব পৰা PDF টোকা, ই-বুক আৰু পূৰ্ববৰ্তী বছৰৰ সমাধান কৰা প্ৰশ্নপত্ৰ ডাউনলোড কৰক যাতে আপুনি অফলাইনত পুনৰাবৃত্তি কৰিব পাৰে। axomexam.in ত সকলো বিনামূলীয়া, দ্বিভাষিক আৰু একাউণ্ট বা লগইনৰ প্ৰয়োজন নাই।",
     "Get PDF notes →": "PDF টোকা লওক →",
     "Contact axomexam": "axomexam ৰ সৈতে যোগাযোগ কৰক",
-    "Report a wrong answer, request a new topic, contribute questions or ask for help with your ADRE, APSC, Assam Police, SSC or Railway preparation. Email support@axomexam.in and we usually reply within two to three working days.": "ভুল উত্তৰ জনাওক, নতুন বিষয় অনুৰোধ কৰক, প্ৰশ্ন আগবঢ়াওক বা আপোনাৰ ADRE, APSC, অসম আৰক্ষী, SSC বা ৰে'লৱে প্ৰস্তুতিত সহায় বিচাৰক। support@axomexam.in লৈ ইমেইল কৰক, আমি সাধাৰণতে দুৰৰ পৰা তিনি কৰ্মদিনৰ ভিতৰত উত্তৰ দিওঁ।"
+    "Report a wrong answer, request a new topic, contribute questions or ask for help with your ADRE, APSC, Assam Police, SSC or Railway preparation. Email support@axomexam.in and we usually reply within two to three working days.": "ভুল উত্তৰ জনাওক, নতুন বিষয় অনুৰোধ কৰক, প্ৰশ্ন আগবঢ়াওক বা আপোনাৰ ADRE, APSC, অসম আৰক্ষী, SSC বা ৰে'লৱে প্ৰস্তুতিত সহায় বিচাৰক। support@axomexam.in লৈ ইমেইল কৰক, আমি সাধাৰণতে দুৰৰ পৰা তিনি কৰ্মদিনৰ ভিতৰত উত্তৰ দিওঁ।",
+    "Choose your exam": "আপোনাৰ পৰীক্ষা বাছনি কৰক",
+    "Open an exam to start its timed mock test.": "সময়বদ্ধ মক টেষ্ট আৰম্ভ কৰিবলৈ এটা পৰীক্ষা খোলক।",
+    "Coming Soon": "শীঘ্ৰে আহি আছে",
+    "Start test": "টেষ্ট আৰম্ভ কৰক",
+    "Every Assam recruitment exam has its own separate mock test. Pick an exam to begin.": "অসমৰ প্ৰতিটো নিযুক্তি পৰীক্ষাৰ বাবে সুকীয়া মক টেষ্ট আছে। আৰম্ভ কৰিবলৈ এটা পৰীক্ষা বাছনি কৰক।",
+    "Practise a full timed mock test built from the exact paper of your exam. Every Assam recruitment exam — Assam Police, ADRE Grade III, ADRE Grade IV, APSC and Assam TET — has its own separate mock tests.": "আপোনাৰ পৰীক্ষাৰ প্ৰকৃত প্ৰশ্নকাকত অনুসৰি সজা সম্পূৰ্ণ সময়বদ্ধ মক টেষ্ট অনুশীলন কৰক। অসমৰ প্ৰতিটো নিযুক্তি পৰীক্ষা — অসম আৰক্ষী, ADRE গ্ৰেড III, ADRE গ্ৰেড IV, APSC আৰু অসম TET — ৰ বাবে সুকীয়া মক টেষ্ট আছে।"
   },
   "regex": [
     {
@@ -565,6 +571,10 @@
     {
       "re": "^Start with the category that carries the most weight in your exam\\. The list above shows the live question count per category, so the biggest groups are easy to spot\\.$",
       "to": "আপোনাৰ পৰীক্ষাত আটাইতকৈ বেছি গুৰুত্ব থকা শ্ৰেণীটোৰ পৰা আৰম্ভ কৰক। ওপৰৰ তালিকাই প্ৰতি শ্ৰেণীৰ চলিত প্ৰশ্নৰ সংখ্যা দেখুৱায়, গতিকে আটাইতকৈ ডাঙৰ গোটসমূহ সহজে চিনি পোৱা যায়।"
+    },
+    {
+      "re": "^(\\d+) subjects$",
+      "to": "$1 টা বিষয়"
     }
   ]
 }

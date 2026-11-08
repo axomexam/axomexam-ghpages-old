@@ -1,0 +1,3007 @@
+{
+  "setNumber": 2,
+  "title": "Full Paper Set 2",
+  "exam": "adre-grade-3",
+  "questions": [
+    {
+      "id": "figure-classification-144",
+      "q": {
+        "en": "Which of the numbered figures is different from the others?",
+        "as": "নম্বৰ দিয়া চিত্ৰবোৰৰ ভিতৰত কোনটো আনবোৰতকৈ বেলেগ?"
+      },
+      "options": [
+        {
+          "en": "2",
+          "as": "২"
+        },
+        {
+          "en": "3",
+          "as": "৩"
+        },
+        {
+          "en": "1",
+          "as": "১"
+        },
+        {
+          "en": "4",
+          "as": "৪"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Three figures have the same colour and one has a different colour, so figure 4 is different.",
+        "as": "তিনিটা চিত্ৰৰ একে ৰং আৰু এটাৰ ৰং বেলেগ, গতিকে 4 নম্বৰ চিত্ৰটো বেলেগ।"
+      }
+    },
+    {
+      "id": "paper-folding-cutting-044",
+      "q": {
+        "en": "A square paper is folded as shown and a hole is punched through it. Which pattern appears when the paper is fully unfolded?",
+        "as": "বৰ্গাকৃতি কাগজ দেখুওৱাৰ দৰে ভাঁজ কৰি এটা ফুটা কৰা হ'ল। কাগজ সম্পূৰ্ণ মেলি দিলে কোনটো আৰ্হি দেখা যাব?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Folding the top half onto the bottom doubles the hole: the punch is mirrored across the horizontal fold line, so two holes appear one above the other.",
+        "as": "ওপৰ আধা তল আধাত ভাঁজ কৰিলে ফুটাটো দুগুণ হয়: ফুটাটো অনুভূমিক ভাঁজ ৰেখাৰ সিটোফালে প্ৰতিবিম্বিত হয়, গতিকে দুটা ফুটা ওপৰ-তল দেখা যায়।"
+      }
+    },
+    {
+      "id": "mensuration-3d-091",
+      "q": {
+        "en": "A cylinder has radius 5 cm and height 12 cm. Its volume (pi = 22/7) is —",
+        "as": "এটা চুঙাৰ ব্যাসাৰ্ধ 5 ছেমি আৰু উচ্চতা 12 ছেমি। আয়তন (pi = 22/7) —"
+      },
+      "options": [
+        {
+          "en": "377.14 cubic cm",
+          "as": "৩৭৭.১৪ cubic cm"
+        },
+        {
+          "en": "1885.72 cubic cm",
+          "as": "১৮৮৫.৭২ cubic cm"
+        },
+        {
+          "en": "942.86 cubic cm",
+          "as": "৯৪২.৮৬ cubic cm"
+        },
+        {
+          "en": "964.86 cubic cm",
+          "as": "৯৬৪.৮৬ cubic cm"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Volume of a cylinder = pi r^2 h = (22/7) x 5 x 5 x 12 = 942.86 cubic cm.",
+        "as": "চুঙাৰ আয়তন = pi r^2 h = (22/7) x 5 x 5 x 12 = 942.86 ঘন ছেমি।"
+      }
+    },
+    {
+      "id": "drawing-inferences-004",
+      "q": {
+        "en": "Passage: Ravi reached the station at 9:05, but the train had already left at 9:00.\nWhich inference follows?",
+        "as": "অনুচ্ছেদ: Ravi reached the station at 9:05, but the train had already left at 9:00.\nকোনটো সিদ্ধান্ত ওলায়?"
+      },
+      "options": [
+        {
+          "en": "Ravi was late for the train",
+          "as": "Ravi was late for the train"
+        },
+        {
+          "en": "The train was late",
+          "as": "The train was late"
+        },
+        {
+          "en": "The station was closed",
+          "as": "The station was closed"
+        },
+        {
+          "en": "Ravi missed the bus",
+          "as": "Ravi missed the bus"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Reaching after the departure time means Ravi was late.",
+        "as": "যাত্ৰা কৰাৰ পিছত পোৱা মানে ৰবি দেৰি হৈছিল।"
+      }
+    },
+    {
+      "id": "awards-honours-206",
+      "q": {
+        "en": "Who confers the Bal Sahitya Puraskar?",
+        "as": "বাল সাহিত্য পুৰস্কাৰ কোনে প্ৰদান কৰে?"
+      },
+      "options": [
+        {
+          "en": "Bharatiya Jnanpith",
+          "as": "ভাৰতীয় জ্ঞানপীঠ"
+        },
+        {
+          "en": "Sahitya Akademi",
+          "as": "সাহিত্য অকাডেমী"
+        },
+        {
+          "en": "Indian Council for Child Welfare",
+          "as": "ভাৰতীয় শিশু কল্যাণ পৰিষদ"
+        },
+        {
+          "en": "The Times Group",
+          "as": "দ্য টাইমছ গ্ৰুপ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Bal Sahitya Puraskar is conferred by the Sahitya Akademi.",
+        "as": "বাল সাহিত্য পুৰস্কাৰ সাহিত্য অকাডেমীে প্ৰদান কৰে।"
+      }
+    },
+    {
+      "id": "indian-history-modern-224",
+      "q": {
+        "en": "In which year did the Paika Rebellion take place?",
+        "as": "পাইক বিদ্ৰোহ কিমান চনত সংঘটিত হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "1857 CE",
+          "as": "১৮৫৭ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1859 CE",
+          "as": "১৮৫৯ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1875 CE",
+          "as": "১৮৭৫ খ্ৰীষ্টাব্দ"
+        },
+        {
+          "en": "1817 CE",
+          "as": "১৮১৭ খ্ৰীষ্টাব্দ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Paika Rebellion took place in 1817 CE.",
+        "as": "পাইক বিদ্ৰোহ ১৮১৭ খ্ৰীষ্টাব্দত সংঘটিত হৈছিল।"
+      }
+    },
+    {
+      "id": "indian-history-modern-039",
+      "q": {
+        "en": "Who was the first Governor-General of India?",
+        "as": "ভাৰতৰ প্ৰথম গৱৰ্ণৰ-জেনেৰেল কোন আছিল?"
+      },
+      "options": [
+        {
+          "en": "Warren Hastings",
+          "as": "ৱাৰেন হেষ্টিংছ"
+        },
+        {
+          "en": "Lord Dalhousie",
+          "as": "লৰ্ড ডালহাউছি"
+        },
+        {
+          "en": "Lord Canning",
+          "as": "লৰ্ড ক্যানিং"
+        },
+        {
+          "en": "Lord William Bentinck",
+          "as": "লৰ্ড উইলিয়াম বেণ্টিংক"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Lord William Bentinck was the first Governor-General of India.",
+        "as": "লৰ্ড উইলিয়াম বেণ্টিংক ভাৰতৰ প্ৰথম গৱৰ্ণৰ-জেনেৰেল আছিল।"
+      }
+    },
+    {
+      "id": "indian-geography-297",
+      "q": {
+        "en": "Which is the largest shipyard of India?",
+        "as": "ভাৰতৰ আটাইতকৈ ডাঙৰ জাহাজ নিৰ্মাণাগাৰ কোন?"
+      },
+      "options": [
+        {
+          "en": "Cochin Shipyard",
+          "as": "কচিন শ্বিপয়াৰ্ড"
+        },
+        {
+          "en": "Hindustan Shipyard",
+          "as": "হিন্দুস্তান শ্বিপয়াৰ্ড"
+        },
+        {
+          "en": "Garden Reach",
+          "as": "গাৰ্ডেন ৰীচ"
+        },
+        {
+          "en": "Mazagon Dock",
+          "as": "মাঝাগাঁও ডক"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Cochin Shipyard is the largest shipyard of India.",
+        "as": "কচিন শ্বিপয়াৰ্ড ভাৰতৰ আটাইতকৈ ডাঙৰ জাহাজ নিৰ্মাণাগাৰ।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-228",
+      "q": {
+        "en": "Which Chinese pilgrim noted that in Kamarupa 'the people are fond of learning'?",
+        "as": "কোন চীনা পৰিব্ৰাজকে উল্লেখ কৰিছিল যে কামৰূপত 'লোকসকল বিদ্যা-প্ৰেমী'?"
+      },
+      "options": [
+        {
+          "en": "Fa-Hien",
+          "as": "ফা-হিয়েন"
+        },
+        {
+          "en": "I-tsing",
+          "as": "আই-চিং"
+        },
+        {
+          "en": "Sung Yun",
+          "as": "চুং য়ুন"
+        },
+        {
+          "en": "Hiuen Tsang",
+          "as": "হিউৱেন চাঙ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Hiuen Tsang noted that the people of Kamarupa were fond of learning and the king patronised scholars.",
+        "as": "হিউৱেন চাঙে উল্লেখ কৰিছিল যে কামৰূপৰ লোকসকল বিদ্যা-প্ৰেমী আছিল আৰু ৰজাই পণ্ডিতসকলক পৃষ্ঠপোষকতা কৰিছিল।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-082",
+      "q": {
+        "en": "Which Ahom king is credited with the composition of Assamese literature in the royal court?",
+        "as": "ৰাজদৰবাৰত অসমীয়া সাহিত্য ৰচনাৰ কৃতিত্ব কোন আহোম ৰজাৰ?"
+      },
+      "options": [
+        {
+          "en": "Sukapha",
+          "as": "চুকাফা"
+        },
+        {
+          "en": "Suklenmung",
+          "as": "চুক্লেংমুং"
+        },
+        {
+          "en": "Susenghphaa",
+          "as": "চুচেংফা"
+        },
+        {
+          "en": "Rudra Singha",
+          "as": "ৰুদ্ৰ সিংহ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The court of Rudra Singha saw a flourishing of Assamese literary composition.",
+        "as": "ৰুদ্ৰ সিংহৰ ৰাজদৰবাৰত অসমীয়া সাহিত্য ৰচনাৰ বিকাশ ঘটিছিল।"
+      }
+    },
+    {
+      "id": "decision-making-061",
+      "q": {
+        "en": "A candidate must have a minimum age of 18 years, two years of work experience. Raja is 19 years old. Raja has 3 years of experience.\nWhich decision is correct?",
+        "as": "প্ৰাৰ্থীৰ অন্তত 18 বছৰ বয়স, দুই বছৰৰ কামৰ অভিজ্ঞতা থাকিব লাগে। ৰাজা ৰ বয়স 19 বছৰ। ৰাজা ৰ 3 বছৰৰ অভিজ্ঞতা আছে।\nকোনটো সিদ্ধান্ত শুদ্ধ?"
+      },
+      "options": [
+        {
+          "en": "Cannot be decided",
+          "as": "নিৰ্ণয় কৰিব নোৱাৰি"
+        },
+        {
+          "en": "No, he is too young",
+          "as": "নহয়, তেওঁ অতি কম বয়সীয়া"
+        },
+        {
+          "en": "No, he has not passed class 12",
+          "as": "নহয়, তেওঁ দ্বাদশ শ্ৰেণী উত্তীৰ্ণ হোৱা নাই"
+        },
+        {
+          "en": "Yes, he qualifies",
+          "as": "হয়, তেওঁ যোগ্য"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Raja meets all the given conditions, so he qualifies.",
+        "as": "ৰাজা এ দিয়া সকলো চৰ্ত পূৰণ কৰে, গতিকে তেওঁ যোগ্য।"
+      }
+    },
+    {
+      "id": "assam-folk-culture-124",
+      "q": {
+        "en": "The Doul Govinda Temple, famous for its Holi festival, is located at which place?",
+        "as": "হোলী উৎসৱৰ বাবে বিখ্যাত দৌল গোবিন্দ মন্দিৰ কোন ঠাইত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Sivasagar",
+          "as": "শিৱসাগৰ"
+        },
+        {
+          "en": "Barpeta",
+          "as": "বৰপেটা"
+        },
+        {
+          "en": "Majuli",
+          "as": "মাজুলী"
+        },
+        {
+          "en": "North Guwahati",
+          "as": "উত্তৰ গুৱাহাটী"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Doul Govinda Temple is located at North Guwahati.",
+        "as": "দৌল গোবিন্দ মন্দিৰ উত্তৰ গুৱাহাটীত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "statistics-009",
+      "q": {
+        "en": "The mean of the numbers 11, 22, 33, 44, 55 is —",
+        "as": "11, 22, 33, 44, 55 সংখ্যাবোৰৰ মাধ্য —"
+      },
+      "options": [
+        {
+          "en": "33",
+          "as": "৩৩"
+        },
+        {
+          "en": "165",
+          "as": "১৬৫"
+        },
+        {
+          "en": "55",
+          "as": "৫৫"
+        },
+        {
+          "en": "11",
+          "as": "১১"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Mean = sum / count = 165 / 5 = 33.",
+        "as": "মাধ্য = যোগফল / সংখ্যা = 165 / 5 = 33।"
+      }
+    },
+    {
+      "id": "voice-change-055",
+      "q": {
+        "en": "Change to passive: Who has broken the window?",
+        "as": "কৰ্মবাচ্যলৈ সলনি কৰা: Who has broken the window?"
+      },
+      "options": [
+        {
+          "en": "Who has the window been broken?",
+          "as": "কোনে খিৰিকীখন ভঙা হৈছে?"
+        },
+        {
+          "en": "By who has the window broken?",
+          "as": "কাৰ দ্বাৰা খিৰিকীখন ভঙা হৈছে (who)?"
+        },
+        {
+          "en": "Whom has broken the window?",
+          "as": "কাক খিৰিকীখন ভঙা হৈছে?"
+        },
+        {
+          "en": "By whom has the window been broken?",
+          "as": "কাৰ দ্বাৰা খিৰিকীখন ভঙা হৈছে?"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Who becomes By whom at the start of the passive question.",
+        "as": "Who কৰ্মবাচ্য প্ৰশ্নৰ আৰম্ভণিত By whom হয়।"
+      }
+    },
+    {
+      "id": "error-detection-233",
+      "q": {
+        "en": "Find the error in the sentence: He is married with her.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: He is married with her."
+      },
+      "options": [
+        {
+          "en": "He",
+          "as": "He"
+        },
+        {
+          "en": "is",
+          "as": "is"
+        },
+        {
+          "en": "married",
+          "as": "married"
+        },
+        {
+          "en": "with",
+          "as": "with"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'with' is wrong here; it should be 'to'. 'Married' takes 'to'.",
+        "as": "ইয়াত 'with' ভুল; 'to' হোৱা উচিত। 'Married' ৱে 'to' লয়।"
+      }
+    },
+    {
+      "id": "awards-honours-057",
+      "q": {
+        "en": "Which statement about the Shaurya Chakra is correct?",
+        "as": "শৌৰ্য চক্ৰ ৰ বিষয়ে কোনটো বক্তব্য শুদ্ধ?"
+      },
+      "options": [
+        {
+          "en": "it is the third highest peacetime gallantry award",
+          "as": "ই তৃতীয় সৰ্বোচ্চ শান্তিকালীন বীৰত্ব বঁটা"
+        },
+        {
+          "en": "it is the highest sporting honour of India",
+          "as": "ই ভাৰতৰ সৰ্বোচ্চ ক্ৰীড়া সন্মান"
+        },
+        {
+          "en": "it is given for literary work in an Indian language",
+          "as": "ই ভাৰতীয় ভাষাৰ সাহিত্যিক কৰ্মৰ বাবে দিয়া হয়"
+        },
+        {
+          "en": "it is the highest honour of the Sahitya Akademi",
+          "as": "ই সাহিত্য অকাডেমীৰ সৰ্বোচ্চ সন্মান"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Shaurya Chakra: it is the third highest peacetime gallantry award.",
+        "as": "শৌৰ্য চক্ৰ: ই তৃতীয় সৰ্বোচ্চ শান্তিকালীন বীৰত্ব বঁটা।"
+      }
+    },
+    {
+      "id": "antonyms-058",
+      "q": {
+        "en": "Choose the antonym of 'comprehend'.",
+        "as": "'comprehend' ৰ বিপৰীত শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "seize",
+          "as": "দখল কৰা"
+        },
+        {
+          "en": "misunderstand",
+          "as": "ভুল বুজা"
+        },
+        {
+          "en": "grasp",
+          "as": "ধৰা"
+        },
+        {
+          "en": "incompetence",
+          "as": "অদক্ষতা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'misunderstand' is an antonym of 'comprehend'; it has the opposite meaning.",
+        "as": "'misunderstand' (ভুল বুজা) হৈছে 'comprehend' (বুজি পোৱা) ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "figure-classification-037",
+      "q": {
+        "en": "Which of the numbered figures is different from the others?",
+        "as": "নম্বৰ দিয়া চিত্ৰবোৰৰ ভিতৰত কোনটো আনবোৰতকৈ বেলেগ?"
+      },
+      "options": [
+        {
+          "en": "3",
+          "as": "৩"
+        },
+        {
+          "en": "1",
+          "as": "১"
+        },
+        {
+          "en": "4",
+          "as": "৪"
+        },
+        {
+          "en": "2",
+          "as": "২"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Three figures are circles and one is a triangle, so figure 1 is different.",
+        "as": "তিনিটা চিত্ৰ বৃত্ত আৰু এটা ত্ৰিভুজ, গতিকে 1 নম্বৰ চিত্ৰটো বেলেগ।"
+      }
+    },
+    {
+      "id": "brahmaputra-barak-116",
+      "q": {
+        "en": "Which district is the Disang river mainly associated with?",
+        "as": "দিচাং নদী মূলতঃ কোন জিলাৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Chirang",
+          "as": "চিৰাং"
+        },
+        {
+          "en": "Tinsukia",
+          "as": "তিনিচুকীয়া"
+        },
+        {
+          "en": "Nalbari",
+          "as": "নলবাৰী"
+        },
+        {
+          "en": "Sivasagar",
+          "as": "শিৱসাগৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Disang river is mainly associated with Sivasagar district.",
+        "as": "দিচাং নদী মূলতঃ শিৱসাগৰ জিলাৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "parts-of-speech-095",
+      "q": {
+        "en": "The verb 'may' in 'you may go now' expresses —",
+        "as": "'you may go now' ত 'may' ক্ৰিয়াই প্ৰকাশ কৰে —"
+      },
+      "options": [
+        {
+          "en": "permission",
+          "as": "অনুমতি"
+        },
+        {
+          "en": "compulsion",
+          "as": "বাধ্যতা"
+        },
+        {
+          "en": "ability",
+          "as": "সামৰ্থ্য"
+        },
+        {
+          "en": "certainty",
+          "as": "নিশ্চয়তা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "May here grants permission to go.",
+        "as": "ইয়াত may এ যাবলৈ অনুমতি দিয়ে।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-113",
+      "q": {
+        "en": "The Right to Freedom of Religion is available to —",
+        "as": "ধৰ্মীয় স্বাধীনতাৰ অধিকাৰ কাৰ বাবে উপলব্ধ?"
+      },
+      "options": [
+        {
+          "en": "citizens only",
+          "as": "কেৱল নাগৰিক"
+        },
+        {
+          "en": "Hindus only",
+          "as": "কেৱল হিন্দু"
+        },
+        {
+          "en": "residents only",
+          "as": "কেৱল বাসিন্দা"
+        },
+        {
+          "en": "all persons",
+          "as": "সকলো ব্যক্তি"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Articles 25 to 28 are available to all persons.",
+        "as": "অনুচ্ছেদ ২৫ ৰ পৰা ২৮ সকলো ব্যক্তিৰ বাবে উপলব্ধ।"
+      }
+    },
+    {
+      "id": "parts-of-speech-038",
+      "q": {
+        "en": "The plural of 'cactus' is —",
+        "as": "'cactus' ৰ বহুবচন কি?"
+      },
+      "options": [
+        {
+          "en": "cactuses",
+          "as": "কেক্টাছেছ"
+        },
+        {
+          "en": "cactus",
+          "as": "কেক্টাছ"
+        },
+        {
+          "en": "cacti",
+          "as": "কেক্টাই"
+        },
+        {
+          "en": "cactae",
+          "as": "কেক্টাই (e)"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Cactus is a Latin noun that forms its plural as cacti.",
+        "as": "Cactus এ এটা লেটিন বিশেষ্য যাৰ বহুবচন cacti হয়।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-131",
+      "q": {
+        "en": "Which medieval Assam kingdom is associated with the 'Charaideo' region?",
+        "as": "'চৰাইদেউ' অঞ্চলৰ লগত কোন মধ্যযুগীয় অসম ৰাজ্য জড়িত?"
+      },
+      "options": [
+        {
+          "en": "The Koch kingdom",
+          "as": "কোচ ৰাজ্য"
+        },
+        {
+          "en": "The Kachari kingdom",
+          "as": "কছাৰী ৰাজ্য"
+        },
+        {
+          "en": "The Ahom kingdom",
+          "as": "আহোম ৰাজ্য"
+        },
+        {
+          "en": "The Chutiya kingdom",
+          "as": "চুতীয়া ৰাজ্য"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Ahom kingdom's first capital was at Charaideo.",
+        "as": "আহোম ৰাজ্যৰ প্ৰথম ৰাজধানী চৰাইদেউত আছিল।"
+      }
+    },
+    {
+      "id": "one-word-substitution-244",
+      "q": {
+        "en": "The killing of pests is called —",
+        "as": "কীট-পতংগ ধ্বংস কৰা বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "matricide",
+          "as": "মাতৃহত্যা"
+        },
+        {
+          "en": "patricide",
+          "as": "পিতৃহত্যা"
+        },
+        {
+          "en": "regicide",
+          "as": "ৰজা-হত্যা"
+        },
+        {
+          "en": "pesticide",
+          "as": "কীটনাশক"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The correct one-word substitution is 'pesticide'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'pesticide' (কীটনাশক)।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-126",
+      "q": {
+        "en": "The Karakoram is mainly located in which part of India?",
+        "as": "কাৰাকোৰাম মূলতঃ ভাৰতৰ কোন অংশত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "western India",
+          "as": "পশ্চিম ভাৰত"
+        },
+        {
+          "en": "Ladakh",
+          "as": "লাডাখ"
+        },
+        {
+          "en": "Himachal Pradesh",
+          "as": "হিমাচল প্ৰদেশ"
+        },
+        {
+          "en": "eastern India",
+          "as": "পূব ভাৰত"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Karakoram is located in Ladakh.",
+        "as": "কাৰাকোৰাম লাডাখত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "awards-honours-004",
+      "q": {
+        "en": "Which of the following is the highest civilian award of India?",
+        "as": "তলৰ কোনটো ভাৰতৰ সৰ্বোচ্চ অসামৰিক বঁটা?"
+      },
+      "options": [
+        {
+          "en": "National Bravery Award",
+          "as": "ৰাষ্ট্ৰীয় বীৰতা বঁটা"
+        },
+        {
+          "en": "Kirti Chakra",
+          "as": "কীৰ্তি চক্ৰ"
+        },
+        {
+          "en": "Padma Shri",
+          "as": "পদ্মশ্ৰী"
+        },
+        {
+          "en": "Bharat Ratna",
+          "as": "ভাৰত ৰত্ন"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Bharat Ratna is the highest civilian award of India.",
+        "as": "ভাৰত ৰত্ন ভাৰতৰ সৰ্বোচ্চ অসামৰিক বঁটা।"
+      }
+    },
+    {
+      "id": "figure-matrix-046",
+      "q": {
+        "en": "Study the 3 x 3 matrix and choose the figure that should replace the question mark.",
+        "as": "3 x 3 মেট্ৰিক্সটো মন কৰি প্ৰশ্নবোধক চিহ্নৰ ঠাইত থব লগা চিত্ৰটো বাছক।"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The figure turns 180 degrees more at each step, so the missing figure is turned 390 degrees.",
+        "as": "চিত্ৰটো প্ৰতিটো ধাপত 180 ডিগ্ৰী বেছি ঘূৰে, গতিকে অনুপস্থিত চিত্ৰটো 390 ডিগ্ৰী ঘূৰোৱা।"
+      }
+    },
+    {
+      "id": "assam-history-modern-251",
+      "q": {
+        "en": "Which Assamese fair is known for its barter system?",
+        "as": "কোন অসমীয়া মেলা ইয়াৰ বিনিময় ব্যৱস্থাৰ বাবে জনা যায়?"
+      },
+      "options": [
+        {
+          "en": "Ambubachi Mela",
+          "as": "অম্বুবাচী মেলা"
+        },
+        {
+          "en": "Rash Mela",
+          "as": "ৰাস মেলা"
+        },
+        {
+          "en": "Jonbeel Mela",
+          "as": "জোনবিল মেলা"
+        },
+        {
+          "en": "Bihu Mela",
+          "as": "বিহু মেলা"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Jonbeel Mela is known for its traditional barter system.",
+        "as": "জোনবিল মেলা ইয়াৰ পৰম্পৰাগত বিনিময় ব্যৱস্থাৰ বাবে জনা যায়।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-268",
+      "q": {
+        "en": "Who wrote the 'Charaka Samhita'?",
+        "as": "'চৰক সংহিতা' কোনে লিখিছিল?"
+      },
+      "options": [
+        {
+          "en": "Sushruta",
+          "as": "সুশ্ৰুত"
+        },
+        {
+          "en": "Aryabhata",
+          "as": "আৰ্যভট্ট"
+        },
+        {
+          "en": "Charaka",
+          "as": "চৰক"
+        },
+        {
+          "en": "Bharata",
+          "as": "ভৰত"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Charaka Samhita is a classic work on medicine.",
+        "as": "চৰক সংহিতা ঔষধৰ এটা ধ্ৰুপদী গ্ৰন্থ।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-170",
+      "q": {
+        "en": "Which of the following describes the ancient Kamarupa king's relationship with the Brahmin community?",
+        "as": "প্ৰাচীন কামৰূপ ৰজাৰ ব্ৰাহ্মণ সমাজৰ লগত সম্পৰ্ক তলৰ কোনটোৱে বৰ্ণনা কৰে?"
+      },
+      "options": [
+        {
+          "en": "Hostile",
+          "as": "শত্ৰুতাৰ"
+        },
+        {
+          "en": "Indifferent",
+          "as": "উদাসীন"
+        },
+        {
+          "en": "Subordinate to them",
+          "as": "তেওঁলোকৰ অধীনস্থ"
+        },
+        {
+          "en": "Patronising, granting land and privileges",
+          "as": "পৃষ্ঠপোষকতা, ভূমি আৰু বিশেষাধিকাৰ প্ৰদান"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Ancient Kamarupa kings patronised Brahmins, granting them land and privileges.",
+        "as": "প্ৰাচীন কামৰূপ ৰজাসকলে ব্ৰাহ্মণসকলক ভূমি আৰু বিশেষাধিকাৰ দি পৃষ্ঠপোষকতা কৰিছিল।"
+      }
+    },
+    {
+      "id": "syllogism-021",
+      "q": {
+        "en": "Statements: All dogs are animals. All animals need food. Conclusions: I. All dogs need food. II. All animals are dogs. Which conclusion follows?",
+        "as": "বিবৃতি: All dogs are animals. All animals need food. সিদ্ধান্ত: I. All dogs need food. II. All animals are dogs. কোনটো সিদ্ধান্ত ওলায়?"
+      },
+      "options": [
+        {
+          "en": "Both I and II follow",
+          "as": "I আৰু II দুয়ো ওলায়"
+        },
+        {
+          "en": "Only I follows",
+          "as": "কেৱল I ওলায়"
+        },
+        {
+          "en": "Only II follows",
+          "as": "কেৱল II ওলায়"
+        },
+        {
+          "en": "Neither I nor II follows",
+          "as": "I বা II এটাও নোলায়"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Dogs are animals and animals need food, so I follows; II reverses the relation.",
+        "as": "কুকুৰ জন্তু আৰু জন্তুৰ খাদ্য লাগে, গতিকে I ওলায়; II ওলোটাই।"
+      }
+    },
+    {
+      "id": "profit-loss-042",
+      "q": {
+        "en": "If the selling price of an article is 80% of its cost price, the loss per cent is —",
+        "as": "এটা সামগ্ৰীৰ বিক্ৰয় মূল্য ক্ৰয় মূল্যৰ 80% হ'লে শতকৰা লোকচান —"
+      },
+      "options": [
+        {
+          "en": "15%",
+          "as": "১৫%"
+        },
+        {
+          "en": "18%",
+          "as": "১৮%"
+        },
+        {
+          "en": "25%",
+          "as": "২৫%"
+        },
+        {
+          "en": "20%",
+          "as": "২০%"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Loss = 20% of CP.",
+        "as": "লোকচান = ক্ৰয় মূল্যৰ 20%।"
+      }
+    },
+    {
+      "id": "brahmaputra-barak-080",
+      "q": {
+        "en": "The Bhogdoi river is a tributary of which river?",
+        "as": "ভোগদৈ নদী কোন নদীৰ উপনৈ?"
+      },
+      "options": [
+        {
+          "en": "Ganga",
+          "as": "গংগা"
+        },
+        {
+          "en": "Subansiri",
+          "as": "সোৱণশিৰি"
+        },
+        {
+          "en": "Barak",
+          "as": "বৰাক"
+        },
+        {
+          "en": "Brahmaputra",
+          "as": "ব্ৰহ্মপুত্ৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Bhogdoi is a tributary of the Brahmaputra.",
+        "as": "ভোগদৈ ব্ৰহ্মপুত্ৰ নদীৰ উপনৈ।"
+      }
+    },
+    {
+      "id": "indian-history-modern-221",
+      "q": {
+        "en": "Which of the following was a peasant movement of the 19th century?",
+        "as": "তলৰ কোনটো ঊনবিংশ শতিকাৰ এটা কৃষক আন্দোলন আছিল?"
+      },
+      "options": [
+        {
+          "en": "The Quit India Movement",
+          "as": "ভাৰত ত্যাগ আন্দোলন"
+        },
+        {
+          "en": "The Indigo Revolt",
+          "as": "নীল বিদ্ৰোহ"
+        },
+        {
+          "en": "The Non-Cooperation Movement",
+          "as": "অসহযোগ আন্দোলন"
+        },
+        {
+          "en": "The Civil Disobedience Movement",
+          "as": "আইন অমান্য আন্দোলন"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Indigo Revolt was a peasant movement of the 19th century.",
+        "as": "নীল বিদ্ৰোহ ঊনবিংশ শতিকাৰ এটা কৃষক আন্দোলন আছিল।"
+      }
+    },
+    {
+      "id": "venn-diagrams-025",
+      "q": {
+        "en": "In a group, 40 know Assamese, 30 know Bengali and 20 know both. How many know at least one language?",
+        "as": "এটা দলত ৪০ জনে অসমীয়া, ৩০ জনে বঙালী আৰু ২০ জনে দুয়োটা জানে। অন্ততঃ এটা ভাষা কিমানজনে জানে?"
+      },
+      "options": [
+        {
+          "en": "70",
+          "as": "৭০"
+        },
+        {
+          "en": "60",
+          "as": "৬০"
+        },
+        {
+          "en": "50",
+          "as": "৫০"
+        },
+        {
+          "en": "40",
+          "as": "৪০"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "At least one = 40 + 30 − 20 = 50.",
+        "as": "অন্ততঃ এটা = 40 + 30 − 20 = 50।"
+      }
+    },
+    {
+      "id": "paper-folding-cutting-024",
+      "q": {
+        "en": "A square paper is folded as shown and a hole is punched through it. Which pattern appears when the paper is fully unfolded?",
+        "as": "বৰ্গাকৃতি কাগজ দেখুওৱাৰ দৰে ভাঁজ কৰি এটা ফুটা কৰা হ'ল। কাগজ সম্পূৰ্ণ মেলি দিলে কোনটো আৰ্হি দেখা যাব?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Folding the left half onto the right doubles the hole: the punch is mirrored across the vertical fold line, so two holes appear side by side.",
+        "as": "বাওঁ আধা সোঁ আধাত ভাঁজ কৰিলে ফুটাটো দুগুণ হয়: ফুটাটো উলম্ব ভাঁজ ৰেখাৰ সিটোফালে প্ৰতিবিম্বিত হয়, গতিকে দুটা ফুটা কাষে-কাষে দেখা যায়।"
+      }
+    },
+    {
+      "id": "statement-conclusions-038",
+      "q": {
+        "en": "Statement: All judges are lawyers. Some lawyers are rich.\nConclusions: I. Some judges are rich. II. All rich persons are lawyers.",
+        "as": "বিবৃতি: All judges are lawyers. Some lawyers are rich.\nসিদ্ধান্ত: I. Some judges are rich. II. All rich persons are lawyers."
+      },
+      "options": [
+        {
+          "en": "Only conclusion I follows",
+          "as": "কেৱল সিদ্ধান্ত I ওলায়"
+        },
+        {
+          "en": "Both I and II follow",
+          "as": "I আৰু II দুয়োটা গ্ৰহণযোগ্য"
+        },
+        {
+          "en": "Neither I nor II follows",
+          "as": "I বা II কোনোটোৱেই গ্ৰহণযোগ্য নহয়"
+        },
+        {
+          "en": "Only conclusion II follows",
+          "as": "কেৱল সিদ্ধান্ত II ওলায়"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Rich lawyers need not be judges, so neither conclusion follows.",
+        "as": "ধনী অধিবক্তা বিচাৰক নহ'বও পাৰে, গতিকে এটাও নোলায়।"
+      }
+    },
+    {
+      "id": "direction-distance-051",
+      "q": {
+        "en": "A man walks 6 km towards the north and then 6 km towards the east. How far is he from the start?",
+        "as": "এজনে উত্তৰলৈ 6 km আৰু পিছত পূৱলৈ 6 km খোজ কাঢ়ে। তেওঁ আৰম্ভণিৰ পৰা কিমান দূৰত?"
+      },
+      "options": [
+        {
+          "en": "12 km",
+          "as": "১২ km"
+        },
+        {
+          "en": "13 km",
+          "as": "১৩ km"
+        },
+        {
+          "en": "6√2 km",
+          "as": "৬√২ km"
+        },
+        {
+          "en": "11 km",
+          "as": "১১ km"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The two equal sides 6 and 6 give a displacement of 6√2 km.",
+        "as": "6 আৰু 6 সমান বাহুৱে 6√2 km সৰণ দিয়ে।"
+      }
+    },
+    {
+      "id": "antonyms-266",
+      "q": {
+        "en": "Choose the antonym of 'mighty'.",
+        "as": "'mighty' ৰ বিপৰীত শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "weak",
+          "as": "দুৰ্বল"
+        },
+        {
+          "en": "safe",
+          "as": "নিৰাপদ"
+        },
+        {
+          "en": "fit",
+          "as": "সুস্থ"
+        },
+        {
+          "en": "secure",
+          "as": "নিৰাপদ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'weak' is an antonym of 'mighty'; it has the opposite meaning.",
+        "as": "'weak' (দুৰ্বল) হৈছে 'mighty' (শক্তিশালী) ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "indian-history-medieval-187",
+      "q": {
+        "en": "What form of literature did the Sufi movement produce?",
+        "as": "ছুফী আন্দোলনে কি ধৰণৰ সাহিত্য সৃষ্টি কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "The composition of mystical poetry",
+          "as": "ৰহস্যবাদী কবিতাৰ ৰচনা"
+        },
+        {
+          "en": "The composition of scientific texts",
+          "as": "বৈজ্ঞানিক গ্ৰন্থৰ ৰচনা"
+        },
+        {
+          "en": "The composition of legal codes",
+          "as": "আইন সংহিতাৰ ৰচনা"
+        },
+        {
+          "en": "The composition of medical texts",
+          "as": "চিকিৎসা গ্ৰন্থৰ ৰচনা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Sufi movement produced mystical poetry in Persian and local languages.",
+        "as": "ছুফী আন্দোলনে পাৰস্য আৰু স্থানীয় ভাষাত ৰহস্যবাদী কবিতা সৃষ্টি কৰিছিল।"
+      }
+    },
+    {
+      "id": "embedded-figures-010",
+      "q": {
+        "en": "Which of the following figures is embedded (hidden) in the given figure?",
+        "as": "তলৰ কোনটো চিত্ৰ দিয়া চিত্ৰখনৰ ভিতৰত লুকাই আছে?"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "A triangle is formed inside the figure, so a triangle is embedded in it.",
+        "as": "চিত্ৰখনৰ ভিতৰত এটা ত্ৰিভুজ গঠন হয়, গতিকে এটা ত্ৰিভুজ লুকাই আছে।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-256",
+      "q": {
+        "en": "Which of the following was a notable ancient Kamarupa musical instrument?",
+        "as": "প্ৰাচীন কামৰূপৰ এটা উল্লেখযোগ্য সংগীত যন্ত্ৰ তলৰ কোনটো আছিল?"
+      },
+      "options": [
+        {
+          "en": "Drums and cymbals used in temple music",
+          "as": "মন্দিৰ সংগীতত ব্যৱহৃত ঢোল আৰু কৰতাল"
+        },
+        {
+          "en": "Piano",
+          "as": "পিয়ানো"
+        },
+        {
+          "en": "Violin",
+          "as": "বেহেলা"
+        },
+        {
+          "en": "Trumpet",
+          "as": "তূৰী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Drums and cymbals used in temple music were notable instruments of ancient Kamarupa.",
+        "as": "মন্দিৰ সংগীতত ব্যৱহৃত ঢোল আৰু কৰতাল প্ৰাচীন কামৰূপৰ উল্লেখযোগ্য বাদ্যযন্ত্ৰ আছিল।"
+      }
+    },
+    {
+      "id": "environment-pollution-040",
+      "q": {
+        "en": "Global warming leads to —",
+        "as": "গোলকীয় উষ্ণতা বৃদ্ধিৰ পৰিণতি কি?"
+      },
+      "options": [
+        {
+          "en": "fall in sea levels",
+          "as": "সমুদ্ৰপৃষ্ঠৰ উচ্চতা হ্ৰাস"
+        },
+        {
+          "en": "rise in sea levels",
+          "as": "সমুদ্ৰপৃষ্ঠৰ উচ্চতা বৃদ্ধি"
+        },
+        {
+          "en": "cooling of the earth",
+          "as": "পৃথিৱী শীতল হোৱা"
+        },
+        {
+          "en": "increase in ice",
+          "as": "বৰফ বৃদ্ধি"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Global warming leads to a rise in sea levels.",
+        "as": "গোলকীয় উষ্ণতা বৃদ্ধিৰ পৰিণতি সমুদ্ৰপৃষ্ঠৰ উচ্চতা বৃদ্ধি।"
+      }
+    },
+    {
+      "id": "error-detection-266",
+      "q": {
+        "en": "Find the error in the sentence: It is time you take a decision.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: It is time you take a decision."
+      },
+      "options": [
+        {
+          "en": "take",
+          "as": "take"
+        },
+        {
+          "en": "It",
+          "as": "It"
+        },
+        {
+          "en": "is",
+          "as": "is"
+        },
+        {
+          "en": "time",
+          "as": "time"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'take' is wrong here; it should be 'took'. 'It is time' takes the past subjunctive.",
+        "as": "ইয়াত 'take' ভুল; 'took' হোৱা উচিত। 'It is time' ৱে past subjunctive লয়।"
+      }
+    },
+    {
+      "id": "assam-india-current-affairs-027",
+      "q": {
+        "en": "Which campaign was started by the Assam government for elephant conservation?",
+        "as": "হাতী সংৰক্ষণৰ বাবে অসম চৰকাৰে কোন অভিযান আৰম্ভ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "Gaj Yatra",
+          "as": "গজ যাত্ৰা"
+        },
+        {
+          "en": "Project Elephant",
+          "as": "প্ৰজেক্ট এলিফেণ্ট"
+        },
+        {
+          "en": "Gajah Kotha",
+          "as": "গজ কথা"
+        },
+        {
+          "en": "Haathi Mere Saathi",
+          "as": "হাতী মেৰে সাথী"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Gajah Kotha is an awareness campaign for elephant conservation in Assam.",
+        "as": "গজ কথা হাতী সংৰক্ষণৰ বাবে অসমৰ এক সজাগতা অভিযান।"
+      }
+    },
+    {
+      "id": "geometry-043",
+      "q": {
+        "en": "The complement of 30 degrees is —",
+        "as": "30 ডিগ্ৰীৰ পৰিপূৰক কোণ —"
+      },
+      "options": [
+        {
+          "en": "150 degrees",
+          "as": "১৫০ degrees"
+        },
+        {
+          "en": "120 degrees",
+          "as": "১২০ degrees"
+        },
+        {
+          "en": "60 degrees",
+          "as": "৬০ degrees"
+        },
+        {
+          "en": "70 degrees",
+          "as": "৭০ degrees"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The complement of an angle = 90 - angle = 90 - 30 = 60 degrees.",
+        "as": "কোণ এটাৰ পৰিপূৰক = 90 - কোণ = 90 - 30 = 60 ডিগ্ৰী।"
+      }
+    },
+    {
+      "id": "complex-puzzles-053",
+      "q": {
+        "en": "4 friends visit a library on 4 different days. The order of visits is A on Tuesday, D on Wednesday, C on Thursday, B on Monday. Who visits on Wednesday?",
+        "as": "4 জন বন্ধুৱে 4 টা বেলেগ দিনত পুথিভঁৰাললৈ যায়। ভ্ৰমণৰ ক্ৰম A ক Tuesday, D ক Wednesday, C ক Thursday, B ক Monday। Wednesday তাৰিখে কোন যায়?"
+      },
+      "options": [
+        {
+          "en": "C",
+          "as": "C"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "B",
+          "as": "B"
+        },
+        {
+          "en": "D",
+          "as": "D"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The list says D visits on Wednesday.",
+        "as": "তালিকাত D ক Wednesday তাৰিখে যায় বুলি আছে।"
+      }
+    },
+    {
+      "id": "figure-series-001",
+      "q": {
+        "en": "Study the series of figures and choose the figure that comes next.",
+        "as": "চিত্ৰৰ শৃংখলাটো মন কৰি পিছৰ চিত্ৰটো বাছি উলিয়াওক।"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The arrow turns 45 degrees clockwise at every step, so the next arrow points down.",
+        "as": "তীৰখন প্ৰতিটো ধাপত 45 ডিগ্ৰী ঘড়ীৰ দিশত ঘূৰে, গতিকে পিছৰ তীৰখন তললৈ ফালে মুখ কৰে।"
+      }
+    },
+    {
+      "id": "indian-geography-143",
+      "q": {
+        "en": "In which state is Corbett Tiger Reserve located?",
+        "as": "কৰ্বেট ব্যাঘ্ৰ প্ৰকল্প কোন ৰাজ্যত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "West Bengal",
+          "as": "পশ্চিমবংগ"
+        },
+        {
+          "en": "Kerala",
+          "as": "কেৰালা"
+        },
+        {
+          "en": "Uttarakhand",
+          "as": "উত্তৰাখণ্ড"
+        },
+        {
+          "en": "Arunachal Pradesh",
+          "as": "অৰুণাচল প্ৰদেশ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Corbett Tiger Reserve is located in Uttarakhand.",
+        "as": "কৰ্বেট ব্যাঘ্ৰ প্ৰকল্প উত্তৰাখণ্ডত অৱস্থিত।"
+      }
+    },
+    {
+      "id": "one-word-substitution-004",
+      "q": {
+        "en": "One who writes plays is called —",
+        "as": "নাটক লিখা ব্যক্তি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "author",
+          "as": "লেখক"
+        },
+        {
+          "en": "autobiographer",
+          "as": "আত্মজীৱনীকাৰ"
+        },
+        {
+          "en": "autocrat",
+          "as": "স্বেচ্ছাচাৰী"
+        },
+        {
+          "en": "dramatist",
+          "as": "নাট্যকাৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The correct one-word substitution is 'dramatist'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'dramatist' (নাট্যকাৰ)।"
+      }
+    },
+    {
+      "id": "clock-calendar-051",
+      "q": {
+        "en": "What is the angle between the hands at 3:45?",
+        "as": "3:45 বজাত কাঁটাদুটাৰ মাজৰ কোণ কিমান?"
+      },
+      "options": [
+        {
+          "en": "142 degrees",
+          "as": "১৪২ ডিগ্ৰী"
+        },
+        {
+          "en": "172 degrees",
+          "as": "১৭২ ডিগ্ৰী"
+        },
+        {
+          "en": "157 degrees",
+          "as": "১৫৭ ডিগ্ৰী"
+        },
+        {
+          "en": "187 degrees",
+          "as": "১৮৭ ডিগ্ৰী"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Using the formula, the angle at 3:45 is 157 degrees.",
+        "as": "সূত্ৰ অনুসৰি 3:45 বজাত কোণ 157 ডিগ্ৰী।"
+      }
+    },
+    {
+      "id": "data-interpretation-056",
+      "q": {
+        "en": "A student scored 82, 76, 88, 70, 80 in Maths, English, Science, Social Science, Assamese (each out of 100). His overall percentage is —",
+        "as": "এজন ছাত্ৰই Maths, English, Science, Social Science, Assamese ত ক্ৰমে 82, 76, 88, 70, 80 নম্বৰ পাইছিল (প্ৰতিটো 100 ৰ ভিতৰত)। তেওঁৰ মুঠ শতাংশ —"
+      },
+      "options": [
+        {
+          "en": "396%",
+          "as": "৩৯৬%"
+        },
+        {
+          "en": "50%",
+          "as": "৫০%"
+        },
+        {
+          "en": "84.2%",
+          "as": "৮৪.২%"
+        },
+        {
+          "en": "79.2%",
+          "as": "৭৯.২%"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Percentage = (396 / 500) x 100 = 79.2%.",
+        "as": "শতাংশ = (396 / 500) x 100 = 79.2%।"
+      }
+    },
+    {
+      "id": "synonyms-118",
+      "q": {
+        "en": "Choose the synonym of 'empty'.",
+        "as": "'empty' ৰ সমাৰ্থক শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "abundance",
+          "as": "প্ৰাচুৰ্য"
+        },
+        {
+          "en": "absurd",
+          "as": "অযৌক্তিক"
+        },
+        {
+          "en": "vacant",
+          "as": "খালী"
+        },
+        {
+          "en": "abrupt",
+          "as": "আকস্মিক"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'vacant' is a synonym of 'empty'; both words have nearly the same meaning.",
+        "as": "'vacant' (খালী) হৈছে 'empty' (খালী) ৰ সমাৰ্থক শব্দ।"
+      }
+    },
+    {
+      "id": "sports-250",
+      "q": {
+        "en": "Pentala Harikrishna is best known for which of the following?",
+        "as": "পেণ্টালা হৰিকৃষ্ণ তলৰ কোনটোৰ বাবে সৰ্বাধিক জনাজাত?"
+      },
+      "options": [
+        {
+          "en": "the Payyoli Express",
+          "as": "পায়্যলি এক্সপ্ৰেছ"
+        },
+        {
+          "en": "Indian chess grandmaster",
+          "as": "ভাৰতীয় দবা গ্ৰেণ্ডমাষ্টাৰ"
+        },
+        {
+          "en": "being a five-time world chess champion",
+          "as": "পাঁচবাৰৰ বিশ্ব দবা চেম্পিয়ন হোৱা"
+        },
+        {
+          "en": "her badminton singles titles",
+          "as": "তেওঁৰ বেডমিণ্টন একক খিতাপ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Pentala Harikrishna is known for Indian chess grandmaster.",
+        "as": "পেণ্টালা হৰিকৃষ্ণ ভাৰতীয় দবা গ্ৰেণ্ডমাষ্টাৰৰ বাবে জনাজাত।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-049",
+      "q": {
+        "en": "Which Fundamental Duty asks citizens to abide by the Constitution?",
+        "as": "কোন মৌলিক কৰ্তব্যে নাগৰিকক সংবিধান মানি চলিবলৈ কয়?"
+      },
+      "options": [
+        {
+          "en": "To pay taxes",
+          "as": "কৰ দিয়া"
+        },
+        {
+          "en": "To vote",
+          "as": "ভোট দিয়া"
+        },
+        {
+          "en": "To abide by the Constitution and respect its ideals",
+          "as": "সংবিধান মানি চলা আৰু ইয়াৰ আদৰ্শক সন্মান কৰা"
+        },
+        {
+          "en": "To join the army",
+          "as": "সেনাবাহিনীত যোগ দিয়া"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The first Fundamental Duty is to abide by the Constitution and respect its ideals.",
+        "as": "প্ৰথম মৌলিক কৰ্তব্য হৈছে সংবিধান মানি চলা আৰু ইয়াৰ আদৰ্শক সন্মান কৰা।"
+      }
+    },
+    {
+      "id": "assam-history-ancient-020",
+      "q": {
+        "en": "Which Chinese pilgrim's travel record mentions the meeting between Harshavardhana and Bhaskaravarman?",
+        "as": "কোন চীনা পৰিব্ৰাজকৰ ভ্ৰমণ-বিৱৰণে হৰ্ষবৰ্ধন আৰু ভাস্কৰবৰ্মনৰ সাক্ষাৎক উল্লেখ কৰে?"
+      },
+      "options": [
+        {
+          "en": "Fa-Hien",
+          "as": "ফা-হিয়েন"
+        },
+        {
+          "en": "Hiuen Tsang",
+          "as": "হিউৱেন চাঙ"
+        },
+        {
+          "en": "I-tsing",
+          "as": "আই-চিং"
+        },
+        {
+          "en": "Sung Yun",
+          "as": "চুং য়ুন"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Hiuen Tsang's record describes the friendship between Harshavardhana and Kumar Bhaskaravarman.",
+        "as": "হিউৱেন চাঙৰ বিৱৰণে হৰ্ষবৰ্ধন আৰু কুমাৰ ভাস্কৰবৰ্মনৰ মৈত্ৰীৰ কথা বৰ্ণনা কৰে।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-261",
+      "q": {
+        "en": "Which of the following was a major cause of conflict between the Ahoms and the Koch?",
+        "as": "আহোম আৰু কোচৰ মাজত সংঘাতৰ এটা প্ৰধান কাৰণ তলৰ কোনটো আছিল?"
+      },
+      "options": [
+        {
+          "en": "Control over Tibet",
+          "as": "তিব্বতৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over Bengal",
+          "as": "বংগৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over the Brahmaputra valley",
+          "as": "ব্ৰহ্মপুত্ৰ উপত্যকাৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over Manipur",
+          "as": "মণিপুৰৰ নিয়ন্ত্ৰণ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Control over the Brahmaputra valley was a major cause of Ahom-Koch conflict.",
+        "as": "ব্ৰহ্মপুত্ৰ উপত্যকাৰ নিয়ন্ত্ৰণ আহোম-কোচ সংঘাতৰ এটা প্ৰধান কাৰণ আছিল।"
+      }
+    },
+    {
+      "id": "statement-conclusions-032",
+      "q": {
+        "en": "Statement: Some teachers are strict. All strict people are feared.\nConclusions: I. Some teachers are feared. II. All feared people are teachers.",
+        "as": "বিবৃতি: Some teachers are strict. All strict people are feared.\nসিদ্ধান্ত: I. Some teachers are feared. II. All feared people are teachers."
+      },
+      "options": [
+        {
+          "en": "Only conclusion II follows",
+          "as": "কেৱল সিদ্ধান্ত II ওলায়"
+        },
+        {
+          "en": "Neither I nor II follows",
+          "as": "I বা II কোনোটোৱেই গ্ৰহণযোগ্য নহয়"
+        },
+        {
+          "en": "Only conclusion I follows",
+          "as": "কেৱল সিদ্ধান্ত I ওলায়"
+        },
+        {
+          "en": "Both I and II follow",
+          "as": "I আৰু II দুয়োটা গ্ৰহণযোগ্য"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The teachers who are strict are feared, so I follows; II does not.",
+        "as": "যিবোৰ শিক্ষক কঠোৰ সেয়া ভয়ৰ পাত্র, গতিকে I ওলায়; II নোলায়।"
+      }
+    },
+    {
+      "id": "error-detection-203",
+      "q": {
+        "en": "Find the error in the sentence: He is used to work hard.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: He is used to work hard."
+      },
+      "options": [
+        {
+          "en": "work",
+          "as": "work"
+        },
+        {
+          "en": "used",
+          "as": "used"
+        },
+        {
+          "en": "to",
+          "as": "to"
+        },
+        {
+          "en": "hard",
+          "as": "hard"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'work' is wrong here; it should be 'working'. Accustomed 'used to' takes a gerund.",
+        "as": "ইয়াত 'work' ভুল; 'working' হোৱা উচিত। অভ্যস্ত অৰ্থত 'used to' ৱে gerund লয়।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-123",
+      "q": {
+        "en": "Which was the capital of the Vajji republic?",
+        "as": "ৱজ্জি গণৰাজ্যৰ ৰাজধানী কোনখন আছিল?"
+      },
+      "options": [
+        {
+          "en": "Vaishali",
+          "as": "ৱৈশালী"
+        },
+        {
+          "en": "Rajgriha",
+          "as": "ৰাজগৃহ"
+        },
+        {
+          "en": "Pataliputra",
+          "as": "পাটলিপুত্ৰ"
+        },
+        {
+          "en": "Kaushambi",
+          "as": "কৌশাম্বী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Vaishali was the capital of the Vajji republic.",
+        "as": "ৱৈশালী ৱজ্জি গণৰাজ্যৰ ৰাজধানী আছিল।"
+      }
+    },
+    {
+      "id": "ranking-order-016",
+      "q": {
+        "en": "In a row of 15 persons, a person is 6th from the left. What is his position from the right?",
+        "as": "15 জনৰ শাৰীত এজন বাওঁৰ পৰা 6 তম। সোঁৰ পৰা তেওঁৰ স্থান কিমান?"
+      },
+      "options": [
+        {
+          "en": "6",
+          "as": "৬"
+        },
+        {
+          "en": "11",
+          "as": "১১"
+        },
+        {
+          "en": "9",
+          "as": "৯"
+        },
+        {
+          "en": "10",
+          "as": "১০"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Position from the right = 15 − 6 + 1 = 10.",
+        "as": "সোঁৰ পৰা স্থান = 15 − 6 + 1 = 10।"
+      }
+    },
+    {
+      "id": "constitution-preamble-rights-141",
+      "q": {
+        "en": "Which Amendment restored the power of the Supreme Court and High Courts in respect of judicial review?",
+        "as": "কোন সংশোধনীয়ে ন্যায়িক পৰ্যালোচনাৰ ক্ষেত্ৰত সৰ্বোচ্চ ন্যায়ালয় আৰু উচ্চ ন্যায়ালয়ৰ ক্ষমতা পুনৰুদ্ধাৰ কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "44th Amendment",
+          "as": "৪৪ সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "42nd Amendment",
+          "as": "৪২ সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "43rd Amendment",
+          "as": "৪৩ সংখ্যক সংশোধনী"
+        },
+        {
+          "en": "1st Amendment",
+          "as": "১ম সংশোধনী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The 44th Amendment restored judicial review powers.",
+        "as": "৪৪ সংখ্যক সংশোধনীয়ে ন্যায়িক পৰ্যালোচনাৰ ক্ষমতা পুনৰুদ্ধাৰ কৰিছিল।"
+      }
+    },
+    {
+      "id": "basic-mensuration-023",
+      "q": {
+        "en": "The volume of a cuboid of length 8 cm, breadth 5 cm and height 3 cm is —",
+        "as": "8 চেমি দীঘ, 5 চেমি প্ৰস্থ আৰু 3 চেমি উচ্চতাৰ ঘনকীয় বস্তুৰ আয়তন —"
+      },
+      "options": [
+        {
+          "en": "100 cubic cm",
+          "as": "১০০ cubic cm"
+        },
+        {
+          "en": "120 cubic cm",
+          "as": "১২০ cubic cm"
+        },
+        {
+          "en": "110 cubic cm",
+          "as": "১১০ cubic cm"
+        },
+        {
+          "en": "130 cubic cm",
+          "as": "১৩০ cubic cm"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Volume = 8 x 5 x 3 = 120 cubic cm.",
+        "as": "আয়তন = 8 x 5 x 3 = 120 cubic cm।"
+      }
+    },
+    {
+      "id": "ranking-order-017",
+      "q": {
+        "en": "In a row of 18 persons, a person is 9th from the left. What is his position from the right?",
+        "as": "18 জনৰ শাৰীত এজন বাওঁৰ পৰা 9 তম। সোঁৰ পৰা তেওঁৰ স্থান কিমান?"
+      },
+      "options": [
+        {
+          "en": "11",
+          "as": "১১"
+        },
+        {
+          "en": "9",
+          "as": "৯"
+        },
+        {
+          "en": "10",
+          "as": "১০"
+        },
+        {
+          "en": "12",
+          "as": "১২"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Position from the right = 18 − 9 + 1 = 10.",
+        "as": "সোঁৰ পৰা স্থান = 18 − 9 + 1 = 10।"
+      }
+    },
+    {
+      "id": "government-schemes-269",
+      "q": {
+        "en": "In which year was National Apprenticeship Promotion Scheme launched?",
+        "as": "ৰাষ্ট্ৰীয় শিক্ষানবিশ প্ৰচাৰ আঁচনি কিমান চনত আৰম্ভ কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "2005",
+          "as": "২০০৫"
+        },
+        {
+          "en": "2014",
+          "as": "২০১৪"
+        },
+        {
+          "en": "2016",
+          "as": "২০১৬"
+        },
+        {
+          "en": "2015",
+          "as": "২০১৫"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "National Apprenticeship Promotion Scheme was launched in 2016.",
+        "as": "ৰাষ্ট্ৰীয় শিক্ষানবিশ প্ৰচাৰ আঁচনি 2016 চনত আৰম্ভ কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "environment-pollution-348",
+      "q": {
+        "en": "The 'precautionary principle' was highlighted in which Indian case?",
+        "as": "'সতৰ্কতা নীতি' কোন ভাৰতীয় গোচৰত গুৰুত্ব দিয়া হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "Kesavananda Bharati case",
+          "as": "কেশৱানন্দ ভাৰতী গোচৰ"
+        },
+        {
+          "en": "Golaknath case",
+          "as": "গোলকনাথ গোচৰ"
+        },
+        {
+          "en": "Vellore Citizens Welfare Forum case",
+          "as": "ভেল্লোৰ নাগৰিক কল্যাণ মঞ্চ গোচৰ"
+        },
+        {
+          "en": "Minerva Mills case",
+          "as": "মিনাৰ্ভা মিলছ গোচৰ"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The Vellore case highlighted the precautionary principle.",
+        "as": "ভেল্লোৰ গোচৰে সতৰ্কতা নীতিত গুৰুত্ব দিছিল।"
+      }
+    },
+    {
+      "id": "fill-in-the-blanks-091",
+      "q": {
+        "en": "Fill in the blank: She was ill, ___ she did not attend school.",
+        "as": "তেওঁ অসুস্থ আছিল, সেয়ে বিদ্যালয়লৈ যোৱা নাই।"
+      },
+      "options": [
+        {
+          "en": "so",
+          "as": "so"
+        },
+        {
+          "en": "but",
+          "as": "but"
+        },
+        {
+          "en": "or",
+          "as": "or"
+        },
+        {
+          "en": "yet",
+          "as": "yet"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The correct word is 'so'.",
+        "as": "শুদ্ধ শব্দটো হৈছে 'so'।"
+      }
+    },
+    {
+      "id": "seating-arrangement-001",
+      "q": {
+        "en": "Five friends sit in a row facing north. The order from left to right is E, D, B, A, C. Who is at the extreme left end?",
+        "as": "পাঁচজন বন্ধুৱে উত্তৰলৈ মুখ কৰি এটা শাৰীত বহে। বাওঁফালৰ পৰা সোঁফাললৈ ক্ৰম E, D, B, A, C। একেবাৰে বাওঁমূৰত কোন?"
+      },
+      "options": [
+        {
+          "en": "C",
+          "as": "C"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "E",
+          "as": "E"
+        },
+        {
+          "en": "B",
+          "as": "B"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "E is written first in the order, so E is at the extreme left end.",
+        "as": "E ক্ৰমত প্ৰথম, গতিকে E একেবাৰে বাওঁমূৰত।"
+      }
+    },
+    {
+      "id": "idioms-phrases-273",
+      "q": {
+        "en": "The idiom 'burn one's boats' means —",
+        "as": "'burn one's boats' বাক্যৰীতিটোৰ অৰ্থ —"
+      },
+      "options": [
+        {
+          "en": "to explain something",
+          "as": "কিবা ব্যাখ্যা কৰা"
+        },
+        {
+          "en": "to spend less money",
+          "as": "কম ধন খৰচ কৰা"
+        },
+        {
+          "en": "not meant seriously",
+          "as": "গম্ভীৰভাৱে নকোৱা"
+        },
+        {
+          "en": "to commit oneself beyond withdrawal",
+          "as": "পিছ হুঁহকিব নোৱাৰাকৈ প্ৰতিশ্ৰুতিবদ্ধ হোৱা"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "'burn one's boats' means to commit oneself beyond withdrawal.",
+        "as": "'burn one's boats' ৰ অৰ্থ হৈছে পিছ হুঁহকিব নোৱাৰাকৈ প্ৰতিশ্ৰুতিবদ্ধ হোৱা।"
+      }
+    },
+    {
+      "id": "figure-classification-058",
+      "q": {
+        "en": "Which of the numbered figures is different from the others?",
+        "as": "নম্বৰ দিয়া চিত্ৰবোৰৰ ভিতৰত কোনটো আনবোৰতকৈ বেলেগ?"
+      },
+      "options": [
+        {
+          "en": "4",
+          "as": "৪"
+        },
+        {
+          "en": "2",
+          "as": "২"
+        },
+        {
+          "en": "3",
+          "as": "৩"
+        },
+        {
+          "en": "1",
+          "as": "১"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Three figures are shaded and one is unshaded, so figure 2 is different.",
+        "as": "তিনিটা চিত্ৰ ছাঁ-মাৰা আৰু এটা ছাঁ-নমৰা, গতিকে 2 নম্বৰ চিত্ৰটো বেলেগ।"
+      }
+    },
+    {
+      "id": "figure-analogy-023",
+      "q": {
+        "en": "In the figure analogy A : B :: C : ?, A is related to B in a certain way. Choose the figure that replaces the question mark.",
+        "as": "চিত্ৰৰ সাদৃশ্য A : B :: C : ? ত A ৰ লগত B এটা নিৰ্দিষ্ট সম্পৰ্কত আছে। প্ৰশ্নবোধক চিহ্নৰ ঠাইত থব লগা চিত্ৰটো বাছক।"
+      },
+      "options": [
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        },
+        {
+          "en": "",
+          "as": ""
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The first figure is turned 180 degrees clockwise to get the second, so the same turn is applied to the third figure.",
+        "as": "প্ৰথম চিত্ৰটো 180 ডিগ্ৰী ঘড়ীৰ দিশত ঘূৰাই দ্বিতীয়টো পোৱা যায়, গতিকে তৃতীয় চিত্ৰটোতো একেই ঘূৰ্ণন প্ৰয়োগ কৰা হয়।"
+      }
+    },
+    {
+      "id": "sports-094",
+      "q": {
+        "en": "Which trophy is associated with badminton?",
+        "as": "কোন ট্ৰফী বেডমিণ্টনৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Duleep Trophy",
+          "as": "দলীপ ট্ৰফী"
+        },
+        {
+          "en": "Thomas Cup",
+          "as": "থমাছ কাপ"
+        },
+        {
+          "en": "Ranji Trophy",
+          "as": "ৰঞ্জী ট্ৰফী"
+        },
+        {
+          "en": "Federation Cup",
+          "as": "ফেডাৰেচন কাপ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The Thomas Cup is associated with badminton.",
+        "as": "থমাছ কাপ বেডমিণ্টনৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "assam-history-modern-206",
+      "q": {
+        "en": "Which Assamese movement demanded the recognition of the Sadri language?",
+        "as": "কোন অসমীয়া আন্দোলনে সদৰী ভাষাৰ স্বীকৃতি দাবী কৰিছিল?"
+      },
+      "options": [
+        {
+          "en": "The Sadri language movement",
+          "as": "সদৰী ভাষা আন্দোলন"
+        },
+        {
+          "en": "The Assamese language movement",
+          "as": "অসমীয়া ভাষা আন্দোলন"
+        },
+        {
+          "en": "The Bodo language movement",
+          "as": "বড়ো ভাষা আন্দোলন"
+        },
+        {
+          "en": "The Bengali language movement",
+          "as": "বঙালী ভাষা আন্দোলন"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Sadri language movement demanded recognition for Sadri, spoken by many tea garden communities.",
+        "as": "সদৰী ভাষা আন্দোলনে বহু চাহ বাগিচা সমাজে কোৱা সদৰী ভাষাৰ স্বীকৃতি দাবী কৰিছিল।"
+      }
+    },
+    {
+      "id": "sports-193",
+      "q": {
+        "en": "Which sportsperson is associated with gymnastics?",
+        "as": "কোন খেলুৱৈ জিমনাষ্টিকছৰ সৈতে জড়িত?"
+      },
+      "options": [
+        {
+          "en": "Dipa Karmakar",
+          "as": "দীপা কৰ্মাকাৰ"
+        },
+        {
+          "en": "Mary Kom",
+          "as": "মেৰী কম"
+        },
+        {
+          "en": "Sunil Gavaskar",
+          "as": "সুনীল গাভাস্কাৰ"
+        },
+        {
+          "en": "Vijender Singh",
+          "as": "বিজেন্দৰ সিং"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Dipa Karmakar is associated with gymnastics.",
+        "as": "দীপা কৰ্মাকাৰ জিমনাষ্টিকছৰ সৈতে জড়িত।"
+      }
+    },
+    {
+      "id": "assam-national-parks-262",
+      "q": {
+        "en": "When was Bornadi Wildlife Sanctuary notified?",
+        "as": "বৰনদী অভয়াৰণ্য কেতিয়া ঘোষণা কৰা হৈছিল?"
+      },
+      "options": [
+        {
+          "en": "1987",
+          "as": "1987"
+        },
+        {
+          "en": "1980",
+          "as": "1980"
+        },
+        {
+          "en": "2003",
+          "as": "2003"
+        },
+        {
+          "en": "1998",
+          "as": "1998"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Bornadi Wildlife Sanctuary was notified in 1980.",
+        "as": "বৰনদী অভয়াৰণ্য 1980 চনত ঘোষণা কৰা হৈছিল।"
+      }
+    },
+    {
+      "id": "trigonometry-027",
+      "q": {
+        "en": "sin 70 degrees equals —",
+        "as": "sin 70 ডিগ্ৰী সমান —"
+      },
+      "options": [
+        {
+          "en": "cos 70 degrees",
+          "as": "cos 70 degrees"
+        },
+        {
+          "en": "sin 20 degrees",
+          "as": "sin 20 degrees"
+        },
+        {
+          "en": "cos 20 degrees",
+          "as": "cos 20 degrees"
+        },
+        {
+          "en": "tan 20 degrees",
+          "as": "tan 20 degrees"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "sin(90 - A) = cos A, so sin 70 = cos 20.",
+        "as": "sin(90 - A) = cos A, গতিকে sin 70 = cos 20।"
+      }
+    },
+    {
+      "id": "antonyms-400",
+      "q": {
+        "en": "Choose the antonym of 'urban'.",
+        "as": "'urban' ৰ বিপৰীত শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "splendid",
+          "as": "ভৱ্য"
+        },
+        {
+          "en": "rural",
+          "as": "গ্ৰাম্য"
+        },
+        {
+          "en": "spendthrift",
+          "as": "অপব্যয়ী"
+        },
+        {
+          "en": "speed",
+          "as": "গতি"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "'rural' is an antonym of 'urban'; it has the opposite meaning.",
+        "as": "'rural' (গ্ৰাম্য) হৈছে 'urban' (চহৰীয়া) ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "error-detection-170",
+      "q": {
+        "en": "Find the error in the sentence: He has completed the work yesterday.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: He has completed the work yesterday."
+      },
+      "options": [
+        {
+          "en": "yesterday",
+          "as": "yesterday"
+        },
+        {
+          "en": "He",
+          "as": "He"
+        },
+        {
+          "en": "has completed",
+          "as": "has completed"
+        },
+        {
+          "en": "has",
+          "as": "has"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'has completed' is wrong here; it should be 'completed'. A definite past time takes the past simple.",
+        "as": "ইয়াত 'has completed' ভুল; 'completed' হোৱা উচিত। নিৰ্দিষ্ট ভূতকালই past simple লয়।"
+      }
+    },
+    {
+      "id": "cubes-dice-044",
+      "q": {
+        "en": "How many vertices does a cuboid have?",
+        "as": "আয়তঘনৰ কিমানটা শীৰ্ষবিন্দু থাকে?"
+      },
+      "options": [
+        {
+          "en": "10",
+          "as": "১০"
+        },
+        {
+          "en": "8",
+          "as": "৮"
+        },
+        {
+          "en": "12",
+          "as": "১২"
+        },
+        {
+          "en": "6",
+          "as": "৬"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "A cuboid has 8 vertices.",
+        "as": "আয়তঘনৰ 8 টা শীৰ্ষবিন্দু থাকে।"
+      }
+    },
+    {
+      "id": "indian-history-ancient-119",
+      "q": {
+        "en": "In which Mahajanapada was the city of Ujjayini located?",
+        "as": "কোন মহাজনপদত উজ্জয়িনী চহৰ অৱস্থিত আছিল?"
+      },
+      "options": [
+        {
+          "en": "Magadha",
+          "as": "মগধ"
+        },
+        {
+          "en": "Avanti",
+          "as": "অৱন্তী"
+        },
+        {
+          "en": "Kosala",
+          "as": "কোশল"
+        },
+        {
+          "en": "Vatsa",
+          "as": "ৱৎস"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Avanti had its capital at Ujjayini.",
+        "as": "অৱন্তীৰ ৰাজধানী উজ্জয়িনীত আছিল।"
+      }
+    },
+    {
+      "id": "geometry-121",
+      "q": {
+        "en": "Each interior angle of a regular polygon of 10 sides is —",
+        "as": "10 বাহুৰ সুষম বহুভুজৰ প্ৰতিটো অন্তঃকোণ —"
+      },
+      "options": [
+        {
+          "en": "144 degrees",
+          "as": "১৪৪ degrees"
+        },
+        {
+          "en": "1440 degrees",
+          "as": "১৪৪০ degrees"
+        },
+        {
+          "en": "36 degrees",
+          "as": "৩৬ degrees"
+        },
+        {
+          "en": "154 degrees",
+          "as": "১৫৪ degrees"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Sum of interior angles = (10 - 2) x 180 = 1440, so each angle = 1440 / 10 = 144 degrees.",
+        "as": "অন্তঃকোণবোৰৰ যোগফল = (10 - 2) x 180 = 1440, গতিকে প্ৰতিটো কোণ = 1440 / 10 = 144 ডিগ্ৰী।"
+      }
+    },
+    {
+      "id": "shape-construction-grouping-016",
+      "q": {
+        "en": "How many matchsticks are needed to make the given figure?",
+        "as": "দিয়া চিত্ৰখন সাজিবলৈ কিমানখন মাৰিবাঁহ লাগে?"
+      },
+      "options": [
+        {
+          "en": "25",
+          "as": "২৫"
+        },
+        {
+          "en": "17",
+          "as": "১৭"
+        },
+        {
+          "en": "24",
+          "as": "২৪"
+        },
+        {
+          "en": "32",
+          "as": "৩২"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Each new square shares one side, so n squares need 3n + 1 = 25 matchsticks.",
+        "as": "প্ৰতিটো নতুন বৰ্গই এটা বাহু ভাগ কৰে, গতিকে n বৰ্গৰ বাবে 3n + 1 = 25 মাৰিবাঁহ লাগে।"
+      }
+    },
+    {
+      "id": "one-word-substitution-321",
+      "q": {
+        "en": "A thing that cannot be avoided is called —",
+        "as": "এৰিব নোৱাৰা বস্তু বা ঘটনা বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "ambidextrous",
+          "as": "উভয়হস্তী"
+        },
+        {
+          "en": "inevitable",
+          "as": "অনিবাৰ্য"
+        },
+        {
+          "en": "analgesic",
+          "as": "বেদনানাশক"
+        },
+        {
+          "en": "antidote",
+          "as": "প্ৰতিবিষ"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "The correct one-word substitution is 'inevitable'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'inevitable' (অনিবাৰ্য)।"
+      }
+    },
+    {
+      "id": "seating-arrangement-002",
+      "q": {
+        "en": "In a row facing north the order from left to right is D, E, A, C, B. Who is second to the left of A?",
+        "as": "উত্তৰলৈ মুখ কৰি এটা শাৰীত বাওঁফালৰ পৰা সোঁফাললৈ ক্ৰম D, E, A, C, B। A ৰ বাওঁফালৰ পৰা দ্বিতীয়জন কোন?"
+      },
+      "options": [
+        {
+          "en": "C",
+          "as": "C"
+        },
+        {
+          "en": "B",
+          "as": "B"
+        },
+        {
+          "en": "A",
+          "as": "A"
+        },
+        {
+          "en": "D",
+          "as": "D"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Two places to the left of A is D.",
+        "as": "A ৰ বাওঁফালে দুটা ঠাইত D।"
+      }
+    },
+    {
+      "id": "error-detection-127",
+      "q": {
+        "en": "Find the error in the sentence: He is more cleverer than his friend.",
+        "as": "বাক্যটোত থকা ভুলটো বিচাৰি উলিয়াওক: He is more cleverer than his friend."
+      },
+      "options": [
+        {
+          "en": "is",
+          "as": "is"
+        },
+        {
+          "en": "than",
+          "as": "than"
+        },
+        {
+          "en": "more",
+          "as": "more"
+        },
+        {
+          "en": "his",
+          "as": "his"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "'more' is wrong here; it should be 'cleverer'. A double comparative is wrong.",
+        "as": "ইয়াত 'more' ভুল; 'cleverer' হোৱা উচিত। দ্বিগুণ comparative ভুল।"
+      }
+    },
+    {
+      "id": "india-rivers-mountains-states-100",
+      "q": {
+        "en": "The Sabarmati river rises from which place?",
+        "as": "সাবৰমতী নদী কোন ঠাইৰ পৰা উৎপত্তি হয়?"
+      },
+      "options": [
+        {
+          "en": "Nepal",
+          "as": "নেপাল"
+        },
+        {
+          "en": "Ganga",
+          "as": "গংগা"
+        },
+        {
+          "en": "Rakas Lake",
+          "as": "ৰাকস হ্ৰদ"
+        },
+        {
+          "en": "Aravalli Hills",
+          "as": "আৰাৱলী পাহাৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The Sabarmati rises from Aravalli Hills.",
+        "as": "সাবৰমতী আৰাৱলী পাহাৰৰ পৰা উৎপত্তি হয়।"
+      }
+    },
+    {
+      "id": "president-pm-governor-cm-050",
+      "q": {
+        "en": "Who appoints the Chief Justice of India?",
+        "as": "ভাৰতৰ মুখ্য ন্যায়াধীশক কোনে নিযুক্তি দিয়ে?"
+      },
+      "options": [
+        {
+          "en": "The President",
+          "as": "ৰাষ্ট্ৰপতি"
+        },
+        {
+          "en": "The Prime Minister",
+          "as": "প্ৰধানমন্ত্ৰী"
+        },
+        {
+          "en": "The Parliament",
+          "as": "সংসদ"
+        },
+        {
+          "en": "The Vice President",
+          "as": "উপ-ৰাষ্ট্ৰপতি"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The President appoints the Chief Justice of India.",
+        "as": "ৰাষ্ট্ৰপতিয়ে ভাৰতৰ মুখ্য ন্যায়াধীশ নিযুক্তি দিয়ে।"
+      }
+    },
+    {
+      "id": "one-word-substitution-106",
+      "q": {
+        "en": "One who compiles a list of books is called —",
+        "as": "কিতাপৰ তালিকা প্ৰস্তুত কৰা ব্যক্তি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "bibliographer",
+          "as": "গ্ৰন্থপঞ্জীকাৰ"
+        },
+        {
+          "en": "sculptor",
+          "as": "ভাস্কৰ্যকাৰ"
+        },
+        {
+          "en": "shepherd",
+          "as": "গৰখীয়া"
+        },
+        {
+          "en": "spectator",
+          "as": "দৰ্শক"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The correct one-word substitution is 'bibliographer'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'bibliographer' (গ্ৰন্থপঞ্জীকাৰ)।"
+      }
+    },
+    {
+      "id": "one-word-substitution-107",
+      "q": {
+        "en": "One who is unable to read or write is called —",
+        "as": "পঢ়িব-লিখিব নজনা ব্যক্তি বোলা হয় —"
+      },
+      "options": [
+        {
+          "en": "spokesman",
+          "as": "মুখপাত্ৰ"
+        },
+        {
+          "en": "stranger",
+          "as": "অচিনাকি মানুহ"
+        },
+        {
+          "en": "surgeon",
+          "as": "শল্য চিকিৎসক"
+        },
+        {
+          "en": "illiterate",
+          "as": "নিৰক্ষৰ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "The correct one-word substitution is 'illiterate'.",
+        "as": "সঠিক এটা-শব্দত-প্ৰকাশ হৈছে 'illiterate' (নিৰক্ষৰ)।"
+      }
+    },
+    {
+      "id": "environment-pollution-102",
+      "q": {
+        "en": "Which is the largest mangrove forest in the world?",
+        "as": "বিশ্বৰ সৰ্ববৃহৎ মেনগ্ৰ'ভ বন কোনটো?"
+      },
+      "options": [
+        {
+          "en": "Sundarbans",
+          "as": "সুন্দৰবন"
+        },
+        {
+          "en": "Amazon",
+          "as": "আমাজন"
+        },
+        {
+          "en": "Congo",
+          "as": "কংগ'"
+        },
+        {
+          "en": "Everglades",
+          "as": "এভাৰগ্লেডছ"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The Sundarbans is the largest mangrove forest in the world.",
+        "as": "সুন্দৰবন বিশ্বৰ সৰ্ববৃহৎ মেনগ্ৰ'ভ বন।"
+      }
+    },
+    {
+      "id": "indian-history-modern-204",
+      "q": {
+        "en": "What political feature marked British rule in India?",
+        "as": "ভাৰতত ব্ৰিটিছ শাসনত কোন ৰাজনৈতিক বৈশিষ্ট্য আছিল?"
+      },
+      "options": [
+        {
+          "en": "The end of nationalism",
+          "as": "জাতীয়তাবাদৰ অন্ত"
+        },
+        {
+          "en": "The end of patriotism",
+          "as": "দেশপ্ৰেমৰ অন্ত"
+        },
+        {
+          "en": "The growth of Indian nationalism",
+          "as": "ভাৰতীয় জাতীয়তাবাদৰ বিকাশ"
+        },
+        {
+          "en": "The end of politics",
+          "as": "ৰাজনীতিৰ অন্ত"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "The growth of Indian nationalism was a feature of British rule in India.",
+        "as": "ভাৰতীয় জাতীয়তাবাদৰ বিকাশ ভাৰতত ব্ৰিটিছ শাসনৰ এটা বৈশিষ্ট্য আছিল।"
+      }
+    },
+    {
+      "id": "rule-detection-031",
+      "q": {
+        "en": "Study the given series of figures. Which rule does the series follow?",
+        "as": "দিয়া চিত্ৰ শৃংখলাটো মন কৰক। শৃংখলাটোৱে কোনটো নিয়ম অনুসৰণ কৰে?"
+      },
+      "options": [
+        {
+          "en": "The size of the figure increases at every step",
+          "as": "চিত্ৰৰ আকাৰ প্ৰতিটো ধাপত বাঢ়ে"
+        },
+        {
+          "en": "The number of sides increases at every step",
+          "as": "বাহুৰ সংখ্যা প্ৰতিটো ধাপত বাঢ়ে"
+        },
+        {
+          "en": "The size of the figure decreases at every step",
+          "as": "চিত্ৰৰ আকাৰ প্ৰতিটো ধাপত কমে"
+        },
+        {
+          "en": "The figure alternates between shaded and unshaded",
+          "as": "চিত্ৰ ছাঁ-মাৰা আৰু ছাঁ-নমৰা মাজত সলনি হয়"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "The figure grows larger by the same amount each time.",
+        "as": "চিত্ৰটো প্ৰতিবাৰ একেই পৰিমাণে ডাঙৰ হয়।"
+      }
+    },
+    {
+      "id": "venn-diagrams-054",
+      "q": {
+        "en": "In a class, 22 play only hockey, 16 play only football and 9 play both. How many play at least one?",
+        "as": "এখন শ্ৰেণীত ২২ জনে কেৱল হকী, ১৬ জনে কেৱল ফুটবল আৰু ৯ জনে দুয়োটা খেলে। অন্ততঃ এটা কিমানজনে খেলে?"
+      },
+      "options": [
+        {
+          "en": "38",
+          "as": "৩৮"
+        },
+        {
+          "en": "50",
+          "as": "৫০"
+        },
+        {
+          "en": "47",
+          "as": "৪৭"
+        },
+        {
+          "en": "45",
+          "as": "৪৫"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Total = 22 + 16 + 9 = 47.",
+        "as": "মুঠ = 22 + 16 + 9 = 47।"
+      }
+    },
+    {
+      "id": "antonyms-386",
+      "q": {
+        "en": "Choose the antonym of 'tense'.",
+        "as": "'tense' ৰ বিপৰীত শব্দ বাছনি কৰক।"
+      },
+      "options": [
+        {
+          "en": "relaxed",
+          "as": "জিৰণি লোৱা"
+        },
+        {
+          "en": "candid",
+          "as": "সৰল"
+        },
+        {
+          "en": "camera",
+          "as": "কেমেৰা"
+        },
+        {
+          "en": "captivate",
+          "as": "মোহিত কৰা"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "'relaxed' is an antonym of 'tense'; it has the opposite meaning.",
+        "as": "'relaxed' (জিৰণি লোৱা) হৈছে 'tense' (তনু) ৰ বিপৰীত অৰ্থৰ শব্দ।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-192",
+      "q": {
+        "en": "Which is a major problem affecting Assam's agriculture?",
+        "as": "অসমৰ কৃষিক প্ৰভাৱিত কৰা এটা প্ৰধান সমস্যা কি?"
+      },
+      "options": [
+        {
+          "en": "Drought only",
+          "as": "কেৱল খৰাং"
+        },
+        {
+          "en": "Volcanic eruptions",
+          "as": "আগ্নেয়গিৰিৰ বিস্ফোৰণ"
+        },
+        {
+          "en": "Floods",
+          "as": "বানপানী"
+        },
+        {
+          "en": "Earthquakes only",
+          "as": "কেৱল ভূমিকম্প"
+        }
+      ],
+      "correct": 2,
+      "explanation": {
+        "en": "Floods are a major problem affecting Assam's agriculture.",
+        "as": "বানপানী অসমৰ কৃষিক প্ৰভাৱিত কৰা এটা প্ৰধান সমস্যা।"
+      }
+    },
+    {
+      "id": "counting-figures-013",
+      "q": {
+        "en": "How many triangles are there in the given figure?",
+        "as": "দিয়া চিত্ৰখনত কিমানটা ত্ৰিভুজ আছে?"
+      },
+      "options": [
+        {
+          "en": "18",
+          "as": "১৮"
+        },
+        {
+          "en": "19",
+          "as": "১৯"
+        },
+        {
+          "en": "17",
+          "as": "১৭"
+        },
+        {
+          "en": "16",
+          "as": "১৬"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Counting every size of triangle, the figure has 18 triangles.",
+        "as": "প্ৰতিটো আকাৰৰ ত্ৰিভুজ গণনা কৰি, চিত্ৰখনত 18 টা ত্ৰিভুজ আছে।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-263",
+      "q": {
+        "en": "Which of the following was a major cause of conflict between the Ahoms and the Chutiyas?",
+        "as": "আহোম আৰু চুতীয়াৰ মাজত সংঘাতৰ এটা প্ৰধান কাৰণ তলৰ কোনটো আছিল?"
+      },
+      "options": [
+        {
+          "en": "Control over Tibet",
+          "as": "তিব্বতৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over Bengal",
+          "as": "বংগৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over Manipur",
+          "as": "মণিপুৰৰ নিয়ন্ত্ৰণ"
+        },
+        {
+          "en": "Control over the Sadiya region",
+          "as": "শদিয়া অঞ্চলৰ নিয়ন্ত্ৰণ"
+        }
+      ],
+      "correct": 3,
+      "explanation": {
+        "en": "Control over the Sadiya region was a major cause of Ahom-Chutiya conflict.",
+        "as": "শদিয়া অঞ্চলৰ নিয়ন্ত্ৰণ আহোম-চুতীয়া সংঘাতৰ এটা প্ৰধান কাৰণ আছিল।"
+      }
+    },
+    {
+      "id": "assam-history-medieval-207",
+      "q": {
+        "en": "The 'Ankiya Naat' is a form of which of the following?",
+        "as": "'অংকীয়া নাট' তলৰ কোনটোৰ এটা ৰূপ?"
+      },
+      "options": [
+        {
+          "en": "Epic poetry",
+          "as": "মহাকাব্য"
+        },
+        {
+          "en": "One-act Assamese drama",
+          "as": "একাংকিক অসমীয়া নাটক"
+        },
+        {
+          "en": "Devotional song",
+          "as": "ভক্তিমূলক গীত"
+        },
+        {
+          "en": "Folk dance",
+          "as": "লোকনৃত্য"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Ankiya Naat is a one-act Assamese drama form created by Sankardev.",
+        "as": "অংকীয়া নাট শংকৰদেৱৰ দ্বাৰা সৃষ্ট একাংকিক অসমীয়া নাটকৰ ৰূপ।"
+      }
+    },
+    {
+      "id": "assam-folk-culture-078",
+      "q": {
+        "en": "Which form of Assamese folk art uses puppets to tell stories?",
+        "as": "কোন অসমীয়া লোক-কলা কাহিনী কোৱাৰ বাবে পুতলা ব্যৱহাৰ কৰে?"
+      },
+      "options": [
+        {
+          "en": "Kushan",
+          "as": "কুশান"
+        },
+        {
+          "en": "Putala Naach",
+          "as": "পুতলা নাচ"
+        },
+        {
+          "en": "Ojapali",
+          "as": "ওজাপালি"
+        },
+        {
+          "en": "Bhaona",
+          "as": "ভাওনা"
+        }
+      ],
+      "correct": 1,
+      "explanation": {
+        "en": "Putala Naach is the puppet theatre of Assam.",
+        "as": "পুতলা নাচ অসমৰ পুতলী-নাট্য।"
+      }
+    },
+    {
+      "id": "indian-assam-economy-127",
+      "q": {
+        "en": "Bongaigaon Refinery is located in which district of Assam?",
+        "as": "বঙাইগাঁও শোধনাগাৰ অসমৰ কোন জিলাত অৱস্থিত?"
+      },
+      "options": [
+        {
+          "en": "Chirang",
+          "as": "চিৰাং"
+        },
+        {
+          "en": "Bongaigaon",
+          "as": "বঙাইগাঁও"
+        },
+        {
+          "en": "Kokrajhar",
+          "as": "কোকৰাঝাৰ"
+        },
+        {
+          "en": "Dhubri",
+          "as": "ধুবুৰী"
+        }
+      ],
+      "correct": 0,
+      "explanation": {
+        "en": "Bongaigaon Refinery is located in Chirang district.",
+        "as": "বঙাইগাঁও শোধনাগাৰ চিৰাং জিলাত অৱস্থিত।"
+      }
+    }
+  ]
+}

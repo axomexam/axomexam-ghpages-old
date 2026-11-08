@@ -155,6 +155,7 @@ const CONFIG = {
   EXAMS: {
     DIR: "data/exams",
     INDEX: "data/exams/index.json",
+    MOCK_SETS_DIR: "data/exam-mock-sets",
     OWNER: "axomexam",
     REPO: "axomexam.github.io",
     BRANCH: "main",
