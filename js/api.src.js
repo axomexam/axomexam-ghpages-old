@@ -135,7 +135,8 @@ const API = (() => {
 
   /* Tiny manifest: exam-mock-sets/<examId>/index.json lists the published set
      numbers, so the runtime learns how many sets exist in one small request
-     instead of probing set-1..set-N (each ~110 KB) one after another. */
+     instead of probing set-1..set-N (each ~110 KB) one after another. Returns
+     { sets, questions } or null. */
   async function getExamMockIndex(examId) {
     const dir = (CONFIG.EXAMS && CONFIG.EXAMS.MOCK_SETS_DIR) || "data/exam-mock-sets";
     const rel = `${dir}/${examId}/index.json`;
@@ -149,7 +150,10 @@ const API = (() => {
         : Array.isArray(data)
           ? data
           : null;
-      return list ? list.filter((n) => Number.isInteger(n) && n > 0) : null;
+      if (!list) return null;
+      const sets = list.filter((n) => Number.isInteger(n) && n > 0);
+      const questions = Number.isInteger(data && data.questions) ? data.questions : 0;
+      return { sets, questions };
     } catch {
       return null;
     }

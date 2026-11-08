@@ -6,7 +6,7 @@
     "durationMinutes": 120,
     "totalMarks": 50,
     "marksPerQuestion": 0.5,
-    "negativeMarking": false,
+    "negativeMarking": 0,
     "sections": [
       {
         "id": "assam-history-geography-culture",

@@ -193,10 +193,11 @@ function writeSet(dir, n, payload) {
   return true;
 }
 
-/* A tiny manifest so the runtime can learn how many sets exist with one small
-   request instead of probing set-1..set-N sequentially, each ~110 KB. */
-function writeManifest(dir, examId, sets) {
-  const payload = { exam: examId, count: sets, sets: Array.from({ length: sets }, (_, i) => i + 1) };
+/* A tiny manifest so the runtime can learn how many sets exist (and how many
+   questions each set carries) with one small request instead of probing
+   set-1..set-N sequentially, each ~110 KB. */
+function writeManifest(dir, examId, sets, questions) {
+  const payload = { exam: examId, count: sets, questions: questions || 0, sets: Array.from({ length: sets }, (_, i) => i + 1) };
   const bytes = JSON.stringify(payload, null, 2) + "\n";
   const file = path.join(dir, "index.json");
   const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
@@ -220,7 +221,7 @@ function blueprintMeta(bp) {
     durationMinutes: bp.durationMinutes,
     totalMarks: bp.totalMarks,
     marksPerQuestion: bp.marksPerQuestion,
-    negativeMarking: !!bp.negativeMarking,
+    negativeMarking: bp.negativeMarking || 0,
     sections: bp.sections.map((s) => ({ id: s.id, questions: s.questions, label: s.label })),
   };
 }
@@ -236,8 +237,9 @@ function buildBlueprintSets(exam, bp, dir) {
   });
 
   const total = perSection.reduce((n, ps) => n + ps.need, 0);
-  if (total !== QUESTIONS_PER_SET) {
-    throw new Error(`${exam.id}: blueprint sections total ${total}, expected ${QUESTIONS_PER_SET}`);
+  const expected = bp.totalQuestions || QUESTIONS_PER_SET;
+  if (total !== expected) {
+    throw new Error(`${exam.id}: blueprint sections total ${total}, expected ${expected}`);
   }
   const sets = Math.min(SETS_PER_EXAM, Math.min(...perSection.map((ps) => Math.floor(ps.order.length / ps.need))));
   const meta = blueprintMeta(bp);
@@ -251,7 +253,7 @@ function buildBlueprintSets(exam, bp, dir) {
   }
 
   const detail = perSection.map((ps) => `${ps.id}=${ps.need}`).join(", ");
-  return { sets, changed, note: `blueprint [${detail}]` };
+  return { sets, changed, questions: total, note: `blueprint [${detail}]` };
 }
 
 /* ---------- legacy mode (no blueprint) ---------- */
@@ -278,7 +280,7 @@ function buildLegacySets(exam, dir) {
     const questions = order.slice((n - 1) * QUESTIONS_PER_SET, n * QUESTIONS_PER_SET);
     if (writeSet(dir, n, { setNumber: n, title: `Full Paper Set ${n}`, exam: exam.id, questions })) changed++;
   }
-  return { sets, changed, note: `pool ${pool.length}` };
+  return { sets, changed, questions: QUESTIONS_PER_SET, note: `pool ${pool.length}` };
 }
 
 function main() {
@@ -295,7 +297,7 @@ function main() {
     const bp = readBlueprint(exam.id);
     const built = bp ? buildBlueprintSets(exam, bp, dir) : buildLegacySets(exam, dir);
     changed += built.changed;
-    if (writeManifest(dir, exam.id, built.sets)) changed++;
+    if (writeManifest(dir, exam.id, built.sets, built.questions)) changed++;
     report.push(`${exam.id}: ${built.note} | sets ${built.sets}`);
   }
 
