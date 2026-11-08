@@ -26,6 +26,11 @@
         "en": "Assam Police Constable (UB & AB) Recruitment Exam 2026 — book front cover",
         "as": "অসম আৰক্ষী কনিষ্টবল (UB আৰু AB) নিযুক্তি পৰীক্ষা ২০২৬ — কিতাপৰ বেটুপাত"
       },
+      "logo": "/images/exams/assam-police-logo.webp",
+      "logoAlt": {
+        "en": "Assam Police official logo",
+        "as": "অসম আৰক্ষী চৰকাৰী ল'গ'"
+      },
       "color": "#2563eb",
       "icon": "AP",
       "status": "available",
@@ -2104,6 +2109,11 @@
         "en": "APSC Combined Competitive Exam (CCE) — book front cover",
         "as": "APSC সংযুক্ত প্ৰতিযোগিতামূলক পৰীক্ষা (CCE) — কিতাপৰ বেটুপাত"
       },
+      "logo": "/images/exams/apsc-logo.webp",
+      "logoAlt": {
+        "en": "APSC official logo",
+        "as": "APSC চৰকাৰী ল'গ'"
+      },
       "color": "#d97706",
       "icon": "APSC",
       "status": "coming-soon",
@@ -2123,6 +2133,11 @@
       "coverAlt": {
         "en": "Assam TET (Teacher Eligibility Test) — book front cover",
         "as": "অসম TET (শিক্ষক যোগ্যতা পৰীক্ষা) — কিতাপৰ বেটুপাত"
+      },
+      "logo": "/images/exams/assam-tet-logo.webp",
+      "logoAlt": {
+        "en": "Assam TET official logo",
+        "as": "অসম TET চৰকাৰী ল'গ'"
       },
       "color": "#0d9488",
       "icon": "TET",
@@ -2144,6 +2159,11 @@
         "en": "A Handbook of Recruitment Examination (DME, DHS, AYUSH & NHM) — book front cover",
         "as": "নিযুক্তি পৰীক্ষাৰ হাতপুথি (DME, DHS, AYUSH আৰু NHM) — কিতাপৰ বেটুপাত"
       },
+      "logo": "/images/exams/dhs-dme-logo.webp",
+      "logoAlt": {
+        "en": "DHS & DME official logo",
+        "as": "DHS আৰু DME চৰকাৰী ল'গ'"
+      },
       "color": "#10b981",
       "icon": "DHS",
       "status": "coming-soon",
@@ -2163,6 +2183,11 @@
       "coverAlt": {
         "en": "Guwahati High Court Gr-III Assam Judicial Service Exam Recruitment — book front cover",
         "as": "গুৱাহাটী উচ্চ ন্যায়ালয় গ্ৰেড-III অসম ন্যায়িক সেৱা পৰীক্ষা নিযুক্তি — কিতাপৰ বেটুপাত"
+      },
+      "logo": "/images/exams/guwahati-hc-logo.webp",
+      "logoAlt": {
+        "en": "Guwahati High Court official logo",
+        "as": "গুৱাহাটী উচ্চ ন্যায়ালয় চৰকাৰী ল'গ'"
       },
       "color": "#8b5cf6",
       "icon": "HC",
@@ -2184,6 +2209,11 @@
         "en": "SSC GD Constable Recruitment Handbook — book front cover",
         "as": "SSC GD কনিষ্টবল নিযুক্তি হাতপুথি — কিতাপৰ বেটুপাত"
       },
+      "logo": "/images/exams/ssc-logo.webp",
+      "logoAlt": {
+        "en": "SSC official logo",
+        "as": "SSC চৰকাৰী ল'গ'"
+      },
       "color": "#ef4444",
       "icon": "SSC",
       "status": "coming-soon",
@@ -2203,6 +2233,11 @@
       "coverAlt": {
         "en": "Indian Railways Group D RRB Exam Recruitment Handbook — book front cover",
         "as": "ভাৰতীয় ৰে'লৱে গ্ৰুপ D RRB পৰীক্ষা নিযুক্তি হাতপুথি — কিতাপৰ বেটুপাত"
+      },
+      "logo": "/images/exams/railway-logo.webp",
+      "logoAlt": {
+        "en": "Railway official logo",
+        "as": "ৰে'লৱে চৰকাৰী ল'গ'"
       },
       "color": "#0ea5e9",
       "icon": "Rly",

@@ -380,10 +380,13 @@ function buildHubPage() {
     const available = e.status === "available" && (e.sections || []).length;
     const nSets = available ? examMockSets(e.id).length : 0;
     const color = examColorHex(e);
-    const cover = e.cover && fs.existsSync(path.join(ROOT, e.cover.replace(/^\//, ""))) ? e.cover : "";
+    const logo = e.logo && fs.existsSync(path.join(ROOT, String(e.logo).replace(/^\//, ""))) ? String(e.logo) : "";
+    const cover = logo || (e.cover && fs.existsSync(path.join(ROOT, e.cover.replace(/^\//, ""))) ? e.cover : "");
+    const thumbAlt = logo ? (loc(e.logoAlt) || loc(e.coverAlt) || loc(e.title)) : (loc(e.coverAlt) || loc(e.title));
+    const fallback = `<span class="exw-thumb-fallback" aria-hidden="true">${escapeHtml(e.icon || loc(e.title).slice(0, 3).toUpperCase())}</span>`;
     const thumb = cover
-      ? `<img class="exw-thumb-img" src="${cover}" alt="${escapeHtml(loc(e.coverAlt) || loc(e.title))}" loading="lazy" decoding="async">`
-      : `<span class="exw-thumb-fallback" aria-hidden="true">${escapeHtml(e.icon || loc(e.title).slice(0, 3).toUpperCase())}</span>`;
+      ? `${fallback}<img class="exw-thumb-img" src="${cover}" alt="${escapeHtml(thumbAlt)}" loading="lazy" decoding="async">`
+      : fallback;
     const badge = available
       ? `<span class="exw-badge exw-badge-live">${nSets} full papers</span>`
       : `<span class="exw-badge exw-badge-soon">Coming Soon</span>`;
@@ -427,6 +430,38 @@ function buildHubPage() {
   );
 
   return normaliseLinks(`${head}${MARKER}\n${ld}${shell.mid}${main}\n\n${credit}${shell.postFooter}`);
+}
+
+/* Exam landing hero for the static page. Mirrors the runtime .exw-hero so a
+   visitor without JavaScript sees the same logo, title and stats. */
+function examHeroHTML(exam, nSets) {
+  const examEn = loc(exam.title);
+  const examAs = locAs(exam.title);
+  const subEn = loc(exam.subtitle);
+  const subAs = locAs(exam.subtitle);
+  const color = examColorHex(exam);
+  const logo = exam.logo && fs.existsSync(path.join(ROOT, String(exam.logo).replace(/^\//, ""))) ? String(exam.logo) : "";
+  const cover = logo || (exam.cover && fs.existsSync(path.join(ROOT, exam.cover.replace(/^\//, ""))) ? exam.cover : "");
+  const alt = logo ? (loc(exam.logoAlt) || loc(exam.coverAlt) || examEn) : (loc(exam.coverAlt) || examEn);
+  const thumb = cover
+    ? `<img src="${cover}" alt="${escapeHtml(alt)}" loading="eager" decoding="async">`
+    : `<span class="exw-hero-fallback">${escapeHtml(exam.icon || examEn.slice(0, 2).toUpperCase())}</span>`;
+  const stats = [
+    ["Full papers", String(nSets)],
+    ["Questions / set", "100"],
+    ["Languages", "অসমীয়া / EN"],
+    ["Mode", "Timed"],
+  ].map(([label, value]) => `<span class="exw-stat"><b>${escapeHtml(value)}</b>${escapeHtml(label)}</span>`).join("");
+  const sub = subAs && subAs !== subEn ? `<span class="exw-hero-sub" lang="as">${escapeHtml(subAs)}</span>` : (subEn ? `<span class="exw-hero-sub">${escapeHtml(subEn)}</span>` : "");
+  return `<div class="exw-hero" style="--c:${color}">
+      <span class="exw-hero-thumb">${thumb}</span>
+      <span class="exw-hero-body">
+        <span class="exw-hero-chip">Exam-wise Mock Test</span>
+        <h2 class="exw-hero-title">${escapeHtml(examEn)}${examAs && examAs !== examEn ? ` <span class="exw-hero-as" lang="as">${escapeHtml(examAs)}</span>` : ""}</h2>
+        ${sub}
+        <span class="exw-hero-stats">${stats}</span>
+      </span>
+    </div>`;
 }
 
 function buildExamPage(exam) {
@@ -474,6 +509,7 @@ function buildExamPage(exam) {
       <h1>${escapeHtml(examEn)}${examAs && examAs !== examEn ? ` <span class="exam-head-as">${escapeHtml(examAs)}</span>` : ""}</h1>
       <p class="page-desc">Each set is a full 100-question paper that mixes every subject of this exam — exactly like the real test. Pick a set to begin.</p>
     </div>
+    ${examHeroHTML(exam, sets.length)}
     <section class="section" style="padding-bottom:40px;">
       <div class="set-grid">${cards}</div>
     </section>

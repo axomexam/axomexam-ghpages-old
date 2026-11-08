@@ -4885,6 +4885,13 @@
     return txt || "Exam book cover";
   }
 
+  /* Alt text for the square exam logo tile. Falls back to the cover alt so a
+     coming-soon exam that has no logo still gets a sensible description. */
+  function examLogoAlt(exam, lang) {
+    const txt = ebkLang(exam && exam.logoAlt, lang) || ebkLang(exam && exam.coverAlt, lang) || ebkLang(exam && exam.title, lang);
+    return txt || "Exam logo";
+  }
+
   function examBookCardHTML(exam, i) {
     const color = examColor(exam);
     const titleEn = ebkLang(exam.title, "en");
@@ -6894,7 +6901,7 @@
       const href = `/exam-wise-mock-test/${encodeURIComponent(e.id)}`;
       const fallback = `<span class="exw-thumb-fallback" aria-hidden="true">${escapeHtml(e.icon || titleEn.slice(0, 3).toUpperCase())}</span>`;
       const thumb = logo
-        ? `${fallback}<img class="exw-thumb-img" src="${escapeHtml(logo)}" alt="${escapeHtml(examCoverAlt(e, state.lang))}" loading="lazy" decoding="async" onerror="this.remove()">`
+        ? `${fallback}<img class="exw-thumb-img" src="${escapeHtml(logo)}" alt="${escapeHtml(examLogoAlt(e, state.lang))}" loading="lazy" decoding="async" onerror="this.remove()">`
         : fallback;
       const badge = available
         ? `<span class="exw-badge exw-badge-live">${escapeHtml(t("mock.examwise.setsCount").replace("{n}", String(nSets)))}</span>`
@@ -6970,7 +6977,8 @@
     const visible = Math.max(DEFAULT_VISIBLE_SETS, ...(sets.length ? sets : [0]));
     const existing = new Set(sets);
     const color = examColor(exam);
-    const cover = exam.cover ? String(exam.cover) : (exam.logo ? String(exam.logo) : "");
+    const logo = exam.logo ? String(exam.logo) : "";
+    const cover = logo || (exam.cover ? String(exam.cover) : "");
 
     const stats = [
       { ico: `<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/>`, label: t("mock.examwise.statSets"), value: String(sets.length) },
@@ -7018,7 +7026,7 @@
 
       <div class="exw-hero" style="--c:${color}">
         <span class="exw-hero-thumb">
-          ${cover ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(examCoverAlt(exam, state.lang))}" loading="eager" decoding="async" onerror="this.remove()">` : `<span class="exw-hero-fallback">${escapeHtml(exam.icon || examEn.slice(0, 2).toUpperCase())}</span>`}
+          ${cover ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(logo ? examLogoAlt(exam, state.lang) : examCoverAlt(exam, state.lang))}" loading="eager" decoding="async" onerror="this.remove()">` : `<span class="exw-hero-fallback">${escapeHtml(exam.icon || examEn.slice(0, 2).toUpperCase())}</span>`}
         </span>
         <span class="exw-hero-body">
           <span class="exw-hero-chip">${escapeHtml(t("mock.examwise.title"))}</span>

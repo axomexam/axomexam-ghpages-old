@@ -333,7 +333,15 @@
     "Coming Soon": "শীঘ্ৰে আহি আছে",
     "Start test": "টেষ্ট আৰম্ভ কৰক",
     "Every Assam recruitment exam has its own separate mock test. Pick an exam to begin.": "অসমৰ প্ৰতিটো নিযুক্তি পৰীক্ষাৰ বাবে সুকীয়া মক টেষ্ট আছে। আৰম্ভ কৰিবলৈ এটা পৰীক্ষা বাছনি কৰক।",
-    "Practise a full timed mock test built from the exact paper of your exam. Every Assam recruitment exam — Assam Police, ADRE Grade III, ADRE Grade IV, APSC and Assam TET — has its own separate mock tests.": "আপোনাৰ পৰীক্ষাৰ প্ৰকৃত প্ৰশ্নকাকত অনুসৰি সজা সম্পূৰ্ণ সময়বদ্ধ মক টেষ্ট অনুশীলন কৰক। অসমৰ প্ৰতিটো নিযুক্তি পৰীক্ষা — অসম আৰক্ষী, ADRE গ্ৰেড III, ADRE গ্ৰেড IV, APSC আৰু অসম TET — ৰ বাবে সুকীয়া মক টেষ্ট আছে।"
+    "Practise a full timed mock test built from the exact paper of your exam. Every Assam recruitment exam — Assam Police, ADRE Grade III, ADRE Grade IV, APSC and Assam TET — has its own separate mock tests.": "আপোনাৰ পৰীক্ষাৰ প্ৰকৃত প্ৰশ্নকাকত অনুসৰি সজা সম্পূৰ্ণ সময়বদ্ধ মক টেষ্ট অনুশীলন কৰক। অসমৰ প্ৰতিটো নিযুক্তি পৰীক্ষা — অসম আৰক্ষী, ADRE গ্ৰেড III, ADRE গ্ৰেড IV, APSC আৰু অসম TET — ৰ বাবে সুকীয়া মক টেষ্ট আছে।",
+    "Exam-wise Mock Test": "পৰীক্ষা-ভিত্তিক মক টেষ্ট",
+    "Full papers": "সম্পূৰ্ণ পত্ৰ",
+    "Questions / set": "প্ৰশ্ন / ছেট",
+    "Languages": "ভাষা",
+    "Mode": "ধৰণ",
+    "Timed": "সময়বদ্ধ",
+    "100-question full paper": "১০০ প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ",
+    "Each set is a full 100-question paper that mixes every subject of this exam — exactly like the real test. Pick a set to begin.": "প্ৰতিটো ছেট ১০০ প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ, যত এই পৰীক্ষাৰ প্ৰতিটো বিষয় মিলাই দিয়া হৈছে — প্ৰকৃত পৰীক্ষাৰ দৰেই। আৰম্ভ কৰিবলৈ এটা ছেট বাছনি কৰক।"
   },
   "regex": [
     {
