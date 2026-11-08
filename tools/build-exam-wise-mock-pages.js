@@ -184,23 +184,30 @@ function qaItemHTML(q, n) {
   if (q.q && q.q.as) {
     parts.push(`<div lang="as" style="color:#64748b; font-size:0.9rem; line-height:1.6; margin-bottom:8px;">${escapeHtml(q.q.as)}</div>`);
   }
+  /* A shared figure (non-verbal series / pattern questions). */
+  if (typeof q.fig === "string" && q.fig) {
+    parts.push(`<div style="margin:6px 0; overflow-x:auto;">${q.fig}</div>`);
+  }
   const opts = Array.isArray(q.options) ? q.options : [];
   if (opts.length) {
     const rows = opts
       .map((o, i) => {
         const en = loc(o);
         const as = o && o.as ? o.as : "";
-        return `<div lang="en" style="margin:2px 0;">(${String.fromCharCode(65 + i)}) ${escapeHtml(en)}${
-          as && as !== en ? ` <span lang="as" style="color:#64748b;">${escapeHtml(as)}</span>` : ""
-        }</div>`;
+        const fig = o && typeof o.fig === "string" ? o.fig : "";
+        const text = `${escapeHtml(en)}${as && as !== en ? ` <span lang="as" style="color:#64748b;">${escapeHtml(as)}</span>` : ""}`;
+        const body = fig ? `${fig}${en ? `<span style="display:block; margin-top:2px;">${text}</span>` : ""}` : text;
+        return `<div lang="en" style="margin:2px 0;">(${String.fromCharCode(65 + i)}) ${body}</div>`;
       })
       .join("");
     parts.push(`<div style="margin-top:8px; color:#334155;">${rows}</div>`);
   }
   const correct = Number.isInteger(q.correct) ? q.correct : -1;
-  const ansEn = opts[correct] ? loc(opts[correct]) : "";
-  const ansAs = opts[correct] && opts[correct].as ? opts[correct].as : "";
-  parts.push(`<div lang="en" style="margin-top:8px;"><strong>Answer:</strong> <span>${escapeHtml(ansEn)}</span></div>`);
+  const ansOpt = opts[correct];
+  const ansEn = ansOpt ? loc(ansOpt) : "";
+  const ansAs = ansOpt && ansOpt.as ? ansOpt.as : "";
+  const ansFig = ansOpt && typeof ansOpt.fig === "string" ? ansOpt.fig : "";
+  parts.push(`<div lang="en" style="margin-top:8px;"><strong>Answer:</strong> ${ansFig}${ansEn ? `<span>${escapeHtml(ansEn)}</span>` : ""}</div>`);
   if (ansAs && ansAs !== ansEn) {
     parts.push(`<div lang="as" style="color:#64748b; font-size:0.9rem;">${escapeHtml(ansAs)}</div>`);
   }

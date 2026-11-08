@@ -72,9 +72,17 @@ function normalizeQ(item) {
   const out = {
     id: String(item.id || ""),
     q: { en: item.q.en || "", as: item.q.as || "" },
-    options: item.options.map((o) => ({ en: o.en || "", as: o.as || "" })),
+    options: item.options.map((o) => {
+      const opt = { en: o.en || "", as: o.as || "" };
+      /* Non-verbal questions carry the shape as an inline SVG on the option
+         (and sometimes on the question itself). Keep it so the runtime and the
+         static page can draw the figure. */
+      if (typeof o.fig === "string" && o.fig) opt.fig = o.fig;
+      return opt;
+    }),
     correct: item.correct,
   };
+  if (typeof item.fig === "string" && item.fig) out.fig = item.fig;
   if (item.explanation) out.explanation = { en: item.explanation.en || "", as: item.explanation.as || "" };
   return out;
 }
