@@ -1,0 +1,12 @@
+{
+  "exam": "dhs-dme-grade-4",
+  "count": 5,
+  "questions": 50,
+  "sets": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

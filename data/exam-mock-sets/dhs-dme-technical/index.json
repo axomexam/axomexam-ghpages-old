@@ -1,0 +1,12 @@
+{
+  "exam": "dhs-dme-technical",
+  "count": 5,
+  "questions": 100,
+  "sets": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}
