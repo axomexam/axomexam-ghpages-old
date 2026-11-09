@@ -51,6 +51,22 @@
   const EXAM_WISE_FORCE_UPGRADE = false;
   const EXAM_WISE_LIVE = ["assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme", "dhs-dme-technical", "dhs-dme-grade-4"];
   const examWiseIsLive = (id) => !EXAM_WISE_FORCE_UPGRADE && EXAM_WISE_LIVE.indexOf(id) !== -1;
+  /* Curated hub order. Live exams follow this priority (any live exam not
+     listed ranks after those that are); every Coming Soon exam is pushed to
+     the end, so it can never sit above a live paper. An exam takes its slot
+     as soon as its first set is published. */
+  const EXAM_HUB_ORDER = ["assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme-technical", "dhs-dme", "dhs-dme-grade-4", "guwahati-hc"];
+  const orderExamWiseHub = (exams) => exams
+    .map((e, i) => ({ e, i }))
+    .sort((a, b) => {
+      const rank = (x) => {
+        if (!examIsAvailable(x.e)) return 1000;
+        const j = EXAM_HUB_ORDER.indexOf(x.e.id);
+        return j === -1 ? 500 : j;
+      };
+      return (rank(a) - rank(b)) || (a.i - b.i);
+    })
+    .map((x) => x.e);
   /* Number of real downloadable PDF files shipped with the site. Kept in
      sync by tools/inject-static-questions.js so the homepage never claims
      more PDFs than it actually serves. */
@@ -6924,7 +6940,7 @@
   }
 
   async function renderExamWisePicker(main) {
-    const exams = (state.exams || []);
+    const exams = orderExamWiseHub(state.exams || []);
     const counts = {};
     await Promise.all(exams.filter((e) => examIsAvailable(e)).map(async (e) => {
       counts[e.id] = await detectExamMockSets(e.id);
@@ -9305,6 +9321,11 @@
      rendered from this array; the labels follow the universal (interface)
      language toggle through applyStaticI18n(). */
   const NOTIFICATIONS = [
+    {
+      title: { en: "Exam-wise free mock tests are live — test now", as: "পৰীক্ষা-ভিত্তিক বিনামূলীয়া মক টেষ্ট উপলব্ধ — এতিয়াই পৰীক্ষা দিয়ক" },
+      desc: { en: "Full-paper timed mock tests for Assam Police, ADRE Grade III & IV and DHS & DME, with bilingual questions and instant scoring.", as: "অসম আৰক্ষী, ADRE তৃতীয় আৰু চতুৰ্থ শ্ৰেণী আৰু DHS আৰু DME-ৰ বাবে সম্পূৰ্ণ প্ৰশ্নকাকতৰ সময়বদ্ধ মক টেষ্ট, দ্বিভাষিক প্ৰশ্ন আৰু তৎক্ষণাত ফলাফলসহ।" },
+      href: "/exam-wise-mock-test/",
+    },
     {
       title: { en: "New app version 2.6 available — update now", as: "এপৰ নতুন সংস্কৰণ 2.6 উপলব্ধ — এতিয়াই আপডেট কৰক" },
       desc: { en: "Floating bottom bar, blue footer, faster loading and bug fixes. Tap to download the latest APK.", as: "ফ্ল'টিং তলৰ বাৰ, নীলা ফুটাৰ, দ্ৰুত লোডিং আৰু বাগ ফিক্স। শেহতীয়া APK ডাউনল'ড কৰিবলৈ টিপক।" },

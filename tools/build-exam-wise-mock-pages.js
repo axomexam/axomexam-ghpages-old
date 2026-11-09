@@ -247,7 +247,31 @@ const examsData = readJSON(path.join(ROOT, "data", "exams", "index.json")) || { 
    available ones get their own sub-pages, the rest render a Coming Soon
    panel at runtime and are marked with a badge here. */
 const ALL_EXAMS = (examsData.exams || []);
-const EXAMS = ALL_EXAMS.filter((e) => e.status === "available" && (e.sections || []).length);
+
+/* Curated display order for the hub: the priority list first, any other live
+   exam next, and every Coming Soon exam last. An exam therefore drops into its
+   slot the moment its first set is published, and a Coming Soon exam can never
+   sit above a live one. */
+const EXAM_HUB_ORDER = [
+  "assam-police",
+  "adre-grade-3",
+  "adre-grade-4",
+  "dhs-dme-technical",
+  "dhs-dme",
+  "dhs-dme-grade-4",
+  "guwahati-hc",
+];
+const examIsLive = (e) => e.status === "available" && (e.sections || []).length;
+const examHubRank = (e) => {
+  if (!examIsLive(e)) return 1000;
+  const i = EXAM_HUB_ORDER.indexOf(e.id);
+  return i === -1 ? 500 : i;
+};
+const hubOrderedExams = () =>
+  ALL_EXAMS.map((e, i) => ({ e, i }))
+    .sort((a, b) => (examHubRank(a.e) - examHubRank(b.e)) || (a.i - b.i))
+    .map((x) => x.e);
+const EXAMS = hubOrderedExams().filter(examIsLive);
 
 /* ---------- page builders ---------- */
 
@@ -442,11 +466,11 @@ function setContent(exam, setNumber) {
 function buildHubPage() {
   const url = pageURL([]);
   const title = `Exam-wise Mock Test — Assam Police & ADRE | ${SITE}`;
-  const desc = "Free exam-wise mock tests for Assam Police, ADRE Grade III and Grade IV — separate timed full papers with instant scoring and bilingual answers.";
+  const desc = "Free exam-wise mock tests for Assam Police, ADRE Grade III & IV and DHS & DME — separate timed full papers with instant scoring and bilingual answers.";
   const shell = shellParts();
   const head = setHead(shell.preLD, { title, desc, url, ogDesc: desc });
 
-  const cards = ALL_EXAMS.map((e) => {
+  const cards = hubOrderedExams().map((e) => {
     const available = e.status === "available" && (e.sections || []).length;
     const nSets = available ? examMockSets(e.id).length : 0;
     const color = examColorHex(e);
@@ -480,7 +504,7 @@ function buildHubPage() {
         { label: "Exam-wise Mock Test" },
       ])}
       <h1>Exam-wise Mock Test</h1>
-      <p class="page-desc">Practise a full timed mock test built from the exact paper of your exam. Every Assam recruitment exam — Assam Police, ADRE Grade III, ADRE Grade IV, APSC and Assam TET — has its own separate mock tests.</p>
+      <p class="page-desc">Practise a full timed mock test built from the exact paper of your exam. Every Assam recruitment exam — Assam Police, ADRE Grade III, ADRE Grade IV, DHS & DME, APSC and Assam TET — has its own separate mock tests.</p>
     </div>
     <section class="section" style="padding-bottom:40px;">
       <div class="mt-topics-head"><h2>Choose your exam</h2><p>Open an exam to start its timed mock test.</p></div>
