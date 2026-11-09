@@ -3,6 +3,7 @@
   "sourcesPage": "/sources/",
   "exams": {
     "assam-police": { "body": "SLPRB Assam", "label": "SLPRB Assam", "url": "https://slprbassam.in/" },
+    "assam-police-si": { "body": "SLPRB Assam", "label": "SLPRB Assam", "url": "https://slprbassam.in/" },
     "adre": { "body": "SLRC Assam", "label": "SLRC Assam", "url": "https://slrcassam.in/" },
     "adre-grade-3": { "body": "SLRC Assam", "label": "SLRC Assam", "url": "https://slrcassam.in/" },
     "adre-grade-4": { "body": "SLRC Assam", "label": "SLRC Assam", "url": "https://slrcassam.in/" },

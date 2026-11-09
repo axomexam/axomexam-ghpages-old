@@ -253,6 +253,7 @@ const ALL_EXAMS = (examsData.exams || []);
    slot the moment its first set is published, and a Coming Soon exam can never
    sit above a live one. */
 const EXAM_HUB_ORDER = [
+  "assam-police-si",
   "assam-police",
   "adre-grade-3",
   "adre-grade-4",

@@ -49,13 +49,13 @@
      1-2 hours" notice. Set EXAM_WISE_FORCE_UPGRADE to true to take the whole
      portal down again without touching the list. */
   const EXAM_WISE_FORCE_UPGRADE = false;
-  const EXAM_WISE_LIVE = ["assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme", "dhs-dme-technical", "dhs-dme-grade-4"];
+  const EXAM_WISE_LIVE = ["assam-police-si", "assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme", "dhs-dme-technical", "dhs-dme-grade-4"];
   const examWiseIsLive = (id) => !EXAM_WISE_FORCE_UPGRADE && EXAM_WISE_LIVE.indexOf(id) !== -1;
   /* Curated hub order. Live exams follow this priority (any live exam not
      listed ranks after those that are); every Coming Soon exam is pushed to
      the end, so it can never sit above a live paper. An exam takes its slot
      as soon as its first set is published. */
-  const EXAM_HUB_ORDER = ["assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme-technical", "dhs-dme", "dhs-dme-grade-4", "guwahati-hc"];
+  const EXAM_HUB_ORDER = ["assam-police-si", "assam-police", "adre-grade-3", "adre-grade-4", "dhs-dme-technical", "dhs-dme", "dhs-dme-grade-4", "guwahati-hc"];
   const orderExamWiseHub = (exams) => exams
     .map((e, i) => ({ e, i }))
     .sort((a, b) => {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T00:51:53.744Z",
+  "generatedAt": "2026-11-09T09:00:24.128Z",
   "topicCounts": {
     "gk/assam-literature/ancient-pre-vaishnavite-sec/charyapada-folk-songs": 37,
     "gk/assam-literature/ancient-pre-vaishnavite-sec/early-poets-translations": 37,
@@ -404,6 +404,31 @@
     "assam-police/general-knowledge-current-affairs/sports-awards": 165,
     "assam-police/general-knowledge-current-affairs/important-days-capitals-currencies": 286,
     "assam-police/general-knowledge-current-affairs": 1261,
+    "assam-police-si/logical-reasoning/verbal-reasoning": 200,
+    "assam-police-si/logical-reasoning/non-verbal-reasoning": 73,
+    "assam-police-si/logical-reasoning": 273,
+    "assam-police-si/elementary-mathematics/number-system": 14,
+    "assam-police-si/elementary-mathematics/lcm-hcf": 17,
+    "assam-police-si/elementary-mathematics/percentage": 18,
+    "assam-police-si/elementary-mathematics/profit-loss": 15,
+    "assam-police-si/elementary-mathematics/ratio-proportion": 15,
+    "assam-police-si/elementary-mathematics/average": 20,
+    "assam-police-si/elementary-mathematics/simple-compound-interest": 13,
+    "assam-police-si/elementary-mathematics/time-work": 17,
+    "assam-police-si/elementary-mathematics/time-speed-distance": 23,
+    "assam-police-si/elementary-mathematics": 152,
+    "assam-police-si/general-knowledge-science-current-affairs/indian-polity-constitution": 28,
+    "assam-police-si/general-knowledge-science-current-affairs/indian-history-national-movement": 70,
+    "assam-police-si/general-knowledge-science-current-affairs/indian-world-geography": 8,
+    "assam-police-si/general-knowledge-science-current-affairs/general-science-technology": 200,
+    "assam-police-si/general-knowledge-science-current-affairs/indian-history-polity-economy": 200,
+    "assam-police-si/general-knowledge-science-current-affairs/current-affairs": 136,
+    "assam-police-si/general-knowledge-science-current-affairs/static-gk": 191,
+    "assam-police-si/general-knowledge-science-current-affairs": 833,
+    "assam-police-si/assam-history-geography-culture/assam-history": 200,
+    "assam-police-si/assam-history-geography-culture/assam-geography": 199,
+    "assam-police-si/assam-history-geography-culture/assam-culture": 128,
+    "assam-police-si/assam-history-geography-culture": 527,
     "adre-grade-3/elementary-mathematics/number-system": 67,
     "adre-grade-3/elementary-mathematics/simplification-fractions": 64,
     "adre-grade-3/elementary-mathematics/lcm-hcf": 61,
@@ -651,6 +676,6 @@
     "dhs-dme/computer-knowledge/ms-office": 80,
     "dhs-dme/computer-knowledge": 160
   },
-  "examsTotal": 30377,
-  "topicsTotal": 608
+  "examsTotal": 32162,
+  "topicsTotal": 629
 }
