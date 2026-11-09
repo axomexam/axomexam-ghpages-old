@@ -139,6 +139,21 @@ const caNames = new Map();
   }
 }
 
+/* exam id -> question count in its full paper (from the mock-set manifest). */
+const examPaperCount = new Map();
+{
+  const dir = path.join(ROOT, "data", "exam-mock-sets");
+  let ids = [];
+  try { ids = fs.readdirSync(dir).filter((d) => fs.existsSync(path.join(dir, d, "index.json"))); } catch (e) {}
+  for (const id of ids) {
+    const m = readJSON(path.join(dir, id, "index.json"));
+    if (m && Number.isInteger(m.questions) && m.questions > 0) examPaperCount.set(id, m.questions);
+  }
+}
+
+const AS_DIGITS = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+const toAsDigits = (n) => String(n).replace(/\d/g, (d) => AS_DIGITS[+d]);
+
 /* topic-content description keyed by the topic path inside a category */
 const topicDescAs = new Map();
 for (const cat of fs.readdirSync(path.join(ROOT, "data", "content"))) {
@@ -445,25 +460,27 @@ function headFor(rel) {
     const examId = segs[1] || "";
     const setSeg = segs[2] || "";
     const examAs = examId ? (examNames.get(examId) || {}).as || "" : "";
+    const nq = examId ? (examPaperCount.get(examId) || 100) : 100;
+    const nqAs = toAsDigits(nq);
     const setMatch = /^set-(\d+)$/.exec(setSeg);
     if (setMatch && examAs) {
       const n = setMatch[1];
       return {
         title: `${examAs} সম্পূৰ্ণ পত্ৰ মক টেষ্ট — ছেট ${n} | axomexam`,
-        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট ছেট ${n} — ১০০ টা দ্বিভাষিক প্ৰশ্ন, সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু উত্তৰৰ পৰ্যালোচনা।`,
+        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট ছেট ${n} — ${nqAs} টা দ্বিভাষিক প্ৰশ্ন, সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু উত্তৰৰ পৰ্যালোচনা।`,
         h1: `${examAs} — সম্পূৰ্ণ পত্ৰ ছেট ${n}`,
       };
     }
     if (examAs) {
       return {
         title: `${examAs} মক টেষ্ট — সম্পূৰ্ণ পত্ৰ ছেট | axomexam`,
-        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — ১০০ প্ৰশ্নৰ ছেটত সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
+        meta: `${examAs} পৰীক্ষাৰ বাবে বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — ${nqAs} প্ৰশ্নৰ ছেটত সকলো বিষয়, তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
         h1: `${examAs} মক টেষ্ট`,
       };
     }
     return {
-      title: `পৰীক্ষা-ভিত্তিক মক টেষ্ট — অসম আৰক্ষী, ADRE গ্ৰেড III আৰু IV | axomexam`,
-      meta: `অসম আৰক্ষী, ADRE গ্ৰেড III আৰু ADRE গ্ৰেড IV ৰ বাবে সুকীয়া বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
+      title: `পৰীক্ষা-ভিত্তিক মক টেষ্ট — অসম আৰক্ষী, ADRE আৰু DHS-DME | axomexam`,
+      meta: `অসম আৰক্ষী, ADRE গ্ৰেড III, ADRE গ্ৰেড IV আৰু DHS-DME ৰ বাবে সুকীয়া বিনামূলীয়া সম্পূৰ্ণ পত্ৰ মক টেষ্ট — তৎক্ষণাৎ ফলাফল আৰু দ্বিভাষিক উত্তৰৰ পৰ্যালোচনা।`,
       h1: `পৰীক্ষা-ভিত্তিক মক টেষ্ট`,
     };
   }
