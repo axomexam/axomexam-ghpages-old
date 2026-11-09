@@ -341,6 +341,7 @@
     "Mode": "ধৰণ",
     "Timed": "সময়বদ্ধ",
     "100-question full paper": "১০০ প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ",
+    "Live": "উপলব্ধ",
     "Each set is a full 100-question paper that mixes every subject of this exam — exactly like the real test. Pick a set to begin.": "প্ৰতিটো ছেট ১০০ প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ, যত এই পৰীক্ষাৰ প্ৰতিটো বিষয় মিলাই দিয়া হৈছে — প্ৰকৃত পৰীক্ষাৰ দৰেই। আৰম্ভ কৰিবলৈ এটা ছেট বাছনি কৰক।"
   },
   "regex": [
@@ -583,6 +584,14 @@
     {
       "re": "^(\\d+) subjects$",
       "to": "$1 টা বিষয়"
+    },
+    {
+      "re": "^(\\d+)-question full paper$",
+      "to": "$1 প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ"
+    },
+    {
+      "re": "^(\\d+)-question full paper × (\\d+) sets$",
+      "to": "$1 প্ৰশ্নৰ সম্পূৰ্ণ পত্ৰ × $2 ছেট"
     }
   ]
 }

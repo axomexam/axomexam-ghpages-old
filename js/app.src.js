@@ -6960,10 +6960,10 @@
         ? `${fallback}<img class="exw-thumb-img" src="${escapeHtml(logo)}" alt="${escapeHtml(examLogoAlt(e, state.lang))}" loading="lazy" decoding="async" onerror="this.remove()">`
         : fallback;
       const badge = available
-        ? `<span class="exw-badge exw-badge-live">${escapeHtml(t("mock.examwise.setsCount").replace("{n}", String(nSets)))}</span>`
+        ? `<span class="exw-badge exw-badge-live">${escapeHtml(t("mock.examwise.live"))}</span>`
         : `<span class="exw-badge exw-badge-soon">${escapeHtml(t("exams.comingSoon"))}</span>`;
       const meta = available
-        ? escapeHtml(tf("mock.examwise.fullPaperMetaN", { n: nQ }))
+        ? escapeHtml(tf("mock.examwise.fullPaperMetaSets", { n: nQ, s: nSets }))
         : escapeHtml(subEn || t("exams.comingSoon"));
       return `
         <a class="exw-card reveal ${available ? "" : "is-soon"}" style="--c:${examColor(e)}" data-delay="${i * 50}" href="${href}">

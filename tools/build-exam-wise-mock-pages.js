@@ -482,9 +482,9 @@ function buildHubPage() {
       ? `${fallback}<img class="exw-thumb-img" src="${cover}" alt="${escapeHtml(thumbAlt)}" loading="lazy" decoding="async">`
       : fallback;
     const badge = available
-      ? `<span class="exw-badge exw-badge-live">${nSets} full papers</span>`
+      ? `<span class="exw-badge exw-badge-live">Live</span>`
       : `<span class="exw-badge exw-badge-soon">Coming Soon</span>`;
-    const meta = available ? `${examQuestionCount(e.id)}-question full paper` : escapeHtml(loc(e.subtitle) || "Coming Soon");
+    const meta = available ? `${examQuestionCount(e.id)}-question full paper × ${nSets} sets` : escapeHtml(loc(e.subtitle) || "Coming Soon");
     const href = `/exam-wise-mock-test/${encodeURIComponent(e.id)}`;
     return `<a class="exw-card${available ? "" : " is-soon"}" style="--c:${color}" href="${href}">
         <span class="exw-thumb">${thumb}${badge}</span>
