@@ -68,12 +68,16 @@ const SKIP_DIRS = new Set([
 ]);
 
 /* Pages that must not get a twin: error page, and the routes that are
-   deliberately noindex (they have no unique content of their own). */
+   deliberately noindex (they have no unique content of their own).
+   topic/trending/assam-freedom-fighters is indexable and DOES have a twin, but
+   that twin is written by tools/build-trending-topic-pages.js (Assamese-only
+   body); listing it here stops this tool from overwriting it. */
 const SKIP_ROUTES = new Set([
   "404.html",
   "search",
   "trending",
   "topic/trending/assam-gk-special",
+  "topic/trending/assam-freedom-fighters",
   "topic/english/grammar-vocab/tenses",
 ]);
 
