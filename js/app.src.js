@@ -4918,6 +4918,41 @@
     return !!(exam && exam.status === "available" && (exam.sections || []).length);
   }
 
+  /* Free Exam Books readiness is kept separate from exam.status on purpose:
+     exam.status also gates the exam-wise mock tests and the hero question
+     total, so flipping it would take those down too. Only these three books
+     are shown as ready in the /exams/ listing; every other book shows
+     "Coming Soon" while its content stays unpublished. */
+  const EXAM_BOOKS_READY = ["assam-police", "adre-grade-3", "adre-grade-4"];
+  function examBookIsReady(exam) {
+    return !!(exam && EXAM_BOOKS_READY.indexOf(exam.id) !== -1 && (exam.sections || []).length);
+  }
+
+  /* The Coming Soon panel shared by the exam book page and every section page
+     of a book that is not ready yet. */
+  function examBookComingSoonHTML(exam) {
+    const color = examColor(exam);
+    const titleEn = ebkLang(exam.title, "en");
+    const titleAs = ebkLang(exam.title, "as");
+    const subEn = ebkLang(exam.subtitle, "en");
+    return `
+      <div class="page-head">
+        <nav class="breadcrumb">
+          <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
+          <a href="/exams">${t("nav.exams")}</a><span class="bc-sep">/</span>
+          <span>${escapeHtml(titleEn)}</span>
+        </nav>
+      </div>
+      <div class="exam-soon-panel" style="--ebk:${color}">
+        <span class="exam-soon-ico">${EXAM_SECTION_ICONS.default}</span>
+        <h1>${escapeHtml(titleEn)}${titleAs && titleAs !== titleEn ? ` <span class="exam-soon-as">${escapeHtml(titleAs)}</span>` : ""}</h1>
+        ${subEn ? `<p class="exam-soon-sub">${escapeHtml(subEn)}</p>` : ""}
+        <span class="exam-soon-chip">${t("exams.comingSoon")}</span>
+        <p class="exam-soon-msg">${escapeHtml(t("exams.comingSoonMsg"))}</p>
+        <a class="btn btn-accent" href="/exams">${t("exams.backToExams")}</a>
+      </div>`;
+  }
+
   function examCoverAlt(exam, lang) {
     const txt = ebkLang(exam && exam.coverAlt, lang) || ebkLang(exam && exam.title, lang);
     return txt || "Exam book cover";
@@ -4935,7 +4970,7 @@
     const titleEn = ebkLang(exam.title, "en");
     const titleAs = ebkLang(exam.title, "as");
     const subEn = ebkLang(exam.subtitle, "en");
-    const available = examIsAvailable(exam);
+    const available = examBookIsReady(exam);
     const statusLabel = available ? t("exams.readNow") : t("exams.comingSoon");
     const name = normalizeText(titleEn + " " + titleAs + " " + subEn);
     const cover = exam.cover ? String(exam.cover) : "";
@@ -5169,8 +5204,8 @@
     }
 
     const sorted = exams.slice().sort((a, b) => {
-      const av = examIsAvailable(a) ? 0 : 1;
-      const bv = examIsAvailable(b) ? 0 : 1;
+      const av = examBookIsReady(a) ? 0 : 1;
+      const bv = examBookIsReady(b) ? 0 : 1;
       if (av !== bv) return av - bv;
       return ebkLang(a.title, "en").localeCompare(ebkLang(b.title, "en"));
     });
@@ -5488,25 +5523,10 @@
     const titleAs = ebkLang(exam.title, "as");
     const subEn = ebkLang(exam.subtitle, "en");
     const subAs = ebkLang(exam.subtitle, "as");
-    const available = examIsAvailable(exam);
+    const available = examBookIsReady(exam);
 
     if (!available) {
-      main.innerHTML = `
-        <div class="page-head">
-          <nav class="breadcrumb">
-            <a href="/">${t("breadcrumb.home")}</a><span class="bc-sep">/</span>
-            <a href="/exams">${t("nav.exams")}</a><span class="bc-sep">/</span>
-            <span>${escapeHtml(titleEn)}</span>
-          </nav>
-        </div>
-        <div class="exam-soon-panel" style="--ebk:${color}">
-          <span class="exam-soon-ico">${EXAM_SECTION_ICONS.default}</span>
-          <h1>${escapeHtml(titleEn)}${titleAs && titleAs !== titleEn ? ` <span class="exam-soon-as">${escapeHtml(titleAs)}</span>` : ""}</h1>
-          ${subEn ? `<p class="exam-soon-sub">${escapeHtml(subEn)}</p>` : ""}
-          <span class="exam-soon-chip">${t("exams.comingSoon")}</span>
-          <p class="exam-soon-msg">${escapeHtml(t("exams.comingSoonMsg"))}</p>
-          <a class="btn btn-accent" href="/exams">${t("exams.backToExams")}</a>
-        </div>`;
+      main.innerHTML = examBookComingSoonHTML(exam);
       return;
     }
 
@@ -5710,6 +5730,11 @@
     const exam = findExam(examId);
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
 
+    if (exam && !examBookIsReady(exam)) {
+      main.innerHTML = examBookComingSoonHTML(exam);
+      return;
+    }
+
     if (!exam || !sec) {
       main.innerHTML = `
         <div class="page-head" style="text-align:center; max-width:720px; margin:0 auto; padding:40px 16px; box-sizing:border-box;">
@@ -5843,6 +5868,11 @@
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
     const sub = sec ? (sec.subcategories || []).find((s) => s.id === subId) : null;
 
+    if (exam && !examBookIsReady(exam)) {
+      main.innerHTML = examBookComingSoonHTML(exam);
+      return;
+    }
+
     if (!exam || !sec || !sub) {
       main.innerHTML = `
         <div class="page-head" style="text-align:center; max-width:720px; margin:0 auto; padding:40px 16px; box-sizing:border-box;">
@@ -5959,6 +5989,11 @@
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
     const sub = sec ? (sec.subcategories || []).find((s) => s.id === subId) : null;
     const child = sub ? (sub.subcategories || []).find((s) => s.id === childId) : null;
+
+    if (exam && !examBookIsReady(exam)) {
+      main.innerHTML = examBookComingSoonHTML(exam);
+      return;
+    }
 
     if (!exam || !sec || !sub || !child) {
       main.innerHTML = `
