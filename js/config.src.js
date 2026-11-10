@@ -40,7 +40,7 @@ const CONFIG = {
     DOWNLOADS: ["brahmaputra-river.pdf", "country-capital.pdf"],
     /* Extra trending topics — JSON files inside /data/trending-topics/ */
     TRENDING_BASE: "/data/trending-topics/",
-    TRENDING: ["assam-gk-special"],
+    TRENDING: ["assam-gk-special", "assam-freedom-fighters"],
     /* Previous year questions — /data/previous-year/<exam>/<year>/<file>.pdf */
     PYEAR_BASE: "/data/previous-year/",
     /* Mock test sets — /data/mock-test/<category>/<subcategory>/set-<n>.json */
