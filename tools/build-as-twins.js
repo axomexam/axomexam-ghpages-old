@@ -42,6 +42,7 @@ const fs = require("fs");
 const path = require("path");
 const { createTranslator } = require("./lib/as-hub-strings");
 const { createPageDescTranslator, pageDescSpan } = require("./lib/as-page-desc");
+const { EXAM_BOOK_NAMES } = require("./lib/exam-book-names");
 
 const ROOT = process.cwd();
 const BASE = "https://axomexam.in";
@@ -422,6 +423,11 @@ function headFor(rel) {
     const trail = segs.slice(1);
     let name = (examNames.get(trail.join("/")) || {}).as || "";
     const exam = (examNames.get(trail[0]) || {}).as || "";
+    /* Book surfaces use the display override; the mock-test branch below
+       deliberately keeps the short registry title. */
+    const examOverride = EXAM_BOOK_NAMES[trail[0]];
+    if (examOverride && trail.length === 1) name = examOverride.as;
+    const examLabel = (examOverride && examOverride.as) || exam;
     if (!name) {
       const ct = contentTitle.get(trail[trail.length - 1]) || {};
       name = ct.as || "";
@@ -447,15 +453,15 @@ function headFor(rel) {
         };
       }
       return {
-        title: titled(shortName, `${exam} | প্ৰশ্ন আৰু উত্তৰ`),
-        meta: `${exam} পৰীক্ষাৰ বাবে ${shortName}ৰ প্ৰশ্ন আৰু ব্যাখ্যা — বিনামূলীয়া, দ্বিভাষিক।`,
-        h1: `${shortName} — ${exam}`,
+        title: titled(shortName, `${examLabel} | প্ৰশ্ন আৰু উত্তৰ`),
+        meta: `${examLabel} পৰীক্ষাৰ বাবে ${shortName}ৰ প্ৰশ্ন আৰু ব্যাখ্যা — বিনামূলীয়া, দ্বিভাষিক।`,
+        h1: `${shortName} — ${examLabel}`,
       };
     }
     return {
-      title: titled(shortName || "যুক্তিতৰ্ক", `${exam || "অসম আৰক্ষী"} | প্ৰশ্ন আৰু উত্তৰ`),
-      meta: `${exam || "অসম আৰক্ষী"} পৰীক্ষাৰ বাবে ${shortName || "যুক্তিতৰ্ক"}ৰ প্ৰশ্ন আৰু ব্যাখ্যা — বিনামূলীয়া, দ্বিভাষিক।`,
-      h1: `${shortName || "যুক্তিতৰ্ক"} — ${exam || "অসম আৰক্ষী"}`,
+      title: titled(shortName || "যুক্তিতৰ্ক", `${examLabel || "অসম আৰক্ষী"} | প্ৰশ্ন আৰু উত্তৰ`),
+      meta: `${examLabel || "অসম আৰক্ষী"} পৰীক্ষাৰ বাবে ${shortName || "যুক্তিতৰ্ক"}ৰ প্ৰশ্ন আৰু ব্যাখ্যা — বিনামূলীয়া, দ্বিভাষিক।`,
+      h1: `${shortName || "যুক্তিতৰ্ক"} — ${examLabel || "অসম আৰক্ষী"}`,
     };
   }
 

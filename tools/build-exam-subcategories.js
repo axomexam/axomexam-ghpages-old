@@ -24,6 +24,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { examBookName } = require("./lib/exam-book-names");
 
 const ROOT = path.resolve(__dirname, "..");
 const EXAMS_INDEX = path.join(ROOT, "data", "exams", "index.json");
@@ -952,7 +953,7 @@ function main() {
   const exam = (index.exams || []).find((e) => e.id === "assam-police");
   if (!exam) throw new Error("assam-police exam not found in index.json");
 
-  const examEn = (exam.title && exam.title.en) || "Assam Police";
+  const examEn = examBookName(exam, "en") || "Assam Police";
   const created = [];
   const missing = [];
   const newUrls = [];

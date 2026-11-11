@@ -1551,7 +1551,7 @@
         desc = "Free online e-books for Assam competitive exams (ADRE, APSC, Assam Police) — Assam History, Indian History, Art & Culture, Polity, Economy and Geography. Read online in English and Assamese, no PDF download.";
       } else if (segs[0] === "exams") {
         const exam = (state.exams || []).find((e) => e.id === segs[1]);
-        const exName = exam ? localized(exam.title) : "";
+        const exName = exam ? examBookName(exam) : "";
         const sec = exam && segs[2] ? (exam.sections || []).find((s) => s.id === segs[2]) : null;
         const secName = sec ? localized(sec.title) : "";
         const sub = sec && segs[3] ? (sec.subcategories || []).find((s) => s.id === segs[3]) : null;
@@ -4928,12 +4928,25 @@
     return !!(exam && EXAM_BOOKS_READY.indexOf(exam.id) !== -1 && (exam.sections || []).length);
   }
 
+  /* Display name for the exam books. Only the Assam Police Constable book
+     needs a longer label than its registry title, so the override lives here
+     instead of in data/exams/index.json: that title is also what the
+     exam-wise mock-test hub reads, and the mock hub must not change. */
+  const EXAM_BOOK_NAMES = {
+    "assam-police": { en: "Assam Police AB & UB", as: "অসম আৰক্ষী AB আৰু UB" },
+  };
+  function examBookName(exam, lang) {
+    const custom = exam ? EXAM_BOOK_NAMES[exam.id] : null;
+    if (custom) return custom[lang || state.lang || "en"] || custom.en;
+    return ebkLang(exam && exam.title, lang);
+  }
+
   /* The Coming Soon panel shared by the exam book page and every section page
      of a book that is not ready yet. */
   function examBookComingSoonHTML(exam) {
     const color = examColor(exam);
-    const titleEn = ebkLang(exam.title, "en");
-    const titleAs = ebkLang(exam.title, "as");
+    const titleEn = examBookName(exam, "en");
+    const titleAs = examBookName(exam, "as");
     const subEn = ebkLang(exam.subtitle, "en");
     return `
       <div class="page-head">
@@ -4954,21 +4967,21 @@
   }
 
   function examCoverAlt(exam, lang) {
-    const txt = ebkLang(exam && exam.coverAlt, lang) || ebkLang(exam && exam.title, lang);
+    const txt = ebkLang(exam && exam.coverAlt, lang) || examBookName(exam, lang);
     return txt || "Exam book cover";
   }
 
   /* Alt text for the square exam logo tile. Falls back to the cover alt so a
      coming-soon exam that has no logo still gets a sensible description. */
   function examLogoAlt(exam, lang) {
-    const txt = ebkLang(exam && exam.logoAlt, lang) || ebkLang(exam && exam.coverAlt, lang) || ebkLang(exam && exam.title, lang);
+    const txt = ebkLang(exam && exam.logoAlt, lang) || ebkLang(exam && exam.coverAlt, lang) || examBookName(exam, lang);
     return txt || "Exam logo";
   }
 
   function examBookCardHTML(exam, i) {
     const color = examColor(exam);
-    const titleEn = ebkLang(exam.title, "en");
-    const titleAs = ebkLang(exam.title, "as");
+    const titleEn = examBookName(exam, "en");
+    const titleAs = examBookName(exam, "as");
     const subEn = ebkLang(exam.subtitle, "en");
     const available = examBookIsReady(exam);
     const statusLabel = available ? t("exams.readNow") : t("exams.comingSoon");
@@ -5519,8 +5532,8 @@
     }
 
     const color = examColor(exam);
-    const titleEn = ebkLang(exam.title, "en");
-    const titleAs = ebkLang(exam.title, "as");
+    const titleEn = examBookName(exam, "en");
+    const titleAs = examBookName(exam, "as");
     const subEn = ebkLang(exam.subtitle, "en");
     const subAs = ebkLang(exam.subtitle, "as");
     const available = examBookIsReady(exam);
@@ -5748,7 +5761,7 @@
     const subs = Array.isArray(sec.subcategories) ? sec.subcategories : [];
     if (subs.length) {
       const color = examColor(exam, sec);
-      const examEn = ebkLang(exam.title, "en");
+      const examEn = examBookName(exam, "en");
       const secEn = ebkLang(sec.title, "en");
       const secAs = ebkLang(sec.title, "as");
       main.innerHTML = `
@@ -5776,7 +5789,7 @@
     try { data = await API.getExamSection(examId, sectionId); } catch (e) { data = null; }
 
     const color = examColor(exam, sec);
-    const examEn = ebkLang(exam.title, "en");
+    const examEn = examBookName(exam, "en");
     const secEn = ebkLang(sec.title, "en");
 
     if (!data) {
@@ -5886,7 +5899,7 @@
     const childSubs = Array.isArray(sub.subcategories) ? sub.subcategories : [];
     if (childSubs.length) {
       const color = examColor(exam, sec);
-      const examEn = ebkLang(exam.title, "en");
+      const examEn = examBookName(exam, "en");
       const secEn = ebkLang(sec.title, "en");
       const subEn = ebkLang(sub.title, "en");
       const subAs = ebkLang(sub.title, "as");
@@ -5914,7 +5927,7 @@
     }
 
     const color = examColor(exam, sec);
-    const examEn = ebkLang(exam.title, "en");
+    const examEn = examBookName(exam, "en");
     const secEn = ebkLang(sec.title, "en");
     const subEn = ebkLang(sub.title, "en");
     const subAs = ebkLang(sub.title, "as");
@@ -6006,7 +6019,7 @@
     }
 
     const color = examColor(exam, sec);
-    const examEn = ebkLang(exam.title, "en");
+    const examEn = examBookName(exam, "en");
     const secEn = ebkLang(sec.title, "en");
     const subEn = ebkLang(sub.title, "en");
     const childEn = ebkLang(child.title, "en");
