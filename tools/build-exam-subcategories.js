@@ -791,7 +791,7 @@ function buildShellPage({ subEn, subAs, secEn, secAs, examEn, secHref, subHref, 
   <!-- ===== Preloader ===== -->
   <div id="preloader" aria-hidden="true">
     <div class="loader-logo">axomexam</div>
-    <div class="loader-bar"><span></span></div>
+    <div class="axo-book"><span class="axo-book-body"></span><span class="axo-book-spine"></span><span class="axo-book-cover"></span></div>
   </div>
 
   <!-- ===== Header ===== -->

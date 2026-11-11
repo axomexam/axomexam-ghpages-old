@@ -2400,6 +2400,13 @@
       </div>`;
   }
 
+  /* Book-opening loader markup, shared by every async render so the waiting
+     state reads as "a book page opening" instead of a generic spinner. */
+  const BOOK_LOADER_ICON = `<div class="axo-book"><span class="axo-book-body"></span><span class="axo-book-spine"></span><span class="axo-book-cover"></span></div>`;
+  function bookLoaderHTML(message) {
+    return `<div class="loader">${BOOK_LOADER_ICON}<p>${message}</p></div>`;
+  }
+
   function emptyHTML() {
     return `<div class="qa-empty"><div class="big">
       <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7"/><path d="M9 9h6"/><path d="M9 13h4"/><path d="m15 16 2 2 4-4"/></svg>
@@ -2413,7 +2420,7 @@
      topic index, so they never appear in Downloads / Trending /
      Search — reading only, exactly as required. */
   async function renderArticleReader(main, cat, sub) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     let data = null;
     try {
       data = await API.getArticles(sub.id);
@@ -2457,7 +2464,7 @@
   }
 
   async function renderTopicPage(main, rec) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     try {
       const data = await API.getTopic(rec.cat.id, rec.topic.id, rec.sub && rec.sub.id, rec.cat && rec.cat.contentLayout);
       if (data) {
@@ -4522,7 +4529,7 @@
   /* ================= Downloads page ================= */
   async function renderDownloadsPage(main) {
     const isAs = state.lang === "as";
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     let files = [];
     try { files = await API.listDownloads(); } catch (err) {}
 
@@ -4645,7 +4652,7 @@
   }
 
   async function renderEbooksPage(main) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     let books = [];
     try {
       books = await API.listBooks();
@@ -4783,7 +4790,7 @@
 
   async function renderEbookReaderPage(main, bookId) {
     const safeId = String(bookId || "").replace(/[^A-Za-z0-9_-]/g, "");
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     if (!safeId) return render404(main);
 
     let book = null;
@@ -5068,7 +5075,7 @@
   }
 
   async function renderCurrentAffairsPage(main) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     let cats = [];
     try { cats = await API.listCurrentAffairs(); } catch (e) { cats = []; }
     if (!Array.isArray(cats)) cats = [];
@@ -5099,7 +5106,7 @@
   }
 
   async function renderCurrentAffairsCategoryPage(main, catId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
 
     let meta = null;
     let questions = [];
@@ -5201,7 +5208,7 @@
   }
 
   async function renderExamsPage(main) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     const exams = await getExamsList();
 
     if (!exams.length) {
@@ -5517,7 +5524,7 @@
   }
 
   async function renderExamPage(main, examId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     await getExamsList();
     const exam = findExam(examId);
 
@@ -5738,7 +5745,7 @@
   }
 
   async function renderExamSectionPage(main, examId, sectionId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     await getExamsList();
     const exam = findExam(examId);
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
@@ -5875,7 +5882,7 @@
   }
 
   async function renderExamSubcategoryPage(main, examId, sectionId, subId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     await getExamsList();
     const exam = findExam(examId);
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
@@ -5996,7 +6003,7 @@
   }
 
   async function renderExamSubSubcategoryPage(main, examId, sectionId, subId, childId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     await getExamsList();
     const exam = findExam(examId);
     const sec = exam ? (exam.sections || []).find((s) => s.id === sectionId) : null;
@@ -6210,7 +6217,7 @@
 
   /* ================= Previous Year Questions ================= */
   async function renderPreviousYear(main, segs) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("load.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("load.loading"));
     if (segs.length === 1) return renderPreviousYearExams(main);
     const exam = ((typeof CONFIG !== "undefined" && CONFIG.PYEAR_EXAMS) || []).find((e) => e.id === segs[1]);
     if (!exam) return render404(main);
@@ -6911,7 +6918,7 @@
   }
 
   async function handleExamWiseMockRouting(main, segs) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
     await getExamsList();
 
     const examId = segs[1];
@@ -7381,7 +7388,7 @@
   }
 
   async function renderExamWiseStart(main, exam, setNumber) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
 
     const data = await API.getExamMockSet(exam.id, setNumber);
     const list = data && Array.isArray(data.questions) ? data.questions : [];
@@ -7436,7 +7443,7 @@
   /* Subcategory landing: show manual JSON sets when available,
      otherwise fall back to the old section / topic flow. */
   async function renderMockSubLevel(main, cat, sub) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
     const sets = await detectMockSets(cat.id, sub.id);
     return renderMockSetPicker(main, cat, sub, sets);
   }
@@ -7618,7 +7625,7 @@
   async function renderMockCategoryPicker(main) {
     /* Exam-wise cards are drawn from the live exam library, so the picker
        waits for it before painting. */
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
     await getExamsList();
     const mockCategories = state.categories.filter(c => c.id !== "study-guides" && c.id !== "articles");
     const baseline = mockLandingBaseline();
@@ -8033,7 +8040,7 @@
   }
 
   async function renderMockSetDifficulty(main, cat, sub, setNumber) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
 
     const loaded = await loadMockSetQuestions(cat, sub, setNumber);
     if (!loaded) {
@@ -8259,7 +8266,7 @@
   }
 
   async function renderMockSetup(main, cat, subId, secId, topicId) {
-    main.innerHTML = `<div class="loader"><div class="spinner"></div><p>${t("mock.loading")}</p></div>`;
+    main.innerHTML = bookLoaderHTML(t("mock.loading"));
 
     const pool = await collectQuestionsForMock(cat, subId, secId, topicId);
     if (!pool.length) {
