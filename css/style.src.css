@@ -2950,7 +2950,7 @@ body[data-ui-lang="as"] [data-axo-editorial-credit] [data-axo-lang="as"] { displ
 .exw-thumb-fallback { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 800; font-size: 1.3rem; letter-spacing: .5px; }
 .exw-badge { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; text-align: center; font-size: .6rem; font-weight: 800; letter-spacing: .3px;
   padding: 3px 2px; text-transform: uppercase; color: #fff; }
-.exw-badge-live { background: color-mix(in srgb, var(--c) 78%, #000 6%); }
+.exw-badge-live { background: #dc2626; }
 .exw-badge-soon { background: #64748b; }
 .exw-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .exw-title { font-weight: 700; font-size: 1.02rem; color: var(--ink); line-height: 1.25; }
