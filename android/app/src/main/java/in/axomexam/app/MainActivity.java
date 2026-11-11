@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
   private ProgressBar progress;
   private View offlineView;
   private View loadingView;
+  private BookLoaderView loadingBook;
   private TextView loadingText;
   private View drawerOverlay;
   private View drawerPanel;
@@ -88,6 +89,7 @@ public class MainActivity extends Activity {
   private SharedPreferences prefs;
   private boolean pageFailed = false;
   private boolean firstLoadDone = false;
+  private boolean showLoaderOnNextLoad = false;
   private long lastBackPress = 0L;
 
   private final Handler ui = new Handler(Looper.getMainLooper());
@@ -123,6 +125,7 @@ public class MainActivity extends Activity {
     progress = findViewById(R.id.progress);
     offlineView = findViewById(R.id.offline);
     loadingView = findViewById(R.id.loading);
+    loadingBook = findViewById(R.id.loading_book);
     loadingText = findViewById(R.id.loading_text);
     drawerOverlay = findViewById(R.id.drawer_overlay);
     drawerPanel = findViewById(R.id.drawer_panel);
@@ -205,8 +208,10 @@ public class MainActivity extends Activity {
       @Override
       public void onPageStarted(WebView view, String url, Bitmap favicon) {
         pageFailed = false;
-        if (!firstLoadDone) {
+        if (!firstLoadDone || showLoaderOnNextLoad) {
+          showLoaderOnNextLoad = false;
           loadingView.setVisibility(View.VISIBLE);
+          loadingBook.start();
           loadingText.setText(R.string.loading_connecting);
           ui.postDelayed(slowHint, 4000);
         }
@@ -220,6 +225,7 @@ public class MainActivity extends Activity {
       public void onPageFinished(WebView view, String url) {
         ui.removeCallbacks(slowHint);
         progress.setVisibility(View.GONE);
+        loadingBook.stop();
         loadingView.setVisibility(View.GONE);
         swipe.setRefreshing(false);
         if (!firstLoadDone) {
@@ -369,12 +375,14 @@ public class MainActivity extends Activity {
     swipe.setProgressBackgroundColorSchemeColor(ContextCompat.getColor(this, R.color.card));
     swipe.setOnRefreshListener(() -> {
       pageFailed = false;
+      showLoaderOnNextLoad = true;
       web.reload();
     });
 
     findViewById(R.id.offline_retry).setOnClickListener(v -> {
       if (isOnline()) {
         offlineView.setVisibility(View.GONE);
+        showLoaderOnNextLoad = true;
         web.reload();
       } else {
         toast(getString(R.string.offline_still));
@@ -606,6 +614,7 @@ public class MainActivity extends Activity {
 
   private void showOffline() {
     ui.removeCallbacks(slowHint);
+    loadingBook.stop();
     loadingView.setVisibility(View.GONE);
     progress.setVisibility(View.GONE);
     swipe.setRefreshing(false);

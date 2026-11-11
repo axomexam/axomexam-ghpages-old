@@ -43,6 +43,7 @@
   <string name="loading_connecting">Connecting…</string>
   <string name="loading_loading">Loading…</string>
   <string name="loading_slow">Slow network… still loading</string>
+  <string name="cd_loading">Loading a book</string>
   <string name="offline_title">You are offline</string>
   <string name="offline_msg">Please check your internet connection and try again. Study content is loaded online.</string>
   <string name="offline_retry">Retry</string>

@@ -39,6 +39,7 @@
   <string name="loading_connecting">সংযোগ কৰি আছে…</string>
   <string name="loading_loading">ল\'ড কৰি আছে…</string>
   <string name="loading_slow">লেহেমীয়া নেটৱৰ্ক… এতিয়াও ল\'ড হৈ আছে</string>
+  <string name="cd_loading">কিতাপ ল\'ড হৈ আছে</string>
   <string name="offline_title">আপুনি অফলাইন</string>
   <string name="offline_msg">ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক। অধ্যয়ন সামগ্ৰী অনলাইনত ল\'ড হয়।</string>
   <string name="offline_retry">পুনৰ চেষ্টা</string>
