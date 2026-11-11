@@ -594,8 +594,9 @@ comes from the exam's blueprint (100 for the first five, 50 for
   still use this). The blueprint is copied into each set JSON under `blueprint`
   so the runtime and the static builder can show the same details.
 - More than 5 sets, and harder ones: a blueprint may carry a `sets` field
-  (ADRE Grade III and Grade IV both set `"sets": 10`). The first `SETS_PER_EXAM`
-  (5) stay balanced — each takes its slice of the whole shuffled section pool.
+  (ADRE Grade III, ADRE Grade IV and Assam Police SI all set `"sets": 10`). The
+  first `SETS_PER_EXAM` (5) stay balanced — each takes its slice of the whole
+  shuffled section pool.
   The extra sets are the *harder* ones: `hardPoolOrder` scores every remaining question by
   its position in its leaf (banks are written easiest-first, weighted 0.6) and
   its text length (weight 0.4), keeps the hardest `extraCount x need` per
