@@ -1,5 +1,6 @@
 {
   "exam": "adre-grade-3",
+  "sets": 10,
   "totalQuestions": 150,
   "durationMinutes": 180,
   "totalMarks": 150,

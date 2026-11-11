@@ -226,12 +226,55 @@ function blueprintMeta(bp) {
   };
 }
 
-/* Build the five sets so each follows the blueprint exactly, and every set
-   draws a different slice of every section (no question repeats across sets). */
+/* A cheap difficulty proxy for one leaf's bank. Each bank is written
+   easiest-first, so a question's position in its leaf is the strongest signal;
+   its text length is a weak secondary one. Returns one score per question,
+   0 (easiest) to 1 (hardest). */
+function leafDifficulty(group) {
+  const n = group.length;
+  const byLen = group.map((q, i) => i).sort((a, b) => (group[a].q.en.length - group[b].q.en.length) || (a - b));
+  const lenRank = new Array(n);
+  byLen.forEach((idx, r) => { lenRank[idx] = n > 1 ? r / (n - 1) : 0; });
+  return group.map((q, i) => (n > 1 ? 0.6 * (i / (n - 1)) + 0.4 * lenRank[i] : 0));
+}
+
+/* The question order for the extra (harder) sets. The balanced sets use the
+   whole pool; the extra sets instead draw from the hardest
+   extraCount x need questions of every section, so each extra set is harder
+   than the balanced ones while still spanning every sub-category. Leaves are
+   interleaved one item at a time so the merged list keeps subject coverage
+   and stays roughly hardest-first. */
+function hardPoolOrder(groups, need, extraCount, usedKeys) {
+  const perLeaf = groups.map((g) => {
+    const scores = leafDifficulty(g);
+    return g
+      .map((q, i) => ({ q, s: scores[i] }))
+      .filter((x) => !usedKeys.has(x.q.id || `t:${x.q.en}`))
+      .sort((a, b) => (b.s - a.s) || String(a.q.id).localeCompare(String(b.q.id)));
+  });
+  const merged = [];
+  const max = perLeaf.reduce((m, g) => Math.max(m, g.length), 0);
+  for (let i = 0; i < max; i++) {
+    for (const g of perLeaf) if (i < g.length) merged.push(g[i].q);
+  }
+  return deDupe(merged).slice(0, need * extraCount);
+}
+
+/* Build the sets so each follows the blueprint exactly, and every set draws a
+   different slice of every section (no question repeats across sets).
+
+   The first SETS_PER_EXAM sets are balanced: each takes a different slice of
+   the section's whole (shuffled) pool. A blueprint may ask for more sets than
+   that with a `sets` field; the extra sets are the harder ones — each draws
+   from the hardest questions left in every section, dealt round-robin so the
+   extra sets stay even with one another. */
 function buildBlueprintSets(exam, bp, dir) {
-  const perSection = bp.sections.map((s) => {
+  const groupsBySection = bp.sections.map((s) => {
     const sec = (exam.sections || []).find((x) => x.id === s.id);
-    const pool = sec ? deDupe(roundRobin(readSectionGroups(exam.id, sec))) : [];
+    return sec ? readSectionGroups(exam.id, sec) : [];
+  });
+  const perSection = bp.sections.map((s, i) => {
+    const pool = deDupe(roundRobin(groupsBySection[i]));
     const order = shuffleInPlace(pool, mulberry32(seedFor(`${exam.id}:${s.id}`)));
     return { id: s.id, need: s.questions, order };
   });
@@ -241,19 +284,39 @@ function buildBlueprintSets(exam, bp, dir) {
   if (total !== expected) {
     throw new Error(`${exam.id}: blueprint sections total ${total}, expected ${expected}`);
   }
-  const sets = Math.min(SETS_PER_EXAM, Math.min(...perSection.map((ps) => Math.floor(ps.order.length / ps.need))));
+  const balanced = Math.min(SETS_PER_EXAM, Math.min(...perSection.map((ps) => Math.floor(ps.order.length / ps.need))));
+  const extraCapacity = Math.min(...perSection.map((ps) => Math.floor((ps.order.length - balanced * ps.need) / ps.need)));
+  const wanted = bp.sets && bp.sets > balanced ? Math.min(bp.sets, balanced + extraCapacity) : balanced;
+  const extraCount = wanted - balanced;
   const meta = blueprintMeta(bp);
 
   let changed = 0;
-  for (let n = 1; n <= sets; n++) {
+  const usedKeys = new Set();
+  for (let n = 1; n <= balanced; n++) {
     const questions = [];
     for (const ps of perSection) questions.push(...ps.order.slice((n - 1) * ps.need, n * ps.need));
     shuffleInPlace(questions, mulberry32(seedFor(`${exam.id}:set:${n}`)));
+    for (const q of questions) usedKeys.add(q.id || `t:${q.q.en}`);
     if (writeSet(dir, n, { setNumber: n, title: `Full Paper Set ${n}`, exam: exam.id, blueprint: meta, questions })) changed++;
   }
 
+  if (extraCount > 0) {
+    const hardBySection = bp.sections.map((s, i) =>
+      hardPoolOrder(groupsBySection[i], perSection[i].need, extraCount, usedKeys));
+    for (let k = 1; k <= extraCount; k++) {
+      const n = balanced + k;
+      const questions = [];
+      for (let i = 0; i < bp.sections.length; i++) {
+        const pool = hardBySection[i];
+        for (let j = k - 1; j < pool.length; j += extraCount) questions.push(pool[j]);
+      }
+      shuffleInPlace(questions, mulberry32(seedFor(`${exam.id}:set:${n}`)));
+      if (writeSet(dir, n, { setNumber: n, title: `Full Paper Set ${n}`, exam: exam.id, blueprint: meta, questions })) changed++;
+    }
+  }
+
   const detail = perSection.map((ps) => `${ps.id}=${ps.need}`).join(", ");
-  return { sets, changed, questions: total, note: `blueprint [${detail}]` };
+  return { sets: wanted, changed, questions: total, note: `blueprint [${detail}]${extraCount ? ` + ${extraCount} harder` : ""}` };
 }
 
 /* ---------- legacy mode (no blueprint) ---------- */
