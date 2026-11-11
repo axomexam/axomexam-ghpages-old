@@ -6,6 +6,7 @@
   "marksPerQuestion": 1,
   "negativeMarking": 0.25,
   "difficultyMix": { "easy": 50, "moderate": 35, "difficult": 15 },
+  "sets": 10,
   "sections": [
     {
       "id": "general-knowledge-assam-gk",
