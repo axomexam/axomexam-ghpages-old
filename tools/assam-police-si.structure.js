@@ -24,10 +24,10 @@
    bank (data/exams/assam-police/...) and the shared subject pools
    (data/mock-test/...). The SI book is degree-level, so the builder
    prefers the harder, analytical questions where a pool offers them.
-   It shares its cover and logo with Assam Police Constable.
+   It has its own cover image and shares the logo with Assam Police Constable.
    ============================================================ */
 
-const COVER = "/images/exams/assam-police-cover.webp";
+const COVER = "/images/exams/assam-police-si-cover.webp";
 const LOGO = "/images/exams/assam-police-logo.webp";
 const COVER_ALT = {
   en: "Assam Police Sub-Inspector (UB & AB) Recruitment Exam — book front cover",
