@@ -387,6 +387,8 @@ function examEntry() {
     subtitle: EXAM.subtitle,
     note: EXAM.note,
     cover: EXAM.cover,
+    logo: EXAM.logo,
+    logoAlt: EXAM.logoAlt,
     coverAlt: EXAM.coverAlt,
     color: EXAM.color,
     icon: EXAM.icon,
