@@ -982,6 +982,36 @@ before editing icon containers or the tile builders in `js/app.src.js`.
   Buttons do not inherit the body `line-height`, so `.tab-item` pins
   `line-height: 1.6` to keep all five icons on the same row.
 
+## Android app — building and signing
+
+The APK lives in `android/` (Gradle, `in.axomexam.app`). There is no toolchain in
+a fresh workspace, so install one before building:
+
+```bash
+# JDK 17, Gradle 8.7, Android cmdline-tools into ~/axo (no root needed)
+# then: sdkmanager --licenses, and install platform-tools, platforms;android-34, build-tools;34.0.0
+echo "sdk.dir=$HOME/axo/sdk" > android/local.properties   # gitignored
+JAVA_HOME=$HOME/axo/jdk PATH=$JAVA_HOME/bin:$HOME/axo/gradle/bin:$PATH \
+ANDROID_SDK_ROOT=$HOME/axo/sdk gradle assembleDebug --no-daemon
+```
+
+`gradle assembleDebug` needs the network on its first run (dependency download)
+and takes under a minute afterwards. Run it in the background and poll the log;
+a foreground build can exceed the terminal timeout.
+
+**Signing.** `app/axomexam-v2.6.apk` is signed with the release key
+(`CN=axomexam`, configured via `AXO_KEYSTORE` or `android/axomexam-release.jks`).
+That keystore is a secret and is not in the repo, so a workspace build produces a
+**debug-signed** APK that cannot replace the shipped one. Treat such a build as a
+test artifact only; the owner re-signs the release. `*.jks`/`*.keystore` are
+gitignored on purpose.
+
+**Verifying a view without a device.** Robolectric in native-graphics mode draws
+the real view to a bitmap, which is enough to confirm an animation's geometry and
+colours. It needs `testOptions { unitTests { includeAndroidResources = true } }`
+and `@GraphicsMode(GraphicsMode.Mode.NATIVE)`; rendering a `View` outside a
+window requires `measure()` + `layout()` before `draw()`.
+
 ## Assamese (/as/) twin build order
 
 The `/as/` tree is generated, not hand-edited. Run the steps in this order;
