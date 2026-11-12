@@ -464,6 +464,263 @@ function setContent(exam, setNumber) {
   );
 }
 
+/* ---------- Route A: unique, crawler-visible per-set content ----------
+
+   Every set of an exam plays the same fixed-length paper, so its questions
+   are a permutation of the same bank. The only crawler-visible text that can
+   tell two set pages apart is the editorial block. It is therefore written
+   *outside* <main id="app"> — which the SPA rewrites on load — as a guarded
+   `.axo-extra-content` section, in both languages, and carries set-specific
+   detail: which slice of the blueprint this set is, the exact paper pattern,
+   and the topics it actually draws its questions from. */
+
+/* id -> {en, as} for every section / sub-category / leaf in the exam index. */
+let LEAF_TITLES = null;
+function examLeafTitles() {
+  if (LEAF_TITLES) return LEAF_TITLES;
+  LEAF_TITLES = {};
+  const idx = readJSON(path.join(ROOT, "data", "exams", "index.json"));
+  (function walk(node) {
+    if (Array.isArray(node)) return node.forEach(walk);
+    if (!node || typeof node !== "object") return;
+    if (node.id && node.title && typeof node.title === "object") LEAF_TITLES[node.id] = node.title;
+    Object.keys(node).forEach((k) => walk(node[k]));
+  })(idx);
+  return LEAF_TITLES;
+}
+
+/* leaf id -> its /exams/<exam>/... page, scanned from disk. Shallow pages win,
+   so a section slug maps to the section page and a leaf slug to the leaf. */
+function examLeafURLs(examId) {
+  const out = {};
+  const root = path.join(ROOT, "exams", examId);
+  (function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (!e.isDirectory()) continue;
+      const full = path.join(dir, e.name);
+      if (fs.existsSync(path.join(full, "index.html")) && !out[e.name]) {
+        out[e.name] = "/" + path.relative(ROOT, full).replace(/\\/g, "/") + "/";
+      }
+      walk(full);
+    }
+  })(root);
+  return out;
+}
+
+/* The leaf slug of a question id (`average-3` -> `average`). */
+function leafOf(id) {
+  const m = /^(.*)-\d+$/.exec(String(id == null ? "" : id));
+  return m ? m[1] : String(id == null ? "" : id);
+}
+
+/* A question id may name a topic slightly differently from its /exams/ page
+   (`cube-dice` vs `cubes-dice`, `counting-figure` vs `counting-figures`).
+   Normalise both sides — lower-case, split on non-letters, drop a trailing
+   plural `s` — so those still resolve to the real page instead of leaking a
+   raw slug into the topic list. */
+function leafKey(slug) {
+  return String(slug == null ? "" : slug)
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean)
+    .map((t) => (t.length > 3 && t.endsWith("s") ? t.slice(0, -1) : t))
+    .join("-");
+}
+
+/* Fallback label for a leaf that has no readable title in the index. */
+function humaniseLeaf(slug) {
+  return String(slug == null ? "" : slug)
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+/* Question banks abbreviate a few topics in their question ids. Map the
+   shorthand to the real topic id so the label stays readable. */
+const LEAF_SYNONYMS = { pos: "parts-of-speech" };
+
+let LEAF_ALIAS = Object.create(null);
+function examLeafAlias(examId, titles, urls) {
+  if (LEAF_ALIAS[examId]) return LEAF_ALIAS[examId];
+  const map = (LEAF_ALIAS[examId] = {});
+  for (const id of [...Object.keys(titles), ...Object.keys(urls)]) {
+    const k = leafKey(id);
+    if (k && !(k in map)) map[k] = id;
+  }
+  return map;
+}
+
+/* Bilingual panel pair used by the extra-content section. */
+function bilingualPanels(enInner, asInner) {
+  const style = "background:var(--bg,#ffffff); border:1px solid var(--border,#e2e8f0); border-radius:18px; padding:28px 24px; line-height:1.85; color:var(--ink-soft,#475569); max-width:900px; margin:0 auto; text-align:left;";
+  return `<article lang="en" data-axo-lang="en" class="info-panel exw-content" style="${style}">
+${enInner}
+      </article>
+      <article lang="as" data-axo-lang="as" class="info-panel exw-content" style="${style}">
+${asInner}
+      </article>`;
+}
+
+/* Build the per-set editorial block. Returns { en, as } inner HTML; the caller
+   wraps it in the guarded .axo-extra-content section. Keeps every sentence the
+   old in-<main> block carried and adds the set-specific detail on top. */
+function setExtraContent(exam, setNumber, setData, bp) {
+  const examEn = loc(exam.title) || exam.id;
+  const examAs = locAs(exam.title) || examEn;
+  const q = examQuestionCount(exam.id);
+  const per = bp && bp.marksPerQuestion ? bp.marksPerQuestion : 1;
+  const secs = examSections(exam);
+  const secList = secs.map((s) => s.en).join(", ");
+  const harder = setNumber > 5;
+
+  /* Distinct topics this set actually draws from, in blueprint order. */
+  const titles = examLeafTitles();
+  const urls = examLeafURLs(exam.id);
+  const alias = examLeafAlias(exam.id, titles, urls);
+  const seen = new Set();
+  const leaves = [];
+  for (const item of (setData && setData.questions) || []) {
+    const raw = leafOf(item.id);
+    if (!raw) continue;
+    const syn = LEAF_SYNONYMS[raw];
+    const base = syn && (titles[syn] || urls[syn]) ? syn : raw;
+    const leaf = titles[base] || urls[base] ? base : (alias[leafKey(base)] || base);
+    if (!seen.has(leaf)) { seen.add(leaf); leaves.push(leaf); }
+  }
+
+  const topicLis = (langKey) =>
+    leaves
+      .map((l) => {
+        const t = titles[l];
+        const name = (t && (t[langKey] || t.en)) || humaniseLeaf(l);
+        const url = urls[l];
+        return url
+          ? `<li><a href="${url}">${escapeHtml(name)}</a></li>`
+          : `<li>${escapeHtml(name)}</li>`;
+      })
+      .join("\n            ");
+
+  const patternRows = (langKey) =>
+    (bp.sections || [])
+      .map((s) => {
+        const name = (s.label && (s.label[langKey] || s.label.en)) || s.id;
+        const marks = s.questions * per;
+        return `            <tr><td style="padding:7px 10px; border-bottom:1px solid var(--border,#e2e8f0); text-align:left;">${escapeHtml(name)}</td><td style="padding:7px 10px; border-bottom:1px solid var(--border,#e2e8f0); text-align:right; white-space:nowrap;">${s.questions}</td><td style="padding:7px 10px; border-bottom:1px solid var(--border,#e2e8f0); text-align:right; white-space:nowrap;">${marks}</td></tr>`;
+      })
+      .join("\n");
+
+  const patternTable = (langKey, head) =>
+    `          <table style="width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:.94rem;">
+            <thead><tr>
+              <th style="padding:7px 10px; border-bottom:2px solid var(--border,#e2e8f0); text-align:left;">${escapeHtml(head[0])}</th>
+              <th style="padding:7px 10px; border-bottom:2px solid var(--border,#e2e8f0); text-align:right;">${escapeHtml(head[1])}</th>
+              <th style="padding:7px 10px; border-bottom:2px solid var(--border,#e2e8f0); text-align:right;">${escapeHtml(head[2])}</th>
+            </tr></thead>
+            <tbody>
+${patternRows(langKey)}
+            </tbody>
+          </table>`;
+
+  const siblingLis = (langKey) =>
+    examMockSets(exam.id)
+      .filter((n) => n !== setNumber)
+      .map((n) => {
+        const label = langKey === "as" ? `সম্পূৰ্ণ পত্ৰ ছেট ${asDigits(n)}` : `Full Paper Set ${n}`;
+        return `<li><a href="/exam-wise-mock-test/${exam.id}/set-${n}/">${label}</a></li>`;
+      })
+      .join("\n            ");
+
+  const en = `        <h2 style="margin-top:0;">${escapeHtml(examEn)} — Full Paper Set ${setNumber}</h2>
+        <p>${harder
+      ? `Set ${setNumber} is one of the <strong>harder</strong> papers in this series. It follows the same ${escapeHtml(examEn)} blueprint as the first five sets, but its questions are drawn from the more demanding end of every topic bank — longer calculations, closer options and fewer direct one-line facts.`
+      : `Set ${setNumber} is one of the first five <strong>balanced</strong> papers in this series. Every section of the ${escapeHtml(examEn)} blueprint appears in the same proportion as the real paper, so it is the best set to attempt first to see where you stand.`}</p>
+        <p>Full Paper Set ${setNumber} of the ${escapeHtml(examEn)} exam-wise mock test is a complete ${q}-question paper that mixes every subject of the exam — ${escapeHtml(secList)} — and runs under a live timer, exactly like the real test.</p>
+        <p>When you start this set you choose your question language (Assamese or English) and the timer begins. You can move between questions, skip a hard one and come back, and submit at any time. On submit you get an instant score along with the correct answer and a short explanation for every question, in both languages.</p>
+        <h3>Paper pattern of this set</h3>
+${patternTable("en", ["Section", "Questions", "Marks"])}
+        <p style="font-size:.9rem;">Total: ${q} questions • ${escapeHtml(String(bp.totalMarks || q))} marks • ${escapeHtml(String(bp.durationMinutes || 0))} minutes${(bp.negativeMarking || 0) > 0 ? ` • ${escapeHtml(String(bp.negativeMarking))} negative marking per wrong answer` : " • no negative marking"}.</p>
+        <h3>Topics this set draws from</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+            ${topicLis("en")}
+        </ul>
+        <h3>What this set tests</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+          <li>${q} questions drawn from every subject of the ${escapeHtml(examEn)} paper.</li>
+          <li>Four options per question, with a single correct answer.</li>
+          <li>Bilingual questions, options and explanations.</li>
+          <li>Instant scoring and a full answer review on submit.</li>
+        </ul>
+        <h3>How to attempt it</h3>
+        <ol style="margin:8px 0 0 20px; line-height:1.9;">
+          <li>Pick your question language.</li>
+          <li>Start the timer and attempt the whole paper without pausing.</li>
+          <li>Submit and review the explanations for the questions you missed.</li>
+          <li>Reattempt the set later and compare your score.</li>
+        </ol>
+        <h3>Other full paper sets in this series</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+            ${siblingLis("en")}
+        </ul>
+        <h2>Frequently asked questions</h2>
+        <h3>Which topics does ${escapeHtml(examEn)} Full Paper Set ${setNumber} cover?</h3>
+        <p>Set ${setNumber} covers ${leaves.length} topics across the ${escapeHtml(examEn)} syllabus, listed under "Topics this set draws from" above. Each topic links to its full question bank so you can revise the theory before you attempt the paper.</p>
+        <h3>How many questions are in ${escapeHtml(examEn)} Full Paper Set ${setNumber}?</h3>
+        <p>${q} bilingual questions with four options each, covering every subject of the paper.</p>
+        <h3>Is ${escapeHtml(examEn)} Set ${setNumber} timed?</h3>
+        <p>Yes. The set runs on a live timer from the moment you start, so it works like the real examination.</p>
+        <h3>Can I see the answers?</h3>
+        <p>Yes. After you submit, every question shows the correct option and a short explanation in both Assamese and English.</p>
+        <h3>Can I reattempt this set?</h3>
+        <p>Yes. All sets are free and unlimited — you can reattempt any set as many times as you like.</p>`;
+
+  const as = `        <h2 style="margin-top:0;">${escapeHtml(examAs)} — সম্পূৰ্ণ পত্ৰ ছেট ${asDigits(setNumber)}</h2>
+        <p>${harder
+      ? `ছেট ${asDigits(setNumber)} এই শৃংখলাৰ <strong>অধিক কঠিন</strong> পত্ৰসমূহৰ এখনে। ই প্ৰথম পাঁচখন ছেটৰ দৰেই একে ${escapeHtml(examAs)} ব্লুপ্ৰিণ্ট অনুসৰণ কৰে, কিন্তু ইয়াৰ প্ৰশ্ন প্ৰতিটো বিষয়-ভাণ্ডাৰৰ অধিক কঠিন অংশৰ পৰা লোৱা হৈছে — দীঘল হিচাপ, ওচৰা-ওচৰি বিকল্প আৰু কম প্ৰত্যক্ষ তথ্য।`
+      : `ছেট ${asDigits(setNumber)} এই শৃংখলাৰ প্ৰথম পাঁচখন <strong>ভাৰসাম্য</strong> পত্ৰৰ এখনে। ${escapeHtml(examAs)} ব্লুপ্ৰিণ্টৰ প্ৰতিটো শিতান প্ৰকৃত পৰীক্ষাৰ দৰেই একে অনুপাতে আছে, গতিকে আপুনি ক'ত আছে সেয়া জানিবলৈ প্ৰথমে এই ছেটখন চেষ্টা কৰক।`}</p>
+        <p>${escapeHtml(examAs)} পৰীক্ষা-ভিত্তিক মক টেষ্টৰ সম্পূৰ্ণ পত্ৰ ছেট ${asDigits(setNumber)} এটা ${asDigits(q)} প্ৰশ্নৰ পত্ৰ, য'ত পৰীক্ষাৰ সকলো বিষয় মিলাই দিয়া হয় — ${escapeHtml(secs.map((s) => s.as || s.en).join(", "))} — আৰু প্ৰকৃত পৰীক্ষাৰ দৰেই এটা সময়বদ্ধ ঘড়ীৰ তলত চলে।</p>
+        <p>ছেট আৰম্ভ কৰিলে আপুনি প্ৰশ্নৰ ভাষা (অসমীয়া বা ইংৰাজী) বাছনি কৰে আৰু টাইমাৰ আৰম্ভ হয়। আপুনি প্ৰশ্নৰ মাজত আগবাঢ়িব, কঠিন এটা এৰি পিছত ঘূৰি আহিব, আৰু যিকোনো সময়ত জমা দিব পাৰে। জমা দিয়াৰ লগে লগে তৎক্ষণাত নম্বৰ, শুদ্ধ উত্তৰ আৰু প্ৰতিটো প্ৰশ্নৰ চুটি ব্যাখ্যা — দুয়ো ভাষাত — পোৱা যায়।</p>
+        <h3>এই ছেটৰ পত্ৰ আৰ্হি</h3>
+${patternTable("as", ["শিতান", "প্ৰশ্ন", "নম্বৰ"])}
+        <p style="font-size:.9rem;">মুঠ: ${asDigits(q)} প্ৰশ্ন • ${asDigits(bp.totalMarks || q)} নম্বৰ • ${asDigits(bp.durationMinutes || 0)} মিনিট${(bp.negativeMarking || 0) > 0 ? ` • প্ৰতিটো ভুল উত্তৰৰ বাবে ${asDigits(bp.negativeMarking)} ঋণাত্মক নম্বৰ` : " • ঋণাত্মক নম্বৰ নাই"}।</p>
+        <h3>এই ছেটত সামৰি লোৱা বিষয়সমূহ</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+            ${topicLis("as")}
+        </ul>
+        <h3>এই ছেটত কি পৰীক্ষা কৰা হয়</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+          <li>${escapeHtml(examAs)} পত্ৰৰ প্ৰতিটো বিষয়ৰ পৰা লোৱা ${asDigits(q)} টা প্ৰশ্ন।</li>
+          <li>প্ৰতিটো প্ৰশ্নত চাৰিটা বিকল্প, এটাই শুদ্ধ উত্তৰ।</li>
+          <li>দ্বিভাষিক প্ৰশ্ন, বিকল্প আৰু ব্যাখ্যা।</li>
+          <li>জমা দিয়াৰ লগে লগে তৎক্ষণাত নম্বৰ আৰু সম্পূৰ্ণ উত্তৰ পৰ্যালোচনা।</li>
+        </ul>
+        <h3>কেনেকৈ চেষ্টা কৰিব</h3>
+        <ol style="margin:8px 0 0 20px; line-height:1.9;">
+          <li>প্ৰশ্নৰ ভাষা বাছনি কৰক।</li>
+          <li>টাইমাৰ আৰম্ভ কৰি নেৰাকৈ গোটেই পত্ৰখন চেষ্টা কৰক।</li>
+          <li>জমা দি যিবোৰ প্ৰশ্ন ভুল হৈছে তাৰ ব্যাখ্যা পঢ়ি লওক।</li>
+          <li>পিছত পুনৰ ছেটটো চেষ্টা কৰি নম্বৰ তুলনা কৰক।</li>
+        </ol>
+        <h3>এই শৃংখলাৰ আন সম্পূৰ্ণ পত্ৰৰ ছেটসমূহ</h3>
+        <ul style="margin:8px 0 0 20px; line-height:1.9;">
+            ${siblingLis("as")}
+        </ul>
+        <h2>সঘনাই সোধা প্ৰশ্ন</h2>
+        <h3>${escapeHtml(examAs)} সম্পূৰ্ণ পত্ৰ ছেট ${asDigits(setNumber)} ত কি কি বিষয় আছে?</h3>
+        <p>ছেট ${asDigits(setNumber)} ত ${escapeHtml(examAs)} পাঠ্যক্ৰমৰ ${asDigits(leaves.length)} টা বিষয় আছে, ওপৰৰ "এই ছেটত সামৰি লোৱা বিষয়সমূহ" তালিকাত দেখুওৱা হৈছে। প্ৰতিটো বিষয়ে তাৰ সম্পূৰ্ণ প্ৰশ্ন-সংগ্ৰহলৈ লিংক কৰে, যাতে পত্ৰখন দিয়াৰ আগতে আপুনি তত্ত্ব পুনৰ পঢ়িব পাৰে।</p>
+        <h3>${escapeHtml(examAs)} সম্পূৰ্ণ পত্ৰ ছেট ${asDigits(setNumber)} ত কিমান প্ৰশ্ন আছে?</h3>
+        <p>${asDigits(q)} টা দ্বিভাষিক প্ৰশ্ন, প্ৰতিটোত চাৰিটা বিকল্প, পত্ৰৰ প্ৰতিটো বিষয় সামৰি।</p>
+        <h3>${escapeHtml(examAs)} ছেট ${asDigits(setNumber)} সময়বদ্ধ নেকি?</h3>
+        <p>হয়। আৰম্ভ কৰাৰ মুহূৰ্তৰ পৰাই এটা সময়বদ্ধ ঘড়ীত ছেটটো চলে, সেয়ে ই প্ৰকৃত পৰীক্ষাৰ দৰেই কাম কৰে।</p>
+        <h3>উত্তৰ চাব পাৰিমনে?</h3>
+        <p>হয়। জমা দিয়াৰ পিছত প্ৰতিটো প্ৰশ্নত শুদ্ধ বিকল্প আৰু অসমীয়া আৰু ইংৰাজী দুয়ো ভাষাত চুটি ব্যাখ্যা দেখুওৱা হয়।</p>
+        <h3>এই ছেট পুনৰ চেষ্টা কৰিব পাৰিমনে?</h3>
+        <p>হয়। আটাইবোৰ ছেট বিনামূলীয়া আৰু সীমাহীন — আপুনি যিকোনো ছেট যিমানবাৰ বিচাৰে পুনৰ চেষ্টা কৰিব পাৰে।</p>`;
+
+  return { en, as };
+}
+
 function buildHubPage() {
   const url = pageURL([]);
   const title = `Exam-wise Mock Test — Assam Police & ADRE | ${SITE}`;
@@ -763,8 +1020,16 @@ function buildLiveSetPage(exam, setNumber, setData, bp) {
       </div>
     </div>
     <div id="set-questions">${questionsBlock(setData)}</div>
-    ${setContent(exam, setNumber)}
   </main>`;
+
+  /* Route A: the set-specific editorial block lives outside <main> (which the
+     SPA replaces on load) in a guarded .axo-extra-content section, so it
+     survives rendering and gives each set page its own crawler-visible text. */
+  const extraInner = setExtraContent(exam, setNumber, setData, bp);
+  const extraPath = `/exam-wise-mock-test/${exam.id}/set-${setNumber}/`;
+  const extra = `  <section class="section axo-extra-content" data-axo-extra="1" data-axo-path="${extraPath}" style="padding-bottom:48px;">
+      ${bilingualPanels(extraInner.en, extraInner.as)}
+    </section>`;
 
   const ld = `<script type="application/ld+json">${jsonldGraph(url, title, desc, [
     { href: "/", label: "Home" },
@@ -778,7 +1043,7 @@ function buildLiveSetPage(exam, setNumber, setData, bp) {
     "gk"
   );
 
-  return normaliseLinks(`${head}${MARKER}\n${ld}${shell.mid}${main}\n\n${credit}${shell.postFooter}`);
+  return normaliseLinks(`${head}${MARKER}\n${ld}${shell.mid}${main}\n${extra}\n${credit}${shell.postFooter}`);
 }
 
 /* Pre-live set page: the bilingual "system upgrade" notice, shown for an exam
