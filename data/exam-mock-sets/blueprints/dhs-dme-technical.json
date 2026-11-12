@@ -5,6 +5,7 @@
   "totalMarks": 100,
   "marksPerQuestion": 1,
   "negativeMarking": 0,
+  "sets": 10,
   "difficultyMix": { "easy": 45, "moderate": 40, "difficult": 15 },
   "sections": [
     {
