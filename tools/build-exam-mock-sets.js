@@ -129,6 +129,28 @@ function readSectionGroups(examId, sec) {
   return groups;
 }
 
+/* Read one section's questions from a dedicated "extra bank" directory
+   (data/exam-mock-sets/extra/<exam>/<section>/question-*.json). The extra sets
+   of an exam draw from here instead of the exam's own bank, so a question used
+   in the balanced sets is never repeated in the harder ones, and vice versa.
+   Each section directory is read as one group; the caller round-robins. */
+function readExtraGroups(examId, sec) {
+  const dir = path.join(ROOT, "data", "exam-mock-sets", "extra", examId, sec.id);
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir).filter((f) => /^question-.*\.json$/i.test(f)).sort();
+  const qs = [];
+  for (const f of files) {
+    const data = readJSON(path.join(dir, f));
+    if (Array.isArray(data)) {
+      for (const raw of data) {
+        const q = normalizeQ(raw);
+        if (q) qs.push(q);
+      }
+    }
+  }
+  return qs.length ? [qs] : [];
+}
+
 /* Interleave the groups one item at a time, so the merged list alternates
    across sub-categories rather than exhausting one before the next. */
 function roundRobin(groups) {
@@ -267,7 +289,14 @@ function hardPoolOrder(groups, need, extraCount, usedKeys) {
    the section's whole (shuffled) pool. A blueprint may ask for more sets than
    that with a `sets` field; the extra sets are the harder ones — each draws
    from the hardest questions left in every section, dealt round-robin so the
-   extra sets stay even with one another. */
+   extra sets stay even with one another.
+
+   When a dedicated extra bank exists for the exam
+   (data/exam-mock-sets/extra/<exam>/<section>/), the extra sets draw from it
+   instead of the exam's own bank. That keeps the harder sets fully unique
+   against the balanced sets (and against every other exam's mock sets, since
+   the extra bank is authored fresh), while the balanced sets keep using the
+   exam bank exactly as before. */
 function buildBlueprintSets(exam, bp, dir) {
   const groupsBySection = bp.sections.map((s) => {
     const sec = (exam.sections || []).find((x) => x.id === s.id);
@@ -285,7 +314,23 @@ function buildBlueprintSets(exam, bp, dir) {
     throw new Error(`${exam.id}: blueprint sections total ${total}, expected ${expected}`);
   }
   const balanced = Math.min(SETS_PER_EXAM, Math.min(...perSection.map((ps) => Math.floor(ps.order.length / ps.need))));
-  const extraCapacity = Math.min(...perSection.map((ps) => Math.floor((ps.order.length - balanced * ps.need) / ps.need)));
+
+  /* Prefer the dedicated extra bank for the harder sets when it covers every
+     section with enough questions; otherwise fall back to the harder slice of
+     the exam's own bank. */
+  const requestedExtra = bp.sets && bp.sets > balanced ? bp.sets - balanced : 0;
+  const extraBySection = bp.sections.map((s) => {
+    const sec = (exam.sections || []).find((x) => x.id === s.id);
+    return sec ? readExtraGroups(exam.id, sec) : [];
+  });
+  const useExtraBank = requestedExtra > 0 && extraBySection.every((groups, i) => {
+    const pool = deDupe(roundRobin(groups));
+    return pool.length >= perSection[i].need * requestedExtra;
+  });
+
+  const extraCapacity = useExtraBank
+    ? requestedExtra
+    : Math.min(...perSection.map((ps) => Math.floor((ps.order.length - balanced * ps.need) / ps.need)));
   const wanted = bp.sets && bp.sets > balanced ? Math.min(bp.sets, balanced + extraCapacity) : balanced;
   const extraCount = wanted - balanced;
   const meta = blueprintMeta(bp);
@@ -301,8 +346,16 @@ function buildBlueprintSets(exam, bp, dir) {
   }
 
   if (extraCount > 0) {
-    const hardBySection = bp.sections.map((s, i) =>
-      hardPoolOrder(groupsBySection[i], perSection[i].need, extraCount, usedKeys));
+    let hardBySection;
+    if (useExtraBank) {
+      hardBySection = bp.sections.map((s, i) => {
+        const pool = deDupe(roundRobin(extraBySection[i]));
+        return shuffleInPlace(pool, mulberry32(seedFor(`${exam.id}:extra:${s.id}`))).slice(0, perSection[i].need * extraCount);
+      });
+    } else {
+      hardBySection = bp.sections.map((s, i) =>
+        hardPoolOrder(groupsBySection[i], perSection[i].need, extraCount, usedKeys));
+    }
     for (let k = 1; k <= extraCount; k++) {
       const n = balanced + k;
       const questions = [];
@@ -316,7 +369,8 @@ function buildBlueprintSets(exam, bp, dir) {
   }
 
   const detail = perSection.map((ps) => `${ps.id}=${ps.need}`).join(", ");
-  return { sets: wanted, changed, questions: total, note: `blueprint [${detail}]${extraCount ? ` + ${extraCount} harder` : ""}` };
+  const src = useExtraBank && extraCount > 0 ? " (extra bank)" : "";
+  return { sets: wanted, changed, questions: total, note: `blueprint [${detail}]${extraCount ? ` + ${extraCount} harder${src}` : ""}` };
 }
 
 /* ---------- legacy mode (no blueprint) ---------- */
