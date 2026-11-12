@@ -508,9 +508,11 @@ function examLeafURLs(examId) {
   return out;
 }
 
-/* The leaf slug of a question id (`average-3` -> `average`). */
+/* The leaf slug of a question id (`average-3` -> `average`). Extra-bank ids
+   carry a per-section running suffix instead (`assam-history-x002`), so that
+   form is stripped too. */
 function leafOf(id) {
-  const m = /^(.*)-\d+$/.exec(String(id == null ? "" : id));
+  const m = /^(.*?)(?:-\d+|-x\d+)$/.exec(String(id == null ? "" : id));
   return m ? m[1] : String(id == null ? "" : id);
 }
 
