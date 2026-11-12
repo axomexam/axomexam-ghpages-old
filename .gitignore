@@ -10,3 +10,7 @@ android/app/build/
 android/local.properties
 *.jks
 *.keystore
+
+# Python bytecode cache
+__pycache__/
+*.pyc
